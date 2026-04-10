@@ -1,9 +1,9 @@
-name: ci
+name: Release Documentation
 on:
   workflow_dispatch:
     inputs:
       documentation-version:
-        description: 'The version of documentation you want to deploy (e.g., 4.9.x)'
+        description: 'The version of documentation you want to deploy (e.g., 4.9.1), for docu the version will be used as 4.9.x'
         required: true
       set-default:
         description: 'Set as default documentation version (only if gh-pages branch does not exist)'
@@ -42,11 +42,38 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
+
+      - name: Derive minor wildcard version
+        run: |
+          DOC_VERSION="${{ inputs.documentation-version }}"
+          DOC_VERSION_X="${DOC_VERSION%.*}.x"
+          echo "DOC_VERSION_X=$DOC_VERSION_X" >> $GITHUB_ENV
+
       - run: pip install mkdocs-material mike
-      - run: mike deploy --push --update-aliases ${{ inputs.documentation-version }} latest
+      - run: mike deploy --push --update-aliases ${DOC_VERSION_X} latest
       - run: |                      # set default only if gh-pages branch does not exists
           if [ "${{ inputs.set-default }}" = "true" ]; then  
             mike set-default latest --push
           fi
+          
+
+  tag-repo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # REQUIRED to push tags
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # required so tags/history exist
+
+      - name: Create and push tag
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          
+          git tag ${{ github.event.inputs.tag }}
+          git push origin ${{ github.event.inputs.tag }}
+
       
           
