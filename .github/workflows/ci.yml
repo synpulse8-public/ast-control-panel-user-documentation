@@ -58,6 +58,7 @@ jobs:
           
 
   tag-repo:
+    needs: deploy
     runs-on: ubuntu-latest
     permissions:
       contents: write   # REQUIRED to push tags
@@ -72,8 +73,8 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
           
-          git tag ${{ github.event.inputs.tag }}
-          git push origin ${{ github.event.inputs.tag }}
+          git tag ${{ inputs.documentation-version }}
+          git push origin ${{ inputs.documentation-version }}
 
       
           
