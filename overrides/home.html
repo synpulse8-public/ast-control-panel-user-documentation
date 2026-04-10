@@ -1,0 +1,83 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+{{ super() }}
+
+<!-- FULL-BLEED HERO (outside .md-grid) -->
+<section class="hero-bleed">
+
+    <div class="mdx-hero__image hero-gradient">
+        <!-- Left-aligned image ON TOP of the gradient -->
+        <img
+                class="hero-graphic"
+                src="{{ 'assets/global/s8AST.png' | url }}"
+                alt="AST"
+                draggable="false"
+        />
+
+        <!-- Optional right-side content -->
+        <div class="hero-content">
+            <h1 class="intro-heading">Accelerate and optimize your testing</h1>
+            <p class="intro-para">Maximize coverage, speed and quality with our advanced automated testing solution powered by synpulse8 </p>
+        </div>
+    </div>
+</section>
+
+<!-- TILES stay inside the normal content width -->
+<section class="mdx-container landing-tiles">
+    <div class="md-grid md-typeset">
+        <div class="grid cards" markdown>
+            <a class="card-link" href="{{ 'introduction/' | url }}">
+                <article>
+                    <h3>Introduction</h3>
+                    <p>General information. Architecture. Capabilities</p>
+                    <p><strong>Start here →</strong></p>
+                </article>
+            </a>
+
+            <a class="card-link" href="{{ 'user_guide_overview/' | url }}">
+                <article>
+                    <h3>User Guide</h3>
+                    <p>Functionality description. Navigation. Administration. Test scripts. </p>
+                    <p><strong>See user guide →</strong></p>
+                </article>
+            </a>
+
+            <a class="card-link" href="{{ 'integration_overview/' | url }}">
+                <article>
+                    <h3>Integration Guide</h3>
+                    <p>3rd party tool integration. Deployment. Security. System Requirements. </p>
+                    <p><strong>See integration →</strong></p>
+                </article>
+            </a>
+
+            <a class="card-link" href="{{ 'faq/' | url }}">
+                <article>
+                    <h3>FAQ</h3>
+                    <p>Have a look at FAQ and get your answers quickly</p>
+                    <p><strong>Learn more →</strong></p>
+                </article>
+            </a>
+
+            <a class="card-link" href="{{ 'best_practices/' | url }}">
+                <article>
+                    <h3>Best Practices</h3>
+                    <p>Suggestions for smoother operation..</p>
+                    <p><strong>See best practices →</strong></p>
+                </article>
+            </a>
+
+            <a class="card-link" href="{{ 'release_notes/' | url }}">
+                <article>
+                    <h3>Release Notes</h3>
+                    <p>What’s new in the latest releases.</p>
+                    <p><strong>See changes →</strong></p>
+                </article>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}

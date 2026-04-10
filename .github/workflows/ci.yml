@@ -1,0 +1,52 @@
+name: ci
+on:
+  workflow_dispatch:
+    inputs:
+      documentation-version:
+        description: 'The version of documentation you want to deploy (e.g., 4.9.x)'
+        required: true
+      set-default:
+        description: 'Set as default documentation version (only if gh-pages branch does not exist)'
+        required: false
+        default: 'false'
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Fetch gh-pages branch if exists
+        run: |
+  
+          if ! git ls-remote --exit-code origin gh-pages; then
+            echo "gh-pages branch does NOT exist. Skipping fetch."
+          else
+            git fetch origin gh-pages:gh-pages
+          fi
+
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      - uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      - run: pip install mkdocs-material mike
+      - run: mike deploy --push --update-aliases ${{ inputs.documentation-version }} latest
+      - run: |                      # set default only if gh-pages branch does not exists
+          if [ "${{ inputs.set-default }}" = "true" ]; then  
+            mike set-default latest --push
+          fi
+      
+          
