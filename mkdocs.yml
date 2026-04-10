@@ -1,0 +1,81 @@
+site_name: Control Panel Guide
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - navigation.tracking  # Highlight section while scrolling
+  palette:
+      # Palette toggle for light mode
+    - scheme: default
+      primary: black
+      toggle:
+       icon: material/weather-sunny
+       name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+  logo: assets/global/s8AST.png
+  favicon: assets/global/favicon.png
+
+extra:
+  version:
+    provider: mike
+  generator: false
+
+nav:
+    - Introduction: introduction.md
+    - User guide:
+        - Overview: user_guide_overview.md
+        - Login: login.md
+        - Administration: admin.md
+        - Navigation: navigation.md
+        - Test case repository: test_case_repository.md
+        - Test script definition:
+            - Test script and test data: test_script_and_test_data.md
+            - Integration of script languages: integration_of_script_languages.md
+            - Input operations: input_operations.md
+            - Query operations: query_operation.md
+            - Verify operations: verify_operations.md
+            - Control statements: control_statements.md
+            - Methods: methods.md
+        - Test sets: test_sets.md
+        - Schedule: schedule.md
+        - Analytics: analytics.md
+        - Reports: reports.md
+        - Frequently used terms and metatypes: glossary_of_terms.md
+    - Integration guide:
+        - Overview: integration_overview.md
+        - HP ALM: alm.md
+        - Jira Xray: jira_xray.md
+        - Keycloak: keycloak.md
+        - Deployment: deployment.md
+        - Security: security.md
+        - System requirements: system_requirements.md
+    - FAQ: faq.md
+    - Best practices: best_practices.md
+    - Release notes: release_notes.md
+
+extra_css:
+  - styles/extra.css
+
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - sane_lists
+  - md_in_html
+  - toc:
+      toc_depth: 2-3
+copyright: Copyright © 2026 Synpulse
