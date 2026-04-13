@@ -6,9 +6,9 @@ on:
         description: 'The version of documentation you want to deploy (e.g., 4.9.1), for docu the version will be used as 4.9.x'
         required: true
       set-default:
-        description: 'Set as default documentation version (only if gh-pages branch does not exist)'
+        description: 'Set as default documentation version'
         required: false
-        default: 'false'
+        default: 'true'
 permissions:
   contents: write
 jobs:
