@@ -2,7 +2,7 @@
 
 The solution uses these technologies and frameworks:
 
-- React 17
+- React 18
 - Java 17 with Spring Boot 3.5.x
 - Oracle DB(Client owned)
 
