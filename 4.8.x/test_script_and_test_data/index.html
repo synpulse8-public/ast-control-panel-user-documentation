@@ -1,0 +1,2083 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../test_case_repository/">
+      
+      
+        <link rel="next" href="../integration_of_script_languages/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/global/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Test script and test data - Control Panel Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../styles/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#test-script-xml-structure-and-definition" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Control Panel Guide" class="md-header__button md-logo" aria-label="Control Panel Guide" data-md-component="logo">
+      
+  <img src="../assets/global/s8AST.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Control Panel Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Test script and test data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Control Panel Guide" class="md-nav__button md-logo" aria-label="Control Panel Guide" data-md-component="logo">
+      
+  <img src="../assets/global/s8AST.png" alt="logo">
+
+    </a>
+    Control Panel Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_guide_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Login
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test_case_repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test case repository
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test script definition
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Test script definition
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test script and test data
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test script and test data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#test-script-xml-structure-and-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test script XML Structure and Definition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test script XML Structure and Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conditional Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-specific-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User-Specific Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-and-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables and Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-your-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Your Scripts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-basic-tags-and-control-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview of Basic Tags and Control Statements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-of-a-simple-test-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example of a Simple Test Case
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-data-management-and-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Data Management and Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Data Management and Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-excel-for-test-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Excel for Test Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-domestic-payment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example - Domestic Payment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration_of_script_languages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration of script languages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../query_operation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Query operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verify_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verify operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../control_statements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control statements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test_sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test sets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary_of_terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frequently used terms and metatypes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Integration guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HP ALM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jira_xray/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jira Xray
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keycloak/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keycloak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system_requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#test-script-xml-structure-and-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test script XML Structure and Definition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test script XML Structure and Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conditional Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-specific-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User-Specific Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annotations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-and-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables and Arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-your-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Your Scripts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-basic-tags-and-control-statements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview of Basic Tags and Control Statements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-of-a-simple-test-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example of a Simple Test Case
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-data-management-and-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Data Management and Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Data Management and Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-excel-for-test-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Excel for Test Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-domestic-payment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example - Domestic Payment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="test-script-and-test-data">Test Script and Test Data</h1>
+<h2 id="test-script-xml-structure-and-definition">Test script XML Structure and Definition</h2>
+<p>Test cases are defined using XML notation, consisting of an opening tag, attributes, values, and a closing tag.</p>
+<p>The basic structure of a test case is enclosed within the <strong><code>&lt;testcase&gt;</code></strong> element:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;</span>
+<span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="w"> </span><span class="na">user=</span><span class="s">&quot;avaloq&quot;</span><span class="w"> </span><span class="na">bu=</span><span class="s">&quot;AAA&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;uuid&quot;</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;/testcase&gt;</span>
+</code></pre></div>
+<p>The table below details the attributes for the <code>&lt;testcase&gt;</code> tag:</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Mandatory?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>version</em></td>
+<td>Yes</td>
+<td>Version number is always 1.0</td>
+</tr>
+<tr>
+<td><em>user</em></td>
+<td>Yes</td>
+<td>User to log in</td>
+</tr>
+<tr>
+<td><em>bu</em></td>
+<td>Yes</td>
+<td>Business unit to log in.</td>
+</tr>
+<tr>
+<td><em>name</em></td>
+<td>Yes</td>
+<td>Name of the test case. It must correspond to the filename.</td>
+</tr>
+<tr>
+<td><em>max-errors</em></td>
+<td>No</td>
+<td>Maximum error limit in order before the test is interrupted. Test error limit validation is only applicable if the value is less than <code>ast.verification_failure</code> property's numeric value in <em>ast.properties</em>.<br>If <code>ast.verification_failure</code> is <code>continue</code>, then the <code>max-errors</code> will be ignored and the test run will continue.</td>
+</tr>
+<tr>
+<td><em>extra</em></td>
+<td>No</td>
+<td>Advanced flags are explicit here, for now only the following flags are available: <code>skipping-empty-data-sets=true</code> to skip tests with an empty data set instead of throwing an error.</td>
+</tr>
+</tbody>
+</table>
+<p>The XML notation supports various formats for defining attributes, ranging from multi-line long notation to a single-line compact format:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Notation</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Long</td>
+<td><code>&lt;annotation&gt;</code> <br> &ensp; <code>&lt;key&gt;</code> <br> &emsp; <code>"Type"</code> <br> &ensp; <code>&lt;/key&gt;</code><br> &ensp; <code>&lt;value&gt;</code> <br> &emsp; <code>"Functional test"</code> <br> &ensp; <code>&lt;/value&gt;</code> <br> <code>&lt;/annotation&gt;</code></td>
+<td>Attributes as child elements on several lines</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td><code>&lt;annotation&gt;</code> <br> &ensp; <code>&lt;key&gt;"Type"&lt;/key&gt;</code><br> &ensp; <code>&lt;value&gt;"Functional test"&lt;/value&gt;</code> <br> <code>&lt;/annotation&gt;</code></td>
+<td>Attributes as child elements on one line</td>
+</tr>
+<tr>
+<td>Short</td>
+<td><code>&lt;annotation key="Type" value="Functional test"&gt;</code> <br> &ensp; ... <br><code>&lt;/annotation&gt;</code></td>
+<td>Base element with attributes on several lines.</td>
+</tr>
+<tr>
+<td>Compact</td>
+<td><code>&lt;annotation key="Type" value="Functional test" /&gt;</code></td>
+<td>Base element with attributes on one line.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="test-steps">Test Steps</h3>
+<p>AST differentiates between three primary step types:
+- <strong><code>&lt;input&gt;</code></strong> - Sends a command to the Avaloq Banking System.
+- <strong><code>&lt;query&gt;</code></strong> - Queries information from the Avaloq Banking System.
+- <strong><code>&lt;verify&gt;</code></strong> - Verifies equality of properties.</p>
+<p><img alt="test_case_parts.svg" src="../assets/UserDocumentationM/test_case_parts.svg" /></p>
+<figcaption>Structural decomposition of AST test case into Input, Query, Verify steps, and 1.n Operations</figcaption>
+
+<p>AST executes test steps sequentially, from top to bottom. The test script language employs a single flow control model and does not support nested flow controls.</p>
+<h3 id="conditional-execution">Conditional Execution</h3>
+<p>A <strong>condition</strong> can be defined for any <strong>test step</strong>. If the condition is met, the step executes; otherwise, it is skipped. <strong>Conditions</strong> can be based on <strong>Avaloq script</strong> or <strong>JavaScript</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;input</span><span class="w"> </span><span class="na">avaloq-cond=</span><span class="s">&quot;... a condition ...&quot;</span><span class="nt">&gt;</span><span class="w"> </span>...<span class="w"> </span>
+<span class="nt">&lt;input</span><span class="w"> </span><span class="na">script-cond=</span><span class="s">&quot;... a JavaScript condition ...&quot;</span><span class="nt">&gt;</span><span class="w"> </span>...
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example 1</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;invoke-method</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sag/XYZ/foo&quot;</span><span class="w"> </span><span class="na">avaloq-cond=</span><span class="s">&quot;$var = 0&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 2</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;input</span><span class="w"> </span><span class="na">avaloq-cond=</span><span class="s">&quot;$sell_qty is not null&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 3</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;wait</span><span class="w"> </span><span class="na">avaloq-cond=</span><span class="s">&quot;doc_forex($doc).wfc_status_id=54&quot;</span><span class="w"> </span><span class="na">raise-msg=</span><span class="s">&quot;Settlement was not processed&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div>
+</div>
+<h3 id="user-specific-description">User-Specific Description</h3>
+<p>Each step can include a user-specific description using the <code>&lt;descn&gt;</code> element or a <code>descn</code> attribute. </p>
+<p>This allows for the use of business-relevant messages in the AST log and reports. The visibility of this description in the log and reports is dependent on its placement and the <code>ast.base.log_level</code> setting.</p>
+<table>
+<thead>
+<tr>
+<th>Placement</th>
+<th>Test case</th>
+<th>Step</th>
+<th>Discussion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sample</td>
+<td><code>&lt;testcase ...&gt;</code><br>&ensp;<code>&lt;descn&gt;</code><br>&ensp;&ensp;My testcase description<br>&ensp;<code>&lt;/descn&gt;</code><br>&ensp;...<br><code>&lt;/testcase&gt;</code></td>
+<td><code>&lt;input&gt;</code><br>&ensp;<code>&lt;descn&gt;</code><br>&ensp;&ensp;My input step description<br>&ensp;<code>&lt;/descn&gt;</code><br>&ensp;...<br><code>&lt;/input&gt;</code></td>
+<td><code>&lt;mass-pay descn="My Payment Test description"&gt;</code><br>&ensp;...<br><code>&lt;/mass-pay&gt;</code></td>
+</tr>
+<tr>
+<td>Placement of <code>DESCN</code> element</td>
+<td><code>DESCN</code> must be placed right after the opening tag of a <code>&lt;testcase&gt;</code> element <br>(i.e., before any further steps or operation elements)</td>
+<td><code>DESCN</code> must be placed right after the opening tag of input, query or verify elements<br>(i.e., before any operation elements)</td>
+<td><code>DESCN</code> must be placed as an attribute within the opening tag of an operation element</td>
+</tr>
+<tr>
+<td>Visible in Log and Reports, if <code>ast.base.log_level</code> set to</td>
+<td>Testcase<br>Step<br>Operation<br>Detail</td>
+<td>~~Testcase~~<br>Step<br>Operation<br>Detail</td>
+<td>~~Testcase~~<br>~~Step~~<br>Operation<br>Detail</td>
+</tr>
+</tbody>
+</table>
+<h3 id="annotations">Annotations</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>Annotations</strong> are used to define meta information for test cases. </p>
+</div>
+<p>By annotating a test case, it can be categorized or labeled. The keys and values within annotations do not affect the execution of the test case but are included in the test report for consolidation or analysis of a test run.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;</span>
+<span class="w">  </span><span class="nt">&lt;textcase</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="w"> </span><span class="na">user=</span><span class="s">&quot;avaloq&quot;</span><span class="w"> </span><span class="na">bu=</span><span class="s">&quot;AAA&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CASH: Cost Calculation&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;annotations&gt;</span>
+<span class="w">      </span><span class="nt">&lt;annotation</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;Stage&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Modul&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;annotation</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;Kind&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Functional Test&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;annotation</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;Situation&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Regression&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;annotation</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;Domain&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;CASH&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;annotation</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;Domain&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;COST&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/annotations&gt;</span>
+<span class="w">    </span>...
+</code></pre></div>
+<h3 id="variables-and-arguments">Variables and Arguments</h3>
+<p>Variables and Arguments are the core tools you use to store and share information within a single test case, making your scripts dynamic and reusable</p>
+<ul>
+<li><strong>Arguments</strong> link your test script to <strong>external test data</strong> (like an Excel file). The argument name must match the <strong>column header</strong> in the external spreadsheet.</li>
+<li><strong>Variables</strong> are defined directly within your <strong>XML script</strong> to <strong>temporarily store values</strong>.</li>
+</ul>
+<p>Both arguments and variables function identically during test execution</p>
+<h4 id="declaring-and-assigning-values">Declaring and Assigning Values</h4>
+<p>You should declare all variables and arguments near the beginning of your test case</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;variable&gt;</code></td>
+<td>Defines a new variable to hold dynamic values</td>
+<td><code>&lt;variable name="doc" /&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;argument&gt;</code></td>
+<td>Declares a field that imports data from a specific data sheet column</td>
+<td><code>&lt;argument name="AMOUNT" /&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>You can set an initial or default value for a variable using one of these expression types:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>avaloq-expr</code></td>
+<td>Sets a value using an Avaloq Script expression</td>
+<td><code>&lt;variable name="today" avaloq-expr="session.today" /&gt;</code></td>
+</tr>
+<tr>
+<td><code>script-expr</code></td>
+<td>Sets a value using a JavaScript expression</td>
+<td><code>&lt;variable name="var" script-expr="-1 * $l\_amount" /&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="reading-data-input-and-saving-results-output">Reading Data (Input) and Saving Results (Output)</h4>
+<p>The syntax determines if you're pulling data from a variable/argument or pushing data into a variable.</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Syntax</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input (Read)</td>
+<td>Precede the name with a <strong>dollar sign (\$)</strong> : <code>$variable_name</code></td>
+<td>Retrieves and uses the variable's value for the operation</td>
+<td><code>&lt;set property="bu_id" value="$customer" /&gt;</code></td>
+</tr>
+<tr>
+<td>Output (Write)</td>
+<td>Use the name without the <strong>$</strong> in the <code>select</code> attribute</td>
+<td>Stores the result of the operation into the variable</td>
+<td><code>&lt;out property="id" select="doc" /&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="using-variables-in-text">Using Variables in Text</h4>
+<p>When inserting a variable into a plain text block - like a log message or message payload - it must be enclosed in curly brackets (<code>{}</code>).</p>
+<ul>
+<li><strong>Description (Log/Reports)</strong>: <code>&lt;descn&gt;Object PersonID = {$obj_person_id}&lt;/descn&gt;</code></li>
+<li><strong>Message/File Payload</strong>: <code>&lt;payload&gt;AFGH{$myVar}ABC&lt;/payload&gt;</code></li>
+</ul>
+<h3 id="troubleshooting-your-scripts">Troubleshooting Your Scripts</h3>
+<p>The <strong><code>&lt;debug&gt;</code> tag</strong> is a crucial tool for developers to <strong>inspect data flow and troubleshoot logic</strong> during a test run</p>
+<p>It allows you to display a text message or the current value of one or more variables in the console log</p>
+<h4 id="how-to-use-it">How to Use It</h4>
+<p>To include a variable's content, you must enclose it in both the dollar sign prefix and the curly brackets: <code>{$variableName}</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Usage</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Debug Statement</td>
+<td><code>&lt;debug&gt;Testing with variable [{$constUserName}]&lt;/debug&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The debug message is only displayed in the log output if the system setting <code>ast.base.debug</code> is explicitly set to <code>true</code> in the main configuration file (<em>ast.properties</em>)</p>
+</div>
+<h3 id="overview-of-basic-tags-and-control-statements">Overview of Basic Tags and Control Statements</h3>
+<p>These tags serve as the fundamental "glue" between test steps and operations, allowing you to control execution flow and manage session settings.</p>
+<table>
+<thead>
+<tr>
+<th>Tag / Control Statement</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;argument&gt;</code></td>
+<td>Defines a placeholder for importing external data from a spreadsheet</td>
+</tr>
+<tr>
+<td><code>&lt;variable&gt;</code></td>
+<td>Defines a new variable for local data storage</td>
+</tr>
+<tr>
+<td><code>&lt;debug&gt;</code></td>
+<td>Displays a customizable message or variable content in the log (if enabled)</td>
+</tr>
+<tr>
+<td><code>&lt;session&gt;</code></td>
+<td>Switches the active user, business unit (BU), or Avaloq instance for subsequent operations</td>
+</tr>
+<tr>
+<td><code>&lt;wait&gt;</code></td>
+<td>Halts test execution until a specified timeout passes or a defined Avaloq/JavaScript condition is met</td>
+</tr>
+<tr>
+<td><code>&lt;if&gt;</code>, <code>&lt;select&gt;</code></td>
+<td>Conditional Execution: Evaluates an Avaloq expression and only runs the enclosed tags if the condition is satisfied</td>
+</tr>
+<tr>
+<td><code>&lt;invoke-method&gt;</code></td>
+<td>Calls a reusable block of test logic (a method) defined externally.</td>
+</tr>
+<tr>
+<td><code>&lt;setting&gt;</code></td>
+<td>Modifies a core AST property (like the application log level) during the test run.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-of-a-simple-test-case">Example of a Simple Test Case</h3>
+<p>The preceding chapters introduced the basic elements of a test case, specifically the three core steps: input, query, and verify. This section provides a simple, illustrative example. The context for this test case is the requirement to create a Person and an Address as test data within the test system.</p>
+<h4 id="step-1-address-creation">Step 1: Address Creation</h4>
+<p>The first step involves creating a new Address record in the system using the <code>&lt;input&gt;</code> block.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">bu=</span><span class="s">&quot;AAA&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;0 - Create Address &amp; Person&quot;</span><span class="w"> </span><span class="na">user=</span><span class="s">&quot;avaloq&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Create Address --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;input&gt;</span>
+<span class="w">    </span><span class="nt">&lt;new-doc</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;addr&quot;</span><span class="w"> </span><span class="na">init-action=</span><span class="s">&quot;1100&quot;</span><span class="w"> </span><span class="na">close-action=</span><span class="s">&quot;1090&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;addr_type_id&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;first_name&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;Tina&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;name&quot;</span><span class="w">         </span><span class="na">value=</span><span class="s">&quot;Tester&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;street&quot;</span><span class="w">       </span><span class="na">value=</span><span class="s">&quot;Regression Road&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;street_nr&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;7&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;city&quot;</span><span class="w">         </span><span class="na">value=</span><span class="s">&quot;Zürich&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;zip&quot;</span><span class="w">          </span><span class="na">value=</span><span class="s">&quot;8000&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;country_id&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;CH&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/new-doc&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/input&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</code></pre></div>
+<h4 id="step-2-person-creation-and-address-id-transfer">Step 2: Person Creation and Address ID Transfer</h4>
+<p>The second step is the creation of a Person record that uses the address created in the first step. If a unique identifier was not explicitly used during the address creation, its ID must be transferred using a temporary value.</p>
+<p>To facilitate this transfer, a parameter is populated within the address creation's input section using the tag <code>&lt;out property="id" select="addr_doc_id" /&gt;</code>. This transfers the newly created address ID to the local variable <code>addr_doc_id</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">bu=</span><span class="s">&quot;AAA&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;0 - Create Address &amp; Person&quot;</span><span class="w"> </span><span class="na">user=</span><span class="s">&quot;avaloq&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Local variable definition --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;l_obj_addr_id&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Create Address --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;input&gt;</span>
+<span class="w">    </span><span class="nt">&lt;new-doc</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;addr&quot;</span><span class="w"> </span><span class="na">init-action=</span><span class="s">&quot;1100&quot;</span><span class="w"> </span><span class="na">close-action=</span><span class="s">&quot;1090&quot;</span><span class="nt">&gt;</span><span class="w">  </span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span>...
+<span class="w">      </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;l_obj_addr_id&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;/input&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Create Person --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;input&gt;</span>
+<span class="w">    </span><span class="nt">&lt;descn&gt;</span>Natürliche<span class="w"> </span>Person<span class="w"> </span>erfassen<span class="nt">&lt;/descn&gt;</span>
+<span class="w">    </span><span class="nt">&lt;new-doc</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;person&quot;</span><span class="w"> </span><span class="na">init-action=</span><span class="s">&quot;1100&quot;</span><span class="w"> </span><span class="na">close-action=</span><span class="s">&quot;1019&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;form_id&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;917&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;person_det.person_type_id&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;person_natural&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;person_name_list(1).first_name&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_first_name&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;person_name_list(1).middle_name&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_middle_name&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;person_name_list(1).last_name&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_name&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;sort_alpha&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_sort_alpha&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;obj_extn.person_sym&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_sort_alpha&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;domi_addr_id&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$l_obj_addr_id&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+
+<span class="w">      </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;person_doc_id&quot;</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w">            </span>
+<span class="w">    </span><span class="nt">&lt;/new-doc&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/input&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</code></pre></div>
+<h4 id="step-3-verification">Step 3: Verification</h4>
+<p>Following the creation steps, the <code>&lt;verify&gt;</code> statement is used to confirm that the Person record was successfully created. This involves reading the status of the person into the variable a_status_2 using an avaloq-expr and subsequently writing this status to the log via the <code>&lt;descn&gt;</code> tag.</p>
+<p>The <code>&lt;verify&gt;</code> block checks if the status of the newly created person (referenced by the variable <code>$person_doc_id</code>) equals the expected value, 90.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;a_status_2&quot;</span><span class="w"> </span><span class="na">avaloq-expr=</span><span class="s">&quot;doc_person($person_doc_id).wfc_status_id&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;verify&gt;</span>
+<span class="w">      </span><span class="nt">&lt;descn&gt;</span>Verifizieren<span class="w"> </span>Orderstatus<span class="w"> </span><span class="nt">&lt;/descn&gt;</span>
+<span class="w">      </span><span class="nt">&lt;value</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;a_status_2&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;90&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/verify&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;obj_person_id&quot;</span><span class="w"> </span><span class="na">avaloq-expr=</span><span class="s">&quot;&#39;#&#39;||doc_person($person_doc_id).person_id&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;input&gt;</span>
+<span class="w">      </span><span class="nt">&lt;descn&gt;</span><span class="w"> </span>Object<span class="w"> </span>PersonID<span class="w"> </span>=<span class="w"> </span>{$obj_person_id}<span class="w"> </span><span class="nt">&lt;/descn&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/input&gt;</span>
+</code></pre></div>
+<h2 id="test-data-management-and-integration">Test Data Management and Integration</h2>
+<p>AST supports importing test data from Excel.</p>
+<h3 id="using-excel-for-test-data">Using Excel for Test Data</h3>
+<p>Data from an Excel sheet can be imported for use in test cases. The first sheet contains the test data, where each column name must have a corresponding <code>&lt;argument&gt;</code> defined in the test case. The second sheet is used to link the test case data rows to a specific test case XML file.
+<img alt="excel_test_data.png" src="../assets/UserDocumentationM/excel_test_data.png" /></p>
+<figcaption>Test data from Excel sheet</figcaption>
+
+<p>Each column requires a corresponding argument in the test case:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;close_wfc&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;bp&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;buy_asset&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div>
+<p>These arguments can be used the same way as variables: <code>$close_wfc</code>, <code>$bp</code>, <code>$buy_asset</code>. Since arguments are treated like variables, the same naming rules apply.</p>
+<p>To assign the test case data to a test case, the second sheet is used:
+<img alt="excel_test_data_link.png" src="../assets/UserDocumentationM/excel_test_data_link.png" /></p>
+<figcaption>Link between test data on Excel tab and test case</figcaption>
+
+<h3 id="example-domestic-payment">Example - Domestic Payment</h3>
+<p>Test data increases the operational variance of test cases by enabling the execution of a single test logic with different input values. For example, test cases related to domestic payments utilize varied test data to confirm system behavior under diverse conditions, demonstrating this approach.</p>
+<p>The test data look as as follows:
+<img alt="test_data_domestic_payment.png" src="../assets/UserDocumentationM/test_data_domestic_payment.png" /></p>
+<figcaption>Test data to test domestic payments</figcaption>
+
+<p>The arguments are defined as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="w"> </span><span class="na">user=</span><span class="s">&quot;$ast_user1&quot;</span><span class="w"> </span><span class="na">bu=</span><span class="s">&quot;$ast_bu1&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;$TESTCASE_ID&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;descn&gt;</span>$DESCRIPTION<span class="nt">&lt;/descn&gt;</span>
+<span class="w">  </span><span class="nt">&lt;annotations&gt;</span>
+<span class="w">    </span><span class="nt">&lt;annotation</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;Stage&quot;</span><span class="w">           </span><span class="na">value=</span><span class="s">&quot;System Test&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;annotation</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;Kind&quot;</span><span class="w">            </span><span class="na">value=</span><span class="s">&quot;System Test&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;annotation</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;Situation&quot;</span><span class="w">       </span><span class="na">value=</span><span class="s">&quot;System Test&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;annotation</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;Domain&quot;</span><span class="w">          </span><span class="na">value=</span><span class="s">&quot;System Test&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;annotation</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;Business Type&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;System Test&quot;</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w">            </span>
+<span class="w">  </span><span class="nt">&lt;/annotations&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Arguments for the test cases --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TESTCASE_ID&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;DESCRIPTION&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CURRY&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;AMOUNT&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;DEBIT_MACC&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;BENEF&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;BENEF_IBAN&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;REASON&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;STATUS&quot;</span><span class="nt">&gt;</span><span class="w">                        </span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>Based on the column names of the read-in test data, test data variables are automatically generated.</li>
+<li>These can be used arbitrarily in the test case definition.</li>
+</ul>
+</div>
+<p>In addition to actual test data, expected results, etc. can also be read:</p>
+<ul>
+<li>The test data variables are automatically replaced with the corresponding test case data at test case runtime.</li>
+<li>Of course, such dynamic values can also be used in the tests. In this way, a whole series of test cases can be generated with a "basic test case".</li>
+</ul>
+<p><br></p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="cm">&lt;!-- Variable Definition --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;l_doc&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Create order --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;input&gt;</span>
+<span class="w">    </span><span class="nt">&lt;descn&gt;</span>Erstellt<span class="w"> </span>einen<span class="w"> </span>Zahlungsauftrag<span class="nt">&lt;/descn&gt;</span>
+<span class="w">    </span><span class="nt">&lt;new-doc</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;pay&quot;</span><span class="w"> </span><span class="na">init-action=</span><span class="s">&quot;open_dom_pay&quot;</span><span class="w"> </span><span class="na">close-action=</span><span class="s">&quot;proceed&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;deb_macc_id&quot;</span><span class="w">   </span><span class="na">value=</span><span class="s">&quot;$DEBIT_MACC&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;curry_id&quot;</span><span class="w">      </span><span class="na">value=</span><span class="s">&quot;$CURRY&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;amount&quot;</span><span class="w">        </span><span class="na">value=</span><span class="s">&quot;$AMOUNT&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;benef_iban&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;$BENEF_IBAN&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;benef&quot;</span><span class="w">         </span><span class="na">value=</span><span class="s">&quot;$BENEF&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;benef_info&quot;</span><span class="w">    </span><span class="na">value=</span><span class="s">&quot;$REASON&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;id&quot;</span><span class="w">            </span><span class="na">select=</span><span class="s">&quot;l_doc&quot;</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w">                        </span>
+<span class="w">    </span><span class="nt">&lt;/new-doc&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/input&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Read order status --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">avaloq-expr=</span><span class="s">&quot;doc_trx($l_doc).wfc_status.name&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;result&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Verify order status --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;verify&gt;</span>
+<span class="w">    </span><span class="nt">&lt;descn&gt;</span>Verify<span class="w"> </span>order<span class="w"> </span>status<span class="nt">&lt;/descn&gt;</span>
+<span class="w">    </span><span class="nt">&lt;value</span><span class="w"> </span><span class="na">descn=</span><span class="s">&quot;Status&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;$result&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$STATUS&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/verify&gt;</span>
+<span class="nt">&lt;/testcase&gt;</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Synpulse
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tracking"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>

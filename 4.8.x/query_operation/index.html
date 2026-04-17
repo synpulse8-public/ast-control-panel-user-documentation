@@ -1,0 +1,1922 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../input_operations/">
+      
+      
+        <link rel="next" href="../verify_operations/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/global/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Query operations - Control Panel Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../styles/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#object-query" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Control Panel Guide" class="md-header__button md-logo" aria-label="Control Panel Guide" data-md-component="logo">
+      
+  <img src="../assets/global/s8AST.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Control Panel Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Query operations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Control Panel Guide" class="md-nav__button md-logo" aria-label="Control Panel Guide" data-md-component="logo">
+      
+  <img src="../assets/global/s8AST.png" alt="logo">
+
+    </a>
+    Control Panel Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_guide_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Login
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test_case_repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test case repository
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test script definition
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Test script definition
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test_script_and_test_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test script and test data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration_of_script_languages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration of script languages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Query operations
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Query operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#object-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object query
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Order query
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-order-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference order query
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-avaloq-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Avaloq messages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-xpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query xpath
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verify_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verify operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../control_statements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control statements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test_sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test sets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary_of_terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frequently used terms and metatypes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Integration guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HP ALM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jira_xray/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jira Xray
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keycloak/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keycloak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system_requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#object-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object query
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Order query
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-order-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference order query
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-avaloq-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Avaloq messages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-xpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query xpath
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="query-operations">Query operations</h1>
+<p>These operations <strong>retrieve information</strong> from a test object. For instance, you can use them to get the status of a message or the attributes of an object.</p>
+<p>The AST query operations offer read-only access to entities within the Avaloq Banking System. You can query objects, orders, and messages. Note that the <code>exec</code> operation, described in chapter <a href="../input_operations/#exec-operation">Exec operation</a>, is also available for use in query operations. </p>
+<p>The query element also lets you explicitly synchronize with all pillars in the Avaloq Banking System. To do this, use the <code>enforce-pkp-sync</code> attribute to enforce the synchronization. For more information, see the configuration settings.</p>
+<h3 id="object-query">Object query</h3>
+<p>The object query allows you to access instances of any object type within the Avaloq Banking System. </p>
+<p>You can query objects statically using their ID or dynamically.</p>
+<p>To dynamically load an object's ID, you can use a combination of the id and property attributes. This operation respects the timeout setting defined in the <em>service.dynamicloading.timeout_in_sec property</em>.</p>
+<p><strong><em><code>&lt;query&gt;</code> | <code>&lt;obj ...&gt;</code></em></strong> - Retrieves information about an Avaloq object</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>id</em> (IN)</td>
+<td>The object can be identified by its key (e.g. ISIN:LU0055731813, RS) or an internal id (e.g. #198276). <br>Specify its metatype instead, if you want to query an object dynamically. (e.g. {bp} for business partner)</td>
+</tr>
+<tr>
+<td><em>property</em> (IN)</td>
+<td>Properties of object to be retrieved. <br> If you specified a metatype in the ID, then here specify the criteria like class_id('bp_custr_type')=custr#AND#ref_curry_id!=CHF (more examples below). If none is found, the result will be empty.</td>
+</tr>
+<tr>
+<td><em>object-type</em> (IN)</td>
+<td>Type of object to be retrieved.</td>
+</tr>
+<tr>
+<td><em>domain-type</em> (IN)</td>
+<td>Domain-type of object to be retrieved. This parameter is used in special cases where an object of a given specific type is accessed in a different way. For example objects of type asset are accessed as instances of "obj_asset_realsec".</td>
+</tr>
+<tr>
+<td><em>select</em> (OUT)</td>
+<td>Target variable where the read property (or the object id for dynamic loading) is stored.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;query&gt;</span>
+<span class="w">  </span><span class="nt">&lt;descn&gt;</span>Get<span class="w"> </span>the<span class="w"> </span>name<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>created<span class="w"> </span>money<span class="w"> </span>account<span class="nt">&lt;/descn&gt;</span>
+<span class="w">  </span><span class="nt">&lt;obj</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;$id&quot;</span><span class="w"> </span><span class="na">object-type=</span><span class="s">&quot;macc&quot;</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;name&quot;</span><span class="na">select=</span><span class="s">&quot;m_name&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+<span class="nt">&lt;query&gt;</span>
+<span class="w">  </span><span class="nt">&lt;descn&gt;</span>Query<span class="w"> </span>a<span class="w"> </span>container<span class="w"> </span>object<span class="w"> </span>id<span class="w"> </span>with<span class="w"> </span>these<span class="w"> </span>parameters<span class="nt">&lt;/descn&gt;</span>
+<span class="w">  </span><span class="nt">&lt;obj</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;{cont}&quot;</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;is_cust=-#AND#bp_id=[{TYPE=bp}domi_country_id=#2089#AND#ref_curry_id=EUR]#AND#bp_id=[{TYPE=bp}marital_status_id=#102]&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;l_found_object_id&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+</code></pre></div>
+</div>
+<h3 id="order-query">Order query</h3>
+<p>Instances of all orders in the Avaloq Banking System can be accessed with the order query.</p>
+<p>Alternatively you can use the id and property to load dynamically an order id within the timeout set in <code>service.dynamicloading.timeout_in_sec</code>.</p>
+<p><strong><em><code>&lt;query&gt;</code> | <code>&lt;doc ...&gt;</code></em></strong> - Retrieves information about an existing Avaloq order</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>id</em> (IN)</td>
+<td>Id of order to be retrieved. Alternatively an order key can be used (e.g. extl_ref_nr: "ABCD").<br>Specify its metatype instead, if you want to query an order dynamically. (e.g. {bp} for business partner)</td>
+</tr>
+<tr>
+<td><em>property</em> (IN)</td>
+<td>Properties of the order to be retrieved.<br> If you specified a metatype in the ID, then here specify the criteria like class_id('bp_custr_type')=custr#AND#ref_curry_id!=CHF (more examples below). If none is found, the result will be empty.</td>
+</tr>
+<tr>
+<td><em>select</em> (OUT)</td>
+<td>Target variable where the read property is stored.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example 1</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;query&gt;</span>
+<span class="w">  </span><span class="nt">&lt;doc</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;$othsec&quot;</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;pos.name&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;pos-name&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 2</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;query&gt;</span>
+<span class="w">  </span><span class="nt">&lt;descn&gt;</span>Query<span class="w"> </span>a<span class="w"> </span>container<span class="w"> </span>order<span class="w"> </span>id<span class="w"> </span>with<span class="w"> </span>theseparameters<span class="nt">&lt;/descn&gt;</span>
+<span class="w">  </span><span class="nt">&lt;doc</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;{cont}&quot;</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;is_cust={-,+}#AND#bp_id=[{TYPE=bp}ref_curry_id=CHF]&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;l_found_order_id&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+</code></pre></div>
+</div>
+<h3 id="reference-order-query">Reference order query</h3>
+<p>The ref-doc query operation allows you to retrieve information from an order that references a specific target order. </p>
+<p>Because referencing orders are often generated asynchronously, this operation is designed to wait until the referenced order is available or a specified timeout occurs. If multiple orders reference the same target order, you can use an index to select the correct one.</p>
+<p><strong><em><code>&lt;query&gt;</code> | <code>&lt;ref-doc ...&gt;</code></em></strong> - Retrieves an order that references a given order</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>id</em> (IN)</td>
+<td>Id of object to be retrieved. Alternatively the order can be identified by a key (e.g. EXTL_REF_NR:EBA_PAY_12345).</td>
+</tr>
+<tr>
+<td><em>index</em> (IN)</td>
+<td>Index if an order provides multiple references</td>
+</tr>
+<tr>
+<td><em>select</em> (OUT)</td>
+<td>Target variable</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;query&gt;</span>
+<span class="w">  </span><span class="nt">&lt;descn&gt;</span>Getting<span class="w"> </span>settlement<span class="w"> </span>of<span class="w"> </span>a<span class="w"> </span>payment<span class="nt">&lt;/descn&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ref-doc</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;$payment&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;settlement&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+</code></pre></div>
+</div>
+<h3 id="query-avaloq-messages">Query Avaloq messages</h3>
+<p>The message query operation provides access to incoming and outgoing messages from the Avaloq Messaging Interface (AMI). </p>
+<p>Similar to the ref-doc operation, this operation waits until the message of interest is available (or a timeout occurs).</p>
+<p>This operation provides a comfortable way to access messages stemming from the processing of a file (regardless of the file type).</p>
+<p><strong><em><code>&lt;query&gt;</code> | <code>&lt;msg ...&gt;</code></em></strong> - Retrieves an Avaloq message.</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>id</em> (IN)</td>
+<td>Id of the message to be retrieved.</td>
+</tr>
+<tr>
+<td><em>file_id</em> (IN)</td>
+<td>Id of the file, the message belongs to (requires also parameter sequence number).</td>
+</tr>
+<tr>
+<td><em>seq_nr</em> (IN)</td>
+<td>Sequence number of the message within the file specified by parameter file_id.</td>
+</tr>
+<tr>
+<td><em>extl_ref_nr</em> (IN)</td>
+<td>External reference number of the message to be retrieved.</td>
+</tr>
+<tr>
+<td><em>property</em> (IN)</td>
+<td>Properties of message to be retrieved.</td>
+</tr>
+<tr>
+<td><em>select</em> (OUT)</td>
+<td>Target variable.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;query&gt;</span>
+<span class="w">  </span><span class="nt">&lt;descn&gt;</span>Get<span class="w"> </span>created<span class="w"> </span>order<span class="w"> </span>by<span class="w"> </span>EXTL_REF_NR<span class="w"> </span>of<span class="w"> </span>inserted<span class="w"> </span>msg<span class="nt">&lt;/descn&gt;</span>
+<span class="w">  </span><span class="nt">&lt;msgextl_ref_nr</span><span class="err">=&quot;$sic_tag_03&quot;</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;doc_id&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;doc&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+</code></pre></div>
+</div>
+<h3 id="query-xpath">Query xpath</h3>
+<p>The util-xpath query operation provides the possibility to evaluate xpath expressions on xml-content. </p>
+<p>The result of the xpath query can be a single value or a node list converted to a string with the list items separated by a delimiter.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Namespace aware XPATH expressions are <strong>not</strong> supported.</p>
+</div>
+<p><strong><em><code>&lt;query&gt;</code> | <code>&lt;util-xpath ...&gt;</code></em></strong> - Retrieves an Avaloq message.</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>src</em> (IN)</td>
+<td>XML source, can be specified with a variable</td>
+</tr>
+<tr>
+<td><em>delim</em> (IN)</td>
+<td>Character or string to separate node list items. If the xpath describes a node list a delimiter has to be specified.</td>
+</tr>
+<tr>
+<td><em>descn</em> (IN)</td>
+<td>Description</td>
+</tr>
+<tr>
+<td><em>select</em> (OUT)</td>
+<td>Target variable</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;query&gt;</span>
+<span class="w">  </span><span class="nt">&lt;descn&gt;</span>Evaluate<span class="w"> </span>XPATH<span class="w"> </span>on<span class="w"> </span>XML<span class="w"> </span>file<span class="nt">&lt;/descn&gt;</span>
+<span class="w">  </span><span class="nt">&lt;util-xpath</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;$xml_file&quot;</span><span class="w"> </span><span class="na">xpath=</span><span class="s">&quot;//descn&quot;</span><span class="na">select=</span><span class="s">&quot;result&quot;</span><span class="w"> </span><span class="na">delim=</span><span class="s">&quot;;&quot;</span><span class="w"> </span><span class="na">descn=</span><span class="s">&quot;Query all descn elements&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+</code></pre></div>
+</div>
+<h4 id="query-sql">Query SQL</h4>
+<p>The <code>util-sql</code> operation is used to execute SELECT statements on the Avaloq database. This operation can return either a single value or a single column with multiple rows. If the query returns multiple rows, you must specify a delimiter to separate the values, and the results will be concatenated into a single string.</p>
+<p><strong><em><code>&lt;query&gt;</code> | <code>&lt;util-sql ...&gt;</code></em></strong> - Returns the result of an sql statement.</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>stmt</em> (IN)</td>
+<td>A select statement returning a single value or a column with multiple rows. Note that characters like '&lt;' must be encoded using HTML entities.</td>
+</tr>
+<tr>
+<td><em>delim</em> (IN)</td>
+<td>Character or string to separate multiple rows. If the sql statement returns more than a single value a delimiter has to be specified.</td>
+</tr>
+<tr>
+<td><em>descn</em> (IN)</td>
+<td>Description</td>
+</tr>
+<tr>
+<td><em>connection</em> (IN)</td>
+<td>Optionally give a connection name as listed by the <em>ext.conn.</em><em> properties in </em>ast.properties* to execute a query on a separate database.</td>
+</tr>
+<tr>
+<td>select (OUT)</td>
+<td>Target variable</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;query&gt;</span>
+<span class="w">  </span><span class="nt">&lt;descn&gt;</span><span class="w"> </span>SQL<span class="w"> </span>statement<span class="w"> </span>returning<span class="w"> </span>multiple<span class="w"> </span>rows<span class="nt">&lt;/descn&gt;</span>
+<span class="w">  </span><span class="nt">&lt;util-sql</span><span class="w"> </span><span class="na">stmt=</span><span class="s">&quot;select obj_id from obj_name where name= &#39;{$n}&#39;&quot;</span><span class="w"> </span><span class="na">delim=</span><span class="s">&quot;;&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;sql_result&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+</code></pre></div>
+</div>
+<h4 id="query-file">Query file</h4>
+<p>The util-file query operation provides the possibility to read large values from files. The file content can either be read from the local file system or the IO directory of the Avaloq Banking System. With this operation it is also possible to write or append the content of a variable to a local file.</p>
+<p><strong><em><code>&lt;query&gt;</code> | <code>&lt;util-file ...&gt;</code></em></strong> - Reads in the content of a file or writes/appends into a file.</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>dir</em> (IN)</td>
+<td>Direction indicates whether a file is to be read, written, or appended. Possible values are "write", "append" and "read". Default is "read".</td>
+</tr>
+<tr>
+<td><em>id</em> (IN)</td>
+<td>Id of the file to be read (id corresponds to column id in the FILE_IDX of the Avaloq Banking System).</td>
+</tr>
+<tr>
+<td><em>path</em> (IN)</td>
+<td>Path to the local file that is to be read or written.</td>
+</tr>
+<tr>
+<td><em>descn</em> (IN)</td>
+<td>Description</td>
+</tr>
+<tr>
+<td><em>select</em> (OUT)</td>
+<td>Target variable that holds the content to be written or read.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- reading in from local file system --&gt;</span>
+<span class="nt">&lt;query&gt;</span>
+<span class="w">  </span><span class="nt">&lt;util-file</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;somepath&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;f_content&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+
+<span class="cm">&lt;!-- reading in from the Avaloq io directory --&gt;</span>
+<span class="nt">&lt;query&gt;</span>
+<span class="w">  </span><span class="nt">&lt;util-file</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;$file_id&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;f_content&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+
+<span class="cm">&lt;!-- writing to local directory --&gt;</span>
+<span class="nt">&lt;query&gt;</span>
+<span class="w">  </span><span class="nt">&lt;util-file</span><span class="w"> </span><span class="na">dir=</span><span class="s">&quot;write&quot;</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;$fPath&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;$f_content&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+
+<span class="cm">&lt;!-- appending to local directory --&gt;</span>
+<span class="nt">&lt;query&gt;</span>
+<span class="w">  </span><span class="nt">&lt;util-file</span><span class="w"> </span><span class="na">dir=</span><span class="s">&quot;append&quot;</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;$fPath&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;$f_content&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+</code></pre></div>
+</div>
+<h4 id="query-diff">Query diff</h4>
+<p>The <code>util-diff</code> query operation finds differences between two values. Like standard diff utilities such as Windiff or GNU Diff, it compares the value of one variable against another. 
+The operation then returns both the identified differences and the longest common subsequence of the two variables.</p>
+<p><img alt="query_diff.svg" src="../assets/UserDocumentationM/query_diff.svg" /></p>
+<figcaption>Console output showing the results of comparing two strings with the util-diff operation</figcaption>
+
+<p><strong><em><code>&lt;query&gt;</code> | <code>&lt;util-diff ...&gt;</code></em></strong> - Finds differences in large strings</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>src</em> (IN)</td>
+<td>Source string for comparison (mandatory).</td>
+</tr>
+<tr>
+<td><em>ref</em> (IN)</td>
+<td>Reference string to compare against (mandatory).</td>
+</tr>
+<tr>
+<td><em>select</em> (OUT)</td>
+<td>Variable that will be filled with all the differences between the two given strings.</td>
+</tr>
+<tr>
+<td><em>lcs</em> (IN)</td>
+<td>Variable that will be filled with the longest common subsequence of the two given strings.</td>
+</tr>
+<tr>
+<td><em>delim</em> (IN)</td>
+<td>The comparison identifies multiple differences. These differences are concatenated with this delimiter before they are returned.</td>
+</tr>
+<tr>
+<td><em>splitter</em> (IN)</td>
+<td>Pattern to split the two input values into pieces for piecewise comparison. Defaults to the newline character, that is by default a line wise comparison is done.</td>
+</tr>
+<tr>
+<td><em>descn</em> (IN)</td>
+<td>Description</td>
+</tr>
+<tr>
+<td><em>regex</em> (IN)</td>
+<td>A flag when set to true, compares <em>src</em> and <em>ref</em> to check if equal; if not, it will then check if a regular expression is present in the line of <em>ref</em> and will match the pattern against the current line of src. The default is false.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;query&gt;</span><span class="w"> </span>
+<span class="w">  </span><span class="nt">&lt;util-diff</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;$val_5&quot;</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;$val_6&quot;</span><span class="w"> </span><span class="na">delim=</span><span class="s">&quot;\n&quot;</span><span class="w"> </span><span class="na">splitter=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;diff&quot;</span><span class="w"> </span><span class="na">lcs=</span><span class="s">&quot;lcs&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: Two strings are compared</p>
+<ul>
+<li>Source: "b__C__dE"</li>
+<li>Reference: "Ab__c__d"</li>
+<li>Splitter "" (Empty string resulting in comparison by character)
+The result is four differences and the longest common subsequence is:<code>"b____d"</code>.</li>
+</ul>
+</div>
+<h4 id="query-replace">Query replace</h4>
+<p>The <code>util-replace</code> operation allows to replace certain key words in a string or a variable with different values.</p>
+<p><strong><em><code>&lt;query&gt;</code> | <code>&lt;util-replace ...&gt;</code></em></strong> - Replace key words with values</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>src</em> (IN)</td>
+<td>Source string for replacement (mandatory).</td>
+</tr>
+<tr>
+<td><em>select</em> (OUT)</td>
+<td>Variable that will be filled with the replaced content of <em>src</em>. The same variable can be used for <em>src</em> and <em>select</em>.</td>
+</tr>
+<tr>
+<td><em>replacement</em> (IN)</td>
+<td>Contains attributes <em>key</em> and <em>value</em>.</td>
+</tr>
+<tr>
+<td><em>key</em> (IN)</td>
+<td>Contains a string from <em>src</em> that is to be replaced with <em>value</em>.</td>
+</tr>
+<tr>
+<td><em>value</em> (IN)</td>
+<td>Contains a string to replace <em>key</em>.</td>
+</tr>
+<tr>
+<td><em>descn</em> (IN)</td>
+<td>Description</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;query&gt;</span>
+<span class="w">  </span><span class="nt">&lt;util-replace</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;{$text}&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;text&quot;</span><span class="w"> </span><span class="na">descn=</span><span class="s">&quot;REPLACE MSG&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;replacement</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;[val_date]&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$l_date&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;replacement</span><span class="w"> </span><span class="na">key=</span><span class="s">&quot;[amount]&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$l_amt&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/util-replace&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+</code></pre></div>
+</div>
+<h4 id="query-latest-order">Query latest-order</h4>
+<p>The <code>latest-order</code> operation fetches and displays the latest Avaloq orders in AST.</p>
+<p><strong><em><code>&lt;query&gt;</code> | <code>&lt;latest-order ...&gt;</code></em></strong> - Display values of latest orders in avaloq.</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>limit</em> (IN)</td>
+<td>Limit number of items to shown in Avaloq orders. Default value is 20.</td>
+</tr>
+<tr>
+<td><em>select</em> (OUT)</td>
+<td>An AST Variable to specify and save the output operation.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;query&gt;</span>
+<span class="w">  </span><span class="nt">&lt;latest-order</span><span class="w"> </span><span class="na">limit=</span><span class="s">&quot;10&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;text&quot;</span><span class="w"> </span><span class="na">descn=</span><span class="s">&quot;LATESTORDER TEST&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+</code></pre></div>
+</div>
+<h4 id="query-order-generation">Query order-generation</h4>
+<p>The <code>order-generation</code> operation allows to generate a template for an AST test based on an existing order id.</p>
+<p><strong><em><code>&lt;query&gt;</code> | <code>&lt;order-generation ...&gt;</code></em></strong> - Generate a template test XML to re-create an Avaloq order.</p>
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>id</em> (IN)</td>
+<td>AST expression to specify the Avaloq order ID to be scanned to generate the AST test template.</td>
+</tr>
+<tr>
+<td><em>descn</em> (IN)</td>
+<td>Description of this operation instance.</td>
+</tr>
+<tr>
+<td><em>validate</em> (IN)</td>
+<td>Boolean to specify if AST should try to automatically trim down the test through a strict validation. Depending on the complexity of the order, this may results in a failure. Defaults to false.</td>
+</tr>
+<tr>
+<td><em>output-xml</em> (OUT)</td>
+<td>The name of the generated AST test template XML that will be saved upon completion.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;query&gt;</span>
+<span class="w">  </span><span class="nt">&lt;order-generation</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;100000015324&quot;</span><span class="w"> </span><span class="na">output-xml=</span><span class="s">&quot;generated-test.xml&quot;</span><span class="w"> </span><span class="na">descn=</span><span class="s">&quot;generating atest template for 00000015324&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/query&gt;</span>
+</code></pre></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Synpulse
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tracking"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
