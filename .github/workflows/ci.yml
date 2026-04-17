@@ -50,6 +50,7 @@ jobs:
           echo "DOC_VERSION_X=$DOC_VERSION_X" >> $GITHUB_ENV
 
       - run: pip install mkdocs-material mike
+      - run: pip install mkdocs-print-site-plugin
       - run: mike deploy --push --update-aliases ${DOC_VERSION_X} latest
       - run: |                      # set default only if gh-pages branch does not exists
           if [ "${{ inputs.set-default }}" = "true" ]; then  
