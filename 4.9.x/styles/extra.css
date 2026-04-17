@@ -1,0 +1,147 @@
+.md-main__inner.md-grid {
+    max-width: 1600px;
+}
+.md-content__inner img {
+  display: block;      /* Required for margin: auto to work */
+  margin: 1em auto;    /* Centers the image horizontally and adds vertical space */
+
+  /* 2. Rounded Corners */
+  border-radius: 8px;  /* Adjust '8px' to any value you like (e.g., 5px, 15px) */
+
+  /* Optional: Bounding the image size */
+  max-width: 90%;      /* Ensures images are responsive and don't take up the full screen width */
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Center the caption under the image */
+figcaption {
+  width: 35em;        /* same as your image width */
+  max-width: 100%;    /* avoids overflow */
+  margin: 0.6em auto; /* centers the text */
+  text-align: center;
+  font-style: italic;
+}
+
+
+/* --- Landing tiles (Material grid + cards) --- */
+
+/* The container around your tiles */
+.landing-tiles {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.grid.cards .card-link { display:block; height:100%; color:inherit; text-decoration:none; }
+.grid.cards .card-link > article {
+  height:100%; padding:0.2rem 1.25rem; border-radius:.6rem;
+  background: var(--md-surface);
+  border: 2px solid color-mix(in oklab, currentColor 12%, transparent);
+  transition: transform .15s, box-shadow .15s, border-color .15s;
+}
+.grid.cards .card-link:hover > article,
+.grid.cards .card-link:focus-visible > article {
+  color: var(--md-typeset-a-color);
+  transform: translateY(-2px);
+  border-color: var(--md-typeset-a-color);
+  box-shadow: 0 6px 20px rgba(0,0,0,.25), 0 1px 0 rgba(255,255,255,.05) inset;
+}
+.card-link h3 {
+  margin-top: 1rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+
+/* Full-bleed hero stays the same */
+.hero-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+/* Gradient container */
+.mdx-hero__image.hero-gradient {
+  position: relative;            /* creates stacking context */
+  width: 100%;
+  min-height: 60vh;
+  background: linear-gradient(
+    135deg,
+    #6a00ff 0%,
+    #4a24b6 28%,
+    #2a2140 56%,
+    #15161a 100%
+  );
+  overflow: hidden;              /* clip any image overflow */
+  color: #fff;
+}
+
+/* If you added an overlay earlier with ::after, keep it UNDER the image/content */
+.mdx-hero__image.hero-gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;                    /* important: below image/content */
+}
+
+/* The image ON TOP of the gradient, pinned to the left edge */
+.hero-graphic {
+  display: block;
+  position: static;
+  margin: 2rem 0 1rem 3rem;
+  height: clamp(60px, 40vh, 150px);
+  width: auto;
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Right-side content aligned to the grid, above everything */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 70rem;
+  margin-left: 2rem;
+  margin-right: 0;
+  padding: clamp(2rem, 2vw, 2rem) 1rem;
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+/* Optional: limit width on the text column */
+.hero-content > * {
+  max-width: 50rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Small screens: center stack */
+@media (max-width: 900px) {
+  .hero-graphic {
+    display: block;
+    margin: 2rem 0 1rem 2rem;
+    height: clamp(60px, 28vh, 120px);
+    left: unset;
+    transform: none;
+  }
+  .hero-content {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin-left: 2rem;
+    margin-right: 0;
+  }
+}
+
+.intro-heading{
+font-size: clamp(1.75rem, 5vw, 2.5rem);
+  line-height: 1.2;
+  font-weight: 700;
+  }
+.intro-para{
+font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+  margin-top: 1rem;
+  }
