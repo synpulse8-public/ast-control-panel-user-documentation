@@ -78,4 +78,7 @@ markdown_extensions:
   - md_in_html
   - toc:
       toc_depth: 2-3
+plugins:
+  - search
+  - print-site
 copyright: Copyright © 2026 Synpulse
