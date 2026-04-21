@@ -1,3 +1,4 @@
+# Jira Xray
 This chapter explains how to set up the **AST Control Panel** to integrate with **Jira** using the **Xray** test management app. This integration allows you to link your automated test cases to external IDs, track execution results, and view synchronization status and logs directly from AST.
 
 ### Configuration Settings
