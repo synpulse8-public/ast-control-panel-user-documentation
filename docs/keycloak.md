@@ -9,7 +9,7 @@ The keycloak profile allows you to integrate the AST Control Panel with Keycloak
 !!! info
     All of these environment variables need to be set up in the same place as the variables mentioned in the [Minimal deployment settings](deployment.md#minimal-settings-for-deployment)
 
-1. Firstly the keycloak profile must be set as an env variable in your deployment file:
+1. The keycloak profile must be set as an env variable in your deployment file:
     ```properties
     SPRING_PROFILES_ACTIVE=prod,api-docs,keycloak
     ```
@@ -25,24 +25,26 @@ The keycloak profile allows you to integrate the AST Control Panel with Keycloak
 !!! info
     For the `SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI` use the JWK URL provided by your keycloak instance. Usually it is the url with /certs at the end. 
 
-3. Other settings that have to configured in an deployment file:
-    ```properties
-    AST_CONTROL_PANEL_SSO_USERNAME_CLAIM=preferred_username
+3. Other settings that have to configured in the deployment file:
+    
 
-    AST_CONTROL_PANEL_SSO_ROLES_CLAIM=sourceGroups
+| Configuration key                                   | Description                                                                 |
+|-----------------------------------------------------|-----------------------------------------------------------------------------|
+| `AST_CONTROL_PANEL_SSO_USERNAME_CLAIM`              | Specifies the claim from which the username will be extracted. The username must be unique. |
+| `AST_CONTROL_PANEL_SSO_ROLES_CLAIM`                 | Specifies the claim from which the roles will be extracted.                 |
+| `AST_CONTROL_PANEL_SSO_ROLE_MAPPING_ROLE_ADMIN`     | Specifies which roles from the claims will be mapped to the **admin** role in the application. Multiple roles can be configured. |
+| `ROLE_MAPPING_ROLE_USER`                            | Specifies which roles from the claims will be mapped to the **user** role in the application. Multiple roles can be configured. |
 
-    AST_CONTROL_PANEL_SSO_ROLE_MAPPING_ROLE_ADMIN=admin,admin2
+Example:
+```properties
+AST_CONTROL_PANEL_SSO_USERNAME_CLAIM=preferred_username
 
-    AST_CONTROL_PANEL_SSO_ROLE_MAPPING_ROLE_USER=user,user2
-    ```
-   
-    `AST_CONTROL_PANEL_SSO_USERNAME_CLAIM `- specifies the claim from which the username will be extracted. This username has to be unique
+AST_CONTROL_PANEL_SSO_ROLES_CLAIM=sourceGroups
 
-    `AST_CONTROL_PANEL_SSO_ROLES_CLAIM` - specifies the claim from which the roles should be extracted
+AST_CONTROL_PANEL_SSO_ROLE_MAPPING_ROLE_ADMIN=admin,admin2
 
-    `AST_CONTROL_PANEL_SSO_ROLE_MAPPING_ROLE_ADMIN:` specifies which roles from the claims will be mapped as the admin role in the app. It can be more then one role.
-
-    `ROLE_MAPPING_ROLE_USER` specifies which roles from the claims will be mapped as the user role in the app. It can be more then one role. 
+AST_CONTROL_PANEL_SSO_ROLE_MAPPING_ROLE_USER=user,user2
+```
 
 4.  If your keycloak instance is using self-signed certificates you need to import the certificate in the java truststore of the application.
 See the [Setting up a truststore](deployment.md#setting-up-a-truststore-for-ssl) section.
@@ -59,6 +61,15 @@ After the keycloak profile activation the authentication process is entirely han
 - If there was already a user created via ast with the same username as is being used by a keycloak user this user modified to a keycloak user automatically.
 
 - If an ast user is deactivated or was deleted and a keycloak user with the same user name logs in, the keycloak user has precedence as the data in JWT claims are taken into consideration.
+
+### Behavior of the application with keycloak profile deactivated after it was active
+If you deactivate the keycloak profile after it was active, the application will switch back to the default authentication process.
+
+The users that were converted to keycloak users will be converted back to normal users and they will be able to log in again with their old credentials.
+
+The users that were created as new users in keycloak while the profile was active will be deleted. If you want to keep these users you need to create them again in the app after deactivating the keycloak profile.
+
+
 
 
 
