@@ -1,3 +1,4 @@
+# HP ALM
 This chapter provides instructions for integrating HP ALM with the AST Control Panel. You will learn the necessary configuration steps, how to link test cases to external ALM IDs, map ALM instance IDs, and view the synchronization status for executed tests.
 
 ### ALM Configuration

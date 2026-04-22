@@ -1,4 +1,4 @@
-
+# Frequently used terms and metatypes
 ## Glossary of Terms
 
 |Term|Definition|
