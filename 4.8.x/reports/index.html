@@ -1,0 +1,1841 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../analytics/">
+      
+      
+        <link rel="next" href="../glossary_of_terms/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/global/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Reports - Control Panel Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../styles/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#report-formats-and-generation-html-xml-excel" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Control Panel Guide" class="md-header__button md-logo" aria-label="Control Panel Guide" data-md-component="logo">
+      
+  <img src="../assets/global/s8AST.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Control Panel Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reports
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Control Panel Guide" class="md-nav__button md-logo" aria-label="Control Panel Guide" data-md-component="logo">
+      
+  <img src="../assets/global/s8AST.png" alt="logo">
+
+    </a>
+    Control Panel Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_guide_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Login
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test_case_repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test case repository
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test script definition
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Test script definition
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test_script_and_test_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test script and test data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration_of_script_languages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration of script languages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../query_operation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Query operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verify_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verify operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../control_statements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control statements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test_sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test sets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#report-formats-and-generation-html-xml-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Report Formats and Generation (HTML, XML, Excel)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Report Formats and Generation (HTML, XML, Excel)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xml-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XML Report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTML report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excel-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Excel Report
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-execution-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewing Execution Reports
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Viewing Execution Reports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-reports-in-the-control-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Reports in the Control Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customizing Reports
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing Reports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-and-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration and Templates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excel-template-and-xpath-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Excel template and XPATH expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary_of_terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frequently used terms and metatypes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Integration guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HP ALM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jira_xray/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jira Xray
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keycloak/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keycloak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system_requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#report-formats-and-generation-html-xml-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Report Formats and Generation (HTML, XML, Excel)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Report Formats and Generation (HTML, XML, Excel)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xml-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XML Report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTML report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excel-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Excel Report
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-execution-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewing Execution Reports
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Viewing Execution Reports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-reports-in-the-control-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Reports in the Control Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customizing Reports
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing Reports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-and-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration and Templates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excel-template-and-xpath-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Excel template and XPATH expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reports">Reports</h1>
+<p>When you execute test cases with the AST tool, it automatically collects information about the test run and provides it to you through two main output channels: the <strong>AST Log</strong> and a <strong>XML Report</strong>.</p>
+<h4 id="ast-log">AST Log</h4>
+<p>The AST log provides real-time feedback on the test run as it happens.</p>
+<ul>
+<li><strong>Console Output</strong>: The log is displayed directly "on the go" in the console. This is useful for monitoring the progress of your tests in real time.</li>
+</ul>
+<h4 id="the-xml-report">The  XML Report</h4>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Upon completion of the test run, AST generates a single, comprehensive XML file that summarizes the entire test run. </p>
+</div>
+<p>This report is the foundation for creating other report types.</p>
+<ul>
+<li>
+<p>Primary Report Format: The XML file is the primary output format. It's designed to be <strong>machine-readable</strong>, making it easy to use as a <strong>data source</strong>.</p>
+</li>
+<li>
+<p>Generating Other Reports: You can use this XML report to generate various other report formats, such as <strong>HTML, Excel,</strong> or custom reports tailored to your specific needs.</p>
+</li>
+</ul>
+<h2 id="report-formats-and-generation-html-xml-excel">Report Formats and Generation (HTML, XML, Excel)</h2>
+<h3 id="xml-report">XML Report</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The AST test automation tool generates a detailed XML report for every test run. </p>
+</div>
+<p>This report, which is the central source of information about a test's execution, is defined by the <em>out.xsd</em> schema file.</p>
+<h3 id="html-report">HTML report</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The HTML report provides a user-friendly, web-based view of your test execution results.</p>
+</div>
+<p><img alt="ast_html_report.png" src="../assets/UserDocumentationM/ast_html_report.png" /></p>
+<figcaption>Snippet of the HTML test report clearly distinguishing between successful (green) and failed (red) test steps</figcaption>
+
+<p>It is generated automatically from the master XML report after the test run is complete.</p>
+<h4 id="key-features">Key Features</h4>
+<ul>
+<li><strong>User-Friendly Format</strong>: The HTML format offers a clear, web-based display of test results, making it easy to review the success and failure of test steps.</li>
+<li><strong>Source Generation</strong>: The HTML report is generated from the comprehensive XML report using an XSL Transformation (XSLT).</li>
+</ul>
+<h4 id="configuration">Configuration</h4>
+<p>The specific style and content of the HTML report are controlled by a stylesheet defined in your AST property file (<em>ast.properties</em>):</p>
+<table>
+<thead>
+<tr>
+<th>Property Name</th>
+<th>Example Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ast.report.xslt</td>
+<td>report_summary.xsl</td>
+<td>Specifies the path and name of the XSLT file used to transform the XML report into the final HTML output.</td>
+</tr>
+</tbody>
+</table>
+<p>By modifying the referenced XSLT file, you can customize the appearance and level of detail presented in the final HTML report.</p>
+<h3 id="excel-report">Excel Report</h3>
+<p>The Excel report is generated from an XML test run file using XPath expressions embedded inside the Excel template.</p>
+<p>Each sheet in the template contains expressions that extract data from the XML and populate the report.</p>
+<p>The expressions are evaluated by the AST report generator when creating the Excel report.</p>
+<p>For more information, see the <a href="#excel-template-and-xpath-expressions">Excel Report Template</a> section.</p>
+<h2 id="viewing-execution-reports">Viewing Execution Reports</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The AST Control Panel provides several methods for reviewing the results and logs of executed tests, both through the graphical interface and via the REST API.</p>
+</div>
+<h3 id="accessing-reports-in-the-control-panel">Accessing Reports in the Control Panel</h3>
+<p>You can view reports at three levels of detail: Execution, Test Set, and Individual Test Case.</p>
+<h4 id="the-schedule-execution-view">The Schedule (Execution) View</h4>
+<p>The <strong>Schedule</strong> menu functions as the central log for all test activity, showing the status of both scheduled and completed runs.</p>
+<ul>
+<li><strong>Execution Grid</strong>: The main table displays key metadata for every run, including the Start Date, End Date, User Name, and the current Status.</li>
+<li><strong>Execution Results Summary</strong>: This summary details the total number of tests that Passed, Failed, Errored, and are Pending.</li>
+<li><strong>Detailed Execution Report Window</strong>: Clicking the Report action in the grid opens a separate detail window showing the results for that entire run.<ul>
+<li>This window lists every Test Case included in the run, its Status, Start and End times.</li>
+<li>It offers a Summary HTML Report button for a full-run overview.</li>
+</ul>
+</li>
+</ul>
+<h4 id="test-case-repository-individual-test-case">Test Case Repository (Individual Test Case)</h4>
+<p>You can view the latest report for an individual test case directly from the Test Case Repository.</p>
+<ul>
+<li><strong>Status Bubble</strong>: Clicking on the colored status bubble next to a test case opens its execution report.</li>
+<li><strong>Report Formats</strong>: Reports for individual test cases are available in three distinct formats for review and export:</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The <strong>Analytics</strong> menu also provides the ability to export a CSV reports. See the <a href="../analytics/">Analytics</a> documentation for details.</p>
+</div>
+<h2 id="customizing-reports">Customizing Reports</h2>
+<p>You can customize the content and format of Excel reports by using an Excel template and embedding <strong>XPATH expressions</strong>. When a test run is complete, AST enriches your template by replacing cell contents with data pulled directly from the <strong>XML Report</strong> using these expressions.</p>
+<h3 id="configuration-and-templates">Configuration and Templates</h3>
+<p>The process relies on defining the necessary files in your configuration:</p>
+<ul>
+<li><strong>XML Report</strong>: This is the base data source generated after every test run. The Excel customization process uses data from this file.</li>
+<li><strong>Excel Template</strong>: This is the Excel file (.xls or .xlsx) you design with your desired layout.</li>
+<li><strong>HTML Template</strong>: This is the html you can design with your desired layout.</li>
+</ul>
+<p>The template files can be uploaded in <a href="../admin/#configuration">Configuration</a> section. Admin role is required to upload these files</p>
+<h3 id="excel-template-and-xpath-expressions">Excel template and XPATH expressions</h3>
+<p>The Excel template supports three expression formats:</p>
+<h5 id="1-single-value-expression">1. Single Value Expression</h5>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Syntax</label><label for="__tabbed_1_2">Example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>[xpath]
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>[testrun/@status]
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>This returns a single value from the XML and writes it into the cell.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Example XML</label><label for="__tabbed_2_2">Result in Excel</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;testrun</span><span class="w"> </span><span class="na">status=</span><span class="s">&quot;ok&quot;</span><span class="nt">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>ok
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h5 id="2-multi-value-expression">2. Multi-value Expression</h5>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Syntax</label><label for="__tabbed_3_2">Example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>[[xpath]]
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>[[//testcase/@status]]
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>This returns all matching nodes and writes them vertically into the column.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Example XML</label><label for="__tabbed_4_2">Result in Excel</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;testcases&gt;</span>
+<span class="w">  </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">status=</span><span class="s">&quot;ok&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">status=</span><span class="s">&quot;ok&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">status=</span><span class="s">&quot;error&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/testcases&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>ok
+ok
+error
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Each value is written into a new row.</p>
+<hr />
+<h5 id="3-row-based-expression">3. Row-based Expression</h5>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Syntax</label><label for="__tabbed_5_2">Example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>[[[nodeset_xpath;relative_xpath]]]
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>[[[//testcase;@status]]]
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Meaning of the example:</p>
+<ol>
+<li>Select all nodes using <code>testcase</code></li>
+<li>For each selected node evaluate <code>status</code></li>
+<li>Write results row-by-row in the sheet</li>
+</ol>
+<h4 id="test-cases-sheet">Test Cases Sheet</h4>
+<p>The <strong>Test Cases</strong> sheet contains all executed test cases.</p>
+<p>Default expressions used in the template:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Expression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status</td>
+<td><code>[[//testcase/arguments/argument[@name="TESTCASE_ID"]/../../@status]]</code></td>
+</tr>
+<tr>
+<td>Test Case ID</td>
+<td><code>[[//testcase/arguments/argument[@name="TESTCASE_ID"]/@value]]</code></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>[[//testcase/arguments/argument[@name="DESCRIPTION"]/@value]]</code></td>
+</tr>
+<tr>
+<td>Test Script</td>
+<td><code>[[//testcase/arguments/argument[@name="TESTCASE_ID"]/../../testscript]]</code></td>
+</tr>
+<tr>
+<td>Test Data</td>
+<td><code>[[//testcase/arguments/argument[@name="TESTCASE_ID"]/../../testdata]]</code></td>
+</tr>
+<tr>
+<td>Data Index</td>
+<td><code>[[//testcase/arguments/argument[@name="TESTCASE_ID"]/../../index]]</code></td>
+</tr>
+</tbody>
+</table>
+<p>Rows are generated from the <code>testcase</code> nodes in the XML.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Expressions that depend on optional fields may behave differently.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>[[//testcase/arguments/argument[@name=&quot;TESTCASE_ID&quot;]/@value]]
+</code></pre></div>
+<p>This expression only returns nodes that contain <code>TESTCASE_ID</code>.</p>
+<p>If some testcases do not contain this argument, those rows will not appear in the result.</p>
+</div>
+<h4 id="alternative-pattern">Alternative Pattern</h4>
+<p>To ensure that <strong>all testcases appear in the report</strong>, rows should always be anchored on the <code>testcase</code> node.</p>
+<p>Other fields can then extract values relative to that testcase.</p>
+<p>Example:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Expression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status</td>
+<td><code>[[//testcase[@status="ok"]/@status]]</code></td>
+</tr>
+<tr>
+<td>Test Case ID</td>
+<td><code>[[//testcase/arguments/argument[@name="TESTCASE_ID"]/@value]]</code></td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>[[//testcase/arguments/argument[@name="DESCRIPTION"]/@value]]</code></td>
+</tr>
+<tr>
+<td>Test Script</td>
+<td><code>[[//testcase[@status="ok"]/testscript]]</code></td>
+</tr>
+<tr>
+<td>Test Data</td>
+<td><code>[[//testcase[@status="ok"]/testdata]]</code></td>
+</tr>
+<tr>
+<td>Data Index</td>
+<td><code>[[//testcase[@status="ok"]/index]]</code></td>
+</tr>
+</tbody>
+</table>
+<p>Typical AST XML structure:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;testrun&gt;</span>
+<span class="w">  </span><span class="nt">&lt;testcases&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">status=</span><span class="s">&quot;ok&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TEST_A&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;arguments&gt;</span>
+<span class="w">        </span><span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TESTCASE_ID&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TEST_A_1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/arguments&gt;</span>
+<span class="w">      </span><span class="nt">&lt;testscript&gt;</span>test_a.xml<span class="nt">&lt;/testscript&gt;</span>
+<span class="w">      </span><span class="nt">&lt;testdata&gt;</span>data.xls<span class="nt">&lt;/testdata&gt;</span>
+<span class="w">      </span><span class="nt">&lt;index&gt;</span>0<span class="nt">&lt;/index&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/testcase&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/testcases&gt;</span>
+<span class="nt">&lt;/testrun&gt;</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Synpulse
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tracking"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
