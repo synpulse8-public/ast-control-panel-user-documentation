@@ -1,6 +1,7 @@
 # Administration
 When the admin role is assigned to a user in the AST Control Panel, they gain access to the "Admin" menu. 
-This menu provides various administrative functionalities, including user management, system metrics, health status, log management, application configuration, and API documentation.
+This menu provides various administrative functionalities, including user management, system metrics, health status, log management, 
+application configuration, database management and API documentation.
 
 ![admin_menu.png](assets/AdminDocu/dropdown.png)
 <figcaption>Admin menu dropdown</figcaption>
@@ -69,6 +70,46 @@ In the application configuration section you can set up various properties:
 | ast-control-panel.user-interface.header-text-color   | Property to set up the color of the text in the header in the control panel. You can use any valid CSS hex color value for this property.                                                                                                                                             |
 
 The override checkbox must be selected to use the value you set up, otherwise the default value will be used. Default values are set up in the application db.
+
+### Maintenance
+The Maintenance tab provides access to database management functionalities. You can perform database housekeeping by deleting old test executions and reports. 
+This helps to keep the database clean and maintain optimal performance. The interface allows you to select a date and delete all executions and reports that were executed before the selected date.
+
+![maintenance-screen.png](assets/AdminDocu/maintenance-screen.png)
+<figcaption>Maintenance interface. </figcaption>
+
+
+You can see the date of the earliest execution which helps you to orient yourself in the database and decide which executions to delete. 
+
+
+There is also displayed the date which is the latest date that can be selected for deletion. This date is calculated based on the environment variable `ast-control-panel.maintenance.execution-info-forced-retention-period`. 
+Default is for 1 year, which means that you cannot delete executions that are newer than 1 year. This is to prevent accidental deletion of recent executions. It accepts the [ISO 8601](https://docs.digi.com/resources/documentation/digidocs/90001488-13/reference/r_iso_8601_duration_format.htm) duration format. 
+
+!!! info
+    Use only the duration part, for example `P6M` for 6 months, `P1Y` for 1 year, `P15D` for 15 days etc. Do not use time designators, such as T, H, M, S etc. because they are not supported in this context.
+
+The executions are deleted in batches, so you can select the batch size for deletion. Default is 1000 executions per batch. If there are more executions to delete than the selected batch size, the deletion will be performed in multiple batches until all selected executions are deleted. 
+This is configurable via the environment variable `ast-control-panel.maintenance.max-executions-to-delete-per-batch`. Info on setting up environment variables can be found [here](deployment.md#setting-up-environment-variables).
+
+After selecting the date you can press the delete button then a confirmation dialog will be displayed which informs you about the number of executions that will be deleted and the date before which the executions will be deleted.
+After confirming the deletion, the deletion process will start and you will see a progress bar with the progress of the deletion (see screenshot below)
+
+![maintenance-progress-bar.png](assets/AdminDocu/maintenance-progress-bar.png)
+<figcaption>Deletion progress bar. </figcaption>
+
+!!! warning "Important"
+    Deletion of executions is irreversible, so please be careful when selecting the date and confirming the deletion. 
+    Once deletion process is started it cannot be stopped, so make sure that you have selected the correct date confirming the deletion.
+
+During the deletion process another deletion cannot be started either via the UI or the API. You will have to wait until the current deletion process is finished. 
+This is to prevent conflicts and ensure data integrity during the deletion process.
+
+The deletion process is performed asynchronously in the background, so you can continue using the control panel while the deletion is in progress.
+
+!!! info
+    We recommend to perform deletions of smaller date ranges(1 week, 1 month) at the start so you can get a feeling of how many executions are being deleted and how long the deletion process takes. 
+    Then you can select larger date ranges for deletion if needed. Using this first on dev environment is also recommended before using it on production environment for the first time.
+
 
 ### API
 The API tab provides access to the REST API documentation and allows you to test API endpoints directly from the control panel.

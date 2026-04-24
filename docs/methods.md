@@ -1,3 +1,4 @@
+# Methods
 ## Definition and use of Methods
 AST test script syntax supports outsourcing functionality in **methods**. This mechanism can be applied to implement often-used test script sub-steps in a single AST method. This helps to build **re-usable AST test script steps**.
 

@@ -54,7 +54,7 @@ nav:
         - Jira Xray: jira_xray.md
         - Keycloak: keycloak.md
         - Deployment: deployment.md
-        - Security: security.md
+        - Security: security-info.md
         - System requirements: system_requirements.md
     - FAQ: faq.md
     - Best practices: best_practices.md
