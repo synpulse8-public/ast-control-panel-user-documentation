@@ -2,7 +2,7 @@
         <!-- Left-aligned image ON TOP of the gradient -->
         <img
                 id="hero-graphic-pdf"
-                src="/assets/global/s8AST.png"
+                src="{{ base_url }}/assets/global/s8AST.png"
                 alt="AST"
                 draggable="false"
         />
