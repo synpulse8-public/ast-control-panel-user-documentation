@@ -80,5 +80,9 @@ markdown_extensions:
       toc_depth: 2-3
 plugins:
   - search
-  - print-site
+  - print-site:
+      enumerate_headings: false
+      enumerate_figures: false
+      add_cover_page: true
+      cover_page_template: "docs/print_cover_page/custom_cover_page.tpl"
 copyright: Copyright © 2026 Synpulse
