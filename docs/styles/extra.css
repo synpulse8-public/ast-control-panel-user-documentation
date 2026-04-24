@@ -145,3 +145,66 @@ font-size: clamp(1rem, 2.5vw, 1.25rem);
   line-height: 1.6;
   margin-top: 1rem;
   }
+
+.hero-bleed-pdf {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+/* Gradient container */
+.mdx-hero__image.hero-gradient-pdf {
+  position: relative;            /* creates stacking context */
+  width: 100%;
+  min-height: 90vh;
+  background: linear-gradient(
+    135deg,
+    #6a00ff 0%,
+    #4a24b6 28%,
+    #2a2140 56%,
+    #15161a 100%
+  );
+  overflow: hidden;              /* clip any image overflow */
+  color: #fff;
+}
+
+/* If you added an overlay earlier with ::after, keep it UNDER the image/content */
+.mdx-hero__image.hero-gradient-pdf::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;                    /* important: below image/content */
+}
+
+/* The image ON TOP of the gradient, pinned to the left edge */
+#hero-graphic-pdf {
+  display: block;
+  position: static;
+  margin-left: 2rem;
+  height: clamp(60px, 40vh, 120px);
+  width: auto;
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+/* Right-side content aligned to the grid, above everything */
+#hero-content-pdf {
+  position: relative;
+  z-index: 2;
+  max-width: 50rem;
+  margin-left: 0.5rem;
+  margin-right: 0;
+  padding: clamp(2rem, 2vw, 2rem) 1rem;
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+/* Optional: limit width on the text column */
+#hero-content-pdf > * {
+  max-width: 50rem;
+  margin-left: 0;
+  margin-right: 0;
+  color: #fff;
+}
