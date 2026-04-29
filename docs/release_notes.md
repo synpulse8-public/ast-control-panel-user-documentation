@@ -7,7 +7,7 @@
 
 #### New Features
 - Database Maintenance(Deletion of old executions and reports). For more info click [here](admin.md#maintenance).
-- When turning off Keycloak profile AST created users are restored to their previous state, meaning they will be able to log in again with their old credentials. For more info click [here](keycloak.md).
+- When turning off Keycloak profile AST created users are restored to their previous state, meaning they will be able to log in again with their old credentials. For more info click [here](keycloak.md#behavior-of-the-application-with-keycloak-profile-deactivated-after-it-was-active).
 
 #### Bug Fixes
 - Fixed avaloq instance dropdown , so it is displayed correctly
