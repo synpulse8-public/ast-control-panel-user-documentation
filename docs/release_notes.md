@@ -21,5 +21,5 @@
 #### Other Changes
 - Updated frontend dependencies.
 - Updated backend dependencies. Using Spring Boot 3.5.14
-- Updated AST Core to 3.1.3
+- Updated AST Core to 3.11.3
 - Help button now opens the documentation in a new tab.
