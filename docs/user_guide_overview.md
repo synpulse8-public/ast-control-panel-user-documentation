@@ -30,7 +30,7 @@ You can use the sidebar on the left for navigation or the tiles below to jump to
 
             <a class="card-link" href="../navigation">
                 <article>
-                    <h3>Navigation</h3>
+                    <h3>Landing page and Navigation</h3>
                     <p>Brief summary of applications sections </p>
                     <p><strong>Explore →</strong></p>
                 </article>

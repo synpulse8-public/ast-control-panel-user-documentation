@@ -33,7 +33,7 @@ nav:
         - Overview: user_guide_overview.md
         - Login: login.md
         - Administration: admin.md
-        - Navigation: navigation.md
+        - Landing page and Navigation: navigation.md
         - Test case repository: test_case_repository.md
         - Test script definition:
             - Test script and test data: test_script_and_test_data.md
