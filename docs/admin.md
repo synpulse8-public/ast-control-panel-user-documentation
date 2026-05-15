@@ -3,20 +3,26 @@ When the admin role is assigned to a user in the AST Control Panel, they gain ac
 This menu provides various administrative functionalities, including user management, system metrics, health status, log management, 
 application configuration, database management and API documentation.
 
-![admin_menu.png](assets/AdminDocu/dropdown.png)
-<figcaption>Admin menu dropdown</figcaption>
+
+You can access the menu by clicking the cogwheel icon in the upper right corner of the control panel interface:
+![admin.png](assets/AdminDocu/admin.png)
+<figcaption>Admin menu access</figcaption>
+
+After clicking the icon, you will be redirected to the admin page where you can use the navigation panel on the left side to access different administrative functionalities.
+![admin-sidebar.png](assets/AdminDocu/admin-sidebar.png)
+<figcaption>Administration navigation panel</figcaption>
 
 ### User management
 As an administrator, you can access the User Role Maintenance to change roles of other existing users, delete them, or create new users and assign them a password and roles .
 
 Click admin dropdown in the upper right panel and select User management.
 
-![users list.png](assets/ControlPanelDocu/users%20list.png)
+![users list.png](assets/AdminDocu/users-list.png)
 <figcaption>User management interface. </figcaption>
 
-Click create a new user or use buttons next to respective user in table to change details.
+To create a new user use the Click new user button. To edit details of current user click the row of the table and a user details dialog will open where you can edit.
 
-![create_user.png](assets/UserDocumentationM/create_user.png)
+![create_user.png](assets/AdminDocu/create_user.png)
 <figcaption>User Role Maintenance interface. </figcaption>
 This view allows an administrator to define login credentials and assign access roles (e.g., ROLE_ADMIN, ROLE_USER) for the control panel.
 Each role will have access to the corresponding view.
@@ -66,8 +72,7 @@ In the application configuration section you can set up various properties:
 | ast-control-panel.execution.max-parallel-processes   | The number of maximum parallel processes for test execution. This is used to limit the number of parallel executions that can be run at the same time. If the number of scheduled executions exceeds this number, the additional executions will be queued until a slot is available. |
 | ast-control-panel.integration.alm.enabled            | Flag to enable or disable the ALM integration. If true more options will be available in the configuration for ALM integration. For more details on ALM integration see [ALM integration](alm.md) documentation.                                                                      |
 | ast-control-panel.integration.xray.enabled           | Flag to enable or disable the Xray integration. If true more options will be available in the configuration for Xray integration. For more details on Xray integration see [Xray integration](jira_xray.md) documentation.                                                            |
-| ast-control-panel.user-interface.header-color        | Property to set up the color of the header in the control panel. You can use any valid CSS hex color value for this property.                                                                                                                                                         |
-| ast-control-panel.user-interface.header-text-color   | Property to set up the color of the text in the header in the control panel. You can use any valid CSS hex color value for this property.                                                                                                                                             |
+| ast-control-panel.user-interface.header-color        | Property to set up the color of the ribbon under the header in the control panel. You can choose from 6 predefined header ribbon colors.                                                                                                                                              | |
 
 The override checkbox must be selected to use the value you set up, otherwise the default value will be used. Default values are set up in the application db.
 
@@ -92,10 +97,7 @@ The executions are deleted in batches, so you can select the batch size for dele
 This is configurable via the environment variable `ast-control-panel.maintenance.max-executions-to-delete-per-batch`. Info on setting up environment variables can be found [here](deployment.md#setting-up-environment-variables).
 
 After selecting the date you can press the delete button then a confirmation dialog will be displayed which informs you about the number of executions that will be deleted and the date before which the executions will be deleted.
-After confirming the deletion, the deletion process will start and you will see a progress bar with the progress of the deletion (see screenshot below)
-
-![maintenance-progress-bar.png](assets/AdminDocu/maintenance-progress-bar.png)
-<figcaption>Deletion progress bar. </figcaption>
+After confirming the deletion, the deletion process will start and you will see a progress bar with the progress of the deletion.
 
 !!! warning "Important"
     Deletion of executions is irreversible, so please be careful when selecting the date and confirming the deletion. 
@@ -115,4 +117,4 @@ The deletion process is performed asynchronously in the background, so you can c
 The API tab provides access to the REST API documentation and allows you to test API endpoints directly from the control panel.
 
 The first APIs are the management ones. To see the solution API documentation you need to select the "springdocDefault" option from the dropdown:
-![api.png](assets/ControlPanelDocu/api_dropdown.png)
+![api.png](assets/AdminDocu/api_dropdown.png)
