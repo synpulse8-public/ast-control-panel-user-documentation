@@ -1728,6 +1728,40 @@ error
 </code></pre></div>
 <p>This expression only returns nodes that contain <code>TESTCASE_ID</code>.</p>
 <p>If some testcases do not contain this argument, those rows will not appear in the result.</p>
+<p>Be aware that the names are case-sensitive, so <code>TESTCASE_ID</code> and <code>testcase_id</code> are considered different arguments.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Setup</p>
+<p>To be able to see the TESECASE_ID to be populated in the report it has to be setup in the test data excel and in the test case.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Test data excel</label><label for="__tabbed_6_2">Test case</label><label for="__tabbed_6_3">Result in Excel Report</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="excel-test-data.png" src="../assets/UserDocumentationM/excel-test-data.png" /></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="w"> </span><span class="na">user=</span><span class="s">&quot;$ast_user1&quot;</span><span class="w"> </span><span class="na">bu=</span><span class="s">&quot;$ast_bu1&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;IF_ELSE_TEST_WITH_EXCEL_DATA_ARGUMENTS&quot;</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;customer&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;asset&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;counterparty&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;price&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;qty&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TESTCASE_ID&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;verify&gt;</span>
+<span class="w">    </span><span class="nt">&lt;value</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;$price&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;20&quot;</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;/verify&gt;</span>
+
+
+<span class="nt">&lt;/testcase&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><img alt="excel-report-result.png" src="../assets/UserDocumentationM/excel-report-result.png" /></p>
+</div>
+</div>
+</div>
 </div>
 <h4 id="alternative-pattern">Alternative Pattern</h4>
 <p>To ensure that <strong>all testcases appear in the report</strong>, rows should always be anchored on the <code>testcase</code> node.</p>
