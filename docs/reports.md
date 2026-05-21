@@ -223,6 +223,41 @@ Rows are generated from the `testcase` nodes in the XML.
     This expression only returns nodes that contain `TESTCASE_ID`.
     
     If some testcases do not contain this argument, those rows will not appear in the result.
+    
+    Be aware that the names are case-sensitive, so `TESTCASE_ID` and `testcase_id` are considered different arguments.
+
+
+!!! example "Setup"
+
+    To be able to see the TESECASE_ID to be populated in the report it has to be setup in the test data excel and in the test case.
+
+    === "Test data excel"
+
+        ![excel-test-data.png](assets/UserDocumentationM/excel-test-data.png)
+    
+    === "Test case"
+    
+        ```xml
+        <testcase version="1.0" user="$ast_user1" bu="$ast_bu1" name="IF_ELSE_TEST_WITH_EXCEL_DATA_ARGUMENTS">
+
+        <argument name="customer" />
+        <argument name="asset" />
+        <argument name="counterparty"/>
+        <argument name="price"/>
+        <argument name="qty" />
+        <argument name="TESTCASE_ID" />
+        
+        <verify>
+            <value select="$price" value="20"/>
+        
+        </verify>
+        
+        
+        </testcase>
+        ```
+
+    === "Result in Excel Report"
+        ![excel-report-result.png](assets/UserDocumentationM/excel-report-result.png)
 
 
 #### Alternative Pattern
