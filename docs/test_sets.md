@@ -129,4 +129,4 @@ The interface consists of a detailed, scrollable table that functions as the cen
 ![test_set_scheduling.png](assets/UserDocumentationM/test_set_scheduling.png)
 <figcaption> A modal dialog illustrating the "Schedule execution" interface, detailing parameters for test set execution including selection of test set and instance, scheduled date/time, and recurrence options.</figcaption>
 
-You will be able to see the scheduled execution in the table in the [Schedule](schedule.md) tab.
+You will be able to see the scheduled execution in the table in the [Schedule](executions.md) tab.

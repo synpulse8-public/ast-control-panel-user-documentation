@@ -44,7 +44,7 @@ nav:
             - Control statements: control_statements.md
             - Methods: methods.md
         - Test sets: test_sets.md
-        - Schedule: schedule.md
+        - Executions: executions.md
         - Analytics: analytics.md
         - Reports: reports.md
         - Frequently used terms and metatypes: glossary_of_terms.md

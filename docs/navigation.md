@@ -26,7 +26,7 @@ Short description of the sections on the landing page is provided in the table b
 | ![home.png](assets/ControlPanelDocu/home.png) | Navigates back to the main dashboard or landing page of the application.                     |
 | **[Tests](test_case_repository.md)**          | Displays and manages individual test cases. This is the core repository for all tests. |
 | **[Sets](test_sets.md)**                      | Organizes multiple tests into logical groups or suites for streamlined execution.      |
-| **[Executions](schedule.md)**                 | Displays scheduled and finished executions. Provides executions details.               |
+| **[Executions](executions.md)**                 | Displays scheduled and finished executions. Provides executions details.               |
 | **[Analytics](analytics.md)**                 | Provides insights and reports on test execution results, trends, and performance.      |
 
 Each tab navigates you to separate sections described in the table and in following chapters in more details.
