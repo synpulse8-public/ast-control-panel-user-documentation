@@ -6,12 +6,11 @@ This chapter provides instructions for integrating HP ALM with the AST Control P
 To enable HP ALM integration, an administrator must navigate to the configuration panel in the AST Control Panel and perform the following steps:
 
 1. **Enable Integration**: Ensure that `ast-control-panel.integration.alm.enabled` is set to `true`.
-2.
-![appPropEdit.png](assets/AdminDocu/appPropEdit.png)
+![alm_enabled.png](assets/AdminDocu/alm_enabled.png)
 <figcaption>Application Properties in AST Control Panel showing the <code>ast-control-panel.integration.alm.enabled</code> setting activated for ALM integration.</figcaption>
 
 2. **Enter Connection Details**: Input the required ALM configuration parameters, including the **URL**, **domain**, **project name**, **username**, and **password** .
-![appProps.png](assets/AdminDocu/appProps.png)
+![alm_values.png](assets/AdminDocu/alm_values.png)
 <figcaption>Interface for entering ALM configuration parameters, such as URL, domain, project name, username, and password, to establish the connection.</figcaption>
 
 !!! info
@@ -34,22 +33,22 @@ To link AST test cases to corresponding test entities in HP ALM, you must assign
 
 1. **Individual Assignment:**
     - Go to the 'Tests' tab and click on a specific test case.
-    - The test case details view will open, showing a field where you can assign or edit the 'External HP ALM ID').
+    - The test case [metadata panel](test_case_repository.md#metadata-and-details) will open, showing a field where you can assign or edit the 'HP ALM ID').
 
 ![alm_test_case_id.png](assets/UserDocumentationM/alm_test_case_id.png)
-<figcaption>Test Case details view showing the field for assigning or editing the 'External HP ALM ID' to link the script to a corresponding ALM entity.</figcaption>
+<figcaption>Test Case metadata view showing the field for assigning or editing the 'HP ALM ID' to link the script to a corresponding ALM entity.</figcaption>
 
 2. **Bulk Assignment (CSV Upload):**
-    - Right-click on a test case in the repository tree to open the context menu.
-    - Select 'Manage External IDs'.
+    - Click on any test case in the repository tree to open the [metadata panel](test_case_repository.md#metadata-and-details).
+    - Click on 'Manage External IDs'.
     - This opens a dialog allowing you to upload the mappings via a CSV file. The CSV file must contain the AST Test Case ID, the External Hp Alm ID, and optionally, ALM Instance Ids.
 
-![alm_test_case_id_alternative.png](assets/UserDocumentationM/alm_test_case_id_alternative.png)
-<figcaption> Test case context menu displaying the 'Manage External IDs' option for bulk upload of ID mappings via CSV.</figcaption>
+![bulk_external_ids.png](assets/UserDocumentationM/bulk_external_ids.png)
+<figcaption> Test case metadata panel displaying the 'Manage External IDs' option for bulk upload of ID mappings via CSV.</figcaption>
 
 
 
-![alm_test_case_id_alternative2.png](assets/UserDocumentationM/alm_test_case_id_alternative2.png)
+![external_ids_dialog.png](assets/UserDocumentationM/external_ids_dialog.png)
 <figcaption>Dialog box for uploading external IDs via CSV file, showing fields for the file and a download button for the CSV template.</figcaption>
 
 
@@ -69,46 +68,36 @@ When executing tests in HP ALM, the synchronization requires an External ALM Ins
 4. If a test case is missing this ID, you cannot schedule a synchronization with ALM. The ID can be assigned via a dropdown menu or added as a new entry.
 
 ![alm_id_test_set.png](assets/UserDocumentationM/alm_id_test_set.png)
-<figcaption>Test Set Definitions view listing test cases and showing the requirement for an 'External ALM Instance Id' for ALM synchronization..</figcaption>>
-
-
-
-![alm_id_test_set_add.png](assets/UserDocumentationM/alm_id_test_set_add.png)
 <figcaption>Detail view of a test set showing the dropdown menu for assigning or adding a new 'External ALM Instance Id' for each test case.</figcaption>
- 
 
 
 ### Scheduling and ALM Synchronization
 
-Once your test cases are linked to ALM IDs and organized in a Test Set, you can schedule the run and initiate the synchronization process.
+Once your test cases are linked to ALM IDs and organized in a Test Set, you can schedule the execution and initiate the synchronization process.
 
-1. **Schedule the Run**: When scheduling a test run (either immediately or for a future time), ensure the ALM sync checkbox is selected in the scheduling dialog
+1. **Schedule the Run**: When scheduling a test execution (either immediately or for a future time), ensure the ALM sync checkbox is selected in the scheduling dialog
 
 Schedule execution dialog with the ALM sync checkbox selected, indicating that execution results will be synchronized with HP ALM.
 
 ![alm_scheduling.png](assets/UserDocumentationM/alm_scheduling.png)
 <figcaption>Image of the Schedule Execution dialog showing a checkbox for ALM sync.</figcaption>
 
-2. **Monitor Synchronization**: After execution, the results and the synchronization status will be visible in the 'Schedule'
+2. **Monitor Synchronization**: After execution, the results and the synchronization status will be visible in the 'Executions' tab.
 
-Schedule view displaying a history of test runs, including columns for overall execution status and ALM sync status.
+Executions view displaying a history of test runs, including columns for overall execution status and ALM sync status.
 
 ![alm_schedule_view.png](assets/UserDocumentationM/alm_schedule_view.png)
-<figcaption>Image of the Schedule view table showing execution status and ALM Sync Status columns</figcaption>
+<figcaption>Image of the Executions view table showing execution status and ALM Sync Status columns</figcaption>
 
-3. **View Sync Logs**:Clicking on the 'Reports' button for a completed execution opens a detailed view, which includes execution status and ALM sync logs
+3. **View Sync Logs**:Clicking on the table row for a completed execution opens a detailed view, which includes execution status and ALM sync logs
    
-Detailed execution report with a link to the ALM Sync Log, providing information on the synchronization outcome.</figcaption>
+Detailed execution report with a link to the ALM Sync Log, providing information on the synchronization outcome.
 
 ![alm_log_reports.png](assets/UserDocumentationM/alm_log_reports.png)
 <figcaption>Image of the detailed execution report showing links to HTML, Log, and XML reports, along with an ALM Sync Log link.</figcaption>
 
-4. **Detailed Logs and Errors**: Detailed logs, including the time, status, and any errors from the synchronization attempt, can be viewed in the log window
-
-Panel in the detailed execution report showing the ALM Sync Logs with timestamps, status, and any troubleshooting information.
-
-![ALM_sync_logs.png](assets/UserDocumentationM/ALM_sync_logs.png)
-<figcaption>Image of the detailed execution report showing a panel with ALM Sync Logs and status indicators</figcaption>
+4. **Detailed Logs and Errors**: Detailed logs, including the time, status, and any errors from the synchronization attempt, 
+can be viewed in the log window panel in the detailed execution report showing the ALM Sync Logs with timestamps, status, and any troubleshooting information.
 
 ### Sync Failures and Troubleshooting
 
