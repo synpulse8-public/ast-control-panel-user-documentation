@@ -23,3 +23,8 @@
 - Updated backend dependencies. Using Spring Boot 3.5.14
 - Updated AST Core to 3.11.3
 - Help button now opens the documentation in a new tab.
+
+## Version 4.10.1
+
+#### Bug Fixes
+- Fixed an issue where unsuccessful Xray synchronization would cause thread blocking resulting into test execution issues.

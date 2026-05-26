@@ -64,6 +64,9 @@ When a test run is scheduled, you must specify the unique **Xray Execution ID** 
 ![xray_sync3.png](assets/UserDocumentationM/xray_sync3.png)
 <figcaption>Test execution log showing Xray Sync Status column</figcaption>
 
+By default, the synchronization will be attempted 3 times with a timeout of 30 seconds for each attempt. If the synchronization fails after all attempts, the execution will be marked as completed with a failed sync status. 
+You can adjust the number of attempts and timeout duration by setting the environment variables `AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_ATTEMPTS` and `AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_DURATION` respectively.
+
 
 ### Vieving Reports and Sync Logs
 
