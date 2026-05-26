@@ -1405,6 +1405,8 @@ On how to set environment variables please refer to the <a href="../deployment/#
 <p><img alt="xray_sync3.png" src="../assets/UserDocumentationM/xray_sync3.png" /></p>
 <figcaption>Test execution log showing Xray Sync Status column</figcaption>
 
+<p>By default, the synchronization will be attempted 3 times with a timeout of 30 seconds for each attempt. If the synchronization fails after all attempts, the execution will be marked as completed with a failed sync status. 
+You can adjust the number of attempts and timeout duration by setting the environment variables <code>AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_ATTEMPTS</code> and <code>AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_DURATION</code> respectively.</p>
 <h3 id="vieving-reports-and-sync-logs">Vieving Reports and Sync Logs</h3>
 <p>After a test run is complete, you can review its status and troubleshoot any issues.</p>
 <ul>

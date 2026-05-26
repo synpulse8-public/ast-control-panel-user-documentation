@@ -6873,6 +6873,8 @@ On how to set environment variables please refer to the <a href="#deployment-set
 <p><img alt="xray_sync3.png" src="../assets/UserDocumentationM/xray_sync3.png" /></p>
 <figcaption>Test execution log showing Xray Sync Status column</figcaption>
 
+<p>By default, the synchronization will be attempted 3 times with a timeout of 30 seconds for each attempt. If the synchronization fails after all attempts, the execution will be marked as completed with a failed sync status. 
+You can adjust the number of attempts and timeout duration by setting the environment variables <code>AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_ATTEMPTS</code> and <code>AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_DURATION</code> respectively.</p>
 <h3 id="jira_xray-vieving-reports-and-sync-logs">Vieving Reports and Sync Logs</h3>
 <p>After a test run is complete, you can review its status and troubleshoot any issues.</p>
 <ul>
@@ -7307,6 +7309,11 @@ Always ensure that the database is rolled back to the state before the upgrade b
 <li>Updated backend dependencies. Using Spring Boot 3.5.14</li>
 <li>Updated AST Core to 3.11.3</li>
 <li>Help button now opens the documentation in a new tab.</li>
+</ul>
+<h2 id="release_notes-version-4101">Version 4.10.1</h2>
+<h4 id="release_notes-bug-fixes_1">Bug Fixes</h4>
+<ul>
+<li>Fixed an issue where unsuccessful Xray synchronization would cause thread blocking resulting into test execution issues.</li>
 </ul></section></div><style>.print-site-enumerate-headings #introduction > h1:before { content: '1 ' }
 
                 .print-site-enumerate-headings #introduction h2:before { content: '1.' counter(counter-introduction-2) ' ' }
