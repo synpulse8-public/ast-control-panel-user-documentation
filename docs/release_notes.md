@@ -1,30 +1,19 @@
 # Release notes
 
-## Version 4.10.0
+## Version 4.11.0
 
-#### Breaking Changes
-- Removed ApplUserResource API
+!!!danger "Important"
+    The 4.11.0 release will be the last one for the 4.x release line, and it will be supported only by patch versions of critical bugs.
+    
 
-#### New Features
-- Database Maintenance(Deletion of old executions and reports). For more info click [here](admin.md#maintenance).
-- When turning off Keycloak profile AST created users are restored to their previous state, meaning they will be able to log in again with their old credentials. For more info click [here](keycloak.md#behavior-of-the-application-with-keycloak-profile-deactivated-after-it-was-active).
+    This release(or its future patch versions) are a prerequisite for the next major release, which will be 5.0.0 (New Frontend).
+    
+
 
 #### Bug Fixes
-- Fixed avaloq instance dropdown , so it is displayed correctly
-- Username filter in schedule table now working correctly
-- Fixed Admin dropdown shifting when opened
-- Show pending status for ALM instead of N/A
-- Fixed error when Keycloak token was missing surname and name claims(should handle service accounts now)
-- Fixed issue when username containing @ could not login
-
+- Fixed issue with running a testcase with a method was throwing a 500 error
+- Fixed issue where variables were not correctly replaced in the payload of a test case when running it.
 
 #### Other Changes
-- Updated frontend dependencies.
-- Updated backend dependencies. Using Spring Boot 3.5.14
-- Updated AST Core to 3.11.3
-- Help button now opens the documentation in a new tab.
-
-## Version 4.10.1
-
-#### Bug Fixes
-- Fixed an issue where unsuccessful Xray synchronization would cause thread blocking resulting into test execution issues.
+- Updated backend dependencies.
+- Updated AST Core to 3.12.0 
