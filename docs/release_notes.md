@@ -17,3 +17,8 @@
 #### Other Changes
 - Updated backend dependencies.
 - Updated AST Core to 3.12.0 
+
+## Version 4.11.1
+
+#### Bug Fixes
+- Fixed issue of schedule view not working because of null xray logs
