@@ -63,7 +63,7 @@ In selected filters the app offers suggestions for filters e.g. user name.
 If a filter is active it will be shown in the active filters tab on the top right side of the table.
 You can quickly clear the filters by clicking on the "x" icon next to the active filter or by clicking on the "Clear all" button which will clear all active filters at once.
 
-!!! warning Important
+!!! Info
     The for execution status is applied together with other filters, meaning that if you select "Scheduled" status and filter by user name "John", you will see only scheduled executions created by John. 
     If you want to see all executions by "John", you need to set the execution status filter to "all".
 
@@ -74,7 +74,7 @@ You can quickly clear the filters by clicking on the "x" icon next to the active
 
 Clicking a table row of a Running or Finished execution button will show the same functionality as shown in the Test set [reports tab](test_sets.md#reports-tab).
 
-When clicking a table orw of a Scheduled execution a dialog will be shown that gives you the option to modify or cancel the scheduled execution.
+When clicking a table row of a Scheduled execution a dialog will be shown that gives you the option to modify or cancel the scheduled execution.
 
 ![execution_schedule_dialog](assets/ControlPanelDocu/execution_schedule_dialog.png)
 <figcaption>Dialog shown when clicking on a Scheduled execution</figcaption>
