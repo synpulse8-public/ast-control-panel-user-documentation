@@ -11,12 +11,12 @@ The interface of AST is divided into two main sections:
 
 2. **central content area** with test content administration functionalities and user-specific options.
 
-3. **right-hand side panel** with test case details and metadata
+3. **right-hand side panel** with test case version information and details
 
 The interface provides hierarchical navigation for test scripts and a central content area for viewing and editing the XML-based test logic.
 
 ![ast_control_panel.png](assets/UserDocumentationM/ast_control_panel.png)
-<figcaption>Test Case Repository displaying the hierarchical tree of test cases and the XML editor pane with the metadata on the right</figcaption>
+<figcaption>Test Case Repository displaying the hierarchical tree of test cases and the XML editor pane with the version information on the right</figcaption>
 
 !!! info
     Both the left hand navigation panel and the right hand side panel are collapsible, allowing users to maximize the central content area when needed for a more focused view on test case details and editing.
@@ -31,16 +31,37 @@ Each folder within the tree is labeled with a descriptive name(of the users choo
 User can create modify or delete folders, test cases or methods.
 To work with test cases or folders click on the three dots. Then you see **[context menu](#create-edit-and-manage-test-cases)** with all the functionalities.
 
-### Metadata and details
+### Version information and details panel
 
 When a test case is opened , the main content area of the control panel populates with its details and controls.
-In the right panel you can see its details. You can also see the last run status of this testcase. In this metadata section you can also modify the name of the test case and its description.
+In the right panel you can see its version information like creation date, who created this version and the version number. 
+When the newest available version is shown, the version is labeled as 'latest' and the version number is not shown.
+
+You can also see the last run status of this testcase. 
+
+In this section you can also modify the name of the test case and its description.
+
 When Xray or ALM integration is set up, you can also see the linked external IDs and you can also bulk upload or download these IDs.
 
 ![testcasemetadata.png](assets/UserDocumentationM/testcasemetadata.png)
-<figcaption>Detailed view of a selected test case information containing key metadata, external IDs and the last run.</figcaption>
+<figcaption>Detailed view of a selected test case information, external IDs, the last run and the button where you can upload test data.</figcaption>
 
 The last run status if clickable and opens a dialog where you can download the execution report.
+
+#### Test case data
+The test data can be also uploaded in this section. You can also download the data file that is currently in use or remove it.
+
+![test-data-not-present.png](assets/UserDocumentationM/test-data-not-present.png)
+<figcaption>View of the right panel when no test data are attached to testcase</figcaption>
+
+!!! warning
+    Uploading new excel file removes old one. There can be only 1 data file in usage!
+
+![testdata-present.png](assets/UserDocumentationM/testdata-present.png)
+<figcaption>View of the right panel when test data are attached to testcase. You can replace, remove or download the test data file</figcaption>
+
+To understand more the test data topic please read this chapter: **[Test script and test data design](test_script_and_test_data.md)**.
+
 
 
 ### Execution Reporting
@@ -85,24 +106,6 @@ This multi-pane layout ensures that the user has a complete overview of the test
 
 Test case editor offers another set of useful functionalities that help you with code checking, version comparison and data upload. These are accessible in upper right part of editor by click on the three dots button.
 ![addition feat.png](assets/ControlPanelDocu/additional-feat.png)
-
-#### Test case data
-
-After clicking 'test data' button you can:
-
-1. Upload new excel file with data
-
-2. Download data file that is currently in use
-
-3. Remove the data file
-
-![testdata.png](assets/ControlPanelDocu/testdata.png)
-<figcaption>Test case data modal</figcaption>
-
-!!! warning
-    Uploading new excel file removes old one. There can be only 1 data file in usage!
-
-To understand more the test data topic please read this chapter: **[Test script and test data design](test_script_and_test_data.md)**.
 
 #### Text formatting
 Text formatting helps you to checks how the document would look after formatting rules are applied, without permanently changing it. It helps you preview spacing, indentation, and layout issues to confirm the formatting is correct before saving or publishing.
