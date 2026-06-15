@@ -74,7 +74,7 @@ After a test run is complete, you can review its status and troubleshoot any iss
 <figcaption>Detailed execution report showing Xray sync status</figcaption>
 
 ![xray_log.png](assets/UserDocumentationM/xray_log.png)
-<figcaption>Log view of Xray synchronization</figcaption>
+<figcaption>Log view of Xray synchronization</figcaption> 
 
 Below is an example of a JSON payload sent to XRAY:
 
