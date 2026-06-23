@@ -210,14 +210,14 @@ To facilitate this transfer, a parameter is populated within the address creatio
 <?xml version="1.0" encoding="UTF-8"?>
 <testcase bu="AAA" name="0 - Create Address & Person" user="avaloq" version="1.0">
   <!-- Local variable definition -->
-  <variable name="l_obj_addr_id" />
+  <variable name="addr_doc_id" />
 
   <!-- Create Address -->
   <input>
     <new-doc type="addr" init-action="1100" close-action="1090">  
       <set ... />
       ...
-      <out property="id" select="l_obj_addr_id" />
+      <out property="id" select="addr_doc_id" />
   
   </input>
 
@@ -234,7 +234,7 @@ To facilitate this transfer, a parameter is populated within the address creatio
       <set property="sort_alpha" value="$in_sort_alpha" />
       <set property="obj_extn.person_sym" value="$in_sort_alpha" />
       
-      <set property="domi_addr_id" value="$l_obj_addr_id" />
+      <set property="domi_addr_id" value="$addr_doc_id" />
 
       <out property="id" select="person_doc_id" />            
     </new-doc>
@@ -272,7 +272,7 @@ AST supports importing test data from Excel.
 Data from an Excel sheet can be imported for use in test cases. The first sheet contains the test data, where each column name must have a corresponding `<argument>` defined in the test case. The second sheet is used to link the test case data rows to a specific test case XML file.
 ![excel_test_data.png](assets/UserDocumentationM/excel_test_data.png)
 <figcaption>Test data from Excel sheet</figcaption>
-
+Each row starts with the active sign. '+' means active, '-' means inactive.
 Each column requires a corresponding argument in the test case:
 
 ~~~xml

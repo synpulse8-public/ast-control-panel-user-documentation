@@ -63,13 +63,13 @@ When a test run is scheduled, you must specify the unique **Xray Execution ID** 
 <figcaption>Test execution log showing Xray Sync Status column</figcaption>
 
 
-### Vieving Reports and Sync Logs
+### Viewing Reports and Sync Logs
 
 After a test run is complete, you can review its status and troubleshoot any issues.
 
 - **View Sync Status**: Click the executions table row  for a completed execution to open a detailed view showing the test execution status and Xray sync logs.
 - **Detailed Logs**: In the Reports pop-up window, you can see the synchronization status for each test case and click '**View Sync Logs**' for detailed event records.
-- **Manual JSON Download**: You can download the **raw JSON payload** sent to Xray by clicking the '**XRAY JSON**' button. This file contains the execution results and metadata, which is useful for debugging.
+- **Manual JSON Download**: You can download the **raw JSON payload** sent to Xray by clicking the '**XRAY JSON**' button in the 'Reports' dropdown. This file contains the execution results and metadata, which is useful for debugging.
 ![xray_reports.png](assets/UserDocumentationM/xray_reports.png)
 <figcaption>Detailed execution report showing Xray sync status</figcaption>
 

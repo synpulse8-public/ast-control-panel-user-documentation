@@ -70,13 +70,13 @@ Additional columns identify the User Name responsible for the run and the specif
 
 The table includes a summary of execution results, detailing the number of Tests:
 
-- Passed
+- Passed 
 
-- Failed
+- Failed 
 
-- Errored
+- Error
 
-- Pending
+- Scheduled 
 
 This numerical breakdown offers an immediate status of the execution outcome. The right-most columns provide action options, including viewing Reports and controls to Modify or Delete a scheduled run.
 
