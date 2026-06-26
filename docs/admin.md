@@ -15,7 +15,10 @@ After clicking the icon, you will be redirected to the admin page where you can 
 ### User management
 As an administrator, you can access the User Role Maintenance to change roles of other existing users, delete them, or create new users and assign them a password and roles .
 
-Click admin dropdown in the upper right panel and select User management.
+!!! info
+    The user management section is disabled if the Keycloak SSO authentication is enabled. 
+    In this case, user management is handled by Keycloak and not by the AST Control Panel.
+    For more information on Keycloak SSO authentication, please refer to the [Keycloak setup](keycloak.md) documentation.
 
 ![users list.png](assets/AdminDocu/users-list.png)
 <figcaption>User management interface. </figcaption>
