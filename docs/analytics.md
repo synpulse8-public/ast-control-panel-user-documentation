@@ -13,7 +13,7 @@ This report offers three different viewing formats to accommodate various user n
 ### Reports to download
 
 **1.Historical execution data**
-Select the date you want to recieve data from and click download. Report in csv format will be donwloaded to you machine
+Select the date you want to receive data from and click download. Report in csv format will be downloaded to your machine
 ![histexecdata.png](assets/ControlPanelDocu/histexecdata.png)
 <figcaption></figcaption>
 

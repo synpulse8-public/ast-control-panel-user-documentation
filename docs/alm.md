@@ -9,14 +9,14 @@ To enable HP ALM integration, an administrator must navigate to the configuratio
 ![alm_enabled.png](assets/AdminDocu/alm_enabled.png)
 <figcaption>Application Properties in AST Control Panel showing the <code>ast-control-panel.integration.alm.enabled</code> setting activated for ALM integration.</figcaption>
 
-2. **Enter Connection Details**: Input the required ALM configuration parameters, including the **URL**, **domain**, **project name**, **username**, and **password** .
+2. **Enter Connection Details**: Input the required ALM configuration parameters, including the **URL**, **domain**, **project name**, **username**, and **password**.
 ![alm_values.png](assets/AdminDocu/alm_values.png)
 <figcaption>Interface for entering ALM configuration parameters, such as URL, domain, project name, username, and password, to establish the connection.</figcaption>
 
 !!! info
     When setting the URL use the URL without the qcbin part.
 
-#### Setting Environment Variables(Optional)
+#### Setting Environment Variables (Optional)
 The ALM session and login(authentication) endpoint can be changed by setting the environment variables `AST_CONTROL_PANEL_ALM_SESSION_ENDPOINT` and `AST_CONTROL_PANEL_ALM_LOGIN_ENDPOINT`. 
 
 
@@ -33,7 +33,7 @@ To link AST test cases to corresponding test entities in HP ALM, you must assign
 
 1. **Individual Assignment:**
     - Go to the 'Tests' tab and click on a specific test case.
-    - The test case [details panel](test_case_repository.md#version-information-and-details-panel) will open, showing a field where you can assign or edit the 'HP ALM ID').
+    - The test case [details panel](test_case_repository.md#version-information-and-details-panel) will open, showing a field where you can assign or edit the 'HP ALM ID'.
 
 ![alm_test_case_id.png](assets/UserDocumentationM/alm_test_case_id.png)
 <figcaption>Test Case metadata view showing the field for assigning or editing the 'HP ALM ID' to link the script to a corresponding ALM entity.</figcaption>
@@ -41,7 +41,7 @@ To link AST test cases to corresponding test entities in HP ALM, you must assign
 2. **Bulk Assignment (CSV Upload):**
     - Click on any test case in the repository tree to open the [details panel](test_case_repository.md#version-information-and-details-panel).
     - Click on 'Manage External IDs'.
-    - This opens a dialog allowing you to upload the mappings via a CSV file. The CSV file must contain the AST Test Case ID, the External Hp Alm ID, and optionally, ALM Instance Ids.
+    - This opens a dialog allowing you to upload the mappings via a CSV file. The CSV file must contain the AST Test Case ID, the External HP ALM ID, and optionally, ALM Instance Ids.
 
 ![bulk_external_ids.png](assets/UserDocumentationM/bulk_external_ids.png)
 <figcaption> Test case metadata panel displaying the 'Manage External IDs' option for bulk upload of ID mappings via CSV.</figcaption>
@@ -89,7 +89,7 @@ Executions view displaying a history of test runs, including columns for overall
 ![alm_schedule_view.png](assets/UserDocumentationM/alm_schedule_view.png)
 <figcaption>Image of the Executions view table showing execution status and ALM Sync Status columns</figcaption>
 
-3. **View Sync Logs**:Clicking on the table row for a completed execution opens a detailed view, which includes execution status and ALM sync logs
+3. **View Sync Logs**: Clicking on the table row for a completed execution opens a detailed view, which includes execution status and ALM sync logs
    
 Detailed execution report with a link to the ALM Sync Log, providing information on the synchronization outcome.
 
@@ -126,7 +126,7 @@ Below is an example of a JSON payload sent to ALM:
   "Fields": [
     {"values": [{"value": "Test Import from AST"}], "Name": "name"},
     {"values": [{"value": "admin"}], "Name": "owner"},
-    {"values": [{"value": "sript-hp-alm-id-1"}], "Name": "test-id"},
+    {"values": [{"value": "script-hp-alm-id-1"}], "Name": "test-id"},
     {"values": [{"value": "test1"}], "Name": "testcycl-id"},
     {"values": [{"value": "Failed"}], "Name": "status"},
     {"values": [{"value": "hp.qc.run.MANUAL"}], "Name": "subtype-id"},

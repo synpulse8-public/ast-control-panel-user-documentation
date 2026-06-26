@@ -33,7 +33,8 @@ The AST Testing Suite comprises two main components: the **AST Core (execution e
 The **AST Core** is the test execution engine. Its function is to run test cases, verify the results, and generate the corresponding reports. It supports various operations, including input, query, and verification steps, and integrates with Avaloq using the Open Interface (DDIC, Report Writer, AMI).
 
 #### AST Control Panel
-High-level architectural overview of the AST Suite, illustrating core components and their interaction with target systems via the Avaloq Open Interface for all testing operations.</figcaption>
+
+High-level architectural overview of the AST Suite, illustrating core components and their interaction with target systems via the Avaloq Open Interface for all testing operations.
 
 ![ast_core_panel.png](assets/UserDocumentationM/ast_core_panel.png)
 <figcaption>Diagram of AST's core components (Control Panel, Core Testing Module) connecting to databases and web servers via HTTP and JDBC.</figcaption>
@@ -71,7 +72,7 @@ AST provides functionality to automate testing for the Avaloq Banking System, an
 |File Processing|<ul><li>Uploading, processing of files (Avaloq standard formats and user defined types).</li><li>Full access to all results of the processed file.</li></ul>|
 |Message Processing|<ul><li>Insertion and processing of any message (standard and user defined types)</li><li>Access to all results of message processing</li><li>Access to all aspects of outgoing messages (with tag-based verification for SIC, EuroSIC, SWIFT and SECOM messages)</li></ul>|
 |Application Management|<ul><li>Conditional execution of test steps</li><li>Execution of an arbitrary Avaloq script block</li><li>Execution of Tasks</li><li>Tests are always executed under a freely definable user (any security aspects are respected). Security settings (user) can be switched even within a test case.</li><li>Readiness test: Access to system parameters so that the availability of the system can be analyzed before the test run.</li></ul>|
-|AFP Interface Testing|<ul><li>Test interaction with the Avaloq web interface works as expected.</li><li>Start testcase in AFP and finish in Avaloq backend or viceversa.</li></ul>|
+|AFP Interface Testing|<ul><li>Test interaction with the Avaloq web interface works as expected.</li><li>Start testcase in AFP and finish in Avaloq backend or vice versa.</li></ul>|
 
 ### Testing Logic and Test Data
 
@@ -140,7 +141,7 @@ Here's a breakdown of the available options:
 
 | Test type | Description |
 | --- | --------- |
-|Smoke Tests | The term smoke testing describes the process of validating code changes before they are checked into the product's source tree. After code reviews, smoke testing is the most cost effective method for identifying and fixing defects in software. Smoke tests are designed to confirm that code changes work as expected and do not destabilize an entire build. |
+|Smoke Tests | The term smoke testing describes the process of validating code changes before they are checked into the product's source tree. After code reviews, smoke testing is the most cost-effective method for identifying and fixing defects in software. Smoke tests are designed to confirm that code changes work as expected and do not destabilize an entire build. |
 |Functional Tests | Functional tests are basically designed to simulate and test all specified user interactions entered in the graphical user interface (GUI). |
 |Process Tests | The term process tests describes an integrative test approach, combining specific workflows and related interactions.|
 |Performance Tests | By executing multiple instances of AST performance tests, a great number of users can be simulated.|

@@ -31,7 +31,7 @@ You can use the sidebar on the left for navigation or the tiles below to jump to
             <a class="card-link" href="../navigation">
                 <article>
                     <h3>Landing page and Navigation</h3>
-                    <p>Brief summary of applications sections </p>
+                    <p>Brief summary of application sections </p>
                     <p><strong>Explore →</strong></p>
                 </article>
             </a>
@@ -55,7 +55,7 @@ You can use the sidebar on the left for navigation or the tiles below to jump to
             <a class="card-link" href="../test_sets">
                 <article>
                     <h3>Test sets</h3>
-                    <p>Information on how to use tests sets</p>
+                    <p>Information on how to use test sets</p>
                     <p><strong>See guide →</strong></p>
                 </article>
             </a>

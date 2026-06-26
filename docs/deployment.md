@@ -45,7 +45,7 @@ Then, you can mount this file as a volume in your deployment and specify the pat
 env:
   SPRING_CONFIG_ADDITIONAL_LOCATION: "/deployment/ast-control-panel.properties"
 ```
-You can mount the file as a secret or you can put it into tge ```files``` directory of the helm chart and mount it as a config map. The config map name is ```controlpanel-config``` nad the subpath is ```additional_config.properties```. For more detail see [Mounting Volumes](#mounting-volumes)
+You can mount the file as a secret or you can put it into the ```files``` directory of the helm chart and mount it as a config map. The config map name is ```controlpanel-config``` and the subpath is ```additional_config.properties```. For more detail see [Mounting Volumes](#mounting-volumes)
 
 ### Mounting volumes 
 To mount a volume , you can use the `volumes` and `volumeMounts` sections in the `Values.yaml` file. Example of mounting a secret and a config map as volumes:
@@ -83,7 +83,7 @@ Here is an example of how to do this in the `Values.yaml` file:
 # Environment variables for the container. Optional. Add as needed.
 env:
   SERVER_SSL_ENABLED: true
-  SERVER_SSL_KEY_STORE_TYPE: JKS  #depends o yor preference
+  SERVER_SSL_KEY_STORE_TYPE: JKS  #depends on your preference
   SERVER_SSL_KEY_STORE: file:/deployments/data/ssl-keystore/keystore.jks
   SECURITY_REQUIRE_SSL: true
 
@@ -162,7 +162,7 @@ For other possible settings like ingress, resources, port, replicas and others p
 ## Using docker
 You can run the application in the command line using docker. The app should be deployed like this only for test purposes. For minimal settings you need to set up the same environment variables as for the helm chart deployment. Here is an example of how to run the application using docker with the required environment variables:
 ```bash
-docker run -e SPRING_DATASOURCE_USERNAME=your_username -e SPRING_DATASOURCE_URL=jdbc:oracle:thin:@your_db_address:1521/YOUR_SCHEMA -e SPRING_DATASOURCE_PASSWORD=your_password --network host path/to/your/iamge/ast-control-panel:image_tag
+docker run -e SPRING_DATASOURCE_USERNAME=your_username -e SPRING_DATASOURCE_URL=jdbc:oracle:thin:@your_db_address:1521/YOUR_SCHEMA -e SPRING_DATASOURCE_PASSWORD=your_password --network host path/to/your/image/ast-control-panel:image_tag
 ```
 After the application is started you need to upload your license file, ast.globalsettings and your ast.properties (alternatively see [Mounting of ast.properties](#mounting-of-astproperties-optional)) file in admin section of the app.
 

@@ -23,7 +23,7 @@ If order validation failures occur when the final workflow action is executed, t
 |*ctx-action* (IN)|Performs a context action that creates a new order (alternative to the parameter init-action).|
 |*close-action* (IN)|Closing workflow action|
 |*set* (IN)|Sets 1...n properties of a specific Avaloq Meta Type|
-|*scriplet* (IN)|A piece of Avaloq Script code, that is executed. The alias "tdoc" can be used to reference the current order.|
+|*scriptlet* (IN)|A piece of Avaloq Script code, that is executed. The alias "tdoc" can be used to reference the current order.|
 |*do* (IN)|Performs an action|
 |*add-override* (IN)|Sets an entry to the add-override table with an optional comment attribute.|
 |*script-action* (IN)|Avaloq script function which must return a mem_doc reference. This attribute replaces init-action.|
@@ -60,7 +60,7 @@ You can directly manipulate list contents using the `<set property=...>` or `<do
 |---|---|--|
 |Adding/Editing|`<set property="realvalu_list(1).mtd_id" value="external" />`|Sets a property on a list entry specified by its index (List index of the list entry to be edited).|
 |Adding Element (Simple)|`<do stmt="book_list.add" />`|Adds a new element to the list.|
-|Adding Comlex Element|`<do stmt="cost_entry(1).entry_list.add(5, $costs, 1)" />`|Adds a list element with additional arguments.|
+|Adding Complex Element|`<do stmt="cost_entry(1).entry_list.add(5, $costs, 1)" />`|Adds a list element with additional arguments.|
 |Removing Element|`<do stmt="chld_list.remv(1)" />`|Removes the item at the given index.|
 |Clearing List|`<do stmt="mkt_rel_list.clear" />`|Clears the whole list.|
 
@@ -79,13 +79,13 @@ The doc and new-doc operations support a scriptlet parameter, which allows you t
     <set property="amount" value="1000.00" />
     <set property="curry_id" value="CHF" />
     ...
-  </new_doc>
+  </new-doc>
 </input>
 ~~~
 
 ### Overrides and User-Interface Messages
 
-Control over the occurrence of user interface messages and the ability to override these messages is granted by the `ui-msg`element. A message can be matched by providing a pattern. Alternately, in case of an override message, matching can be performed by passing a `code_override` element (ID, name, or `intl_id`).
+Control over the occurrence of user interface messages and the ability to override these messages is granted by the `ui-msg` element. A message can be matched by providing a pattern. Alternately, in case of an override message, matching can be performed by passing a `code_override` element (ID, name, or `intl_id`).
 
 <br>
 
@@ -93,8 +93,8 @@ Control over the occurrence of user interface messages and the ability to overri
 
 |Attributes|Description|
 |---|---|
-|*text* (IN)|Pattern against with an occurring message is compared. The pattern may contain % as wildcard.|
-|*override* (IN)|Name, `user_id` or `intl_id` of a override|
+|*text* (IN)|Pattern against which an occurring message is compared. The pattern may contain % as wildcard.|
+|*override* (IN)|Name, `user_id` or `intl_id` of an override|
 |*accept-override* (IN)|Boolean value (`true`/`false`) which decides whether an override is accepted or not.|
 |*expect* (IN)|Boolean value (`true`/`false`) which decides whether specified message or override is expected by the testcase. The System reports a failure if no such message or override occurs while execution. This attribute is true by default.|
 
@@ -142,7 +142,7 @@ The order processing operation works similarly to the `new-doc` operation, but i
 
 |Attributes|Description|
 |---|----|
-|id (IN)|Id of order to be processed. Alternatively an order keycan be used to identify the order to be processed. <br> (All other parameters see the description of the new-doc operation.)|
+|id (IN)|Id of order to be processed. Alternatively an order key can be used to identify the order to be processed. <br> (All other parameters see the description of the new-doc operation.)|
 
 !!! example "Example code:"
     ~~~xml
@@ -171,7 +171,7 @@ This operation's processing mode is only compatible with standard Avaloq file ty
 |---|---|
 |*name* (IN)|The filename with which the file is to be handled.|
 |*type* (IN)|The type of the file.|
-|*action* (IN)|The action to be performed on the file, can either be"store" or "process".|
+|*action* (IN)|The action to be performed on the file, can either be "store" or "process".|
 |*payload* (IN)|The full content of the file.|
 |*action* (IN)|Workflow action|
 |*out* (OUT)|Indexed access to the generated messages and orders of the file as well as to all fields of the data dictionary FILE_UPL.|
@@ -180,7 +180,7 @@ This operation's processing mode is only compatible with standard Avaloq file ty
     ~~~xml
     <input>
     <file type="KTB20" name="$file_name" action="process">
-    <payload>...<payload>
+    <payload>...</payload>
     <out property="msg_id(1)" select="msg_1" />
     <out property="doc_id(2)" select="doc_2" />
     </file>
@@ -203,7 +203,7 @@ The **message input operation** allows you to **process messages** within the Av
 |*type* (IN)|The message type (optional).|
 |*status* (IN)|The expected message status (optional).|
 |*payload* (IN)|The raw content of the message.|
-|*out* (OUT)|Access to the DDIC MEM_MSG, specifically to thegenerated order with the property "doc_id".|
+|*out* (OUT)|Access to the DDIC MEM_MSG, specifically to the generated order with the property "doc_id".|
 
 !!! example "Example code:"
     ~~~xml
@@ -226,7 +226,7 @@ The **message input operation** allows you to **process messages** within the Av
 
 ### Mass pay operation
 
-The mass pay input operation allows and creates the process of mass payment in Avaloq Banking System.
+The mass pay input operation enables the process of mass payment in the Avaloq Banking System.
 
 <br>
 
@@ -270,7 +270,7 @@ The mass pay input operation allows and creates the process of mass payment in A
 
 The AST tool can execute sections of the Avaloq scripting language, which is useful for tasks such as string concatenation or retrieving information not available from a standard DDIC (Data Dictionary). However, you should avoid using Avaloq Script if a different method is available.
 
-Syntax and Usage The input for this operation must be valid Avaloq Script; otherwise, an error will be thrown.
+Syntax and Usage. The input for this operation must be valid Avaloq Script; otherwise, an error will be thrown.
 
 - **Return Statement**: The syntax is extended to include a return statement, which lets you assign a value to an AST variable.
 - **AST Variables**: Within the Avaloq Script code, you can reference AST variables by using a dollar sign ($) as a prefix to the variable name.
@@ -312,12 +312,12 @@ AST variables can be bound to JavaScript variables as strings using the paramete
 
 <br>
 
-***`<input>` | `<java-script ...>`*** - Executes Java Script inside an AST test script
+***`<input>` | `<java-script ...>`*** - Executes JavaScript inside an AST test script
 
 |Attributes|Description|
 |---|---|
 |*script* (IN)|Specifies a script operation. With the lang attribute the script language can be defined. As JavaScript is the only language currently implemented this attribute is optional.|
-|*parameter* (IN)|Binds an AST variable specified by value to theJavaScript variable specified by name.|
+|*parameter* (IN)|Binds an AST variable specified by value to the JavaScript variable specified by name.|
 |*payload* (IN)|JavaScript code. AST variables will be expanded as strings in the script code ({$l_var}, same as in input msg operation).|
 |*out* (OUT)|Values of string variables in JavaScript can be passed to AST variables.|
 
@@ -348,7 +348,7 @@ AST variables can be bound to JavaScript variables as strings using the paramete
     </input>
     ~~~
 
-!!! example "Example code (2)(Example for Javascript Nashorn APIs made available by AST):"
+!!! example "Example code (2) (Example for JavaScript Nashorn APIs made available by AST):"
     ~~~xml
     <input>
     <script lang="nashorn">
@@ -364,7 +364,7 @@ AST variables can be bound to JavaScript variables as strings using the paramete
     </payload>
     <out property="state" select="l_state" />
     <out property="action" select="l_action" />
-    <out property="documentAsString"select="l_documentAsString" />
+    <out property="documentAsString" select="l_documentAsString" />
     </script>
     </input>
     ~~~
@@ -390,7 +390,7 @@ You can execute PL/SQL code in AST versions 2.6 and later. This operation requir
     ~~~xml
     <input>
       <descn>Block of pl/sql with return value</descn>
-      <util-plsql select="result" descn="PL/SQL block withreturn">
+      <util-plsql select="result" descn="PL/SQL block with return">
         <payload>
           declare
             l_res number;
@@ -446,9 +446,9 @@ As of AST Release 2.8, you can create XML content dynamically within your tests 
 
 |Attributes|Description|
 |---|---|
-|*tag-id* (IN)|The structure of the XML nodes separated by "/", in form of<br>tag-id="parentTag/childTag/childTagOfChildTag/..."<br>(Applicable in "util-xml" and "util-xml-node" tags, seebelow)|
-|*newline* (IN)|Set what type of character or special character to be use as newline example "\n" for new line or "\r\n" for carriage return.|
-|*indent* (IN)|Set what type of character or special character to be use as tabulator "\t" to indent.|
+|*tag-id* (IN)|The structure of the XML nodes separated by "/", in form of<br>tag-id="parentTag/childTag/childTagOfChildTag/..."<br>(Applicable in "util-xml" and "util-xml-node" tags, see below)|
+|*newline* (IN)|Set what type of character or special character to be used as newline example "\n" for new line or "\r\n" for carriage return.|
+|*indent* (IN)|Set what type of character or special character to be used as tabulator "\t" to indent.|
 |*version* (IN)|If attribute is present it determines what will be the version of the XML header. Default value is version="1.0". If "version" and "encoding" are both absent, then no header is written.|
 |*encoding* (IN)|If attribute is present it determines what will be the encoding of the XML header. Default value is encoding="utf-8". If "version" and "encoding" are both absent, then no header is written.|
 |*clear-tags-if-empty* (IN)|If set to true, any `util-xml-node` without a value will not be generated. If set to false, it will be generated.<br><br>(Only applicable in "util-xml" tag)|
@@ -470,7 +470,7 @@ As of AST Release 2.8, you can create XML content dynamically within your tests 
 |Attributes|Description|
 |---|---|
 |*tag-id* (IN)|The structure of the XML nodes separated by "/", in form of *tag-id="parentTag/childTag/childTagOfChildTag/..."*|
-|*avaloq-cond* (IN)|The condition to be verified in order for the content to beevaluated and executed.|
+|*avaloq-cond* (IN)|The condition to be verified in order for the content to be evaluated and executed.|
 
 <br>
 
@@ -480,16 +480,16 @@ As of AST Release 2.8, you can create XML content dynamically within your tests 
 |---|---|
 |*name* (IN)|Name of the attribute|
 |*value* (IN)|Value of the attribute|
-|*avaloq-cond* (IN)|The condition to be verified in order for the content to beevaluated and executed.|
+|*avaloq-cond* (IN)|The condition to be verified in order for the content to be evaluated and executed.|
 
 <br>
 
-***`<util-xml ...>` |  `<util-xml-value ...>`*** - Create a text value for util-xml-node. Only one value will be added to the last nodedefined in util-xml-node's tag-id attribute.
+***`<util-xml ...>` |  `<util-xml-value ...>`*** - Create a text value for util-xml-node. Only one value will be added to the last node defined in util-xml-node's tag-id attribute.
 
 |Attributes|Description|
 |---|---|
 |*value* (IN)|Value of the node|
-|*avaloq-cond* (IN)|The condition to be verified in order for the content to beevaluated and executed.|
+|*avaloq-cond* (IN)|The condition to be verified in order for the content to be evaluated and executed.|
 
 !!! example "Example code"
     ~~~xml
@@ -528,7 +528,7 @@ Additionally, the `task-exec` operation can return the raw output of an executed
 |*task-templ* (IN)|Predefined task template (id, internal id or user id)|
 |*sync* (IN)|Wait until task is finished in case of asynchronous execution (true\|false), default is false|
 |*mode* (IN)|Sets task execution mode exec (run, show in Avaloq GUI) or submit (submit or print in Avaloq GUI) (exec\|submit) default is exec|
-|*timeout* (IN)|Sets the timout in seconds for the task synchronization. Must be specified when sync is set to true.|
+|*timeout* (IN)|Sets the timeout in seconds for the task synchronization. Must be specified when sync is set to true.|
 |*Set* (IN)|Sets 1...n parameters of the task.|
 |*select* (IN)|Target variable where the report buffer is stored.|
 
@@ -547,7 +547,7 @@ Additionally, the `task-exec` operation can return the raw output of an executed
       </task-exec>
     </input>
     <input>
-      <task-exec task-def="task_fina_serpil" sync="true"timeout="180">
+      <task-exec task-def="task_fina_serpil" sync="true" timeout="180">
         <set property="DATE_LIST_ID" value="today" />
         <set property="COLLAT_VAL_TYPE_LIST_ID" value="2" />
         <set property="COLLAT_VAL_TYPE_LIST_ID" value="100" />
@@ -592,7 +592,7 @@ Because this operation acts outside the main target object—the Avaloq Banking 
     ~~~xml
     <input>
       <descn>run external application: {$app_name}</descn>
-      <cmd-exec cmd="$cmd" stdin="$stdin"stdout="stdout" stderr="stderr" timeout="$timeout" exit-code="exit-code" />
+      <cmd-exec cmd="$cmd" stdin="$stdin" stdout="stdout" stderr="stderr" timeout="$timeout" exit-code="exit-code" />
     </input>
     ~~~
 
@@ -658,7 +658,7 @@ The `rest-group` tag allows you to issue arbitrary REST requests using its embed
 |*result* (OUT)|AST test script variable name the result of the Rest request should be saved to.|
 |*jsonPointers*, *jsonPointersSeparator* (IN)| These two attributes define JSON Pointers to be saved in the result and the separator used in the list of json pointers (default; )|
 |*clientID*, *clientSecret*, *authEndpoint*, *tokenEndpoint*, *bodyForAuthRequest*, *headersForAuthRequest* (IN)| These attributes are available to configure REST requests needing OIDC|
-|*ignoreErrors* (IN)| Configure whether to continue the test execution when the REST call returns failure response,by setting the value to true to false|
+|*ignoreErrors* (IN)| Configure whether to continue the test execution when the REST call returns failure response, by setting the value to true or false|
 |*responseStatus*|AST test script variable stores the REST call response status.|
 |(PAYLOAD)|Payload for the Rest request. Especially important for Put and Post requests.|
 
@@ -674,7 +674,7 @@ The `rest-group` tag allows you to issue arbitrary REST requests using its embed
       <rest-execute path="/mySecondPath/mySecondSubPath" type="GET">
       </rest-execute>
       <!-- Example with OpenId Connect: -->
-      <rest-execute bodyForAuthRequest="user=astuser&password=password" headersForAuthRequest="Content-Type=x-www-form-urlencoded" authEndpoint="http://openidServer/callbackAuth"  clientID="ClientID1" clientSecret="ClientSecret1" path="post/" result="$astVariable2"tokenEndpoint="http://openIdServer/callbackToken" type="POST">
+      <rest-execute bodyForAuthRequest="user=astuser&password=password" headersForAuthRequest="Content-Type=x-www-form-urlencoded" authEndpoint="http://openidServer/callbackAuth"  clientID="ClientID1" clientSecret="ClientSecret1" path="post/" result="$astVariable2" tokenEndpoint="http://openIdServer/callbackToken" type="POST">
       </rest-execute>
     </rest-group>
     </input>
@@ -696,7 +696,7 @@ The `rest-group` tag allows you to issue arbitrary REST requests using its embed
         <rest-header>
           <payload>Content-Type=application/json</payload>
         </rest-header>
-        <rest-execute path="/api/authenticate" type="POST"result="$token" jsonPointers="/id_token"ignoreErrors="true">
+        <rest-execute path="/api/authenticate" type="POST" result="$token" jsonPointers="/id_token" ignoreErrors="true">
           <payload>
             {
             "username": "***",
@@ -709,7 +709,7 @@ The `rest-group` tag allows you to issue arbitrary REST requests using its embed
           <rest-header>
             <payload>Authorization=Bearer ${token}</payload>
           </rest-header>
-          <rest-execute path="/api/all-scripts" type="GET"result="$scripts" ignoreErrors="true" />
+          <rest-execute path="/api/all-scripts" type="GET" result="$scripts" ignoreErrors="true" />
         </rest-group>
         <rest-group server="http://localhost:8080/">
           <rest-header>
@@ -726,7 +726,7 @@ The `rest-group` tag allows you to issue arbitrary REST requests using its embed
             </Request>
             ]]>
           </rest-payload>
-        <rest-execute path="api/submit-script" type="POST"result="$response" ignoreErrors="false" />
+        <rest-execute path="api/submit-script" type="POST" result="$response" ignoreErrors="false" />
       </rest-group>
     </input>
     ~~~
@@ -792,7 +792,7 @@ Once a direct login is successful, the access token is cached internally for one
 
 ### SOAP requests
 
-The soap-group tag allows to issue arbitrary SOAP requests using its embedded soap-execute command.
+The soap-group tag allows issuing arbitrary SOAP requests using its embedded soap-execute command.
 
 <br>
 
@@ -801,7 +801,7 @@ The soap-group tag allows to issue arbitrary SOAP requests using its embedded so
 |Attributes|Description|
 |---|---|
 |*server* (IN)|Url of server SOAP services reside.|
-|*httpHeaders* (IN)|Semicolon separated list of HTTP headers and values that shall get send with the SOAP request.|
+|*httpHeaders* (IN)|Semicolon separated list of HTTP headers and values that shall be sent with the SOAP request.|
 |*soap-execute* (EMBEDDED)|Embedded command to issue specific SOAP requests. If a Basic Authorization is needed use the soap.secured property in the *ast.properties*|
 
 !!! example "Example code"
@@ -831,7 +831,7 @@ The soap-group tag allows to issue arbitrary SOAP requests using its embedded so
     <input>
       <descn>Create prerequisites for SOAP requests</descn>
       <soap-group httpHeaders="header-name headerValue; header-name2 1" server="http://example.com">
-        <soap-execute path="/somePathIfNeeded"result="$astVariable">
+        <soap-execute path="/somePathIfNeeded" result="$astVariable">
           <![CDATA[
           <soapenv:Envelope 
             xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 

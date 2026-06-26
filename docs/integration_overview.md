@@ -1,6 +1,6 @@
 # Integration guide
 
-This sections provides information on how to integrate with various tools. For example ALM or Xray.
+This section provides information on how to integrate with various tools. For example ALM or Xray.
 You can also find information on how to set up SSO with Keycloak in this section. 
 Each integration has its own documentation page where you can find detailed instructions on how to set up the integration and use it.
 
@@ -22,7 +22,7 @@ You can use the sidebar on the left for navigation or use the tiles below to nav
             <a class="card-link" href="../jira_xray">
                 <article>
                     <h3>Jira Xray</h3>
-                    <p>Guide for Xary setup and navigation</p>
+                    <p>Guide for Xray setup and navigation</p>
                     <p><strong>See section →</strong></p>
                 </article>
             </a>

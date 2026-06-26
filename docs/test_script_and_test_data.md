@@ -88,7 +88,7 @@ By annotating a test case, it can be categorized or labeled. The keys and values
 
 ~~~xml
 <?xml version="1.0" encoding="iso-8859-1"?>
-  <textcase version="1.0" user="avaloq" bu="AAA" name="CASH: Cost Calculation">
+  <testcase version="1.0" user="avaloq" bu="AAA" name="CASH: Cost Calculation">
     <annotations>
       <annotation key="Stage" value="Modul" />
       <annotation key="Kind" value="Functional Test" />
@@ -291,7 +291,7 @@ To assign the test case data to a test case, the second sheet is used:
 
 Test data increases the operational variance of test cases by enabling the execution of a single test logic with different input values. For example, test cases related to domestic payments utilize varied test data to confirm system behavior under diverse conditions, demonstrating this approach.
 
-The test data look as as follows:
+The test data look as follows:
 ![test_data_domestic_payment.png](assets/UserDocumentationM/test_data_domestic_payment.png)
 <figcaption>Test data to test domestic payments</figcaption>
 

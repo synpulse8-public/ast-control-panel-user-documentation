@@ -1,8 +1,8 @@
 # Test Sets
 The "Test Sets" menu on the AST Control Panel provides the organization of individual test cases into logical groups for streamlined, combined execution.
 
-Menu has structure similar to test case repository, it is designed for efficiency, with the left side of the screen displaying a repository tree view of all available test sets. 
-This whole menu is collapsible, so you can hide the tree view and use whole screen for content area if you want to focus on details of specific test set.
+The menu has a structure similar to the test case repository. It is designed for efficiency, with the left side of the screen displaying a repository tree view of all available test sets.
+This whole menu is collapsible, so you can hide the tree view and use the whole screen for the content area if you want to focus on details of a specific test set.
 
 Selecting an item from this tree populates the main content area with detailed information and options for that particular test set.
 
@@ -27,42 +27,42 @@ An important feature of this menu is the context menu, which appears when a user
 The primary content area is divided into two key sections. At the top, a metadata panel displays the Name, Description, and unique Test Set ID. This provides quick, high-level context about the selected set. Below this, a tabbed interface further organizes the information. 
 
 ![test_sets_overview.png](assets/UserDocumentationM/test_sets_overview.png)
-<figcaption>Screenshot of the Test Set detail panel, listing contained test cases and execution controls.</figcaption>>
+<figcaption>Screenshot of the Test Set detail panel, listing contained test cases and execution controls.</figcaption>
 
 #### Definitions tab
-The Definitions tab shown in the previous  image, lists all the individual test cases included in the test set. For each test case, it displays its name, execution sequence, and whether it is Deactivated.
+The Definitions tab shown in the previous image lists all the individual test cases included in the test set. For each test case, it displays its name, execution sequence, and whether it is Deactivated.
 This organized table gives the user a clear view of which tests are part of the set and their execution order.
 
 Sequence can be parallel or sequential. In parallel execution, all test cases are executed simultaneously, while in sequential execution, test cases are executed one after the other in a specified order.
-The image below shows that the two testcases are set to execute in parallel as in indicated by the line before the second testcase. 
+The image below shows that the two testcases are set to execute in parallel as indicated by the line before the second testcase. 
 The third testcase has a number next to it, which means that it will be executed after the first two testcases are finished.
 
 ![test_set_sequence.png](assets/ControlPanelDocu/test_set_sequence.png)
-<figcaption>Two test cases are in parallel the third is sequential</figcaption>>
+<figcaption>Two test cases are in parallel the third is sequential</figcaption>
 
-To group testcases into parallel or sequential execution tou need to click the *Edit* button in the definitions tabs.
+To group testcases into parallel or sequential execution you need to click the *Edit* button in the Definitions tab.
 Then you can use drag and drop to change the order of test cases and to group them into parallel or sequential execution.
 
 To set testcase to execute in parallel you click on it and drag it on the testcase you want to execute in parallel with.
 ![test_set_parallel.png](assets/ControlPanelDocu/test_set_parallel.png)
-<figcaption>Dropping a testcase to another to make them execute in parallel</figcaption>>
+<figcaption>Dropping a testcase to another to make them execute in parallel</figcaption>
 
 To set testcase to execute sequentially you click on it and drag it to the line between testcases until the line is highlighted. 
 Then you drop it there, and it will be executed after the testcase above the line is finished.
 
 ![test_set_sequential.png](assets/ControlPanelDocu/test_set_sequential.png)
-<figcaption>Dropping a testcase after another to make them execute in sequence</figcaption>>
+<figcaption>Dropping a testcase after another to make them execute in sequence</figcaption>
 
 #### Summary tab
-The Summary tab shown in image below allows us to select the instance on which selected test set was executed and date range for which we want to see the summary.
+The Summary tab shown in the image below allows us to select the instance on which selected test set was executed and date range for which we want to see the summary.
 Summary works as overview. For more details check reports tab.
 ![tssummarytab.png](assets/ControlPanelDocu/tssummarytab.png)
-<figcaption>Summary tab content with displayed data for specific instance and date range</figcaption>>
+<figcaption>Summary tab content with displayed data for specific instance and date range</figcaption>
 
 #### Reports tab
-The Reports tab contains whole table with many fields that can be set up for different view.
+The Reports tab contains the full table with many fields that can be set up for different view.
 ![tsreportstab.png](assets/ControlPanelDocu/tsreportstab.png)
-<figcaption>Reports display for selected test set</figcaption>>
+<figcaption>Reports display for selected test set</figcaption>
 
 The table is designed to provide a comprehensive overview of all scheduled and executed test runs, allowing users to track the history and outcomes of their test executions effectively.
 The table columns organize data points to track the execution timeline and ownership. These include the Start Date, End Date, Scheduled Date, and Creation Date, allowing for tracking of initiation and completion times. 
@@ -104,14 +104,14 @@ You can also use the context menu for the [folders](test_case_repository.md#fold
 In this case the same dialog appears but with already preselected testcase or all testcases from a folder.
 
 #### Add test cases to already existing test set
-In the Test set view in a open test set you can click on the *Edit* button in the Definitions tab.
-This will enable of editing of the test set. Then you click on the *Add test case* button which will open a dialog from which you can select a test case that will be added to this set.
+In the Test set view in an open test set you can click on the *Edit* button in the Definitions tab.
+This will enable editing of the test set. Then you click on the *Add test case* button which will open a dialog from which you can select a test case that will be added to this set.
 
 It also shows all the testcases that are present in this set. You can also remove test cases from this set by unchecking them in the list.
 ![test_set_add_case.png](assets/ControlPanelDocu/test_set_add_case.png)
 <figcaption>Dialog for adding a test case</figcaption>
 
-Another option is to use he context menu for the [folders](test_case_repository.md#folder-context-menu) and [testcases](test_case_repository.md#test-case-context-menu) in the test case screen.
+Another option is to use the context menu for the [folders](test_case_repository.md#folder-context-menu) and [testcases](test_case_repository.md#test-case-context-menu) in the test case screen.
 Then you choose add to existing test set and then select the test set to which you want to add this test case or folder.
 
 ![addtets.png](assets/ControlPanelDocu/test_case_add_set.png)

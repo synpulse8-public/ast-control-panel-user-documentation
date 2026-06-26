@@ -79,11 +79,11 @@
 | Customer Static Data | bp | BP | Business Partner |
 | Customer Static Data | person | PERSON | Person |
 | Customer Static Data | person_mass | PERSON_MASS | Person Mass |
-| Discrecionary Contract | ips | IPS | Investment Policy Statement |
-| Discrecionary Contract | mpf | MPF | Model Portfolio |
-| Discrecionary Contract | rebalm | REBALM | Rebalancer Master |
-| Discrecionary Contract | rebalp | REBALP | Rebalancer Investment Proposition |
-| Discrecionary Contract | rebals | REBALS | Rebalancer Order |
+| Discretionary Contract | ips | IPS | Investment Policy Statement |
+| Discretionary Contract | mpf | MPF | Model Portfolio |
+| Discretionary Contract | rebalm | REBALM | Rebalancer Master |
+| Discretionary Contract | rebalp | REBALP | Rebalancer Investment Proposition |
+| Discretionary Contract | rebals | REBALS | Rebalancer Order |
 | Fee contracts | feecr | FEECR | Retrocession Fee Contract |
 | Fee contracts | feect | FEECT | Trailer Fee Contract |
 | Fee contracts | feep | FEEP | Fee Profile |

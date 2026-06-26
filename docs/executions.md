@@ -19,7 +19,7 @@ It is the main place to monitor and manage test execution.
 | Execution name   | Name of the execution                                     |
 | Test set name    | Name of the set being executed                            |
 | Instance         | Avaloq instance where tests are executed                  |
-| Status           | Status of the execution(Schedilend/Running/Finished)      |
+| Status           | Status of the execution (Scheduled/Running/Finished)      |
 | Recurrence       | Recurrence of this run                                    |
 | Test cases       | Number of test cases                                      |
 | AST execution ID | Id of the execution                                       |
@@ -30,7 +30,7 @@ It is the main place to monitor and manage test execution.
 
 ### Table view customization
 
-This table can be altered by adding or removing mentioned columns via clicking  the 'Set columns' button. This will open a pop-up with all columns to be selected or unselected as checkboxes. 
+This table can be altered by adding or removing mentioned columns via clicking the 'Set columns' button. This will open a pop-up with all columns to be selected or unselected as checkboxes.
 The table can be set to its default view by clicking on 'reset view' button.
 
 Columns can also be pinned to the left side of the table by clicking on the pin icon in the 'Set columns' dropdown. 
@@ -40,7 +40,7 @@ The order of the pinned columns is determined by the order in which they were pi
 
 ![setcolumns.png](assets/ControlPanelDocu/setcolumns.png)
 <figcaption>Set columns with all columns to be selected or unselected as checkboxes. 
-The Start date columns has the grey pin next to it which indicates it is pinned.
+The Start date column has the grey pin next to it which indicates it is pinned.
 The End Date column is not pinned so you can see an outline of a pin as it being hovered.</figcaption>
 
 ### Ordering
@@ -64,7 +64,7 @@ If a filter is active it will be shown in the active filters tab on the top righ
 You can quickly clear the filters by clicking on the "x" icon next to the active filter or by clicking on the "Clear all" button which will clear all active filters at once.
 
 !!! Info
-    The for execution status is applied together with other filters, meaning that if you select "Scheduled" status and filter by user name "John", you will see only scheduled executions created by John. 
+    The execution status filter is applied together with other filters, meaning that if you select "Scheduled" status and filter by user name "John", you will see only scheduled executions created by John. 
     If you want to see all executions by "John", you need to set the execution status filter to "all".
 
 ![filter_tab.png](assets/ControlPanelDocu/filter_tab.png)
@@ -72,7 +72,7 @@ You can quickly clear the filters by clicking on the "x" icon next to the active
 
 ### Execution details
 
-Clicking a table row of a Running or Finished execution button will show the same functionality as shown in the Test set [reports tab](test_sets.md#reports-tab).
+Clicking a table row of a Running or Finished execution will show the same functionality as shown in the Test set [reports tab](test_sets.md#reports-tab).
 
 When clicking a table row of a Scheduled execution a dialog will be shown that gives you the option to modify or cancel the scheduled execution.
 

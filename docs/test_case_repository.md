@@ -3,7 +3,7 @@
 Click 'Tests' tab on [navigation](navigation.md) panel to go to test repository. Following chapter describes the functionality and how to navigate basic features of test case repository.
 
 
-## Interface overwiew
+## Interface overview
 
 The interface of AST is divided into two main sections:
 
@@ -28,7 +28,7 @@ This hierarchical structure allows users to browse through different categories 
 
 Each folder within the tree is labeled with a descriptive name(of the users choosing) and includes a count of the test cases it contains, giving the user an immediate sense of the repository's scope.
 
-User can create modify or delete folders, test cases or methods.
+Users can create, modify, or delete folders, test cases, or methods.
 To work with test cases or folders click on the three dots. Then you see **[context menu](#create-edit-and-manage-test-cases)** with all the functionalities.
 
 ### Version information and details panel
@@ -46,7 +46,7 @@ When Xray or ALM integration is set up, you can also see the linked external IDs
 ![testcasemetadata.png](assets/UserDocumentationM/testcasemetadata.png)
 <figcaption>Detailed view of a selected test case information, external IDs, the last run and the button where you can upload test data.</figcaption>
 
-The last run status if clickable and opens a dialog where you can download the execution report.
+The last run status is clickable and opens a dialog where you can download the execution report.
 
 #### Test case data
 The test data can be also uploaded in this section. You can also download the data file that is currently in use or remove it.
@@ -78,7 +78,7 @@ To see the testcase content you can single click on a testcase. This will open t
 If you single click another testcase while having one already opened in preview mode, the previous one will be closed and the new one will be opened in preview mode.
 
 
-To pin the testcase you need to use double click. In this mode the testcase will be pinned, and you can open another testcase in preview mode without closing the pinned one.
+To pin the testcase, double-click it. In this mode the testcase will be pinned, and you can open another testcase in preview mode without closing the pinned one.
 If you start to edit a testcase opened in preview mode it will be automatically pinned.
 
 
@@ -86,7 +86,7 @@ Testcase in preview mode is indicated by the name in italic in the test case tab
 
 The actions bar at the bottom provides critical functionalities for interacting with the selected test case:
 
-1. **Save**  modifications
+1. **Save** modifications
 
 2. **Trial Run** (test run)
 
@@ -104,11 +104,11 @@ This multi-pane layout ensures that the user has a complete overview of the test
 
 ### Additional editor features
 
-Test case editor offers another set of useful functionalities that help you with code checking, version comparison and data upload. These are accessible in upper right part of editor by click on the three dots button.
+Test case editor offers another set of useful functionalities that help you with code checking, version comparison and data upload. These are accessible in the upper right part of the editor by clicking the three dots button.
 ![addition feat.png](assets/ControlPanelDocu/additional-feat.png)
 
 #### Text formatting
-Text formatting helps you to checks how the document would look after formatting rules are applied, without permanently changing it. It helps you preview spacing, indentation, and layout issues to confirm the formatting is correct before saving or publishing.
+Text formatting helps you check how the document would look after formatting rules are applied, without permanently changing it. It helps you preview spacing, indentation, and layout issues to confirm the formatting is correct before saving or publishing.
 
 #### Duplicate
 Duplicate creates an exact copy of the testcase. This is useful for creating similar test cases without starting from scratch, allowing you to modify the duplicate while keeping the original intact.

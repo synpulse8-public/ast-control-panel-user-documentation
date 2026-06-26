@@ -29,7 +29,7 @@ All activities made by a user, leading to test cases execution against Avaloq, h
 Given AST testcases are used to prepare synthetic data and simulate complex testcases, optimal results are achieved by using the Avaloq k-user.
 However, if security limitations forbid usage of k-user, it is possible to set up a non k-user as a proxy user for AST. See section [below](#setting-up-a-non-k-user) for instructions.
 
-Logs of test case execution are stored and secured in the database. Log are kept read-only. 
+Logs of test case execution are stored and secured in the database. Logs are kept read-only. 
 Test execution logs are separated from AST application logs. Application logs are stored on the pod.
 
 ### Setting up a non k-user

@@ -5,11 +5,11 @@ This section details the different types of verification you can perform.
 
 ### Verify value operation
 
-The verify value operation allows to test the value of a variable or an avaloq-expression against an expected value. The comparison strategy is as follows (this hierarchy is not adaptable):
+The verify value operation allows testing the value of a variable or an avaloq-expression against an expected value. The comparison strategy is as follows (this hierarchy is not adaptable):
 
 - The two values are treated as numbers and compared (with a tolerated deviation of 1.00\times 10<sup>-8</sup>).
 - The two values are treated as strings and are compared character after character.
-- The expected value is treated as a regular expression. AST tests whether the actual value satisfies the given regularexpression pattern.
+- The expected value is treated as a regular expression. AST tests whether the actual value satisfies the given regular expression pattern.
 
 The content specified in the `select` attribute can also be verified against an XML schema.
 
@@ -20,10 +20,10 @@ The content specified in the `select` attribute can also be verified against an 
 |Attributes |Description|
 |--- | ----|
 |*select* (IN) |Variable to be verified.|
-|*avaloq-expr* (IN)|The value to be verified is determined by an avaloqexpression.|
-|*script-expr* (IN)|The value to be verified is determined by a JavaScriptexpression|
+|*avaloq-expr* (IN)|The value to be verified is determined by an Avaloq expression.|
+|*script-expr* (IN)|The value to be verified is determined by a JavaScript expression|
 |*value* (IN)|Value to be verified against (expected value). Possibly a regular expression pattern.|
-|*schema* (IN)|URI to XML schema. The URI can describe a path to alocal file or a web location (http://...).|
+|*schema* (IN)|URI to XML schema. The URI can describe a path to a local file or a web location (http://...).|
 |*raise-msg* (IN)|Raises a customized error message.|
 
 !!! example "Example code 1"
@@ -37,8 +37,8 @@ The content specified in the `select` attribute can also be verified against an 
 !!! example "Example code 2"
     ~~~xml
     <verify>
-      <descn>Verify that an avaloq-expression equals thespecified number</descn>
-      value avaloq-expr="session.bu_id" value="6"/>
+      <descn>Verify that an avaloq-expression equals the specified number</descn>
+      <value avaloq-expr="session.bu_id" value="6"/>
     </verify>
     ~~~
 
@@ -69,7 +69,7 @@ This booking operation ensures that the asynchronous Avaloq booking engine is co
 |*pos* (IN) |Position on which the verification is done.|
 |*macc* (IN) |Money account on which the verification is done.|
 |*cont* (IN) |Container on which the verification is done.|
-|*curry* (IN) |Currency of the defined container (required whenparameter container is given).|
+|*curry* (IN) |Currency of the defined container (required when parameter container is given).|
 |*qty* (IN) |Quantity to be verified (mandatory).|
 |*recon_lot_type* (IN) |Recon lot type (optional).|
 |*evt-status* (IN) |Event Status of the Booking to be verified (optional).|
@@ -106,7 +106,7 @@ The message verify operation allows you to check the content of a given messageâ
 
 ### Verify compare-pdfs operation
 
-Differences between two PDF files can be checked using the compare pdfs verify operation. The pdf pages are converted to images with 50 pixel/in. The comparison strategy is as follows:
+Differences between two PDF files can be checked using the compare pdfs verify operation. The pdf pages are converted to images with 50 pixels/in. The comparison strategy is as follows:
 
 - One source and one target attribute must be given.
 - Only one source and only one target may be given.
@@ -117,19 +117,19 @@ Differences between two PDF files can be checked using the compare pdfs verify o
 - Comparison between two PDF files will be by pixel and if it exceeds the maximum page pixel errors, the operation returns a failure.
 - It's possible to use sub-tags `<page ...>` in the `<compare-pdfs>` tags to be able to define which pages will be compared.
 - If no `<page>` is present, it works like before, all pages compared.
-- If "save-screenshot-to" attribute is present, it will save the result image base on the declaration value with or without file extension .png.
+- If "save-screenshot-to" attribute is present, it will save the result image based on the declaration value with or without file extension .png.
 
 
 ***`<verify ...>` | `<compare-pdfs ...>`*** - Compares two PDF files
 
 |Attributes|Description|
 |---|---|
-|*source-id (IN)|Source id|
+|*source-id* (IN)|Source id|
 |*source-path* (IN)|Directory and filename of the source PDF file|
 |*target-id* (IN)|Target id|
 |*target-path* (IN)|Directory and filename of the target PDF file|
 |*max-page-pixel-errors* (IN)|The maximum page pixel errors that is valid. Default is 0.|
-|*difference-screenshot* (IN)|Valid values are "onerror" (default) and "always". Saving a screenshot of the comparison to the output folder on error or always. "onerror": Everytime the maximum page pixel errors have been exceeded for each page in the PDF file, or "always".|
+|*difference-screenshot* (IN)|Valid values are "onerror" (default) and "always". Saving a screenshot of the comparison to the output folder on error or always. "onerror": Every time the maximum page pixel errors have been exceeded for each page in the PDF file, or "always".|
 |*save-screenshot-to* (IN)|Save the generated screenshot of image based on the declared value of attribute with or without file extension .png.|
 
 !!! example
@@ -145,12 +145,12 @@ Differences between two PDF files can be checked using the compare pdfs verify o
 
 |Attributes|Description|
 |---|---|
-|*numbers* (IN)|Page number/s to be tested. It can contain a comma separated list of numbers or an "*" for all pages (that can be overriden for some specific cases with other entries below it)|
+|*numbers* (IN)|Page number/s to be tested. It can contain a comma separated list of numbers or an "*" for all pages (that can be overridden for some specific cases with other entries below it)|
 |*x* (IN)|Initial x coord of the portion to be tested for that page. Default is 0. It can be set to a percentage. (e.g. x="/23" means 23%)|
 |*y* (IN)|Initial y coord of the portion to be tested for that page. Default is 0. It can be set to a percentage. (e.g. x="/23"means 23%)|
 |*width* (IN)|"full" for the complete width or width in pixels of the region to be compared. Default is "full". It can be set to a percentage. (e.g. x="/23" means 23%)|
-|*height* (IN)|"full" for the complete width or height in pixels of the region to be compared. Default is "full". It can be set to a percentage. (e.g. x="/23" means 23%)|
-|*max-page-pixels-errors* (IN)|Treshold for this page configuration that overrides the previous ones in the `<compare-pdfs>` or previous `<page>` tags.|
+|*height* (IN)|"full" for the complete height or height in pixels of the region to be compared. Default is "full". It can be set to a percentage. (e.g. x="/23" means 23%)|
+|*max-page-pixels-errors* (IN)|Threshold for this page configuration that overrides the previous ones in the `<compare-pdfs>` or previous `<page>` tags.|
 
 !!! example
     ~~~xml

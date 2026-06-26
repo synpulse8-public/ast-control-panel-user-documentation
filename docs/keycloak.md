@@ -14,7 +14,7 @@ The keycloak profile allows you to integrate the AST Control Panel with Keycloak
     SPRING_PROFILES_ACTIVE=prod,api-docs,keycloak
     ```
 !!! warning "Important"
-    prod and api-docs profiles have to be specified also when using keycloak otherwise the app would start in dev profile which could corrupt the data in your db
+    prod and api-docs profiles have to be specified also when using keycloak, otherwise the app would start in dev profile which could corrupt the data in your db
 
 2. To set up oauth2 correctly these two variables need to be set with your settings:
     ```properties
@@ -25,7 +25,7 @@ The keycloak profile allows you to integrate the AST Control Panel with Keycloak
 !!! info
     For the `SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI` use the JWK URL provided by your keycloak instance. Usually it is the url with /certs at the end. 
 
-3. Other settings that have to configured in the deployment file:
+3. Other settings that have to be configured in the deployment file:
     
 
 | Configuration key                                   | Description                                                                 |
@@ -54,11 +54,11 @@ After the keycloak profile activation the authentication process is entirely han
 
 - You can navigate directly to the application and you will be logged in right away.
 
-- The authentication endpoint is disabled and each request to the API will require a Bearer token. The API functionality remains the same but you must provide a Bearer token in the Authorization header. You can get the Bearer token from your Keycloak instance (You need to ask you Keycloak admin for more details as we have no knowledge about your setup).
+- The authentication endpoint is disabled and each request to the API will require a Bearer token. The API functionality remains the same but you must provide a Bearer token in the Authorization header. You can get the Bearer token from your Keycloak instance (You need to ask your Keycloak admin for more details as we have no knowledge about your setup).
 
 - The user management part is not available when keycloak profile is active. Reason being that the users are managed in keycloak and not in the app. So if you want to add a new user you need to do it in keycloak and not in the app.
 
-- If there was already a user created via ast with the same username as is being used by a keycloak user this user modified to a keycloak user automatically.
+- If there was already a user created via ast with the same username as is being used by a keycloak user this user is modified to a keycloak user automatically.
 
 - If an ast user is deactivated or was deleted and a keycloak user with the same user name logs in, the keycloak user has precedence as the data in JWT claims are taken into consideration.
 

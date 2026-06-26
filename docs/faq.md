@@ -20,7 +20,7 @@ For more information see [Mounting of ast.properties (Optional)](deployment.md#m
 
 #### Can the Applications DB credentials be stored as a secret?
 Yes, if you decide to use environment variables for setting up the database connection, you can store the password in a secret and reference it in the `Values.yaml` file. For more information see [Setting up environment variables](deployment.md#setting-up-environment-variables) section in the [Deployment](deployment.md) documentation.
-If you decide to use a custom configuration file([Addional config file](deployment.md#using-the-spring-additional-configuration-file)) for these variables, then you need to store the whole file as a secret if you want to use secrets for storing the database connection details. For more information refer to the [Deployment](deployment.md) documentation.
+If you decide to use a custom configuration file ([Additional config file](deployment.md#using-the-spring-additional-configuration-file)) for these variables, then you need to store the whole file as a secret if you want to use secrets for storing the database connection details. For more information refer to the [Deployment](deployment.md) documentation.
 
 ---
 

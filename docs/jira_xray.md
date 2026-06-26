@@ -26,7 +26,7 @@ On how to set environment variables please refer to the [Setting environment var
 
 You must link your AST test cases to their corresponding Xray test entities in Jira by assigning an **External Xray ID**.
 
-#### Individual Asignement
+#### Individual Assignment
 
 1. Go to the Test tab and select a test case to open its details shown in the [details panel](test_case_repository.md#version-information-and-details-panel).
 2. Use the field in the detail view to assign or edit the **XRAY**.
@@ -34,7 +34,7 @@ You must link your AST test cases to their corresponding Xray test entities in J
 ![xray_testid.png](assets/UserDocumentationM/xray_testid.png)
 <figcaption>Test case detail with External XRAY ID field</figcaption>
 
-#### Bulk Assigment (CSV Upload)
+#### Bulk Assignment (CSV Upload)
 
 1. Click on any test case in the repository tree to open the [details panel](test_case_repository.md#version-information-and-details-panel) and then click **Manage External IDs**.
 2. This dialog allows you to upload mappings via a **CSV file**. The CSV must contain the **AST Test Case ID** and the **External Xray ID**.
@@ -57,7 +57,7 @@ AST Test Case ID,External Xray ID;
 When a test run is scheduled, you must specify the unique **Xray Execution ID** that results will be synced to. **This is different from the External Xray ID** used for individual test cases.
 
 ![xray_sync.png](assets/UserDocumentationM/xray_sync.png)
-<figcaption>Schedule execution dialog with 'Create Jira Xray report</figcaption>
+<figcaption>Schedule execution dialog with 'Create Jira Xray report' option</figcaption>
 
 ![xray_sync3.png](assets/UserDocumentationM/xray_sync3.png)
 <figcaption>Test execution log showing Xray Sync Status column</figcaption>
@@ -67,7 +67,7 @@ When a test run is scheduled, you must specify the unique **Xray Execution ID** 
 
 After a test run is complete, you can review its status and troubleshoot any issues.
 
-- **View Sync Status**: Click the executions table row  for a completed execution to open a detailed view showing the test execution status and Xray sync logs.
+- **View Sync Status**: Click the executions table row for a completed execution to open a detailed view showing the test execution status and Xray sync logs.
 - **Detailed Logs**: In the Reports pop-up window, you can see the synchronization status for each test case and click '**View Sync Logs**' for detailed event records.
 - **Manual JSON Download**: You can download the **raw JSON payload** sent to Xray by clicking the '**XRAY JSON**' button in the 'Reports' dropdown. This file contains the execution results and metadata, which is useful for debugging.
 ![xray_reports.png](assets/UserDocumentationM/xray_reports.png)

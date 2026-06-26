@@ -13,7 +13,7 @@ After clicking the icon, you will be redirected to the admin page where you can 
 <figcaption>Administration navigation panel</figcaption>
 
 ### User management
-As an administrator, you can access the User Role Maintenance to change roles of other existing users, delete them, or create new users and assign them a password and roles .
+As an administrator, you can access the User Role Maintenance to change roles of other existing users, delete them, or create new users and assign them a password and roles.
 
 !!! info
     The user management section is disabled if the Keycloak SSO authentication is enabled. 
@@ -23,7 +23,7 @@ As an administrator, you can access the User Role Maintenance to change roles of
 ![users list.png](assets/AdminDocu/users-list.png)
 <figcaption>User management interface. </figcaption>
 
-To create a new user use the Click new user button. To edit details of current user click the row of the table and a user details dialog will open where you can edit.
+To create a new user, click the New User button. To edit details of the current user, click the row in the table and a user details dialog will open where you can edit.
 
 ![create_user.png](assets/AdminDocu/create_user.png)
 <figcaption>User Role Maintenance interface. </figcaption>
@@ -33,12 +33,12 @@ Each role will have access to the corresponding view.
 | Role type      | Rights                                                                                                              |
 |----------------|---------------------------------------------------------------------------------------------------------------------|
 | **ROLE_USER**  | User can only display reports and run test cases, modify/create test cases and sets. Admin operations not available |
-| **ROLE_ADMIN** | Administrative role, all right assigned                                                                             |
+| **ROLE_ADMIN** | Administrative role, all rights assigned                                                                            |
 
 !!! warning "Important"
     Admin user needs to have user_role and admin_role (both) assigned as rights. So it is only user or both for administrative access.
 
-After logging in with your user, you are navigated to landing page where you will plenty of options on [navigation panel](navigation.md), where you can access test cases and explore plenty of functionalities.
+After logging in with your user, you are navigated to the landing page where you will find plenty of options on the [navigation panel](navigation.md), where you can access test cases and explore plenty of functionalities.
 
 ### Metrics
 The Metrics tab provides an overview of the system's performance and usage statistics. 
@@ -61,9 +61,9 @@ In the configuration files you can set up files necessary for the application:
 |--------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | ast.properties                       | Main configuration file for the application where you can set up various properties for the application such the avaloq connection details etc. |
 | ast.license                          | License file for the application, without a valid file the tests will not execute.                                                              |
-| ast.globalsettings                   | Global settings file where you can set up the business  user.                                                                                   |
+| ast.globalsettings                   | Global settings file where you can set up the business user.                                                                                   |
 | report_template_for_html_report.xslt | XSLT file used for transformation of XML report to HTML report. You can customize the HTML report by changing this file.                        |
-| report_template_for_excel_report.xls | Excel template used for transformation of XML report to Excel report. You can customize the Excel report by changing this file..                |
+| report_template_for_excel_report.xls | Excel template used for transformation of XML report to Excel report. You can customize the Excel report by changing this file.                 |
 
 
 In the application configuration section you can set up various properties:
@@ -75,7 +75,7 @@ In the application configuration section you can set up various properties:
 | ast-control-panel.execution.max-parallel-processes   | The number of maximum parallel processes for test execution. This is used to limit the number of parallel executions that can be run at the same time. If the number of scheduled executions exceeds this number, the additional executions will be queued until a slot is available. |
 | ast-control-panel.integration.alm.enabled            | Flag to enable or disable the ALM integration. If true more options will be available in the configuration for ALM integration. For more details on ALM integration see [ALM integration](alm.md) documentation.                                                                      |
 | ast-control-panel.integration.xray.enabled           | Flag to enable or disable the Xray integration. If true more options will be available in the configuration for Xray integration. For more details on Xray integration see [Xray integration](jira_xray.md) documentation.                                                            |
-| ast-control-panel.user-interface.header-color        | Property to set up the color of the ribbon under the header in the control panel. You can choose from 6 predefined header ribbon colors.                                                                                                                                              | |
+| ast-control-panel.user-interface.header-color        | Property to set up the color of the ribbon under the header in the control panel. You can choose from 6 predefined header ribbon colors.                                                                                                                                              |
 
 The override checkbox must be selected to use the value you set up, otherwise the default value will be used. Default values are set up in the application db.
 
@@ -112,7 +112,7 @@ This is to prevent conflicts and ensure data integrity during the deletion proce
 The deletion process is performed asynchronously in the background, so you can continue using the control panel while the deletion is in progress.
 
 !!! info
-    We recommend to perform deletions of smaller date ranges(1 week, 1 month) at the start so you can get a feeling of how many executions are being deleted and how long the deletion process takes. 
+    We recommend to perform deletions of smaller date ranges (1 week, 1 month) at the start so you can get a feeling of how many executions are being deleted and how long the deletion process takes. 
     Then you can select larger date ranges for deletion if needed. Using this first on dev environment is also recommended before using it on production environment for the first time.
 
 

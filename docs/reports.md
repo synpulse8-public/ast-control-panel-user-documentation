@@ -88,7 +88,7 @@ You can view the latest report for an individual test case directly from the Tes
 - **Report Formats**: Reports for individual test cases are available in three distinct formats for review and export:
 
 !!! info
-    The **Analytics** menu also provides the ability to export a CSV reports. See the [Analytics](analytics.md) documentation for details.
+    The **Analytics** menu also provides the ability to export CSV reports. See the [Analytics](analytics.md) documentation for details.
 
 ## Customizing Reports
 
@@ -102,7 +102,7 @@ The process relies on defining the necessary files in your configuration:
 - **Excel Template**: This is the Excel file (.xls or .xlsx) you design with your desired layout.
 - **HTML Template**: This is the html you can design with your desired layout.
 
-The template files can be uploaded in [Configuration](admin.md#configuration) section. Admin role is required to upload these files
+The template files can be uploaded in the [Configuration](admin.md#configuration) section. Admin role is required to upload these files.
 
 ### Excel template and XPATH expressions
 
@@ -229,7 +229,7 @@ Rows are generated from the `testcase` nodes in the XML.
 
 !!! example "Setup"
 
-    To be able to see the TESECASE_ID to be populated in the report it has to be setup in the test data excel and in the test case.
+    To be able to see the TESTCASE_ID to be populated in the report it has to be setup in the test data excel and in the test case.
 
     === "Test data excel"
 
