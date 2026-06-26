@@ -33,7 +33,7 @@ The keycloak profile allows you to integrate the AST Control Panel with Keycloak
 | `AST_CONTROL_PANEL_SSO_USERNAME_CLAIM`              | Specifies the claim from which the username will be extracted. The username must be unique. |
 | `AST_CONTROL_PANEL_SSO_ROLES_CLAIM`                 | Specifies the claim from which the roles will be extracted.                 |
 | `AST_CONTROL_PANEL_SSO_ROLE_MAPPING_ROLE_ADMIN`     | Specifies which roles from the claims will be mapped to the **admin** role in the application. Multiple roles can be configured. |
-| `ROLE_MAPPING_ROLE_USER`                            | Specifies which roles from the claims will be mapped to the **user** role in the application. Multiple roles can be configured. |
+| `AST_CONTROL_PANEL_SSO_ROLE_MAPPING_ROLE_USER`      | Specifies which roles from the claims will be mapped to the **user** role in the application. Multiple roles can be configured. |
 
 Example:
 ```properties

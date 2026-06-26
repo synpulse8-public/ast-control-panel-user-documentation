@@ -36,7 +36,7 @@ Each role will have access to the corresponding view.
 | **ROLE_ADMIN** | Administrative role, all rights assigned                                                                            |
 
 !!! warning "Important"
-    Admin user needs to have user_role and admin_role (both) assigned as rights. So it is only user or both for administrative access.
+    Admin user needs to have ROLE_USER and ROLE_ADMIN (both) assigned as rights. So it is only user or both for administrative access.
 
 After logging in with your user, you are navigated to the landing page where you will find plenty of options on the [navigation panel](navigation.md), where you can access test cases and explore plenty of functionalities.
 

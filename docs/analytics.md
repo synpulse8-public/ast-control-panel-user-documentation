@@ -7,8 +7,7 @@ The left navigation pane categorizes the available reports. Currently, the prima
 
 ## Execution Reporting
 
-After a test case has been executed, a user can access its detailed report.
-This report offers three different viewing formats to accommodate various user needs and external tools: HTML for a user-friendly, web-based view; Log for a detailed, step-by-step text record; and XML for a structured data format suitable for parsing by other applications. This flexibility ensures that the results can be easily reviewed and integrated into other systems.
+To learn more about the execution reporting features, refer to the [Reports](reports.md) documentation.
 
 ### Reports to download
 

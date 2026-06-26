@@ -35,13 +35,6 @@ After the activation of the Keycloak profile, the authentication endpoint is dis
 
 ---
 
-#### After the setting of the context path, the application is not working properly.
-Make sure that your ingress,load balancer or reverse proxy is configured to handle cookies correctly. 
-The context path requires a cookie to work properly, so if the cookies are not handled correctly, the application may not work as expected. 
-For more information on how to set a custom context path, see the [Setting a custom context path](deployment.md#setting-a-custom-context-path) section in the [Deployment](deployment.md) documentation.
-
----
-
 #### The application experienced a crash and the test run logs are not accessible, how to retrieve the logs?
 Unfortunately, in this case, the logs are not retrievable as they were not saved in the database. 
 The logs are stored in the database only after the test run is finished, so if the application crashes during the test run, the logs will not be saved and therefore not accessible.

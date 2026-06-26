@@ -70,9 +70,9 @@ For more information, see the [Excel Report Template](#excel-template-and-xpath-
 
 You can view reports at three levels of detail: Execution, Test Set, and Individual Test Case.
 
-#### The Schedule (Execution) View
+#### The Execution View
 
-The **Schedule** menu functions as the central log for all test activity, showing the status of both scheduled and completed runs.
+The **Execution** menu functions as the central log for all test activity, showing the status of both scheduled and completed runs.
 
 - **Execution Grid**: The main table displays key metadata for every run, including the Start Date, End Date, User Name, and the current Status.
 - **Execution Results Summary**: This summary details the total number of tests that Passed, Failed, Errored, and are Pending.
@@ -85,7 +85,7 @@ The **Schedule** menu functions as the central log for all test activity, showin
 You can view the latest report for an individual test case directly from the Test Case Repository.
 
 - **Status Bubble**: Clicking on the colored status bubble next to a test case opens its execution report.
-- **Report Formats**: Reports for individual test cases are available in three distinct formats for review and export:
+- **Report Formats**: Reports for individual test cases are available in distinct formats for review and export: Log, HTML, XML and Excel.
 
 !!! info
     The **Analytics** menu also provides the ability to export CSV reports. See the [Analytics](analytics.md) documentation for details.

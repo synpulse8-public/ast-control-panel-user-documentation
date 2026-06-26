@@ -5,7 +5,7 @@ It is the main place to monitor and manage test execution.
 
 
 ![executions.png](assets/UserDocumentationM/executions.png)
-<figcaption>Schedule tab view: table with all runs</figcaption>
+<figcaption>Execution tab view: table with all runs</figcaption>
 
 **List of columns with explanations**
 

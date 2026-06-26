@@ -17,12 +17,12 @@ An important feature of this menu is the context menu, which appears when a user
 ![sets.png](assets/ControlPanelDocu/sets.png)
 <figcaption>Display of the context menu</figcaption>
 
-| Action               |Description|
-|----------------------|---|
-| Modify Test Set Info |Allows user to change the name|
-| Schedule             |Allows the user to Schedule a test case|
-| Execute Now          |Immediate execution of test set|
-| Delete Test Set      |Deletes test set|
+| Action               | Description                                          |
+|----------------------|------------------------------------------------------|
+| Modify Test Set Info | Allows user to change the name                       |
+| Schedule             | Allows the user to schedule an execution of test set |
+| Execute Now          | Immediate execution of test set                      |
+| Delete Test Set      | Deletes test set                                     |
 
 The primary content area is divided into two key sections. At the top, a metadata panel displays the Name, Description, and unique Test Set ID. This provides quick, high-level context about the selected set. Below this, a tabbed interface further organizes the information. 
 
@@ -129,4 +129,4 @@ The interface consists of a detailed, scrollable table that functions as the cen
 ![test_set_scheduling.png](assets/UserDocumentationM/test_set_scheduling.png)
 <figcaption> A modal dialog illustrating the "Schedule execution" interface, detailing parameters for test set execution including selection of test set and instance, scheduled date/time, and recurrence options.</figcaption>
 
-You will be able to see the scheduled execution in the table in the [Schedule](executions.md) tab.
+You will be able to see the scheduled execution in the table in the [Executions](executions.md) tab.

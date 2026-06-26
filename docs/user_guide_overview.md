@@ -2,7 +2,7 @@
 
 This section provides all the information for the users to get started with the AST test automation tool, including how to access the control panel, navigate through its features.
 
-You will be introduced to the various parts of the control panel, such as the Schedule view, Test Cases and Test Sets management, and the reporting features. 
+You will be introduced to the various parts of the control panel, such as the Executions view, Test Cases and Test Sets management, and the reporting features. 
 There is also a whole section dedicated to the administration of the tool, where you can learn how to manage users, view system metrics, and configure application settings.
 
 One of the larger sections is dedicated to writing of test cases, where you can learn how to create and manage your test cases, and how to use the AST test case editor.
@@ -60,10 +60,10 @@ You can use the sidebar on the left for navigation or the tiles below to jump to
                 </article>
             </a>
 
-             <a class="card-link" href="../schedule">
+             <a class="card-link" href="../executions">
                 <article>
-                    <h3>Schedule</h3>
-                    <p>How to use the schedule view</p>
+                    <h3>Executions</h3>
+                    <p>How to use the executions view</p>
                     <p><strong>See guide →</strong></p>
                 </article>
             </a>

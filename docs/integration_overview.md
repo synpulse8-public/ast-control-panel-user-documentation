@@ -43,7 +43,7 @@ You can use the sidebar on the left for navigation or use the tiles below to nav
                 </article>
             </a>
 
-            <a class="card-link" href="../security">
+            <a class="card-link" href="../security-info">
                 <article>
                     <h3>Security</h3>
                     <p>Overview of app security </p>

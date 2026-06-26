@@ -116,7 +116,7 @@ If a synchronization fails, the AST Control Panel provides tools for troubleshoo
 
 4. **Resend to ALM**: To retry the synchronization after resolving the issue, select the failed test(s) and click the 'Resend to ALM' button.
    ![f3.png](assets/AdminDocu/f3.png)
-<figcaption>Schedule view showing the 'Resend to ALM' button for retrying a failed sync</figcaption>
+<figcaption>Execution view showing the 'Resend to ALM' button for retrying a failed sync</figcaption>
 
 Below is an example of a JSON payload sent to ALM:
 
