@@ -109,10 +109,10 @@ If a synchronization fails, the AST Control Panel provides tools for troubleshoo
 ![sync_failure.png](assets/UserDocumentationM/sync_failure.png)
 <figcaption>Image of the Sync Failure Log window showing an error message</figcaption>
 
-3. **Download JSON Payload**: You can click the 'ALM JSON' button to download the raw JSON payload that was sent to ALM. This file can be used for manual upload or debugging the data structure.
+3. **Download JSON Payload**: In the reports dropdown you can click on 'ALM JSON' button to download the raw JSON payload that was sent to ALM. This file can be used for manual upload or debugging the data structure.
 
 ![alm_json.png](assets/UserDocumentationM/alm_json.png)
-<figcaption>Image of the detailed execution report panel showing the 'ALM JSON' button</figcaption>
+<figcaption>Image of the execution report dropdown showing the 'ALM JSON' button</figcaption>
 
 4. **Resend to ALM**: To retry the synchronization after resolving the issue, select the failed test(s) and click the 'Resend to ALM' button.
    ![f3.png](assets/AdminDocu/f3.png)
