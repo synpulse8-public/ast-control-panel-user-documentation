@@ -1,5 +1,5 @@
 # Reports
-When you execute test cases with the AST tool, it automatically collects information about the test run and provides it to you through two main output channels: the **AST Log** and a **XML Report**.
+When you execute test cases with the AST tool, it automatically collects information about the test run and provides it to you through two main output channels: the **AST Log** and an **XML Report**.
 
 #### AST Log ####
 
@@ -72,7 +72,7 @@ You can view reports at three levels of detail: Execution, Test Set, and Individ
 
 #### The Execution View
 
-The **Execution** menu functions as the central log for all test activity, showing the status of both scheduled and completed runs.
+The **Executions** menu functions as the central log for all test activity, showing the status of both scheduled and completed runs.
 
 - **Execution Grid**: The main table displays key metadata for every run, including the Start Date, End Date, User Name, and the current Status.
 - **Execution Results Summary**: This summary details the total number of tests that Passed, Failed, Errored, and are Pending.
@@ -84,8 +84,8 @@ The **Execution** menu functions as the central log for all test activity, showi
 
 You can view the latest report for an individual test case directly from the Test Case Repository.
 
-- **Status Bubble**: Clicking on the colored status bubble next to a test case opens its execution report.
-- **Report Formats**: Reports for individual test cases are available in distinct formats for review and export: Log, HTML, XML and Excel.
+- **Last run status**: Clicking on the last run status in the test case details panel opens its execution report.
+- **Report Formats**: Reports for individual test cases are available in the following formats for review and export: Log, HTML, XML, and Excel.
 
 !!! info
     The **Analytics** menu also provides the ability to export CSV reports. See the [Analytics](analytics.md) documentation for details.

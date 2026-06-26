@@ -5,7 +5,7 @@ Click 'Tests' tab on [navigation](navigation.md) panel to go to test repository.
 
 ## Interface overview
 
-The interface of AST is divided into two main sections:
+The interface of AST is divided into three main areas:
 
 1. **left-hand navigation panel** with file tree structure and filtering options
 
