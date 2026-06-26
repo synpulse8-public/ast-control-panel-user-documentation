@@ -28,7 +28,7 @@ You must link your AST test cases to their corresponding Xray test entities in J
 
 #### Individual Asignement
 
-1. Go to the Test tab and select a test case to open its details shown in the [metadata panel](test_case_repository.md#metadata-and-details).
+1. Go to the Test tab and select a test case to open its details shown in the [details panel](test_case_repository.md#version-information-and-details-panel).
 2. Use the field in the detail view to assign or edit the **XRAY**.
 
 ![xray_testid.png](assets/UserDocumentationM/xray_testid.png)
@@ -36,7 +36,7 @@ You must link your AST test cases to their corresponding Xray test entities in J
 
 #### Bulk Assigment (CSV Upload)
 
-1. Click on any test case in the repository tree to open the [metadata panel](test_case_repository.md#metadata-and-details) and then click **Manage External IDs**.
+1. Click on any test case in the repository tree to open the [details panel](test_case_repository.md#version-information-and-details-panel) and then click **Manage External IDs**.
 2. This dialog allows you to upload mappings via a **CSV file**. The CSV must contain the **AST Test Case ID** and the **External Xray ID**.
 
 ![xray_csv.png](assets/UserDocumentationM/external_ids_dialog.png)

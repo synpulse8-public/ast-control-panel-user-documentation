@@ -33,13 +33,13 @@ To link AST test cases to corresponding test entities in HP ALM, you must assign
 
 1. **Individual Assignment:**
     - Go to the 'Tests' tab and click on a specific test case.
-    - The test case [metadata panel](test_case_repository.md#metadata-and-details) will open, showing a field where you can assign or edit the 'HP ALM ID').
+    - The test case [details panel](test_case_repository.md#version-information-and-details-panel) will open, showing a field where you can assign or edit the 'HP ALM ID').
 
 ![alm_test_case_id.png](assets/UserDocumentationM/alm_test_case_id.png)
 <figcaption>Test Case metadata view showing the field for assigning or editing the 'HP ALM ID' to link the script to a corresponding ALM entity.</figcaption>
 
 2. **Bulk Assignment (CSV Upload):**
-    - Click on any test case in the repository tree to open the [metadata panel](test_case_repository.md#metadata-and-details).
+    - Click on any test case in the repository tree to open the [details panel](test_case_repository.md#version-information-and-details-panel).
     - Click on 'Manage External IDs'.
     - This opens a dialog allowing you to upload the mappings via a CSV file. The CSV file must contain the AST Test Case ID, the External Hp Alm ID, and optionally, ALM Instance Ids.
 
