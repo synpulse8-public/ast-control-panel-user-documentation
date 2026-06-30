@@ -8,5 +8,15 @@ You can access the control panel with local accounts managed in the Control Pane
 !!! info
     An Administrator user with username and password "admin" is provided by default, but we recommend you create another administrator as soon as possible with a stronger password and delete the first one while logged in with the actual new administrator.
 
+### Account settings
 
+!!! info
+    Account settings are only available for local accounts. If you are using Keycloak SSO authentication, you will need to change your password and personal information in Keycloak.
 
+After logging in, you can change your password, first name, and last name in the account settings. 
+The account settings can be accessed by clicking on the user icon in the top right corner of the screen.
+
+![Account settings](assets/UserDocumentationM/account-settings.png)
+<figcaption>Account settings dropdown.</figcaption>
+
+You can also sign out from the account settings dropdown.

@@ -14,17 +14,17 @@ To enable HP ALM integration, an administrator must navigate to the configuratio
 <figcaption>Interface for entering ALM configuration parameters, such as URL, domain, project name, username, and password, to establish the connection.</figcaption>
 
 !!! info
-    When setting the URL use the URL without the qcbin part.
+    When setting the URL, use the URL without the qcbin part.
 
 #### Setting Environment Variables (Optional)
-The ALM session and login(authentication) endpoint can be changed by setting the environment variables `AST_CONTROL_PANEL_ALM_SESSION_ENDPOINT` and `AST_CONTROL_PANEL_ALM_LOGIN_ENDPOINT`. 
+The ALM session and login (authentication) endpoint can be changed by setting the environment variables `AST_CONTROL_PANEL_ALM_SESSION_ENDPOINT` and `AST_CONTROL_PANEL_ALM_LOGIN_ENDPOINT`. 
 
 
 By default, the session endpoint is set to `/qcbin/rest/site-session` and the login endpoint is set to `/qcbin/authentication-point/alm-authenticate`. 
 
 
 If your ALM instance uses different endpoints, you can set these environment variables accordingly.
-On how to set environment variables please refer to the [Setting environment variables](deployment.md#setting-up-environment-variables) documentation.
+For instructions on how to set environment variables, please refer to the [Setting environment variables](deployment.md#setting-up-environment-variables) documentation.
 
 
 ### Assigning External ALM IDs to Test Cases
@@ -109,7 +109,7 @@ If a synchronization fails, the AST Control Panel provides tools for troubleshoo
 ![sync_failure.png](assets/UserDocumentationM/sync_failure.png)
 <figcaption>Image of the Sync Failure Log window showing an error message</figcaption>
 
-3. **Download JSON Payload**: In the reports dropdown you can click on 'ALM JSON' button to download the raw JSON payload that was sent to ALM. This file can be used for manual upload or debugging the data structure.
+3. **Download JSON Payload**: In the reports dropdown you can click the 'ALM JSON' button to download the raw JSON payload that was sent to ALM. This file can be used for manual upload or debugging the data structure.
 
 ![alm_json.png](assets/UserDocumentationM/alm_json.png)
 <figcaption>Image of the execution report dropdown showing the 'ALM JSON' button</figcaption>

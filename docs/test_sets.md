@@ -9,7 +9,7 @@ Selecting an item from this tree populates the main content area with detailed i
 ![test_sets_menu.png](assets/UserDocumentationM/test_sets_menu.png)
 <figcaption>Screenshot of the Test Sets screen showing a list of organized test suites.</figcaption>
 
-It is possible also to filter the test sets. The results are loaded whilst you type characters one by one. Use refresh button if you feel like tree isn't properly loaded.
+You can also filter the test sets. The results are loaded whilst you type characters one by one. Use the refresh button if you feel the tree isn't properly loaded.
 
 ### Context menu
 An important feature of this menu is the context menu, which appears when a user clicks on the three dots next to the test set in the repository tree. This menu offers several actions for managing the selected set.
@@ -54,13 +54,13 @@ Then you drop it there, and it will be executed after the testcase above the lin
 <figcaption>Dropping a testcase after another to make them execute in sequence</figcaption>
 
 #### Summary tab
-The Summary tab shown in the image below allows us to select the instance on which selected test set was executed and date range for which we want to see the summary.
-Summary works as overview. For more details check reports tab.
+The Summary tab shown in the image below allows you to select the instance on which the selected test set was executed and the date range for which you want to see the summary.
+Summary works as an overview. For more details, check the Reports tab.
 ![tssummarytab.png](assets/ControlPanelDocu/tssummarytab.png)
 <figcaption>Summary tab content with displayed data for specific instance and date range</figcaption>
 
 #### Reports tab
-The Reports tab contains the full table with many fields that can be set up for different view.
+The Reports tab contains the full table with many fields that can be set up for a different view.
 ![tsreportstab.png](assets/ControlPanelDocu/tsreportstab.png)
 <figcaption>Reports display for selected test set</figcaption>
 

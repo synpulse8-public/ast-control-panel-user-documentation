@@ -73,7 +73,7 @@ If you want to mount(For more detail see [Mounting Volumes](#mounting-volumes)) 
 You need to put the file you want to mount into the ```files``` directory of the helm chart and then specify the name of the file in the `Values.yaml` file.
 For mounting of the ```ast.properties``` you can use the core-config config map. For example, for ```ast.properties``` the subpath is ```ast.properties```.
 !!! warning "Important"
-    If you want to use this option, you need to specify the path to the properties file in the `ast.core.properties-file.path` property in the admin UI or as an environment variable. 
+    If you want to use this option, you need to specify the path to the properties file in the `ast-core.properties-file-path` property in the admin UI or as an environment variable. 
     Check the [Configuration](admin.md#configuration) section for more details.
 
 ### Setting up a keystore for SSL

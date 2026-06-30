@@ -26,14 +26,14 @@ The interface provides hierarchical navigation for test scripts and a central co
 The tree display provides a clear and organized view of the entire test case repository. 
 This hierarchical structure allows users to browse through different categories and sub-categories of tests, akin to a file system. 
 
-Each folder within the tree is labeled with a descriptive name(of the users choosing) and includes a count of the test cases it contains, giving the user an immediate sense of the repository's scope.
+Each folder within the tree is labeled with a descriptive name (of the user's choosing) and includes a count of the test cases it contains, giving the user an immediate sense of the repository's scope.
 
 Users can create, modify, or delete folders, test cases, or methods.
-To work with test cases or folders click on the three dots. Then you see **[context menu](#create-edit-and-manage-test-cases)** with all the functionalities.
+To work with test cases or folders, click on the three dots. Then you see the **[context menu](#create-edit-and-manage-test-cases)** with all the functionalities.
 
 ### Version information and details panel
 
-When a test case is opened , the main content area of the control panel populates with its details and controls.
+When a test case is opened, the main content area of the control panel populates with its details and controls.
 In the right panel you can see its version information like creation date, who created this version and the version number. 
 When the newest available version is shown, the version is labeled as 'latest' and the version number is not shown.
 
@@ -49,25 +49,25 @@ When Xray or ALM integration is set up, you can also see the linked external IDs
 The last run status is clickable and opens a dialog where you can download the execution report.
 
 #### Test case data
-The test data can be also uploaded in this section. You can also download the data file that is currently in use or remove it.
+Test data can also be uploaded in this section. You can also download the data file that is currently in use or remove it.
 
 ![test-data-not-present.png](assets/UserDocumentationM/test-data-not-present.png)
-<figcaption>View of the right panel when no test data are attached to testcase</figcaption>
+<figcaption>View of the right panel when no test data is attached to the testcase</figcaption>
 
 !!! warning
-    Uploading new excel file removes old one. There can be only 1 data file in usage!
+    Uploading a new Excel file removes the old one. There can be only one data file in use!
 
 ![testdata-present.png](assets/UserDocumentationM/testdata-present.png)
-<figcaption>View of the right panel when test data are attached to testcase. You can replace, remove or download the test data file</figcaption>
+<figcaption>View of the right panel when test data is attached to the testcase. You can replace, remove, or download the test data file</figcaption>
 
-To understand more the test data topic please read this chapter: **[Test script and test data design](test_script_and_test_data.md)**.
+To learn more about test data, please read **[Test script and test data design](test_script_and_test_data.md)**.
 
 
 
 ### Execution Reporting
 
 After a test case has been executed, a user can access its detailed report. You can access it by clicking on the last run status in test case details.
-This report offers different formats for download.
+This report offers different formats for download (Log, HTML, XML, Excel).
 
 
 ![execureport.png](assets/ControlPanelDocu/execureport.png)
@@ -119,11 +119,11 @@ Rebuild document reprocesses the entire file from scratch. The editor re-parses 
 
 #### Test case history
 
-Test case history button displays all the edited and saved versions of displayed document. 
-You can display all of these in editor, change them and of course compare these changes with selected versions.
+Test case history displays all edited and saved versions of the displayed document.
+You can view all of these in the editor, change them, and compare changes with selected versions.
 
 ![history.png](assets/ControlPanelDocu/history.png)
-<figcaption>History of all saved change of test case</figcaption>
+<figcaption>History of all saved changes to the test case</figcaption>
 
 To compare different versions click the button with corresponding name and select version from dropdowns which you want to compare.
 ![compare.png](assets/ControlPanelDocu/compare.png)
@@ -131,12 +131,12 @@ To compare different versions click the button with corresponding name and selec
 
 ## Create, edit and manage test cases
 
-Creating of a new test case or folder is possible via the Create New button.
+Creating a new test case or folder is possible via the Create New button.
 
 ![contextmenu.png](assets/ControlPanelDocu/contextmenu.png)
 <figcaption>Create new test case or folder or other</figcaption>
 
-Moving of test cases, folders and methods is possible via drag and drop or via the context menu. 
+Moving test cases, folders, and methods is possible via drag and drop or via the context menu. 
 To move an item using drag and drop, simply click and hold the item you wish to move, then drag it to the desired location in the tree structure and release it. 
 The interface will provide visual cues to indicate valid drop targets.
 
@@ -195,4 +195,4 @@ Other functionalities are available via the context menu, which can be accessed 
     The name and description of the test cases and methods can also be edited in the right panel when the test case is opened. This allows for quick updates to metadata without needing to access the context menu.
 
 
-To understand further how to write test case scripts please read this chapter: **[Test script and test data design](test_script_and_test_data.md)**. 
+To learn how to write test case scripts, please read **[Test script and test data design](test_script_and_test_data.md)**. 

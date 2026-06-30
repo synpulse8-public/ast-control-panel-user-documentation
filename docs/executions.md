@@ -1,6 +1,6 @@
 # Executions
 
-Executions tab contains all scheduled runs, executed runs and currently executed runs with all their details. 
+The Executions tab contains all scheduled runs, executed runs, and currently running executions with all their details. 
 It is the main place to monitor and manage test execution.
 
 
@@ -41,7 +41,7 @@ The order of the pinned columns is determined by the order in which they were pi
 ![setcolumns.png](assets/ControlPanelDocu/setcolumns.png)
 <figcaption>Set columns with all columns to be selected or unselected as checkboxes. 
 The Start date column has the grey pin next to it which indicates it is pinned.
-The End Date column is not pinned so you can see an outline of a pin as it being hovered.</figcaption>
+The End Date column is not pinned, so you can see an outline of a pin as it is being hovered.</figcaption>
 
 ### Ordering
 Ordering of the data in a column can be changed by clicking on the column header.
@@ -58,7 +58,7 @@ This filter is located on the top left side of the table.
 ![execution_status_filter.png](assets/ControlPanelDocu/execution_status_filter.png)
 <figcaption>Image of the execution status filter</figcaption>
 
-Other option to filter is by clicking the "Filter" button on the top right side of the table which will open a collapsible panel with more filtering options.
+Another option is to filter by clicking the "Filter" button on the top right side of the table, which will open a collapsible panel with more filtering options.
 In selected filters the app offers suggestions for filters e.g. user name. 
 If a filter is active it will be shown in the active filters tab on the top right side of the table.
 You can quickly clear the filters by clicking on the "x" icon next to the active filter or by clicking on the "Clear all" button which will clear all active filters at once.
@@ -79,6 +79,6 @@ When clicking a table row of a Scheduled execution a dialog will be shown that g
 ![execution_schedule_dialog](assets/ControlPanelDocu/execution_schedule_dialog.png)
 <figcaption>Dialog shown when clicking on a Scheduled execution</figcaption>
 
-If you select modify option, you will be navigated to another dialog where you can change the execution name, avaloq instance and scheduled date and time.
+If you select the modify option, you will be navigated to another dialog where you can change the execution name, Avaloq instance, and scheduled date and time.
 
-If you select cancel option, a confirmation dialog will be shown to confirm the cancellation of the scheduled execution. After confirming, the execution will be cancelled and removed from the table.
+If you select the cancel option, a confirmation dialog will be shown to confirm the cancellation of the scheduled execution. After confirming, the execution will be cancelled and removed from the table.

@@ -7,7 +7,7 @@ The AST log provides real-time feedback on the test run as it happens.
 
 - **Console Output**: The log is displayed directly "on the go" in the console. This is useful for monitoring the progress of your tests in real time.
 
-#### The  XML Report ####
+#### The XML Report ####
 !!! info
     Upon completion of the test run, AST generates a single, comprehensive XML file that summarizes the entire test run. 
 
@@ -100,7 +100,7 @@ The process relies on defining the necessary files in your configuration:
 
 - **XML Report**: This is the base data source generated after every test run. The Excel customization process uses data from this file.
 - **Excel Template**: This is the Excel file (.xls or .xlsx) you design with your desired layout.
-- **HTML Template**: This is the html you can design with your desired layout.
+- **HTML Template**: This is the HTML template you can design with your desired layout.
 
 The template files can be uploaded in the [Configuration](admin.md#configuration) section. Admin role is required to upload these files.
 
