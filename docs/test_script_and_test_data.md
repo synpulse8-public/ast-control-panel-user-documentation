@@ -101,16 +101,16 @@ By annotating a test case, it can be categorized or labeled. The keys and values
 
 ### Variables and Arguments
 
-Variables and Arguments are the core tools you use to store and share information within a single test case, making your scripts dynamic and reusable
+Variables and Arguments are the core tools you use to store and share information within a single test case, making your scripts dynamic and reusable.
 
 - **Arguments** link your test script to **external test data** (like an Excel file). The argument name must match the **column header** in the external spreadsheet.
 - **Variables** are defined directly within your **XML script** to **temporarily store values**.
 
-Both arguments and variables function identically during test execution
+Both arguments and variables function identically during test execution.
 
 #### Declaring and Assigning Values
 
-You should declare all variables and arguments near the beginning of your test case
+You should declare all variables and arguments near the beginning of your test case.
 
 |Tag|Purpose|Example|
 |---|---|---|
@@ -142,9 +142,9 @@ When inserting a variable into a plain text block - like a log message or messag
 
 ### Troubleshooting Your Scripts
 
-The **`<debug>` tag** is a crucial tool for developers to **inspect data flow and troubleshoot logic** during a test run
+The **`<debug>` tag** is a crucial tool for developers to **inspect data flow and troubleshoot logic** during a test run.
 
-It allows you to display a text message or the current value of one or more variables in the console log
+It allows you to display a text message or the current value of one or more variables in the console log.
 
 #### How to Use It
 

@@ -9,12 +9,12 @@ The `session` statement allows you to switch the user, business unit, and even t
 
 ***`<session ...>`***  - Sets the current user and business unit. Instance is switched if defined.
 
-|Attributes|Description|
-|---|---|
-|*user* (IN)|User under which the test case is executed. The user can also be an Intermediary oracle user, also named `IMEDuser` if Avaloq is configured to use those.|
-|*bu* (IN)|The business unit the session should run in. Optional parameter – when not specified the business unit remains unchanged, and only the user is switched.|
-|*mode* (IN)|<ul><li>By default the Avaloq user session is in batch mode. </li> <li>By switching the session to interface mode AST connects to Avaloq the same way as the Avaloq Client does.</li><li> Previous to Avaloq Release 3.1 interface mode was mandatory if user interface messages were to be handled (see `<ui-msg>`)</li></ul>|
-|*instance* (IN)|Avaloq instance as defined in *ast.properties* (in a MEMIsetup, see restricted availability).|
+|Attributes| Description                                                                                                                                                                                                                                                                                                                    |
+|---|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|*user* (IN)| User under which the test case is executed. The user can also be an Intermediary oracle user, also named `IMEDuser` if Avaloq is configured to use those.                                                                                                                                                                      |
+|*bu* (IN)| The business unit the session should run in. Optional parameter – when not specified the business unit remains unchanged, and only the user is switched.                                                                                                                                                                       |
+|*mode* (IN)| <ul><li>By default the Avaloq user session is in batch mode. </li> <li>By switching the session to interface mode AST connects to Avaloq the same way as the Avaloq Client does.</li><li> Previous to Avaloq Release 3.1 interface mode was mandatory if user interface messages were to be handled (see `<ui-msg>`)</li></ul> |
+|*instance* (IN)| Avaloq instance as defined in *ast.properties* (in a MEMI setup, see restricted availability).                                                                                                                                                                                                                                 |
 
 !!! example
     ~~~xml

@@ -77,7 +77,7 @@ In the application configuration section you can set up various properties:
 | ast-control-panel.integration.xray.enabled           | Flag to enable or disable the Xray integration. If set to true, more options will be available in the configuration for Xray integration. For more details on Xray integration see [Xray integration](jira_xray.md) documentation.                                                            |
 | ast-control-panel.user-interface.header-color        | Property to set up the color of the ribbon under the header in the control panel. You can choose from 6 predefined header ribbon colors.                                                                                                                                              |
 
-The override checkbox must be selected to use the value you set up, otherwise the default value will be used. Default values are set up in the application db.
+The override checkbox must be selected to use the value you set up, otherwise the default value will be used. Default values are set up in the application database.
 
 ### Maintenance
 The Maintenance tab provides access to database management functionalities. You can perform database housekeeping by deleting old test executions and reports. 

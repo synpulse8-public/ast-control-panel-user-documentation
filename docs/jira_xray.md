@@ -15,12 +15,12 @@ To enable the integration, an administrator must navigate to the application pro
 <figcaption>Xray connection settings in AST Control Panel</figcaption>
 
 #### Setting Environment Variables (Optional)
-If needed the xray sync endpoint can be adjusted by setting the environment variable `AST_CONTROL_PANEL_XRAY_SYNC_ENDPOINT` to the desired URL. 
+If needed, the Xray sync endpoint can be adjusted by setting the environment variable `AST_CONTROL_PANEL_XRAY_SYNC_ENDPOINT` to the desired URL. 
 
 The default value for this variable is `/rest/raven/2.0/import/execution`. 
 
 If your Xray instance uses a different endpoint, you can set the environment variable accordingly.
-On how to set environment variables please refer to the [Setting environment variables](deployment.md#setting-up-environment-variables) documentation.
+For instructions on how to set environment variables please refer to the [Setting environment variables](deployment.md#setting-up-environment-variables) documentation.
 
 ### Assigning External XRAY IDs to Test Cases
 

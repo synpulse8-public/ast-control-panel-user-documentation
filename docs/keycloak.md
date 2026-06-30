@@ -18,7 +18,7 @@ The Keycloak profile allows you to integrate the AST Control Panel with Keycloak
 !!! warning "Important"
     prod and api-docs profiles have to be specified also when using Keycloak; otherwise, the app would start in dev profile, which could corrupt the data in your db.
 
-2. To set up oauth2 correctly these two variables need to be set with your settings:
+2. To set up OAuth2 correctly these two variables need to be set with your settings:
     ```properties
     SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI=https://your.keycloak.address.com/realms/your_realm_name
 

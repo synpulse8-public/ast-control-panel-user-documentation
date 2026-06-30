@@ -229,7 +229,7 @@ Rows are generated from the `testcase` nodes in the XML.
 
 !!! example "Setup"
 
-    To be able to see the TESTCASE_ID to be populated in the report it has to be setup in the test data excel and in the test case.
+    To be able to see the TESTCASE_ID to be populated in the report it has to be set up in the test data excel and in the test case.
 
     === "Test data excel"
 

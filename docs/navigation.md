@@ -29,7 +29,7 @@ Short description of the sections on the landing page is provided in the table b
 | **[Executions](executions.md)**                 | Displays scheduled and finished executions. Provides execution details.                |
 | **[Analytics](analytics.md)**                 | Provides insights and reports on test execution results.                               |
 
-Each tab navigates you to separate sections described in the table and in following chapters in more detail.
+Each tab navigates you to separate sections described in the table and in the following chapters in more detail.
 
 
 ### Secondary navigation menu (Right side)

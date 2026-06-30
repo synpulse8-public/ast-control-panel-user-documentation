@@ -77,7 +77,7 @@ For mounting of the ```ast.properties``` you can use the core-config config map.
     Check the [Configuration](admin.md#configuration) section for more details.
 
 ### Setting up a keystore for SSL
-You can do this by creating a secret with the keystore file and then mounting it as a volume in your deployment. Also you need to setup some environment variables to specify the path to the truststore and its password. 
+You can do this by creating a secret with the keystore file and then mounting it as a volume in your deployment. Also you need to set up some environment variables to specify the path to the truststore and its password. 
 Here is an example of how to do this in the `Values.yaml` file:
 ```yaml
 # Environment variables for the container. Optional. Add as needed.

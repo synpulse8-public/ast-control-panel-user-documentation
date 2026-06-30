@@ -38,7 +38,7 @@ The image below shows that the two testcases are set to execute in parallel as i
 The third testcase has a number next to it, which means that it will be executed after the first two testcases are finished.
 
 ![test_set_sequence.png](assets/ControlPanelDocu/test_set_sequence.png)
-<figcaption>Two test cases are in parallel the third is sequential</figcaption>
+<figcaption>Two test cases are in parallel, the third is sequential</figcaption>
 
 To group testcases into parallel or sequential execution you need to click the *Edit* button in the Definitions tab.
 Then you can use drag and drop to change the order of test cases and to group them into parallel or sequential execution.
@@ -94,7 +94,7 @@ The window lists the individual Test Cases included in the run. For each case, t
 ### Test set creation and alterations
 
 #### Add new test set
-To create test set you can use the *Create Test Set* button in the Test Sets screen or you can use the *Create New* in the Tests screen.
+To create a test set you can use the *Create Test Set* button in the Test Sets screen or you can use the *Create New* in the Tests screen.
 Then a dialog will appear where you can set up the name, description and select test cases that will be part of this set.
 
 ![test_set_create.png](assets/ControlPanelDocu/test_set_create.png)
@@ -114,12 +114,12 @@ It also shows all the testcases that are present in this set. You can also remov
 Another option is to use the context menu for the [folders](test_case_repository.md#folder-context-menu) and [testcases](test_case_repository.md#test-case-context-menu) in the test case screen.
 Then you choose add to existing test set and then select the test set to which you want to add this test case or folder.
 
-![addtets.png](assets/ControlPanelDocu/test_case_add_set.png)
+![Adding test to set](assets/ControlPanelDocu/test_case_add_set.png)
 <figcaption>Dialog for adding test cases to existing set</figcaption>
 
 
 ### Scheduling and Executing Test Sets
-If you want to execute test set immediately, you can select 'Execute now' from the definitions tab. This will run the test set on selected instance and show results in reports tab.
+If you want to execute a test set immediately, you can select 'Execute now' from the Definitions tab. This will run the test set on selected instance and show results in Reports tab.
 
 When clicking on the Schedule button a dialog will appear, allowing you to set up the parameters for scheduling the execution of the test set. You can select the specific test set and instance on which it will run, as well as the scheduled date and time for execution. 
 Additionally, there are options to configure recurrence if you want the test set to run on a regular basis.

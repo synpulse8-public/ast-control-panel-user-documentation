@@ -1,6 +1,6 @@
 # Test Case Repository
 
-Click 'Tests' tab on [navigation](navigation.md) panel to go to test repository. Following chapter describes the functionality and how to navigate basic features of test case repository.
+Click 'Tests' tab on the [navigation](navigation.md) panel to go to test repository. This chapter describes the functionality and how to navigate basic features of test case repository.
 
 
 ## Interface overview
@@ -19,7 +19,7 @@ The interface provides hierarchical navigation for test scripts and a central co
 <figcaption>Test Case Repository displaying the hierarchical tree of test cases and the XML editor pane with the version information on the right</figcaption>
 
 !!! info
-    Both the left hand navigation panel and the right hand side panel are collapsible, allowing users to maximize the central content area when needed for a more focused view on test case details and editing.
+    Both the left-hand navigation panel and the right-hand side panel are collapsible, allowing users to maximize the central content area when needed for a more focused view on test case details and editing.
   
 ## Managing Test Cases
 

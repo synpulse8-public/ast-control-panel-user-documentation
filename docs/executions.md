@@ -24,7 +24,7 @@ It is the main place to monitor and manage test execution.
 | Test cases       | Number of test cases                                      |
 | AST execution ID | Id of the execution                                       |
 | External Xray    | Id used for Xray sync                                     |
-| Execution status | Number of passed/Failed/Error/Pending tests from test set |
+| Execution status | Number of Passed/Failed/Error/Pending tests from test set |
 | Xray sync status | Displays the success/fail of the sync to xray             |
 | ALM sync status  | Displays the success/fail of the sync to alm              |
 
