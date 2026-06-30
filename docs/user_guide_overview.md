@@ -12,11 +12,19 @@ You can use the sidebar on the left for navigation or the tiles below to jump to
 <section class="mdx-container landing-tiles">
     <div class="md-grid md-typeset">
         <div class="grid cards" markdown>
+            <a class="card-link" href="../getting_started">
+                <article>
+                    <h3>Getting Started</h3>
+                    <p>Brief guide on how to get started</p>
+                    <p><strong>Start here →</strong></p>
+                </article>
+            </a>
+
             <a class="card-link" href="../login">
                 <article>
                     <h3>Login</h3>
                     <p>Information on how to access the app</p>
-                    <p><strong>Start here →</strong></p>
+                    <p><strong>See login →</strong></p>
                 </article>
             </a>
 

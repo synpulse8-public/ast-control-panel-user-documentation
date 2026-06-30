@@ -65,6 +65,7 @@ In the configuration files you can set up files necessary for the application:
 | report_template_for_html_report.xslt | XSLT file used for transformation of XML report to HTML report. You can customize the HTML report by changing this file.                        |
 | report_template_for_excel_report.xls | Excel template used for transformation of XML report to Excel report. You can customize the Excel report by changing this file.                 |
 
+For file contents and examples, see [Configuration files](configuration_files.md).
 
 In the application configuration section you can set up various properties:
 

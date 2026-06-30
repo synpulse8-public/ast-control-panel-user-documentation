@@ -11,6 +11,38 @@ You can use the sidebar on the left for navigation or use the tiles below to nav
 <section class="mdx-container landing-tiles">
     <div class="md-grid md-typeset">
         <div class="grid cards" markdown>
+            <a class="card-link" href=../deployment>
+                <article>
+                    <h3>Deployment</h3>
+                    <p>Guide on how to deploy the app</p>
+                    <p><strong>Learn more →</strong></p>
+                </article>
+            </a>
+
+            <a class="card-link" href=../configuration_files>
+                <article>
+                    <h3>Configuration files</h3>
+                    <p>Overview of the configuration files</p>
+                    <p><strong>Learn more →</strong></p>
+                </article>
+            </a>
+            
+            <a class="card-link" href="../security-info">
+                <article>
+                    <h3>Security</h3>
+                    <p>Overview of app security </p>
+                    <p><strong>See section →</strong></p>
+                </article>
+            </a>
+
+            <a class="card-link" href="../system_requirements">
+                <article>
+                    <h3>System requirements</h3>
+                    <p>Brief summary of requirements</p>
+                    <p><strong>See requirements →</strong></p>
+                </article>
+            </a>
+
             <a class="card-link" href="../alm">
                 <article>
                     <h3>HP ALM</h3>
@@ -34,30 +66,7 @@ You can use the sidebar on the left for navigation or use the tiles below to nav
                     <p><strong>See section →</strong></p>
                 </article>
             </a>
-
-            <a class="card-link" href=../deployment>
-                <article>
-                    <h3>Deployment</h3>
-                    <p>Guide on how to deploy the app</p>
-                    <p><strong>Learn more →</strong></p>
-                </article>
-            </a>
-
-            <a class="card-link" href="../security-info">
-                <article>
-                    <h3>Security</h3>
-                    <p>Overview of app security </p>
-                    <p><strong>See section →</strong></p>
-                </article>
-            </a>
-
-            <a class="card-link" href="../system_requirements">
-                <article>
-                    <h3>System requirements</h3>
-                    <p>Brief summary of requirements</p>
-                    <p><strong>See requirements →</strong></p>
-                </article>
-            </a>
+ 
         </div>
     </div>
 </section>

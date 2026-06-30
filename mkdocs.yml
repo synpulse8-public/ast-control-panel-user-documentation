@@ -31,6 +31,7 @@ nav:
     - Introduction: introduction.md
     - User guide:
         - Overview: user_guide_overview.md
+        - Getting started: getting_started.md
         - Login: login.md
         - Administration: admin.md
         - Landing page and Navigation: navigation.md
@@ -50,12 +51,13 @@ nav:
         - Frequently used terms and metatypes: glossary_of_terms.md
     - Integration guide:
         - Overview: integration_overview.md
+        - Deployment: deployment.md
+        - Configuration files: configuration_files.md
+        - Security: security-info.md
+        - System requirements: system_requirements.md
         - HP ALM: alm.md
         - Jira Xray: jira_xray.md
         - Keycloak: keycloak.md
-        - Deployment: deployment.md
-        - Security: security-info.md
-        - System requirements: system_requirements.md
     - FAQ: faq.md
     - Best practices: best_practices.md
     - Release notes: release_notes.md
