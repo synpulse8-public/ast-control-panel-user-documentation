@@ -100,6 +100,14 @@ This section summarizes key information like the File Name and Path of the test 
 
 This multi-pane layout ensures that the user has a complete overview of the test case's location, content, and available actions all in one view.
 
+#### Trial Run vs Schedule
+The **Trial Run** feature allows users to execute the test case immediately. 
+A window is displayed where you can see the logs of the execution in real-time. 
+This is useful for quick validation of the test case logic. No reports are generated for trial runs, and the execution is not recorded in the system.
+
+The **Schedule** feature allows users to schedule the execution of the test case for a later time or date. This execution is recorded in the system, and reports are generated for it.
+It can be visible in the [Executions](executions.md) tab, where you can see all scheduled and executed runs.
+
 
 
 ### Additional editor features
