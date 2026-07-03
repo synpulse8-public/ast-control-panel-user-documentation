@@ -8,8 +8,8 @@ Prerequisites checklist:
 
 - [System requirements](system_requirements.md)
 - [Deployment](deployment.md)
-- After signing in with the default administrator (see [First login](#first-login)) and upload the initial [configuration files](configuration_files.md).
-- Then modify the default administrator account or create a dedicated admin account and remove the default one. See [Administration](admin.md#user-management)
+- After signing in with the default administrator (see [First login](#first-login)), upload the initial [configuration files](configuration_files.md).
+- Then modify the default administrator account or create a dedicated admin account and remove the default one. See [Administration](admin.md#user-management) for more information.
 - If you use Keycloak SSO instead of local accounts, skip signing in with and replacing the default admin account; configuration files must still be uploaded. See [Keycloak](keycloak.md).
 
 ## First login

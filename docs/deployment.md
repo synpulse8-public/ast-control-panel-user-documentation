@@ -16,7 +16,7 @@ SPRING_DATASOURCE_USERNAME=your_username
 
 SPRING_DATASOURCE_PASSWORD=your_password
 ```
-Then you need to manually upload the required configuration files (see [Configuration files](configuration_files.md)) or mount the files as described in [Mounting of ast.properties](#mounting-of-astproperties-optional)
+Then you need to manually upload the required configuration files (see [Configuration files](configuration_files.md)) or mount the ast.properties file as described in [Mounting of ast.properties](#mounting-of-astproperties-optional)
 
 If you would need further settings like ingress, resources, port, replicas and others please refer to the `Values.yaml` file in the provided helm chart. For environment variables settings, secret settings, SSL and other please refer to the sections below.
 ### Setting up environment variables
@@ -164,7 +164,7 @@ You can run the application in the command line using docker. The app should be 
 ```bash
 docker run -e SPRING_DATASOURCE_USERNAME=your_username -e SPRING_DATASOURCE_URL=jdbc:oracle:thin:@your_db_address:1521/YOUR_SCHEMA -e SPRING_DATASOURCE_PASSWORD=your_password --network host path/to/your/image/ast-control-panel:image_tag
 ```
-After the application is started you need to upload the required configuration files (see [Configuration files](configuration_files.md)) or mount the files as described in [Mounting of ast.properties](#mounting-of-astproperties-optional)
+After the application is started you need to upload the required configuration files (see [Configuration files](configuration_files.md)) or mount the ast.properties file as described in [Mounting of ast.properties](#mounting-of-astproperties-optional).
 
 As in the helm chart deployment, you can also set up environment variables using an additional configuration file and mount it as a volume in the docker container. 
 You can use the same example of the `ast-control-panel.properties` file and specify the path to this file in the `SPRING_CONFIG_ADDITIONAL_LOCATION` environment variable.
