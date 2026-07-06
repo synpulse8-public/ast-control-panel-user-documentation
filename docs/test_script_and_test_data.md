@@ -38,7 +38,7 @@ AST differentiates between three primary step types:
 - **`<query>`** - Queries information from the Avaloq Banking System.
 - **`<verify>`** - Verifies equality of properties.
 
-![test_case_parts.svg](assets/UserDocumentationM/test_case_parts.svg)
+![test_case_parts.png](assets/UserDocumentationM/test_case_parts.png)
 <figcaption>Structural decomposition of AST test case into Input, Query, Verify steps, and 1.n Operations</figcaption>
 
 AST executes test steps sequentially, from top to bottom. The test script language employs a single flow control model and does not support nested flow controls.
@@ -282,10 +282,6 @@ Each column requires a corresponding argument in the test case:
 ~~~
 
 These arguments can be used the same way as variables: `$close_wfc`, `$bp`, `$buy_asset`. Since arguments are treated like variables, the same naming rules apply.
-
-To assign the test case data to a test case, the second sheet is used:
-![excel_test_data_link.png](assets/UserDocumentationM/excel_test_data_link.png)
-<figcaption>Link between test data on Excel tab and test case</figcaption>
 
 ### Example - Domestic Payment
 
