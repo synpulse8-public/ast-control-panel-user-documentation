@@ -18,14 +18,14 @@ The solution uses these technologies and frameworks:
 
 #### Memory
 - Minimum 8 GB RAM recommended for standard deployments.
-- RAM requirements scale with usage — the following factors influence memory consumption: Number of test cases stored in the system, Number of parallel executions scheduled. 
+- RAM requirements scale with usage — the following factors influence memory consumption: Number of parallel executions scheduled. 
 
 !!! info
-    As a general guideline: for environments with fewer than 500 test cases and up to 5 parallel executions, 8 GB is sufficient. For larger test suites or higher parallelism, 16 GB or more is recommended. Contact Synpulse for a sizing consultation if needed.
+    As a general guideline: for environments with up to 5 parallel executions, 8 GB is sufficient. For higher parallelism, 16 GB or more is recommended. Contact Synpulse for a sizing consultation if needed.
 
 #### Database
 - Oracle DB (client-owned), minimum 10 GB initial storage.
 - Database size will grow over time based on the volume of test executions and stored results.
 
 !!! info
-    Regular database maintenance is strongly recommended. AST provides a built-in maintenance feature to delete obsolete test cases, execution results, and related data. It is the client's responsibility to perform periodic maintenance to prevent excessive database growth and potential performance degradation. See the [Maintenance](admin.md#Maintenance) section of this documentation for details. 
+    Regular database maintenance is strongly recommended. AST provides a built-in maintenance feature to delete obsolete test cases, execution results, and related data. It is the client's responsibility to perform periodic maintenance to prevent excessive database growth and potential performance degradation. See the [Maintenance](admin.md#maintenance) section of this documentation for details. 
