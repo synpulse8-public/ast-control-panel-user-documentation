@@ -9,17 +9,17 @@ The `session` statement allows you to switch the user, business unit, and even t
 
 ***`<session ...>`***  - Sets the current user and business unit. Instance is switched if defined.
 
-|Attributes|Description|
-|---|---|
-|*user* (IN)|User under which the test case is executed. The user can also be an Intermediary oracle user, also named `IMEDuser` if Avaloq is configured to use those.|
-|*bu* (IN)|The business unit the session should run in. Optionalparameter – when not specified the business unit remainsunchanged and only the user is switched.|
-|*mode* (IN)|<ul><li>By default the Avaloq user session is in batch mode. </li> <li>By switching the session to interface mode ASTconnects to Avaloq the same way as the Avaloq Clientdoes.</li><li> Previous to Avaloq Release 3.1 interface mode wasmandatory if user interface messages where to be handled(see `<ui-msg>`)</li></ul></td>|
-|*instance* (IN)|Avaloq instance as defined in *ast.properties* (in a MEMIsetup, see restricted availability).|
+|Attributes| Description                                                                                                                                                                                                                                                                                                                    |
+|---|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|*user* (IN)| User under which the test case is executed. The user can also be an Intermediary oracle user, also named `IMEDuser` if Avaloq is configured to use those.                                                                                                                                                                      |
+|*bu* (IN)| The business unit the session should run in. Optional parameter – when not specified the business unit remains unchanged, and only the user is switched.                                                                                                                                                                       |
+|*mode* (IN)| <ul><li>By default the Avaloq user session is in batch mode. </li> <li>By switching the session to interface mode AST connects to Avaloq the same way as the Avaloq Client does.</li><li> Previous to Avaloq Release 3.1 interface mode was mandatory if user interface messages were to be handled (see `<ui-msg>`)</li></ul> |
+|*instance* (IN)| Avaloq instance as defined in *ast.properties* (in a MEMI setup, see restricted availability).                                                                                                                                                                                                                                 |
 
 !!! example
     ~~~xml
     <!-- Connect to instance_B -->
-    <session user="test_user_a" bu="AAA"instance="instance_B" mode="interface">
+    <session user="test_user_a" bu="AAA" instance="instance_B" mode="interface">
     ~~~
 
 
@@ -41,7 +41,7 @@ The `wait` statement can either halt test execution for a specified duration or 
 
 !!! example
     ~~~xml
-    <wait avaloq-cond="1=2" raise-msg="one was never two"timeout="5" />
+    <wait avaloq-cond="1=2" raise-msg="one was never two" timeout="5" />
     <wait timeout="10" />
     ~~~
 
@@ -57,7 +57,7 @@ This content may be formed of `<variable>`, `<input>`, `<query>` and `<verify>` 
 
 |Attributes|Description|
 |---| ----|
-|*avaloq-cond* (IN)| The condition to be verified in order for the content to beevaluated and executed|
+|*avaloq-cond* (IN)| The condition to be verified in order for the content to be evaluated and executed|
 
 Example code - IF (1):
 
@@ -78,15 +78,15 @@ Example code - ELSE (2):
 
 ### Controlling the flow with Select case
 
-The Tag `<select> ... </select>` can be inserted under the testcase tag or directly under the method tag (bubble) and allows AST toevaluate a condition in Avaloq and only if one of its resolves is true, to execute the content of the `<case> ... </case>`.
+The Tag `<select> ... </select>` can be inserted under the testcase tag or directly under the method tag (bubble) and allows AST to evaluate a condition in Avaloq and only if one of its case values is true, to execute the content of the `<case> ... </case>`.
 
 This content may be formed of `<variable>`, `<input>`, `<query>` and `<verify>` commands.
 
-***`<select ...>`*** - Select allows an avaloq-expr to be tested for equlity against a list of values.
+***`<select ...>`*** - Select allows an avaloq-expr to be tested for equality against a list of values.
 
 |Attributes|Description|
 |---| ----|
-|*avaloq-expr* (IN)|The avaloq expresion to be verified in order for the.content to be evaluated and executed|
+|*avaloq-expr* (IN)|The avaloq expression to be verified in order for the content to be evaluated and executed|
 
 !!! example
     ~~~xml
@@ -97,7 +97,7 @@ This content may be formed of `<variable>`, `<input>`, `<query>` and `<verify>` 
 
 |Attributes|Description|
 |---| ----|
-|*Value* (IN)|The value to be verified in order for the content to beevaluated and executed|
+|*Value* (IN)|The value to be verified in order for the content to be evaluated and executed|
 
 !!! example
     ~~~xml
@@ -144,14 +144,14 @@ The for-loop control statement allows the body of the tag to be executed repeate
 
 Remark: Define the attributes that determine the number of iterations and the execution logic. The loop iterates based on the number of tokens split by the delimiter from the "select" result or the "avaloq-list" result, assigning each token to the "target" variableRef.
 
-***`<for ...>`*** - Define the attributes on how many times will iterate and execute depending on thenumber of tokens splitted by the delimeter from the "select" or result of "avaloq-list" and assign it to the "target" variableRef. Define either "select" or "avaloq-list" on how to iterate.
+***`<for ...>`*** - Define the attributes on how many times will iterate and execute depending on the number of tokens split by the delimiter from the "select" or result of "avaloq-list" and assign it to the "target" variableRef. Define either "select" or "avaloq-list" on how to iterate.
 
 |Attributes|Description|
 |---|----|
-|*select* (IN)| This attirbute is a type of VariableRef containing the reference to an AST variable.|
+|*select* (IN)| This attribute is a type of VariableRef containing the reference to an AST variable.|
 |*avaloq-list* (IN)| This attribute is a type of AvqExpr containing an Avaloq scripting expression defining a list on which to iterate. Define in delim attribute which property you read for each element of the list.|
-|*delim* (IN)| This attribute defines the type of delimeter to be use to split the content of the variable to have a loop on each token. If avaloq-list is specified, it instead defines the property of the object to be read for each element of the list.|
-|*target* (IN)|This attirbute is a type of VariableRef with the AST variable containing the value of the single token taken from the "select" variable.|
+|*delim* (IN)| This attribute defines the type of delimiter to be used to split the content of the variable to have a loop on each token. If avaloq-list is specified, it instead defines the property of the object to be read for each element of the list.|
+|*target* (IN)|This attribute is a type of VariableRef with the AST variable containing the value of the single token taken from the "select" variable.|
 
 !!! example
     ~~~xml

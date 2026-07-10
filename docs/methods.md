@@ -23,12 +23,12 @@ A method can be invoked in an AST test script or even from within another method
 
 The invocation of an AST Method has the following syntax:
 
-***`<ivoke-method ...>`***  - Executes a method.
+***`<invoke-method ...>`***  - Executes a method.
 
 |Attributes|Description|
 |---|---|
 |*name* (IN)|Name of the method (Path to method from ast-lib directory) |
-|*avaloq-cond/script-cond* (IN)|Avaloq script condition or script condition in an other script language.|
+|*avaloq-cond/script-cond* (IN)|Avaloq script condition or script condition in another script language.|
 |*ignore-blank-setters* (IN)|Defaults to true if not set, it will decide if empty strings should be passed as parameters or ignored.|
 |*select* (OUT)|Return value of executed method (optional and will be ignored if out tag is present).|
 

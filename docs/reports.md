@@ -1,5 +1,5 @@
 # Reports
-When you execute test cases with the AST tool, it automatically collects information about the test run and provides it to you through two main output channels: the **AST Log** and a **XML Report**.
+When you execute test cases with the AST tool, it automatically collects information about the test run and provides it to you through two main output channels: the **AST Log** and an **XML Report**.
 
 #### AST Log ####
 
@@ -7,7 +7,7 @@ The AST log provides real-time feedback on the test run as it happens.
 
 - **Console Output**: The log is displayed directly "on the go" in the console. This is useful for monitoring the progress of your tests in real time.
 
-#### The  XML Report ####
+#### The XML Report ####
 !!! info
     Upon completion of the test run, AST generates a single, comprehensive XML file that summarizes the entire test run. 
 
@@ -70,9 +70,9 @@ For more information, see the [Excel Report Template](#excel-template-and-xpath-
 
 You can view reports at three levels of detail: Execution, Test Set, and Individual Test Case.
 
-#### The Schedule (Execution) View
+#### The Execution View
 
-The **Schedule** menu functions as the central log for all test activity, showing the status of both scheduled and completed runs.
+The **Executions** menu functions as the central log for all test activity, showing the status of both scheduled and completed runs.
 
 - **Execution Grid**: The main table displays key metadata for every run, including the Start Date, End Date, User Name, and the current Status.
 - **Execution Results Summary**: This summary details the total number of tests that Passed, Failed, Errored, and are Pending.
@@ -84,11 +84,11 @@ The **Schedule** menu functions as the central log for all test activity, showin
 
 You can view the latest report for an individual test case directly from the Test Case Repository.
 
-- **Status Bubble**: Clicking on the colored status bubble next to a test case opens its execution report.
-- **Report Formats**: Reports for individual test cases are available in three distinct formats for review and export:
+- **Last run status**: Clicking on the last run status in the test case details panel opens its execution report.
+- **Report Formats**: Reports for individual test cases are available in the following formats for review and export: Log, HTML, XML, and Excel.
 
 !!! info
-    The **Analytics** menu also provides the ability to export a CSV reports. See the [Analytics](analytics.md) documentation for details.
+    The **Analytics** menu also provides the ability to export CSV reports. See the [Analytics](analytics.md) documentation for details.
 
 ## Customizing Reports
 
@@ -100,9 +100,9 @@ The process relies on defining the necessary files in your configuration:
 
 - **XML Report**: This is the base data source generated after every test run. The Excel customization process uses data from this file.
 - **Excel Template**: This is the Excel file (.xls or .xlsx) you design with your desired layout.
-- **HTML Template**: This is the html you can design with your desired layout.
+- **HTML Template**: This is the HTML template you can design with your desired layout.
 
-The template files can be uploaded in [Configuration](admin.md#configuration) section. Admin role is required to upload these files
+The template files can be uploaded in the [Configuration](admin.md#configuration) section. Admin role is required to upload these files.
 
 ### Excel template and XPATH expressions
 
@@ -229,7 +229,7 @@ Rows are generated from the `testcase` nodes in the XML.
 
 !!! example "Setup"
 
-    To be able to see the TESECASE_ID to be populated in the report it has to be setup in the test data excel and in the test case.
+    To be able to see the TESTCASE_ID to be populated in the report it has to be set up in the test data excel and in the test case.
 
     === "Test data excel"
 

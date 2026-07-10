@@ -27,7 +27,7 @@ To dynamically load an object's ID, you can use a combination of the id and prop
     ~~~xml
     <query>
       <descn>Get the name of the created money account</descn>
-      <obj id="$id" object-type="macc" property="name"select="m_name" />
+      <obj id="$id" object-type="macc" property="name" select="m_name" />
     </query>
     <query>
       <descn>Query a container object id with these parameters</descn>
@@ -59,7 +59,7 @@ Alternatively you can use the id and property to load dynamically an order id wi
 !!! example "Example 2"
     ~~~xml
     <query>
-      <descn>Query a container order id with theseparameters</descn>
+      <descn>Query a container order id with these parameters</descn>
       <doc id="{cont}" property="is_cust={-,+}#AND#bp_id=[{TYPE=bp}ref_curry_id=CHF]" select="l_found_order_id" />
     </query>
     ~~~
@@ -110,7 +110,7 @@ This operation provides a comfortable way to access messages stemming from the p
     ~~~xml
     <query>
       <descn>Get created order by EXTL_REF_NR of inserted msg</descn>
-      <msgextl_ref_nr="$sic_tag_03" property="doc_id" select="doc" />
+      <msg extl_ref_nr="$sic_tag_03" property="doc_id" select="doc" />
     </query>
     ~~~
 
@@ -137,7 +137,7 @@ The result of the xpath query can be a single value or a node list converted to 
     ~~~xml
     <query>
       <descn>Evaluate XPATH on XML file</descn>
-      <util-xpath src="$xml_file" xpath="//descn"select="result" delim=";" descn="Query all descn elements" />
+      <util-xpath src="$xml_file" xpath="//descn" select="result" delim=";" descn="Query all descn elements" />
     </query>
     ~~~
 
@@ -236,9 +236,9 @@ The operation then returns both the identified differences and the longest commo
 
 #### Query replace
 
-The `util-replace` operation allows to replace certain key words in a string or a variable with different values.
+The `util-replace` operation allows replacing certain keywords in a string or a variable with different values.
 
-***`<query>` | `<util-replace ...>`*** - Replace key words with values
+***`<query>` | `<util-replace ...>`*** - Replace keywords with values
 
 |Attributes|Description|
 |---|---|
@@ -269,7 +269,7 @@ The `latest-order` operation fetches and displays the latest Avaloq orders in AS
 
 |Attributes|Description|
 |---|---|
-|*limit* (IN)|Limit number of items to shown in Avaloq orders. Default value is 20.|
+|*limit* (IN)|Limit number of items to show in Avaloq orders. Default value is 20.|
 |*select* (OUT)|An AST Variable to specify and save the output operation.|
 
 !!! example
@@ -282,7 +282,7 @@ The `latest-order` operation fetches and displays the latest Avaloq orders in AS
 
 #### Query order-generation
 
-The `order-generation` operation allows to generate a template for an AST test based on an existing order id.
+The `order-generation` operation allows generating a template for an AST test based on an existing order id.
 
 
 ***`<query>` | `<order-generation ...>`*** - Generate a template test XML to re-create an Avaloq order.
@@ -291,12 +291,12 @@ The `order-generation` operation allows to generate a template for an AST test b
 |---|---|
 |*id* (IN)|AST expression to specify the Avaloq order ID to be scanned to generate the AST test template.|
 |*descn* (IN)|Description of this operation instance.|
-|*validate* (IN)|Boolean to specify if AST should try to automatically trim down the test through a strict validation. Depending on the complexity of the order, this may results in a failure. Defaults to false.|
+|*validate* (IN)|Boolean to specify if AST should try to automatically trim down the test through a strict validation. Depending on the complexity of the order, this may result in a failure. Defaults to false.|
 |*output-xml* (OUT)|The name of the generated AST test template XML that will be saved upon completion.|
 
 !!! example
     ~~~xml
     <query>
-      <order-generation id="100000015324" output-xml="generated-test.xml" descn="generating atest template for 00000015324" />
+      <order-generation id="100000015324" output-xml="generated-test.xml" descn="generating a test template for 00000015324" />
     </query>
     ~~~

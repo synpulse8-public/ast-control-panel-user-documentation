@@ -1,6 +1,6 @@
 # Integration guide
 
-This sections provides information on how to integrate with various tools. For example ALM or Xray.
+This section provides information on how to integrate with various tools. For example ALM or Xray.
 You can also find information on how to set up SSO with Keycloak in this section. 
 Each integration has its own documentation page where you can find detailed instructions on how to set up the integration and use it.
 
@@ -11,30 +11,6 @@ You can use the sidebar on the left for navigation or use the tiles below to nav
 <section class="mdx-container landing-tiles">
     <div class="md-grid md-typeset">
         <div class="grid cards" markdown>
-            <a class="card-link" href="../alm">
-                <article>
-                    <h3>HP ALM</h3>
-                    <p>Guide for ALM setup and navigation</p>
-                    <p><strong>See section →</strong></p>
-                </article>
-            </a>
-
-            <a class="card-link" href="../jira_xray">
-                <article>
-                    <h3>Jira Xray</h3>
-                    <p>Guide for Xary setup and navigation</p>
-                    <p><strong>See section →</strong></p>
-                </article>
-            </a>
-
-            <a class="card-link" href="../keycloak">
-                <article>
-                    <h3>Keycloak</h3>
-                    <p>Setup SSO with Keycloak </p>
-                    <p><strong>See section →</strong></p>
-                </article>
-            </a>
-
             <a class="card-link" href=../deployment>
                 <article>
                     <h3>Deployment</h3>
@@ -43,7 +19,15 @@ You can use the sidebar on the left for navigation or use the tiles below to nav
                 </article>
             </a>
 
-            <a class="card-link" href="../security">
+            <a class="card-link" href=../configuration_files>
+                <article>
+                    <h3>Configuration files</h3>
+                    <p>Overview of the configuration files</p>
+                    <p><strong>Learn more →</strong></p>
+                </article>
+            </a>
+            
+            <a class="card-link" href="../security-info">
                 <article>
                     <h3>Security</h3>
                     <p>Overview of app security </p>
@@ -58,6 +42,31 @@ You can use the sidebar on the left for navigation or use the tiles below to nav
                     <p><strong>See requirements →</strong></p>
                 </article>
             </a>
+
+            <a class="card-link" href="../alm">
+                <article>
+                    <h3>HP ALM</h3>
+                    <p>Guide for ALM setup and navigation</p>
+                    <p><strong>See section →</strong></p>
+                </article>
+            </a>
+
+            <a class="card-link" href="../jira_xray">
+                <article>
+                    <h3>Jira Xray</h3>
+                    <p>Guide for Xray setup and navigation</p>
+                    <p><strong>See section →</strong></p>
+                </article>
+            </a>
+
+            <a class="card-link" href="../keycloak">
+                <article>
+                    <h3>Keycloak</h3>
+                    <p>Setup SSO with Keycloak </p>
+                    <p><strong>See section →</strong></p>
+                </article>
+            </a>
+ 
         </div>
     </div>
 </section>

@@ -2,7 +2,7 @@
 
 This section provides all the information for the users to get started with the AST test automation tool, including how to access the control panel, navigate through its features.
 
-You will be introduced to the various parts of the control panel, such as the Schedule view, Test Cases and Test Sets management, and the reporting features. 
+You will be introduced to the various parts of the control panel, such as the Executions view, Test Cases and Test Sets management, and the reporting features. 
 There is also a whole section dedicated to the administration of the tool, where you can learn how to manage users, view system metrics, and configure application settings.
 
 One of the larger sections is dedicated to writing of test cases, where you can learn how to create and manage your test cases, and how to use the AST test case editor.
@@ -12,11 +12,19 @@ You can use the sidebar on the left for navigation or the tiles below to jump to
 <section class="mdx-container landing-tiles">
     <div class="md-grid md-typeset">
         <div class="grid cards" markdown>
+            <a class="card-link" href="../getting_started">
+                <article>
+                    <h3>Getting Started</h3>
+                    <p>Brief guide on how to get started</p>
+                    <p><strong>Start here →</strong></p>
+                </article>
+            </a>
+
             <a class="card-link" href="../login">
                 <article>
                     <h3>Login</h3>
                     <p>Information on how to access the app</p>
-                    <p><strong>Start here →</strong></p>
+                    <p><strong>See login →</strong></p>
                 </article>
             </a>
 
@@ -30,8 +38,8 @@ You can use the sidebar on the left for navigation or the tiles below to jump to
 
             <a class="card-link" href="../navigation">
                 <article>
-                    <h3>Navigation</h3>
-                    <p>Brief summary of applications sections </p>
+                    <h3>Landing page and Navigation</h3>
+                    <p>Brief summary of application sections </p>
                     <p><strong>Explore →</strong></p>
                 </article>
             </a>
@@ -55,15 +63,15 @@ You can use the sidebar on the left for navigation or the tiles below to jump to
             <a class="card-link" href="../test_sets">
                 <article>
                     <h3>Test sets</h3>
-                    <p>Information on how to use tests sets</p>
+                    <p>Information on how to use test sets</p>
                     <p><strong>See guide →</strong></p>
                 </article>
             </a>
 
-             <a class="card-link" href="../schedule">
+             <a class="card-link" href="../executions">
                 <article>
-                    <h3>Schedule</h3>
-                    <p>How to use the schedule view</p>
+                    <h3>Executions</h3>
+                    <p>How to use the executions view</p>
                     <p><strong>See guide →</strong></p>
                 </article>
             </a>

@@ -16,7 +16,7 @@ SPRING_DATASOURCE_USERNAME=your_username
 
 SPRING_DATASOURCE_PASSWORD=your_password
 ```
-Then you need to manually upload your license file, ast.globalsettings and your ast.properties(alternatively see [Mounting of ast.properties](#mounting-of-astproperties-optional)) file in admin section of the app.
+Then you need to manually upload the required configuration files (see [Configuration files](configuration_files.md)) or mount the ast.properties file as described in [Mounting of ast.properties](#mounting-of-astproperties-optional)
 
 If you would need further settings like ingress, resources, port, replicas and others please refer to the `Values.yaml` file in the provided helm chart. For environment variables settings, secret settings, SSL and other please refer to the sections below.
 ### Setting up environment variables
@@ -45,7 +45,7 @@ Then, you can mount this file as a volume in your deployment and specify the pat
 env:
   SPRING_CONFIG_ADDITIONAL_LOCATION: "/deployment/ast-control-panel.properties"
 ```
-You can mount the file as a secret or you can put it into tge ```files``` directory of the helm chart and mount it as a config map. The config map name is ```controlpanel-config``` nad the subpath is ```additional_config.properties```. For more detail see [Mounting Volumes](#mounting-volumes)
+You can mount the file as a secret or you can put it into the ```files``` directory of the helm chart and mount it as a config map. The config map name is ```controlpanel-config``` and the subpath is ```additional_config.properties```. For more detail see [Mounting Volumes](#mounting-volumes)
 
 ### Mounting volumes 
 To mount a volume , you can use the `volumes` and `volumeMounts` sections in the `Values.yaml` file. Example of mounting a secret and a config map as volumes:
@@ -73,17 +73,17 @@ If you want to mount(For more detail see [Mounting Volumes](#mounting-volumes)) 
 You need to put the file you want to mount into the ```files``` directory of the helm chart and then specify the name of the file in the `Values.yaml` file.
 For mounting of the ```ast.properties``` you can use the core-config config map. For example, for ```ast.properties``` the subpath is ```ast.properties```.
 !!! warning "Important"
-    If you want to use this option, you need to specify the path to the properties file in the `ast.core.properties-file.path` property in the admin UI or as an environment variable. 
+    If you want to use this option, you need to specify the path to the properties file in the `ast-core.properties-file-path` property in the admin UI or as an environment variable. 
     Check the [Configuration](admin.md#configuration) section for more details.
 
 ### Setting up a keystore for SSL
-You can do this by creating a secret with the keystore file and then mounting it as a volume in your deployment. Also you need to setup some environment variables to specify the path to the truststore and its password. 
+You can do this by creating a secret with the keystore file and then mounting it as a volume in your deployment. Also you need to set up some environment variables to specify the path to the truststore and its password. 
 Here is an example of how to do this in the `Values.yaml` file:
 ```yaml
 # Environment variables for the container. Optional. Add as needed.
 env:
   SERVER_SSL_ENABLED: true
-  SERVER_SSL_KEY_STORE_TYPE: JKS  #depends o yor preference
+  SERVER_SSL_KEY_STORE_TYPE: JKS  #depends on your preference
   SERVER_SSL_KEY_STORE: file:/deployments/data/ssl-keystore/keystore.jks
   SECURITY_REQUIRE_SSL: true
 
@@ -162,9 +162,9 @@ For other possible settings like ingress, resources, port, replicas and others p
 ## Using docker
 You can run the application in the command line using docker. The app should be deployed like this only for test purposes. For minimal settings you need to set up the same environment variables as for the helm chart deployment. Here is an example of how to run the application using docker with the required environment variables:
 ```bash
-docker run -e SPRING_DATASOURCE_USERNAME=your_username -e SPRING_DATASOURCE_URL=jdbc:oracle:thin:@your_db_address:1521/YOUR_SCHEMA -e SPRING_DATASOURCE_PASSWORD=your_password --network host path/to/your/iamge/ast-control-panel:image_tag
+docker run -e SPRING_DATASOURCE_USERNAME=your_username -e SPRING_DATASOURCE_URL=jdbc:oracle:thin:@your_db_address:1521/YOUR_SCHEMA -e SPRING_DATASOURCE_PASSWORD=your_password --network host path/to/your/image/ast-control-panel:image_tag
 ```
-After the application is started you need to upload your license file, ast.globalsettings and your ast.properties (alternatively see [Mounting of ast.properties](#mounting-of-astproperties-optional)) file in admin section of the app.
+After the application is started you need to upload the required configuration files (see [Configuration files](configuration_files.md)) or mount the ast.properties file as described in [Mounting of ast.properties](#mounting-of-astproperties-optional).
 
 As in the helm chart deployment, you can also set up environment variables using an additional configuration file and mount it as a volume in the docker container. 
 You can use the same example of the `ast-control-panel.properties` file and specify the path to this file in the `SPRING_CONFIG_ADDITIONAL_LOCATION` environment variable.

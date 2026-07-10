@@ -9,37 +9,37 @@ To enable the integration, an administrator must navigate to the application pro
 - **Enter Connection Details**: Input the required Xray configuration parameters, such as the **URL** and **JWT token**.
 
 ![xray_enabling.png](assets/UserDocumentationM/xray_enabling-1.png)
-<figcaption>Xray connection settings in AST Control Panel</figcaption>
-
-![xray_settings.png](assets/UserDocumentationM/xray_settings-1.png)
 <figcaption>Configuration to enable Xray integration</figcaption>
 
-#### Setting Environment Variables(Optional)
-If needed the xray sync endpoint can be adjusted by setting the environment variable `AST_CONTROL_PANEL_XRAY_SYNC_ENDPOINT` to the desired URL. 
+![xray_settings.png](assets/UserDocumentationM/xray_settings-1.png)
+<figcaption>Xray connection settings in AST Control Panel</figcaption>
+
+#### Setting Environment Variables (Optional)
+If needed, the Xray sync endpoint can be adjusted by setting the environment variable `AST_CONTROL_PANEL_XRAY_SYNC_ENDPOINT` to the desired URL. 
 
 The default value for this variable is `/rest/raven/2.0/import/execution`. 
 
 If your Xray instance uses a different endpoint, you can set the environment variable accordingly.
-On how to set environment variables please refer to the [Setting environment variables](deployment.md#setting-up-environment-variables) documentation.
+For instructions on how to set environment variables please refer to the [Setting environment variables](deployment.md#setting-up-environment-variables) documentation.
 
 ### Assigning External XRAY IDs to Test Cases
 
 You must link your AST test cases to their corresponding Xray test entities in Jira by assigning an **External Xray ID**.
 
-#### Individual Asignement
+#### Individual Assignment
 
-1. Go to the 'Test' tab and select a test case to open its details.
-2. Use the field in the detail view to assign or edit the '**External XRAY ID**'.
+1. Go to the Test tab and select a test case to open its details shown in the [details panel](test_case_repository.md#version-information-and-details-panel).
+2. Use the field in the detail view to assign or edit the **XRAY**.
 
 ![xray_testid.png](assets/UserDocumentationM/xray_testid.png)
 <figcaption>Test case detail with External XRAY ID field</figcaption>
 
-#### Bulk Assigment (CSV Upload)
+#### Bulk Assignment (CSV Upload)
 
-1. **Right-click** on a test case in the repository tree and select '**Manage External IDs**'.
+1. Click on any test case in the repository tree to open the [details panel](test_case_repository.md#version-information-and-details-panel) and then click **Manage External IDs**.
 2. This dialog allows you to upload mappings via a **CSV file**. The CSV must contain the **AST Test Case ID** and the **External Xray ID**.
 
-![xray_csv.png](assets/UserDocumentationM/xray_csv.png)
+![xray_csv.png](assets/UserDocumentationM/external_ids_dialog.png)
 <figcaption>Dialog for managing bulk external IDs upload</figcaption>
 
 **Sample Xray CSV Upload** - Example content showing the required columns: `AST Test Case ID` and `External Xray ID` for bulk mapping:
@@ -55,11 +55,9 @@ AST Test Case ID,External Xray ID;
 ### Scheduling and XRAY Synchronization
 
 When a test run is scheduled, you must specify the unique **Xray Execution ID** that results will be synced to. **This is different from the External Xray ID** used for individual test cases.
-![xray_sync.png](assets/UserDocumentationM/xray_sync.png)
-<figcaption>Schedule dialog with Xray Execution ID field</figcaption>
 
-![xray_sync2.png](assets/UserDocumentationM/xray_sync2.png)
-<figcaption>Schedule execution dialog with 'Create Jira Xray report</figcaption>
+![xray_sync.png](assets/UserDocumentationM/xray_sync.png)
+<figcaption>Schedule execution dialog with 'Create Jira Xray report' option</figcaption>
 
 ![xray_sync3.png](assets/UserDocumentationM/xray_sync3.png)
 <figcaption>Test execution log showing Xray Sync Status column</figcaption>
@@ -68,18 +66,18 @@ By default, the synchronization will be attempted 3 times with a timeout of 30 s
 You can adjust the number of attempts and timeout duration by setting the environment variables `AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_ATTEMPTS` and `AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_DURATION` respectively.
 
 
-### Vieving Reports and Sync Logs
+### Viewing Reports and Sync Logs
 
 After a test run is complete, you can review its status and troubleshoot any issues.
 
-- **View Sync Status**: Click the '**Reports**' button for a completed execution to open a detailed view showing the test execution status and Xray sync logs.
-- **Detailed Logs**: In the Reports pop-up window, you can see the synchronization status for each test case and click '**View Sync Log**' for detailed event records.
-- **Manual JSON Download**: You can download the **raw JSON payload** sent to Xray by clicking the '**XRAY JSON**' button. This file contains the execution results and metadata, which is useful for debugging.
+- **View Sync Status**: Click the executions table row for a completed execution to open a detailed view showing the test execution status and Xray sync logs.
+- **Detailed Logs**: In the Reports pop-up window, you can see the synchronization status for each test case and click '**View Sync Logs**' for detailed event records.
+- **Manual JSON Download**: You can download the **raw JSON payload** sent to Xray by clicking the '**XRAY JSON**' button in the 'Reports' dropdown. This file contains the execution results and metadata, which is useful for debugging.
 ![xray_reports.png](assets/UserDocumentationM/xray_reports.png)
 <figcaption>Detailed execution report showing Xray sync status</figcaption>
 
 ![xray_log.png](assets/UserDocumentationM/xray_log.png)
-<figcaption>Log view of Xray synchronization timeline</figcaption>
+<figcaption>Log view of Xray synchronization</figcaption> 
 
 Below is an example of a JSON payload sent to XRAY:
 

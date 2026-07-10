@@ -38,7 +38,7 @@ AST differentiates between three primary step types:
 - **`<query>`** - Queries information from the Avaloq Banking System.
 - **`<verify>`** - Verifies equality of properties.
 
-![test_case_parts.svg](assets/UserDocumentationM/test_case_parts.svg)
+![test_case_parts.png](assets/UserDocumentationM/test_case_parts.png)
 <figcaption>Structural decomposition of AST test case into Input, Query, Verify steps, and 1.n Operations</figcaption>
 
 AST executes test steps sequentially, from top to bottom. The test script language employs a single flow control model and does not support nested flow controls.
@@ -88,7 +88,7 @@ By annotating a test case, it can be categorized or labeled. The keys and values
 
 ~~~xml
 <?xml version="1.0" encoding="iso-8859-1"?>
-  <textcase version="1.0" user="avaloq" bu="AAA" name="CASH: Cost Calculation">
+  <testcase version="1.0" user="avaloq" bu="AAA" name="CASH: Cost Calculation">
     <annotations>
       <annotation key="Stage" value="Modul" />
       <annotation key="Kind" value="Functional Test" />
@@ -101,16 +101,16 @@ By annotating a test case, it can be categorized or labeled. The keys and values
 
 ### Variables and Arguments
 
-Variables and Arguments are the core tools you use to store and share information within a single test case, making your scripts dynamic and reusable
+Variables and Arguments are the core tools you use to store and share information within a single test case, making your scripts dynamic and reusable.
 
 - **Arguments** link your test script to **external test data** (like an Excel file). The argument name must match the **column header** in the external spreadsheet.
 - **Variables** are defined directly within your **XML script** to **temporarily store values**.
 
-Both arguments and variables function identically during test execution
+Both arguments and variables function identically during test execution.
 
 #### Declaring and Assigning Values
 
-You should declare all variables and arguments near the beginning of your test case
+You should declare all variables and arguments near the beginning of your test case.
 
 |Tag|Purpose|Example|
 |---|---|---|
@@ -142,9 +142,9 @@ When inserting a variable into a plain text block - like a log message or messag
 
 ### Troubleshooting Your Scripts
 
-The **`<debug>` tag** is a crucial tool for developers to **inspect data flow and troubleshoot logic** during a test run
+The **`<debug>` tag** is a crucial tool for developers to **inspect data flow and troubleshoot logic** during a test run.
 
-It allows you to display a text message or the current value of one or more variables in the console log
+It allows you to display a text message or the current value of one or more variables in the console log.
 
 #### How to Use It
 
@@ -210,14 +210,14 @@ To facilitate this transfer, a parameter is populated within the address creatio
 <?xml version="1.0" encoding="UTF-8"?>
 <testcase bu="AAA" name="0 - Create Address & Person" user="avaloq" version="1.0">
   <!-- Local variable definition -->
-  <variable name="l_obj_addr_id" />
+  <variable name="addr_doc_id" />
 
   <!-- Create Address -->
   <input>
     <new-doc type="addr" init-action="1100" close-action="1090">  
       <set ... />
       ...
-      <out property="id" select="l_obj_addr_id" />
+      <out property="id" select="addr_doc_id" />
   
   </input>
 
@@ -234,7 +234,7 @@ To facilitate this transfer, a parameter is populated within the address creatio
       <set property="sort_alpha" value="$in_sort_alpha" />
       <set property="obj_extn.person_sym" value="$in_sort_alpha" />
       
-      <set property="domi_addr_id" value="$l_obj_addr_id" />
+      <set property="domi_addr_id" value="$addr_doc_id" />
 
       <out property="id" select="person_doc_id" />            
     </new-doc>
@@ -272,7 +272,7 @@ AST supports importing test data from Excel.
 Data from an Excel sheet can be imported for use in test cases. The first sheet contains the test data, where each column name must have a corresponding `<argument>` defined in the test case. The second sheet is used to link the test case data rows to a specific test case XML file.
 ![excel_test_data.png](assets/UserDocumentationM/excel_test_data.png)
 <figcaption>Test data from Excel sheet</figcaption>
-
+Each row starts with the active sign. '+' means active, '-' means inactive.
 Each column requires a corresponding argument in the test case:
 
 ~~~xml
@@ -283,15 +283,11 @@ Each column requires a corresponding argument in the test case:
 
 These arguments can be used the same way as variables: `$close_wfc`, `$bp`, `$buy_asset`. Since arguments are treated like variables, the same naming rules apply.
 
-To assign the test case data to a test case, the second sheet is used:
-![excel_test_data_link.png](assets/UserDocumentationM/excel_test_data_link.png)
-<figcaption>Link between test data on Excel tab and test case</figcaption>
-
 ### Example - Domestic Payment
 
 Test data increases the operational variance of test cases by enabling the execution of a single test logic with different input values. For example, test cases related to domestic payments utilize varied test data to confirm system behavior under diverse conditions, demonstrating this approach.
 
-The test data look as as follows:
+The test data look as follows:
 ![test_data_domestic_payment.png](assets/UserDocumentationM/test_data_domestic_payment.png)
 <figcaption>Test data to test domestic payments</figcaption>
 
