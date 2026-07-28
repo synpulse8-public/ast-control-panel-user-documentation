@@ -11,7 +11,7 @@ Selecting an item from this tree populates the main content area with detailed i
 
 You can also filter the test sets. The results are loaded whilst you type characters one by one. Use the refresh button if you feel the tree isn't properly loaded.
 
-### Context menu
+## Context menu
 An important feature of this menu is the context menu, which appears when a user clicks on the three dots next to the test set in the repository tree. This menu offers several actions for managing the selected set.
 
 ![sets.png](assets/ControlPanelDocu/sets.png)
@@ -29,9 +29,11 @@ The primary content area is divided into two key sections. At the top, a metadat
 ![test_sets_overview.png](assets/UserDocumentationM/test_sets_overview.png)
 <figcaption>Screenshot of the Test Set detail panel, listing contained test cases and execution controls.</figcaption>
 
-#### Definitions tab
+### Definitions tab
 The Definitions tab shown in the previous image lists all the individual test cases included in the test set. For each test case, it displays its name, execution sequence, and whether it is Deactivated.
 This organized table gives the user a clear view of which tests are part of the set and their execution order.
+
+#### Sequence of execution
 
 Sequence can be parallel or sequential. In parallel execution, all test cases are executed simultaneously, while in sequential execution, test cases are executed one after the other in a specified order.
 The image below shows that the two testcases are set to execute in parallel as indicated by the line before the second testcase. 
@@ -53,13 +55,33 @@ Then you drop it there, and it will be executed after the testcase above the lin
 ![test_set_sequential.png](assets/ControlPanelDocu/test_set_sequential.png)
 <figcaption>Dropping a testcase after another to make them execute in sequence</figcaption>
 
-#### Summary tab
+
+#### Stop execution on failure
+
+You can select the **Stop if fail** checkbox for a test case so that if it fails, the remaining test cases in the set are skipped.
+When that happens, test cases with a higher sequence number are skipped and marked as failed in the execution [report](#reports-tab).
+
+![stop_if_fail.png](assets/ControlPanelDocu/stop-if-fail.png)
+<figcaption>Enabling the option to stop execution on failure</figcaption>
+
+!!!info "Info"
+    We strongly recommend that you use **Stop if fail** for test cases that are executed in sequence.
+
+In parallel execution, only the first checkbox is selectable; the other test cases in the same parallel group follow the same behavior as the first one.
+This is because test cases in a parallel group run at the same time, so their execution order cannot be guaranteed.
+
+!!!warning "Important"
+    If **Stop if fail** is enabled for a test case in a parallel group and that test case fails, the other test cases in the same parallel group are not skipped.
+    This is because test cases in a parallel group run at the same time and share the same sequence number, so their execution order cannot be guaranteed.
+    Only test cases with a higher sequence number than the failed test case are skipped.
+
+### Summary tab
 The Summary tab shown in the image below allows you to select the instance on which the selected test set was executed and the date range for which you want to see the summary.
 Summary works as an overview. For more details, check the Reports tab.
 ![tssummarytab.png](assets/ControlPanelDocu/tssummarytab.png)
 <figcaption>Summary tab content with displayed data for specific instance and date range</figcaption>
 
-#### Reports tab
+### Reports tab
 The Reports tab contains the full table with many fields that can be set up for a different view.
 ![tsreportstab.png](assets/ControlPanelDocu/tsreportstab.png)
 <figcaption>Reports display for selected test set</figcaption>
@@ -91,9 +113,9 @@ Granular execution report detail. This modal window displays the results breakdo
 The window lists the individual Test Cases included in the run. For each case, the Status, Start time, and End time of its execution are listed. The Reports dropdown offers access to the execution data for that specific test case in the following formats: HTML, Log, XML, and Excel. This allows for granular review and data integration. The bottom of the window provides controls to Schedule the test run again or Close the report window.
 
 
-### Test set creation and alterations
+## Test set creation and alterations
 
-#### Add new test set
+### Add new test set
 To create a test set you can use the *Create Test Set* button in the Test Sets screen or you can use the *Create New* in the Tests screen.
 Then a dialog will appear where you can set up the name, description and select test cases that will be part of this set.
 
@@ -103,7 +125,7 @@ Then a dialog will appear where you can set up the name, description and select 
 You can also use the context menu for the [folders](test_case_repository.md#folder-context-menu) and [testcases](test_case_repository.md#test-case-context-menu) in the test case screen to create a new test set.
 In this case the same dialog appears but with already preselected testcase or all testcases from a folder.
 
-#### Add test cases to already existing test set
+### Add test cases to already existing test set
 In the Test set view in an open test set you can click on the *Edit* button in the Definitions tab.
 This will enable editing of the test set. Then you click on the *Add test case* button which will open a dialog from which you can select a test case that will be added to this set.
 
@@ -118,7 +140,7 @@ Then you choose add to existing test set and then select the test set to which y
 <figcaption>Dialog for adding test cases to existing set</figcaption>
 
 
-### Scheduling and Executing Test Sets
+## Scheduling and Executing Test Sets
 If you want to execute a test set immediately, you can select 'Execute now' from the Definitions tab. This will run the test set on selected instance and show results in Reports tab.
 
 When clicking on the Schedule button a dialog will appear, allowing you to set up the parameters for scheduling the execution of the test set. You can select the specific test set and instance on which it will run, as well as the scheduled date and time for execution. 
