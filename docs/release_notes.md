@@ -13,3 +13,13 @@
 - Fix toast notifications
 - Fix duplicate password visibility icons on secret property fields
 
+## Version 5.0.2
+
+#### Bug Fixes
+- Fix toast notifications not displaying correctly
+- Fix sequence number not updating after removing test cases in TestSetDefinition edit mode
+
+#### Other Changes
+- Updated backend and frontend dependencies
+- Updated AST core to version 3.12.2
+
