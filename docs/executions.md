@@ -63,12 +63,14 @@ In selected filters the app offers suggestions for filters e.g. user name.
 If a filter is active it will be shown in the active filters tab on the top right side of the table.
 You can quickly clear the filters by clicking on the "x" icon next to the active filter or by clicking on the "Clear all" button which will clear all active filters at once.
 
+In certain filters you can also select multiple values. For example, you can select multiple user names as shown in the screenshot below
+
 !!! Info
     The execution status filter is applied together with other filters, meaning that if you select "Scheduled" status and filter by user name "John", you will see only scheduled executions created by John. 
     If you want to see all executions by "John", you need to set the execution status filter to "all".
 
 ![filter_tab.png](assets/ControlPanelDocu/filter_tab.png)
-<figcaption>Filter tab with selected user name filter and active filters tab.</figcaption>
+<figcaption>Filter tab with selected user name filter with multiple values and active filters tab.</figcaption>
 
 ### Execution details
 
