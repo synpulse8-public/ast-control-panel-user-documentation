@@ -9,29 +9,29 @@ It is the main place to monitor and manage test execution.
 
 **List of columns with explanations**
 
-| Column           | Description                                               |
-|------------------|-----------------------------------------------------------|
-| Start date       | Starting date of a run                                    |
-| End date         | Ending date of a run                                      |
-| Scheduled date   | Scheduled date of a run                                   |
-| Creation date    | Creation date of a run                                    |
-| User name        | User name that created the set / test case                |
-| Execution name   | Name of the execution                                     |
-| Test set name    | Name of the set being executed                            |
-| Instance         | Avaloq instance where tests are executed                  |
-| Status           | Status of the execution (Scheduled/Running/Finished)      |
-| Recurrence       | Recurrence of this run                                    |
-| Test cases       | Number of test cases                                      |
-| AST execution ID | Id of the execution                                       |
-| External Xray    | Id used for Xray sync                                     |
-| Execution status | Number of Passed/Failed/Error/Pending tests from test set |
-| Xray sync status | Displays the success/fail of the sync to xray             |
-| ALM sync status  | Displays the success/fail of the sync to alm              |
+| Column           | Description                                                  |
+|------------------|--------------------------------------------------------------|
+| Start date       | The date and time when the execution actually started        |
+| End date         | The date and time when the execution actually ended          |
+| Scheduled date   | The date and time the execution was planned to run           |
+| Creation date    | The date and time the execution was created                  |
+| User name        | User name that scheduled the execution                       |
+| Execution name   | Name of the execution                                        |
+| Test set name    | Name of the set being executed                               |
+| Instance         | Avaloq instance where tests are executed                     |
+| Status           | Status of the execution (Scheduled/Running/Finished)         |
+| Recurrence       | Recurrence of this execution (e.g. daily, weekly, one-time)  |
+| Test cases       | Number of test cases                                         |
+| AST execution ID | Internal identifier used by the AST system                   |
+| External Xray    | Id used for Xray sync                                        |
+| Execution status | Summary of test results (e.g. 5 Passed / 2 Failed / 1 Error) |
+| Xray sync status | Displays the success/fail of the sync to xray                |
+| ALM sync status  | Displays the success/fail of the sync to alm                 |
 
 ### Table view customization
 
 This table can be altered by adding or removing mentioned columns via clicking the 'Set columns' button. This will open a pop-up with all columns to be selected or unselected as checkboxes.
-The table can be set to its default view by clicking on 'reset view' button.
+The table can be set to its default view by clicking on 'Reset view' button.
 
 Columns can also be pinned to the left side of the table by clicking on the pin icon in the 'Set columns' dropdown. 
 This will make sure that the column is always visible when scrolling horizontally through the table. 
@@ -63,7 +63,7 @@ In selected filters the app offers suggestions for filters e.g. user name.
 If a filter is active it will be shown in the active filters tab on the top right side of the table.
 You can quickly clear the filters by clicking on the "x" icon next to the active filter or by clicking on the "Clear all" button which will clear all active filters at once.
 
-In certain filters you can also select multiple values. For example, you can select multiple user names as shown in the screenshot below
+In certain filters you can also select multiple values. For example, you can select multiple user names as shown in the screenshot below.
 
 !!! Info
     The execution status filter is applied together with other filters, meaning that if you select "Scheduled" status and filter by user name "John", you will see only scheduled executions created by John. 
