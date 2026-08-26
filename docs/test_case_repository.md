@@ -100,6 +100,21 @@ This section summarizes key information like the File Name and Path of the test 
 
 This multi-pane layout ensures that the user has a complete overview of the test case's location, content, and available actions all in one view.
 
+#### Concurrent editing
+
+When a user is editing a testcase and at the same time another user has the testcase opened, the application will display
+a banner to the second user that shows that the first user is editing the testcase. The second user can still edit the testcase.
+
+The banner serves as a notification only. Whichever user saves last, their version becomes the latest.
+It is still possible to see the previous versions of the testcase in the [test case history](#test-case-history).
+
+The banner will disappear when the user that is editing saves or discards their changes. 
+It will also disappear after a certain time of inactivity from the user that is editing.
+
+![concurrent-editing.png](assets/ControlPanelDocu/concurrent-editing.png)
+<figcaption>Banner showing the user that is editing the file</figcaption>
+
+
 #### Trial Run vs Schedule
 The **Trial Run** feature allows users to execute the test case immediately. 
 A window is displayed where you can see the logs of the execution in real-time. 
