@@ -9,24 +9,24 @@ It is the main place to monitor and manage test execution.
 
 **List of columns with explanations**
 
-| Column           | Description                                                  |
-|------------------|--------------------------------------------------------------|
-| Start date       | The date and time when the execution actually started        |
-| End date         | The date and time when the execution actually ended          |
-| Scheduled date   | The date and time the execution was planned to run           |
-| Creation date    | The date and time the execution was created                  |
-| User name        | User name that scheduled the execution                       |
-| Execution name   | Name of the execution                                        |
-| Test set name    | Name of the set being executed                               |
-| Instance         | Avaloq instance where tests are executed                     |
-| Status           | Status of the execution (Scheduled/Running/Finished)         |
-| Recurrence       | Recurrence of this execution (e.g. daily, weekly, one-time)  |
-| Test cases       | Number of test cases                                         |
-| AST execution ID | Internal identifier used by the AST system                   |
-| External Xray    | Id used for Xray sync                                        |
-| Execution status | Summary of test results (e.g. 5 Passed / 2 Failed / 1 Error) |
-| Xray sync status | Displays the success/fail of the sync to xray                |
-| ALM sync status  | Displays the success/fail of the sync to alm                 |
+| Column           | Description                                                                        |
+|------------------|------------------------------------------------------------------------------------|
+| Start date       | The date and time when the execution actually started                              |
+| End date         | The date and time when the execution actually ended                                |
+| Scheduled date   | The date and time the execution was planned to run                                 |
+| Creation date    | The date and time the execution was created                                        |
+| User name        | User name that scheduled the execution. Deleted users are displayed as !user#<id>  |
+| Execution name   | Name of the execution                                                              |
+| Test set name    | Name of the set being executed                                                     |
+| Instance         | Avaloq instance where tests are executed                                           |
+| Status           | Status of the execution (Scheduled/Running/Finished)                               |
+| Recurrence       | Recurrence of this execution (e.g. daily, weekly, one-time)                        |
+| Test cases       | Number of test cases                                                               |
+| AST execution ID | Internal identifier used by the AST system                                         |
+| External Xray    | Id used for Xray sync                                                              |
+| Execution status | Summary of test results (e.g. 5 Passed / 2 Failed / 1 Error)                       |
+| Xray sync status | Displays the success/fail of the sync to xray                                      |
+| ALM sync status  | Displays the success/fail of the sync to alm                                       |
 
 ### Table view customization
 

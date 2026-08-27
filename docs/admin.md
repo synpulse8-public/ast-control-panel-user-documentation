@@ -38,7 +38,13 @@ Each role will have access to the corresponding view.
 !!! warning "Important"
     Admin user needs to have ROLE_USER and ROLE_ADMIN (both) assigned as rights.
 
-After logging in, you are navigated to the landing page where you will find options on the [navigation panel](navigation.md) to access test cases and other features.
+To modify user information and roles click on the row in the user table. A user modification dialog will then appear.
+
+To delete a user use the trash bin icon in the user table or the delete button in the edit dialog.
+!!! Info
+    Deleted users will appear as !user#<id> e.g. !user#123 in historical execution reports.
+
+After logging in, you are navigated to the landing page where you will find options on the [navigation panel](navigation.md) to access test cases and other features. 
 
 ### Metrics
 The Metrics tab provides an overview of the system's performance and usage statistics. 
