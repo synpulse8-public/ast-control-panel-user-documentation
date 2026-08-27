@@ -34,29 +34,20 @@ The **AST Core** is the test execution engine. Its function is to run test cases
 
 #### AST Control Panel
 
-High-level architectural overview of the AST Suite, illustrating core components and their interaction with target systems via the Avaloq Open Interface for all testing operations.
+The **AST Control Panel** is a web application built on top of AST Core that enables users to:
+- Manage the test case repository
+- Orchestrate test campaigns 
+- Schedule test executions
+- Access execution analytics insights
 
-![ast_core_panel.png](assets/UserDocumentationM/ast_core_panel.png)
-<figcaption>Diagram of AST's core components (Control Panel, Core Testing Module) connecting to databases and web servers via HTTP and JDBC.</figcaption>
-
-The AST Control Panel is a web interface for test management. Its functionality includes:
-
-- Managing test cases.
-- Scheduling test executions.
-- Viewing analytics.
-- Administering user access.
-
-!!! info
-    This panel simplifies the creation and organization of test sets and provides visual access to execution reports and system health.
-
-## AST Architecture and Testing Features
-
-AST system integration architecture. AST utilizes the Avaloq Open Interface and specific channels (AMI, AFP GUI) to ensure comprehensive testing access to the core parameterization layer.
-
-![ast_architecture.png](assets/UserDocumentationM/ast_architecture.png)
-<figcaption>Architecture diagram showing how the AST tool integrates with the Avaloq core via the Open Interface (DDIC, Tasks & RW) to test external systems, files, and the AFP GUI.</figcaption>
+#### AST Architecture
 
 The architecture of AST follows the design of the Avaloq Banking System. AST uses the officially supported Avaloq Open Interface to process user-driven testcases. That gives AST testing scripts access to the full functionality of the Avaloq Banking System.
+
+AST utilizes the Avaloq Open Interface and specific channels (AMI, AFP GUI) to ensure comprehensive testing access to the core parameterization layer.
+
+![ast_high_level_architecture.png](assets/UserDocumentationM/ast_high_level_architecture.png)
+<figcaption>Diagram of AST's core components (Control Panel, Core Testing Module) connecting to databases and web servers via HTTP and JDBC.</figcaption>
 
 !!! info
     The test universe/environment is always the whole system, including the Avaloq core functionality and the client's parameterization. In general, the AST system architecture is designed to automatically test every possible business case the Avaloq Banking System supports.
