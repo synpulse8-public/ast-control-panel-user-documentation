@@ -58,6 +58,7 @@ nav:
         - HP ALM: alm.md
         - Jira Xray: jira_xray.md
         - Keycloak: keycloak.md
+        - Git: git.md
     - FAQ: faq.md
     - Best practices: best_practices.md
     - Release notes: release_notes.md
