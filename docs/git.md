@@ -96,3 +96,7 @@ When using the app with the git profile active there are several constraints to 
 
 Changing testcases into methods and vice versa is not advised as the application may not correctly track the file type change.
 Instead, create a new file of the desired type and delete the original via git.
+
+The cloned repository and user drafts are stored in dedicated folders inside the container. 
+Without a persistent volume mounted to these folders, 
+data is stored in the pod's ephemeral storage and will be lost on restart (the repository is re-cloned automatically, but uncommitted drafts will be lost).
