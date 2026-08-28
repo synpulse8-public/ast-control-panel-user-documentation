@@ -349,23 +349,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ast-architecture-and-testing-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        AST Architecture and Testing Features
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="AST Architecture and Testing Features">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#testing-functionalities" class="md-nav__link">
     <span class="md-ellipsis">
@@ -1464,23 +1447,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ast-architecture-and-testing-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        AST Architecture and Testing Features
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="AST Architecture and Testing Features">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
   <a href="#testing-functionalities" class="md-nav__link">
     <span class="md-ellipsis">
@@ -1563,27 +1529,17 @@
 <h4 id="ast-core">AST Core</h4>
 <p>The <strong>AST Core</strong> is the test execution engine. Its function is to run test cases, verify the results, and generate the corresponding reports. It supports various operations, including input, query, and verification steps, and integrates with Avaloq using the Open Interface (DDIC, Report Writer, AMI).</p>
 <h4 id="ast-control-panel">AST Control Panel</h4>
-<p>High-level architectural overview of the AST Suite, illustrating core components and their interaction with target systems via the Avaloq Open Interface for all testing operations.</p>
-<p><img alt="ast_core_panel.png" src="../assets/UserDocumentationM/ast_core_panel.png" /></p>
+<p>The <strong>AST Control Panel</strong> is a web application built on top of AST Core that enables users to:
+- Manage the test case repository
+- Orchestrate test campaigns 
+- Schedule test executions
+- Access execution analytics insights</p>
+<h4 id="ast-architecture">AST Architecture</h4>
+<p>The architecture of AST follows the design of the Avaloq Banking System. AST uses the officially supported Avaloq Open Interface to process user-driven testcases. That gives AST testing scripts access to the full functionality of the Avaloq Banking System.</p>
+<p>AST utilizes the Avaloq Open Interface and specific channels (AMI, AFP GUI) to ensure comprehensive testing access to the core parameterization layer.</p>
+<p><img alt="ast_high_level_architecture.png" src="../assets/UserDocumentationM/ast_high_level_architecture.png" /></p>
 <figcaption>Diagram of AST's core components (Control Panel, Core Testing Module) connecting to databases and web servers via HTTP and JDBC.</figcaption>
 
-<p>The AST Control Panel is a web interface for test management. Its functionality includes:</p>
-<ul>
-<li>Managing test cases.</li>
-<li>Scheduling test executions.</li>
-<li>Viewing analytics.</li>
-<li>Administering user access.</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This panel simplifies the creation and organization of test sets and provides visual access to execution reports and system health.</p>
-</div>
-<h2 id="ast-architecture-and-testing-features">AST Architecture and Testing Features</h2>
-<p>AST system integration architecture. AST utilizes the Avaloq Open Interface and specific channels (AMI, AFP GUI) to ensure comprehensive testing access to the core parameterization layer.</p>
-<p><img alt="ast_architecture.png" src="../assets/UserDocumentationM/ast_architecture.png" /></p>
-<figcaption>Architecture diagram showing how the AST tool integrates with the Avaloq core via the Open Interface (DDIC, Tasks & RW) to test external systems, files, and the AFP GUI.</figcaption>
-
-<p>The architecture of AST follows the design of the Avaloq Banking System. AST uses the officially supported Avaloq Open Interface to process user-driven testcases. That gives AST testing scripts access to the full functionality of the Avaloq Banking System.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>The test universe/environment is always the whole system, including the Avaloq core functionality and the client's parameterization. In general, the AST system architecture is designed to automatically test every possible business case the Avaloq Banking System supports.</p>

@@ -1407,13 +1407,13 @@
 <li><strong>Return</strong>: Defines the value(s) to be returned.</li>
 <li>The name of the method must correspond with the name of the XML file.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;method</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sag/XYZ/foo&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;method</span><span class="w"> </span><span class="na">name=</span><span class="s">"sag/XYZ/foo"</span><span class="nt">&gt;</span>
 <span class="w">  </span><span class="nt">&lt;descn&gt;</span><span class="w"> </span>...<span class="w"> </span><span class="nt">&lt;/descn&gt;</span>
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">default=</span><span class="s">&quot;A_default_value&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;B&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">"A"</span><span class="w"> </span><span class="na">default=</span><span class="s">"A_default_value"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">"B"</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="w">  </span>...
-<span class="w">  </span><span class="nt">&lt;return</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Name1&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;...&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;return</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Name2&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;...&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;return</span><span class="w"> </span><span class="na">name=</span><span class="s">"Name1"</span><span class="w"> </span><span class="na">select=</span><span class="s">"..."</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;return</span><span class="w"> </span><span class="na">name=</span><span class="s">"Name2"</span><span class="w"> </span><span class="na">select=</span><span class="s">"..."</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/method&gt;</span>
 </code></pre></div>
 <p>A method can be invoked in an AST test script or even from within another method. If a parameter is not used in the invocation, then the attribute default in the parameter definition inside the method is used. A method can have single or multiple returns by using attribute select for single return and element out for multiple returns.</p>
@@ -1481,11 +1481,11 @@
 </tr>
 </tbody>
 </table>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;invoke-method</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sag/XYZ/foo&quot;</span><span class="w"> </span><span class="na">avaloq-cond=</span><span class="s">&quot;$var = 0&quot;</span><span class="nt">&gt;</span>
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$var&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;B&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;3&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;NameOfReturn1&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;myResultVarOut1&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;NameOfReturn2&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;myResultVarOut2&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;invoke-method</span><span class="w"> </span><span class="na">name=</span><span class="s">"sag/XYZ/foo"</span><span class="w"> </span><span class="na">avaloq-cond=</span><span class="s">"$var = 0"</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">"A"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$var"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">"B"</span><span class="w"> </span><span class="na">value=</span><span class="s">"3"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">name=</span><span class="s">"NameOfReturn1"</span><span class="w"> </span><span class="na">select=</span><span class="s">"myResultVarOut1"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">name=</span><span class="s">"NameOfReturn2"</span><span class="w"> </span><span class="na">select=</span><span class="s">"myResultVarOut2"</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/invoke-method&gt;</span>
 </code></pre></div>
 <h3 id="example-of-a-test-case-without-methods">Example of a test case without methods</h3>
@@ -1493,27 +1493,27 @@
 <p>When methods are not used, a test case consists of a sequence of input statements.</p>
 <div class="admonition example">
 <p class="admonition-title">Example of a test case without methods</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">bu=</span><span class="s">&quot;AAA&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;0 - Create Address &amp; Person&quot;</span><span class="w"> </span><span class="na">user=</span><span class="s">&quot;avaloq&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">bu=</span><span class="s">"AAA"</span><span class="w"> </span><span class="na">name=</span><span class="s">"0 - Create Address &amp; Person"</span><span class="w"> </span><span class="na">user=</span><span class="s">"avaloq"</span><span class="w"> </span><span class="na">version=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>
 <span class="w">  </span><span class="cm">&lt;!-- Local variable definition --&gt;</span>
-<span class="w">  </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;addr_doc_id&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">"addr_doc_id"</span><span class="w"> </span><span class="nt">/&gt;</span>
 
 <span class="w">  </span><span class="cm">&lt;!-- Create Address --&gt;</span>
 <span class="w">  </span><span class="nt">&lt;input&gt;</span>
-<span class="w">    </span><span class="nt">&lt;new-doc</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;addr&quot;</span><span class="w"> </span><span class="na">init-action=</span><span class="s">&quot;1100&quot;</span><span class="w"> </span><span class="na">close-action=</span><span class="s">&quot;1090&quot;</span><span class="nt">&gt;</span><span class="w">  </span>
+<span class="w">    </span><span class="nt">&lt;new-doc</span><span class="w"> </span><span class="na">type=</span><span class="s">"addr"</span><span class="w"> </span><span class="na">init-action=</span><span class="s">"1100"</span><span class="w"> </span><span class="na">close-action=</span><span class="s">"1090"</span><span class="nt">&gt;</span><span class="w">  </span>
 <span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="nt">/&gt;</span>
 <span class="w">      </span>...
-<span class="w">      </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;addr_doc_id&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">property=</span><span class="s">"id"</span><span class="w"> </span><span class="na">select=</span><span class="s">"addr_doc_id"</span><span class="w"> </span><span class="nt">/&gt;</span>
 
 <span class="w">  </span><span class="nt">&lt;/input&gt;</span>
 
 <span class="w">  </span><span class="cm">&lt;!-- Create Person --&gt;</span>
 <span class="w">  </span><span class="nt">&lt;input&gt;</span>
 <span class="w">    </span><span class="nt">&lt;descn&gt;</span>Natürliche<span class="w"> </span>Person<span class="w"> </span>erfassen<span class="nt">&lt;/descn&gt;</span>
-<span class="w">    </span><span class="nt">&lt;new-doc</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;person&quot;</span><span class="w"> </span><span class="na">init-action=</span><span class="s">&quot;1100&quot;</span><span class="w"> </span><span class="na">close-action=</span><span class="s">&quot;1019&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;new-doc</span><span class="w"> </span><span class="na">type=</span><span class="s">"person"</span><span class="w"> </span><span class="na">init-action=</span><span class="s">"1100"</span><span class="w"> </span><span class="na">close-action=</span><span class="s">"1019"</span><span class="nt">&gt;</span>
 <span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w">     </span>
 <span class="w">      </span>...
-<span class="w">      </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;person_doc_id&quot;</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w">            </span>
+<span class="w">      </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">property=</span><span class="s">"id"</span><span class="w"> </span><span class="na">select=</span><span class="s">"person_doc_id"</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w">            </span>
 <span class="w">    </span><span class="nt">&lt;/new-doc&gt;</span>
 <span class="w">  </span><span class="nt">&lt;/input&gt;</span>
 
@@ -1525,85 +1525,85 @@
 <p>For example, the generation of a Person object can be extracted into a separate, reusable method that is generally applicable and can be utilized by other test cases.</p>
 <div class="admonition example">
 <p class="admonition-title">Example test case using methods</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;method</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CreatePerson&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;method</span><span class="w"> </span><span class="na">name=</span><span class="s">"CreatePerson"</span><span class="nt">&gt;</span>
 <span class="w">  </span><span class="nt">&lt;descn&gt;</span>Method<span class="w"> </span>creating<span class="w"> </span>a<span class="w"> </span>natural<span class="w"> </span>person<span class="nt">&lt;/descn&gt;</span>
 
 <span class="w">  </span><span class="cm">&lt;!-- Call this method with this script.</span>
 
-<span class="cm">  &lt;invoke-method name=&quot;CreatePerson&quot; &gt;</span>
-<span class="cm">    &lt;parameter name =&quot;in_addr_ID&quot; value=&quot;$l_obj_addr_id&quot;/&gt;</span>
-<span class="cm">    &lt;parameter name =&quot;in_first_name&quot; value=&quot;$l_first_name&quot;/&gt;</span>
-<span class="cm">    &lt;parameter name =&quot;in_middle_name&quot; value=&quot;$l_middle_name&quot;/&gt;</span>
-<span class="cm">    &lt;parameter name =&quot;in_name&quot; value=&quot;$l_name&quot;/&gt;</span>
-<span class="cm">    &lt;parameter name =&quot;in_sort_alpha&quot; value=&quot;PERSON_${l_sort_alpha}&quot;/&gt;</span>
-<span class="cm">    &lt;parameter name =&quot;in_gender&quot; value=&quot;$l_gender&quot;/&gt;</span>
-<span class="cm">    &lt;parameter name =&quot;in_lang&quot; value=&quot;$l_lang&quot;/&gt;</span>
-<span class="cm">    &lt;parameter name =&quot;in_country_nati&quot; value=&quot;$l_country&quot;/&gt;</span>
-<span class="cm">    &lt;parameter name =&quot;in_birthdate&quot; value=&quot;-${l_age}&quot;/&gt;</span>
-<span class="cm">    &lt;parameter name =&quot;in_ident_type&quot; value=&quot;ID&quot;/&gt;</span>
-<span class="cm">    &lt;parameter name =&quot;in_ident_country_id&quot; value=&quot;$l_country&quot;/&gt;</span>
-<span class="cm">    &lt;parameter name =&quot;in_ident_nr&quot; value=&quot;$l_ident_nr&quot;/&gt;</span>
-<span class="cm">    &lt;out name=&quot;out_person_id&quot; select=&quot;l_obj_person_id&quot;/&gt;</span>
+<span class="cm">  &lt;invoke-method name="CreatePerson" &gt;</span>
+<span class="cm">    &lt;parameter name ="in_addr_ID" value="$l_obj_addr_id"/&gt;</span>
+<span class="cm">    &lt;parameter name ="in_first_name" value="$l_first_name"/&gt;</span>
+<span class="cm">    &lt;parameter name ="in_middle_name" value="$l_middle_name"/&gt;</span>
+<span class="cm">    &lt;parameter name ="in_name" value="$l_name"/&gt;</span>
+<span class="cm">    &lt;parameter name ="in_sort_alpha" value="PERSON_${l_sort_alpha}"/&gt;</span>
+<span class="cm">    &lt;parameter name ="in_gender" value="$l_gender"/&gt;</span>
+<span class="cm">    &lt;parameter name ="in_lang" value="$l_lang"/&gt;</span>
+<span class="cm">    &lt;parameter name ="in_country_nati" value="$l_country"/&gt;</span>
+<span class="cm">    &lt;parameter name ="in_birthdate" value="-${l_age}"/&gt;</span>
+<span class="cm">    &lt;parameter name ="in_ident_type" value="ID"/&gt;</span>
+<span class="cm">    &lt;parameter name ="in_ident_country_id" value="$l_country"/&gt;</span>
+<span class="cm">    &lt;parameter name ="in_ident_nr" value="$l_ident_nr"/&gt;</span>
+<span class="cm">    &lt;out name="out_person_id" select="l_obj_person_id"/&gt;</span>
 <span class="cm">  &lt;/invoke-method&gt;</span>
 
 <span class="cm">  --&gt;</span>
 
-<span class="w">  </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;person_doc_id&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">"person_doc_id"</span><span class="nt">/&gt;</span>
 
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_addr_ID&quot;</span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_first_name&quot;</span><span class="w"> </span><span class="na">default=</span><span class="s">&quot;Hans&quot;</span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_middle_name&quot;</span><span class="w"> </span><span class="na">default=</span><span class="s">&quot;Martin&quot;</span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_name&quot;</span><span class="w"> </span><span class="na">default=</span><span class="s">&quot;Schweizer&quot;</span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_sort_alpha&quot;</span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_gender&quot;</span><span class="w"> </span><span class="na">default=</span><span class="s">&quot;M&quot;</span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_lang&quot;</span><span class="w"> </span><span class="na">default=</span><span class="s">&quot;G&quot;</span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_country_nati&quot;</span><span class="w"> </span><span class="na">default=</span><span class="s">&quot;CH&quot;</span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_birthdate&quot;</span><span class="w"> </span><span class="na">default=</span><span class="s">&quot;-42y&quot;</span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_ident_type&quot;</span><span class="w"> </span><span class="na">default=</span><span class="s">&quot;ID&quot;</span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_ident_country_id&quot;</span><span class="w"> </span><span class="na">default=</span><span class="s">&quot;CH&quot;</span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_ident_nr&quot;</span><span class="w"> </span><span class="na">default=</span><span class="s">&quot;756.1993.3991.12&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_addr_ID"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_first_name"</span><span class="w"> </span><span class="na">default=</span><span class="s">"Hans"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_middle_name"</span><span class="w"> </span><span class="na">default=</span><span class="s">"Martin"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_name"</span><span class="w"> </span><span class="na">default=</span><span class="s">"Schweizer"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_sort_alpha"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_gender"</span><span class="w"> </span><span class="na">default=</span><span class="s">"M"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_lang"</span><span class="w"> </span><span class="na">default=</span><span class="s">"G"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_country_nati"</span><span class="w"> </span><span class="na">default=</span><span class="s">"CH"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_birthdate"</span><span class="w"> </span><span class="na">default=</span><span class="s">"-42y"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_ident_type"</span><span class="w"> </span><span class="na">default=</span><span class="s">"ID"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_ident_country_id"</span><span class="w"> </span><span class="na">default=</span><span class="s">"CH"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_ident_nr"</span><span class="w"> </span><span class="na">default=</span><span class="s">"756.1993.3991.12"</span><span class="nt">/&gt;</span>
 
 <span class="w">  </span><span class="nt">&lt;input&gt;</span>
 <span class="w">    </span><span class="nt">&lt;descn&gt;</span>Natürliche<span class="w"> </span>Person<span class="w"> </span>erfassen<span class="nt">&lt;/descn&gt;</span>
-<span class="w">    </span><span class="nt">&lt;new-doc</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;person&quot;</span><span class="w"> </span><span class="na">close-action=</span><span class="s">&quot;1019&quot;</span><span class="w"> </span><span class="na">init-action=</span><span class="s">&quot;1100&quot;</span><span class="nt">&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;form_id&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;917&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;eff_date&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;today&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;open_date&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;today&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;person_det.person_type_id&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;person_natural&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;person_name_list(1).first_name&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_first_name&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;person_name_list(1).middle_name&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_middle_name&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;person_name_list(1).last_name&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_name&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;sort_alpha&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_sort_alpha&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;obj_extn.person_sym&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_sort_alpha&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;gender_id&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_gender&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;lang_id&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_lang&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;person_det.country_nati_id&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_country_nati&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;birth_date&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_birthdate&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;domi_addr_id&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_addr_ID&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;do</span><span class="w"> </span><span class="na">stmt=</span><span class="s">&quot;person_ident_list.add&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;person_ident_list(1).ident_type_id&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_ident_type&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;person_ident_list(1).issue_country_id&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_ident_country_id&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;person_ident_list(1).ident_nr&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$in_ident_nr&quot;</span><span class="nt">/&gt;</span>
-<span class="w">      </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">property=</span><span class="s">&quot;id&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;person_doc_id&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;new-doc</span><span class="w"> </span><span class="na">type=</span><span class="s">"person"</span><span class="w"> </span><span class="na">close-action=</span><span class="s">"1019"</span><span class="w"> </span><span class="na">init-action=</span><span class="s">"1100"</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"form_id"</span><span class="w"> </span><span class="na">value=</span><span class="s">"917"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"eff_date"</span><span class="w"> </span><span class="na">value=</span><span class="s">"today"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"open_date"</span><span class="w"> </span><span class="na">value=</span><span class="s">"today"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"person_det.person_type_id"</span><span class="w"> </span><span class="na">value=</span><span class="s">"person_natural"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"person_name_list(1).first_name"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$in_first_name"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"person_name_list(1).middle_name"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$in_middle_name"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"person_name_list(1).last_name"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$in_name"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"sort_alpha"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$in_sort_alpha"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"obj_extn.person_sym"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$in_sort_alpha"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"gender_id"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$in_gender"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"lang_id"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$in_lang"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"person_det.country_nati_id"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$in_country_nati"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"birth_date"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$in_birthdate"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"domi_addr_id"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$in_addr_ID"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;do</span><span class="w"> </span><span class="na">stmt=</span><span class="s">"person_ident_list.add"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"person_ident_list(1).ident_type_id"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$in_ident_type"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"person_ident_list(1).issue_country_id"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$in_ident_country_id"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set</span><span class="w"> </span><span class="na">property=</span><span class="s">"person_ident_list(1).ident_nr"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$in_ident_nr"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">property=</span><span class="s">"id"</span><span class="w"> </span><span class="na">select=</span><span class="s">"person_doc_id"</span><span class="nt">/&gt;</span>
 <span class="w">    </span><span class="nt">&lt;/new-doc&gt;</span>
 <span class="w">  </span><span class="nt">&lt;/input&gt;</span>
 
-<span class="w">    </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;a_status_2&quot;</span><span class="w"> </span><span class="na">avaloq-expr=</span><span class="s">&quot;doc_person($person_doc_id).wfc_status_id&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">"a_status_2"</span><span class="w"> </span><span class="na">avaloq-expr=</span><span class="s">"doc_person($person_doc_id).wfc_status_id"</span><span class="nt">/&gt;</span>
 
 <span class="w">    </span><span class="nt">&lt;verify&gt;</span>
 <span class="w">      </span><span class="nt">&lt;descn&gt;</span>Verifizieren<span class="w"> </span>Orderstatus<span class="w"> </span><span class="nt">&lt;/descn&gt;</span>
-<span class="w">      </span><span class="nt">&lt;value</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;a_status_2&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;90&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;value</span><span class="w"> </span><span class="na">select=</span><span class="s">"a_status_2"</span><span class="w"> </span><span class="na">value=</span><span class="s">"90"</span><span class="nt">/&gt;</span>
 <span class="w">    </span><span class="nt">&lt;/verify&gt;</span>
 
-<span class="w">    </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;obj_person_id&quot;</span><span class="w"> </span><span class="na">avaloq-expr=</span><span class="s">&quot;&#39;#&#39;||doc_person($person_doc_id).person_id&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">"obj_person_id"</span><span class="w"> </span><span class="na">avaloq-expr=</span><span class="s">"'#'||doc_person($person_doc_id).person_id"</span><span class="nt">/&gt;</span>
 
 <span class="w">    </span><span class="nt">&lt;input&gt;</span>
 <span class="w">      </span><span class="nt">&lt;descn&gt;</span><span class="w"> </span>Object<span class="w"> </span>PersonID<span class="w"> </span>=<span class="w"> </span>{$obj_person_id}<span class="w"> </span><span class="nt">&lt;/descn&gt;</span>
 <span class="w">    </span><span class="nt">&lt;/input&gt;</span>
 
 <span class="w">  </span><span class="cm">&lt;!--   define out parameter --&gt;</span>
-<span class="w">  </span><span class="nt">&lt;return</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;out_person_id&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;obj_person_id&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;return</span><span class="w"> </span><span class="na">name=</span><span class="s">"out_person_id"</span><span class="w"> </span><span class="na">select=</span><span class="s">"obj_person_id"</span><span class="nt">/&gt;</span>
 
 <span class="nt">&lt;/method&gt;</span>
 </code></pre></div>
@@ -1611,31 +1611,31 @@
 <p>Within a test case, the full code implementation can be concisely replaced by a method call. This call requires passing only the necessary parameters for execution.</p>
 <p>It is not required to supply every possible parameter. If a parameter is omitted from the method call, the method will attempt to utilize its 'default' attribute if such an attribute has been defined. In the absence of a defined 'default' attribute, the value for that parameter remains undefined for the duration of the call.</p>
 <p>This approach simplifies the structure of the test case and increases its readability.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">bu=</span><span class="s">&quot;AAA&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;0 - Create Address &amp; Person&quot;</span><span class="w"> </span><span class="na">user=</span><span class="s">&quot;avaloq&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">bu=</span><span class="s">"AAA"</span><span class="w"> </span><span class="na">name=</span><span class="s">"0 - Create Address &amp; Person"</span><span class="w"> </span><span class="na">user=</span><span class="s">"avaloq"</span><span class="w"> </span><span class="na">version=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>
 <span class="w">  </span><span class="cm">&lt;!-- Local variable definition --&gt;</span>
-<span class="w">  </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;addr_doc_id&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;variable</span><span class="w"> </span><span class="na">name=</span><span class="s">"addr_doc_id"</span><span class="w"> </span><span class="nt">/&gt;</span>
 
 <span class="w">  </span><span class="cm">&lt;!-- Create Address --&gt;</span>
-<span class="w">  </span><span class="nt">&lt;invoke-method</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CreateAddress&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;invoke-method</span><span class="w"> </span><span class="na">name=</span><span class="s">"CreateAddress"</span><span class="nt">&gt;</span>
 <span class="w">    </span>...
-<span class="w">    </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;out_addr_id&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;l_obj_addr_id&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">name=</span><span class="s">"out_addr_id"</span><span class="w"> </span><span class="na">select=</span><span class="s">"l_obj_addr_id"</span><span class="nt">/&gt;</span>
 <span class="w">  </span><span class="nt">&lt;/invoke-method&gt;</span>
 
 <span class="w">  </span><span class="cm">&lt;!-- Create Person --&gt;</span>
-<span class="w">  </span><span class="nt">&lt;invoke-method</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;CreatePerson&quot;</span><span class="w"> </span><span class="nt">&gt;</span>
-<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_addr_ID&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;$l_obj_addr_id&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_first_name&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Hans&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_name&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;Muster&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;invoke-method</span><span class="w"> </span><span class="na">name=</span><span class="s">"CreatePerson"</span><span class="w"> </span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_addr_ID"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$l_obj_addr_id"</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_first_name"</span><span class="w"> </span><span class="na">value=</span><span class="s">"Hans"</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_name"</span><span class="w"> </span><span class="na">value=</span><span class="s">"Muster"</span><span class="nt">/&gt;</span>
 
-<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_gender&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;M&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_lang&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;G&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_country_nati&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;CH&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_gender"</span><span class="w"> </span><span class="na">value=</span><span class="s">"M"</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_lang"</span><span class="w"> </span><span class="na">value=</span><span class="s">"G"</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_country_nati"</span><span class="w"> </span><span class="na">value=</span><span class="s">"CH"</span><span class="nt">/&gt;</span>
 
-<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_ident_type&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;ID&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_ident_country_id&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;CH&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">&quot;in_ident_nr&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;756.1993.331.12&quot;</span><span class="nt">/&gt;</span>
-<span class="w">    </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;out_person_id&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;l_obj_person_id&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_ident_type"</span><span class="w"> </span><span class="na">value=</span><span class="s">"ID"</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_ident_country_id"</span><span class="w"> </span><span class="na">value=</span><span class="s">"CH"</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name =</span><span class="s">"in_ident_nr"</span><span class="w"> </span><span class="na">value=</span><span class="s">"756.1993.331.12"</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;out</span><span class="w"> </span><span class="na">name=</span><span class="s">"out_person_id"</span><span class="w"> </span><span class="na">select=</span><span class="s">"l_obj_person_id"</span><span class="nt">/&gt;</span>
 <span class="w">  </span><span class="nt">&lt;/invoke-method&gt;</span>
 <span class="w">  </span>...
 <span class="nt">&lt;/testcase&gt;</span>
