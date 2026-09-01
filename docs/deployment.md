@@ -19,6 +19,27 @@ SPRING_DATASOURCE_PASSWORD=your_password
 Then you need to manually upload the required configuration files (see [Configuration files](configuration_files.md)) or mount the ast.properties file as described in [Mounting of ast.properties](#mounting-of-astproperties-optional)
 
 If you would need further settings like ingress, resources, port, replicas and others please refer to the `Values.yaml` file in the provided helm chart. For environment variables settings, secret settings, SSL and other please refer to the sections below.
+
+### JWT configuration
+
+The following properties control JWT authentication and should be reviewed before deployment.
+
+| Property                                                                         | Description                                       | Default                         |
+|----------------------------------------------------------------------------------|---------------------------------------------------|---------------------------------|
+| `JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET`                             | Secret used for signing and validating JWT tokens | Provided, but should be changed |
+| `JHIPSTER_SECURITY_AUTHENTICATION_JWT_TOKEN_VALIDITY_IN_SECONDS`                 | Token expiration duration                         | 86400 (24 hours)                |
+| `JHIPSTER_SECURITY_AUTHENTICATION_JWT_TOKEN_VALIDITY_IN_SECONDS_FOR_REMEMBER_ME` | Token expiration when "remember me" is selected   | 2592000 (30 days)               |
+
+
+!!! warning "Important"
+    We advise to set the property JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET with a BASE64 encoding at least 256 bits long.
+    You can use the openssl library with this command to generate the string: `openssl rand -base64 64`.
+
+The base64 secret should be stored as a Kubernetes secret (see [Using env and envSecrets](#using-env-and-envsecrets))
+
+
+
+
 ### Setting up environment variables
 #### Using env and envSecrets
 To set up environment variables for the application, you can use the `env` section in the `Values.yaml` file of the helm chart. Here is an example of how to set up the required environment variables:
