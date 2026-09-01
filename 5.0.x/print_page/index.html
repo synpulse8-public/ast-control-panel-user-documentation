@@ -6893,6 +6893,40 @@ Please refer to the <code>Values.yaml</code> file in the provided helm chart for
 </code></pre></div>
 Then you need to manually upload the required configuration files (see <a href="#configuration_files">Configuration files</a>) or mount the ast.properties file as described in <a href="#deployment-mounting-of-astproperties-optional">Mounting of ast.properties</a></p>
 <p>If you would need further settings like ingress, resources, port, replicas and others please refer to the <code>Values.yaml</code> file in the provided helm chart. For environment variables settings, secret settings, SSL and other please refer to the sections below.</p>
+<h3 id="deployment-jwt-configuration">JWT configuration</h3>
+<p>The following properties control JWT authentication and should be reviewed before deployment.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET</code></td>
+<td>Secret used for signing and validating JWT tokens</td>
+<td>Provided, but should be changed</td>
+</tr>
+<tr>
+<td><code>JHIPSTER_SECURITY_AUTHENTICATION_JWT_TOKEN_VALIDITY_IN_SECONDS</code></td>
+<td>Token expiration duration</td>
+<td>86400 (24 hours)</td>
+</tr>
+<tr>
+<td><code>JHIPSTER_SECURITY_AUTHENTICATION_JWT_TOKEN_VALIDITY_IN_SECONDS_FOR_REMEMBER_ME</code></td>
+<td>Token expiration when "remember me" is selected</td>
+<td>2592000 (30 days)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>We advise to set the property JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET with a BASE64 encoding at least 256 bits long.
+You can use the openssl library with this command to generate the string: <code>openssl rand -base64 64</code>.</p>
+</div>
+<p>The base64 secret should be stored as a Kubernetes secret (see <a href="#deployment-using-env-and-envsecrets">Using env and envSecrets</a>)</p>
 <h3 id="deployment-setting-up-environment-variables">Setting up environment variables</h3>
 <h4 id="deployment-using-env-and-envsecrets">Using env and envSecrets</h4>
 <p>To set up environment variables for the application, you can use the <code>env</code> section in the <code>Values.yaml</code> file of the helm chart. Here is an example of how to set up the required environment variables:</p>
