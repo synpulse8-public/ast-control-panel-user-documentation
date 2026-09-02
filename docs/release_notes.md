@@ -22,3 +22,8 @@
 
 #### Bug Fixes
 - Fixed issue of schedule view not working because of null xray logs
+
+## Version 4.11.2
+
+#### Bug Fixes
+- Fix XRAY defects parsing errors
