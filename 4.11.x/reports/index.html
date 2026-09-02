@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/global/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1619,7 +1619,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Example XML</label><label for="__tabbed_2_2">Result in Excel</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;testrun</span><span class="w"> </span><span class="na">status=</span><span class="s">&quot;ok&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;testrun</span><span class="w"> </span><span class="na">status=</span><span class="s">"ok"</span><span class="nt">&gt;</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -1647,9 +1647,9 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;testcases&gt;</span>
-<span class="w">  </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">status=</span><span class="s">&quot;ok&quot;</span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">status=</span><span class="s">&quot;ok&quot;</span><span class="nt">/&gt;</span>
-<span class="w">  </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">status=</span><span class="s">&quot;error&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">status=</span><span class="s">"ok"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">status=</span><span class="s">"ok"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">status=</span><span class="s">"error"</span><span class="nt">/&gt;</span>
 <span class="nt">&lt;/testcases&gt;</span>
 </code></pre></div>
 </div>
@@ -1724,7 +1724,7 @@ error
 <p class="admonition-title">Important</p>
 <p>Expressions that depend on optional fields may behave differently.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>[[//testcase/arguments/argument[@name=&quot;TESTCASE_ID&quot;]/@value]]
+<div class="highlight"><pre><span></span><code>[[//testcase/arguments/argument[@name="TESTCASE_ID"]/@value]]
 </code></pre></div>
 <p>This expression only returns nodes that contain <code>TESTCASE_ID</code>.</p>
 <p>If some testcases do not contain this argument, those rows will not appear in the result.</p>
@@ -1739,17 +1739,17 @@ error
 <p><img alt="excel-test-data.png" src="../assets/UserDocumentationM/excel-test-data.png" /></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="w"> </span><span class="na">user=</span><span class="s">&quot;$ast_user1&quot;</span><span class="w"> </span><span class="na">bu=</span><span class="s">&quot;$ast_bu1&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;IF_ELSE_TEST_WITH_EXCEL_DATA_ARGUMENTS&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">version=</span><span class="s">"1.0"</span><span class="w"> </span><span class="na">user=</span><span class="s">"$ast_user1"</span><span class="w"> </span><span class="na">bu=</span><span class="s">"$ast_bu1"</span><span class="w"> </span><span class="na">name=</span><span class="s">"IF_ELSE_TEST_WITH_EXCEL_DATA_ARGUMENTS"</span><span class="nt">&gt;</span>
 
-<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;customer&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;asset&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;counterparty&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;price&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;qty&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TESTCASE_ID&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">"customer"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">"asset"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">"counterparty"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">"price"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">"qty"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">"TESTCASE_ID"</span><span class="w"> </span><span class="nt">/&gt;</span>
 
 <span class="nt">&lt;verify&gt;</span>
-<span class="w">    </span><span class="nt">&lt;value</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;$price&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;20&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;value</span><span class="w"> </span><span class="na">select=</span><span class="s">"$price"</span><span class="w"> </span><span class="na">value=</span><span class="s">"20"</span><span class="nt">/&gt;</span>
 
 <span class="nt">&lt;/verify&gt;</span>
 
@@ -1804,9 +1804,9 @@ error
 <p>Typical AST XML structure:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;testrun&gt;</span>
 <span class="w">  </span><span class="nt">&lt;testcases&gt;</span>
-<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">status=</span><span class="s">&quot;ok&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TEST_A&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testcase</span><span class="w"> </span><span class="na">status=</span><span class="s">"ok"</span><span class="w"> </span><span class="na">name=</span><span class="s">"TEST_A"</span><span class="nt">&gt;</span>
 <span class="w">      </span><span class="nt">&lt;arguments&gt;</span>
-<span class="w">        </span><span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;TESTCASE_ID&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;TEST_A_1&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;argument</span><span class="w"> </span><span class="na">name=</span><span class="s">"TESTCASE_ID"</span><span class="w"> </span><span class="na">value=</span><span class="s">"TEST_A_1"</span><span class="nt">/&gt;</span>
 <span class="w">      </span><span class="nt">&lt;/arguments&gt;</span>
 <span class="w">      </span><span class="nt">&lt;testscript&gt;</span>test_a.xml<span class="nt">&lt;/testscript&gt;</span>
 <span class="w">      </span><span class="nt">&lt;testdata&gt;</span>data.xls<span class="nt">&lt;/testdata&gt;</span>
@@ -1866,7 +1866,7 @@ error
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tracking"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../js/print-site.js"></script>
       

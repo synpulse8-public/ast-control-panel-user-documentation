@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../assets/global/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1513,7 +1513,7 @@ Then you need to manually upload your license file, ast.globalsettings and your 
 <h4 id="using-env-and-envsecrets">Using env and envSecrets</h4>
 <p>To set up environment variables for the application, you can use the <code>env</code> section in the <code>Values.yaml</code> file of the helm chart. Here is an example of how to set up the required environment variables:</p>
 <p><div class="highlight"><pre><span></span><code><span class="nt">env</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">SPRING_DATASOURCE_URL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;jdbc:oracle:thin:@your_db_address:1521/YOUR_SCHEMA&quot;</span>
+<span class="w">  </span><span class="nt">SPRING_DATASOURCE_URL</span><span class="p">:</span><span class="w"> </span><span class="s">"jdbc:oracle:thin:@your_db_address:1521/YOUR_SCHEMA"</span>
 <span class="w">  </span><span class="nt">SPRING_DATASOURCE_USERNAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_username</span>
 </code></pre></div>
 For environment variables that contain sensitive information, such as <code>SPRING_DATASOURCE_PASSWORD</code>, it is recommended to use Kubernetes secrets. You can create a secret and then reference it in the <code>Values.yaml</code> file. Here is an example of how to reference it:
@@ -1528,7 +1528,7 @@ For environment variables that contain sensitive information, such as <code>SPRI
 </code></pre></div>
 Then, you can mount this file as a volume in your deployment and specify the path to this file in the <code>SPRING_CONFIG_ADDITIONAL_LOCATION</code> environment variable. Here is an example of how to do this in the <code>Values.yaml</code> file:
 <div class="highlight"><pre><span></span><code><span class="nt">env</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">SPRING_CONFIG_ADDITIONAL_LOCATION</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/deployment/ast-control-panel.properties&quot;</span>
+<span class="w">  </span><span class="nt">SPRING_CONFIG_ADDITIONAL_LOCATION</span><span class="p">:</span><span class="w"> </span><span class="s">"/deployment/ast-control-panel.properties"</span>
 </code></pre></div>
 You can mount the file as a secret or you can put it into tge <code>files</code> directory of the helm chart and mount it as a config map. The config map name is <code>controlpanel-config</code> nad the subpath is <code>additional_config.properties</code>. For more detail see <a href="#mounting-volumes">Mounting Volumes</a></p>
 <h3 id="mounting-volumes">Mounting volumes</h3>
@@ -1698,7 +1698,7 @@ In this case we can provide limited support as we have no knowledge about your i
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tracking"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../js/print-site.js"></script>
       
