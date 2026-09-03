@@ -12,7 +12,7 @@
 - Stop execution if a testcase fails. [Read more](test_sets.md#stop-execution-on-failure)
 - Multi-option filtering in Execution view. Filter executions by multiple values per column simultaneously. [Read more](executions.md#filtering)
 - Concurrent testcase editing. [Read more](test_case_repository.md#concurrent-editing)
-- AI assisted test generation. Documentation pending.
+- AI assisted test generation form audit trail. [Read more](ai.md)
 
 #### Other
 

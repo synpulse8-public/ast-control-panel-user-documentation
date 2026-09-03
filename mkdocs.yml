@@ -59,6 +59,7 @@ nav:
         - Jira Xray: jira_xray.md
         - Keycloak: keycloak.md
         - Git: git.md
+        - AI integration: ai.md
     - FAQ: faq.md
     - Best practices: best_practices.md
     - Release notes: release_notes.md
