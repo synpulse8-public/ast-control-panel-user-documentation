@@ -1,25 +1,24 @@
 # Release notes
 
-## Version 5.0.0
+## Version 5.1.0
+
+#### Breaking changes
+
+- Endpoint `api/admin/logfile` was removed. No replacement available.
+- Payload change in POST `api/process-executor-groups/aggregated` endpoint due to multi-option filtering. Check the API specification in the solution. [Read more](admin.md#api)
 
 #### New Features
-- Complete redesign of the user interface for improved usability and aesthetics.
+ 
+- Stop execution if a testcase fails. [Read more](test_sets.md#stop-execution-on-failure)
+- Multi-option filtering in Execution view. Filter executions by multiple values per column simultaneously. [Read more](executions.md#filtering)
+- Concurrent testcase editing. [Read more](test_case_repository.md#concurrent-editing)
+- AI assisted test generation form audit trail. [Read more](ai.md)
 
-## Version 5.0.1
+#### Other
 
-#### Bug Fixes
-- Trial run window fixes
-- Fixing various design inconsistencies
-- Fix toast notifications
-- Fix duplicate password visibility icons on secret property fields
+- Updated to Java 25 and Spring Boot 4.1.x
+- Frontend and Backend dependency updates
+- Various security fixes
+- Various code refactoring for maintainability
 
-## Version 5.0.2
-
-#### Bug Fixes
-- Fix toast notifications not displaying correctly
-- Fix sequence number not updating after removing test cases in TestSetDefinition edit mode
-
-#### Other Changes
-- Updated backend and frontend dependencies
-- Updated AST core to version 3.12.2
 

@@ -3,7 +3,7 @@
 The solution uses these technologies and frameworks:
 
 - React 18
-- Java 17 with Spring Boot 3.5.x
+- Java 25 with Spring Boot 4.1.x
 - Oracle DB(Client owned)
 
 ### Minimal requirements for deployment

@@ -54,8 +54,25 @@ It includes JVM metrics, HTTP request metrics, threads and other relevant perfor
 The Health tab displays the current health status of the application and its components.
 
 ### Logs
-The Logs tab allows you to view and manage application logs. You can set log levels (e.g., INFO, ERROR) for different package namespaces. 
+The Logs tab allows you to view and manage application logs. 
+You can set log levels (e.g., TRACE, DEBUG, INFO, WARN, ERROR, OFF) for different package namespaces. 
 This is useful for troubleshooting and monitoring the application's behavior.
+
+!!! warning
+    Setting log levels to DEBUG or TRACE in production can impact performance and generate large volumes of log output. 
+    Use verbose log levels sparingly.
+
+!!! info
+    Log level changes are applied at runtime and do not persist across application restarts.
+
+By default, only the application logs under 'com.parexa.ast.controlpanel' package name are visible. 
+You can search this package namespace by adding more specific packages or classes within this namespace.
+It is also possible to disable the application log filter (by unchecking the 'Show only AST loggers' option), which will display all available logs.
+
+
+![logs.png](assets/AdminDocu/logs.png)
+<figcaption>The application logs filter. </figcaption>
+
 
 ### Configuration
 The Configuration tab provides access to the application's configuration properties.

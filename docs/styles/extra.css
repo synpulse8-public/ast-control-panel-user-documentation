@@ -2,16 +2,17 @@
     max-width: 1600px;
 }
 .md-content__inner img {
-  display: block;      /* Required for margin: auto to work */
-  margin: 1em auto;    /* Centers the image horizontally and adds vertical space */
-
-  /* 2. Rounded Corners */
-  border-radius: 8px;  /* Adjust '8px' to any value you like (e.g., 5px, 15px) */
-
-  /* Optional: Bounding the image size */
-  max-width: 90%;      /* Ensures images are responsive and don't take up the full screen width */
+  display: block;
+  margin: 1em auto;
+  border-radius: 8px;
+  max-width: 90%;
   height: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+[data-md-color-scheme="slate"] .md-content__inner img {
+  box-shadow: 0 4px 8px rgba(200, 200, 200, 0.15);
+  border: 1px solid rgba(200, 200, 200, 0.1);
 }
 
 
