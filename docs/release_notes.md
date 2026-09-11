@@ -12,7 +12,7 @@
 - Stop execution if a testcase fails. [Read more](test_sets.md#stop-execution-on-failure)
 - Multi-option filtering in Execution view. Filter executions by multiple values per column simultaneously. [Read more](executions.md#filtering)
 - Concurrent testcase editing. [Read more](test_case_repository.md#concurrent-editing)
-- AI assisted test generation form audit trail. [Read more](ai.md)
+- AI assisted test generation from audit trail. [Read more](ai.md)
 
 #### Other
 
@@ -20,5 +20,11 @@
 - Frontend and Backend dependency updates
 - Various security fixes
 - Various code refactoring for maintainability
+
+## Version 5.1.1
+
+#### Bug fix
+
+- Fixed avaloq instance resetting to the first option in instance dropdown in the schedule dialog
 
 
