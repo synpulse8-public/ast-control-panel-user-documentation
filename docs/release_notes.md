@@ -27,4 +27,10 @@
 
 - Fixed avaloq instance resetting to the first option in instance dropdown in the schedule dialog
 
+## Version 5.1.2
+
+#### Bug fix
+
+- Fixed XRAY defects parsing errors
+
 
