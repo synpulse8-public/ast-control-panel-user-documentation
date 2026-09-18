@@ -33,7 +33,33 @@ The primary content area is divided into two key sections. At the top, a metadat
 The Definitions tab shown in the previous image lists all the individual test cases included in the test set. For each test case, it displays its name, execution sequence, and whether it is Deactivated.
 This organized table gives the user a clear view of which tests are part of the set and their execution order.
 
-#### Sequence of execution
+You can also see three buttons: `Schedule`, `Execute Now` and `Edit`. `Schedule` is used for scheduling the test set for a certain time. 
+`Execute Now` executes the testcase immediately. `Edit` button allows you to edit the test set: Adding/removing testcases, changing order of testcases etc.
+
+#### Editing of test set
+
+##### Adding/removing of test cases
+
+Testcases can be added or removed from the test set via the `Add test case` button and removed by using the trash can icon.
+The trash can icon always removes just one test case
+
+![testset-edit.png](assets/ControlPanelDocu/testset-edit.png)
+<figcaption>Highlight of the add and remove buttons.</figcaption>
+
+When adding testcases a dialog appears. In the Add Test Case dialog, test cases that are already included in the test set are preselected.
+To add new test cases, select them and click Add.
+
+!!!warning "Important"
+    Existing test cases are preselected; keep them checked if you want to retain them in the test set, as unchecking them will remove them.
+
+If the Run sequentially checkbox is selected, new test cases are added as separate steps. 
+If it is not selected, the new test cases are added together as a single parallel step.
+
+![testset-add-dialog.png](assets/ControlPanelDocu/testset-add-dialog.png)
+<figcaption>Dialog for adding testcases to test set with a preselected testcase</figcaption>
+
+
+##### Sequence of execution
 
 Sequence can be parallel or sequential. In parallel execution, all test cases are executed simultaneously, while in sequential execution, test cases are executed one after the other in a specified order.
 The image below shows that the two testcases are set to execute in parallel as indicated by the line before the second testcase. 
@@ -56,7 +82,7 @@ Then you drop it there, and it will be executed after the testcase above the lin
 <figcaption>Dropping a testcase after another to make them execute in sequence</figcaption>
 
 
-#### Stop execution on failure
+##### Stop execution on failure
 
 You can select the **Stop if fail** checkbox for a test case so that if it fails, the remaining test cases in the set are skipped.
 When that happens, test cases with a higher sequence number are skipped and marked as failed in the execution [report](#reports-tab).
@@ -74,6 +100,12 @@ This is because test cases in a parallel group run at the same time, so their ex
     If **Stop if fail** is enabled for a test case in a parallel group and that test case fails, the other test cases in the same parallel group are not skipped.
     This is because test cases in a parallel group run at the same time and share the same sequence number, so their execution order cannot be guaranteed.
     Only test cases with a higher sequence number than the failed test case are skipped.
+
+##### Saving and discarding
+
+Changes to test set can be discarded at any time using the `Discard` button. This will restore the last saved version of the test set.
+
+To save changes you made to the test set you need to click on the `Save` button, otherwise the changes are not going to be saved.
 
 ### Summary tab
 The Summary tab shown in the image below allows you to select the instance on which the selected test set was executed and the date range for which you want to see the summary.
