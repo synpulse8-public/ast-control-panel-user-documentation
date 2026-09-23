@@ -30,13 +30,13 @@ The most prominent is the new modal when creating a testcase. Here you can choos
 <figcaption>The create new test case dialog showing two options of creating a testcase</figcaption>
 
 After clicking on the `Continue with AI` button another dialog is shown.
-In this dialog you are able to upload the screenshot of the audit trail from your computer.
+In this dialog you are able to upload the screenshot/pdf of the audit trail from your computer.
 You can choose different AI models and also an example audit trail is shown.
 
 ![ai-create-new-audit-trail.png](assets/UserDocumentationM/ai-create-new-audit-trail.png)
 <figcaption>Dialog for uploading of the audit trail screenshot.</figcaption>
 
-After pressing the create button the screenshot will be sent to the AI and a loading icon is displayed. During this time you have to wait for the generation to complete.
+After pressing the create button the screenshot will be sent to the AI and a loading icon is displayed. During the generation you can freely use the solution.
 After the generation is over the testcase will be shown in the `Tests` view.
 The testcase will be open at creation.
 
