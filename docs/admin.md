@@ -144,5 +144,4 @@ The deletion process is performed asynchronously in the background, so you can c
 ### API
 The API tab provides access to the REST API documentation and allows you to test API endpoints directly from the control panel.
 
-The first APIs are the management ones. To see the solution API documentation you need to select the "springdocDefault" option from the dropdown:
-![api.png](assets/AdminDocu/api_dropdown.png)
+The API specification contains only a subset of useful endpoints to increase readability and reduce the complexity of the specification.
