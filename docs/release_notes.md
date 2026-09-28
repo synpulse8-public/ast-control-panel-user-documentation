@@ -1,36 +1,31 @@
 # Release notes
 
-## Version 5.1.0
-
-#### Breaking changes
-
-- Endpoint `api/admin/logfile` was removed. No replacement available.
-- Payload change in POST `api/process-executor-groups/aggregated` endpoint due to multi-option filtering. Check the API specification in the solution. [Read more](admin.md#api)
+## Version 5.2.0
 
 #### New Features
  
-- Stop execution if a testcase fails. [Read more](test_sets.md#stop-execution-on-failure)
-- Multi-option filtering in Execution view. Filter executions by multiple values per column simultaneously. [Read more](executions.md#filtering)
-- Concurrent testcase editing. [Read more](test_case_repository.md#concurrent-editing)
-- AI assisted test generation from audit trail. [Read more](ai.md)
+- Users can now continue working in the application while AI test case generation is ongoing
+- Added PDF support to AI testcase generation
+- Added auto-scroll to trial run output
+- Updated API specification: limited visible endpoints to a curated set and added more detailed descriptions
+
+#### Bug Fixes
+
+- Fixed duplicated requests when loading file editors
+- Preserved per-tab undo history in the test case editor
+- Fixed pre-selected Avaloq instance in the schedule dialog not matching the global selection
+- Fixed an issue where non-admin users were unable to access the application due to a Keycloak profile configuration
+- Persisted unsaved test case content across page navigation
+
 
 #### Other
 
-- Updated to Java 25 and Spring Boot 4.1.x
+- Updated loading and collapsible panel animations
+- Redesigned user profile dropdown menu
+- Increased display duration for error toast messages
 - Frontend and Backend dependency updates
 - Various security fixes
 - Various code refactoring for maintainability
 
-## Version 5.1.1
-
-#### Bug fix
-
-- Fixed avaloq instance resetting to the first option in instance dropdown in the schedule dialog
-
-## Version 5.1.2
-
-#### Bug fix
-
-- Fixed XRAY defects parsing errors
 
 
