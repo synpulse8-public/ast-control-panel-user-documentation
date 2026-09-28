@@ -92,16 +92,17 @@ For file contents and examples, see [Configuration files](configuration_files.md
 
 In the application configuration section you can set up various properties:
 
-| Property                                             | Description                                                                                                                                                                                                                                                                           |
-|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ast-control-panel.web.domain                         | Web domain for project.                                                                                                                                                                                                                                                               |
-| ast-core.properties-file-path                        | Path to the ast.properties file if you would decide to mount it to the image. For more details on how to mount this file see [Mounting of ast.properties](deployment.md#mounting-of-astproperties-optional) section.                                                                  |
-| ast-control-panel.execution.max-parallel-processes   | The number of maximum parallel processes for test execution. This is used to limit the number of parallel executions that can be run at the same time. If the number of scheduled executions exceeds this number, the additional executions will be queued until a slot is available. |
-| ast-control-panel.integration.alm.enabled            | Flag to enable or disable the ALM integration. If set to true, more options will be available in the configuration for ALM integration. For more details on ALM integration see [ALM integration](alm.md) documentation.                                                                      |
-| ast-control-panel.integration.xray.enabled           | Flag to enable or disable the Xray integration. If set to true, more options will be available in the configuration for Xray integration. For more details on Xray integration see [Xray integration](jira_xray.md) documentation.                                                            |
-| ast-control-panel.user-interface.header-color        | Property to set up the color of the ribbon under the header in the control panel. You can choose from 6 predefined header ribbon colors.                                                                                                                                              |
+| Property                  | Description                                                                                                                                                                                                                                                                           |
+|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Web domain                | Web domain for project.                                                                                                                                                                                                                                                               |
+| Core properties file path | Path to the ast.properties file if you would decide to mount it to the image. For more details on how to mount this file see [Mounting of ast.properties](deployment.md#mounting-of-astproperties-optional) section.                                                                  |
+| Max parallel processes    | The number of maximum parallel processes for test execution. This is used to limit the number of parallel executions that can be run at the same time. If the number of scheduled executions exceeds this number, the additional executions will be queued until a slot is available. |
+| Alm enabled               | Flag to enable or disable the ALM integration. If set to true, more options will be available in the configuration for ALM integration. For more details on ALM integration see [ALM integration](alm.md) documentation.                                                                      |
+| Xray enabled              | Flag to enable or disable the Xray integration. If set to true, more options will be available in the configuration for Xray integration. For more details on Xray integration see [Xray integration](jira_xray.md) documentation.                                                            |
+| Header color              | Property to set up the color of the ribbon under the header in the control panel. You can choose from 6 predefined header ribbon colors.                                                                                                                                              |
 
-The override checkbox must be selected to use the value you set up, otherwise the default value will be used. Default values are set up in the application database.
+The input fields are populated with the default values at the start. Default values are set up in the application database.
+Writing into the input fields and pressing the `Save Changes` button saves currently filled in values.
 
 ### Maintenance
 The Maintenance tab provides access to database management functionalities. You can perform database housekeeping by deleting old test executions and reports. 
@@ -143,5 +144,4 @@ The deletion process is performed asynchronously in the background, so you can c
 ### API
 The API tab provides access to the REST API documentation and allows you to test API endpoints directly from the control panel.
 
-The first APIs are the management ones. To see the solution API documentation you need to select the "springdocDefault" option from the dropdown:
-![api.png](assets/AdminDocu/api_dropdown.png)
+The API specification contains only a subset of useful endpoints to increase readability and reduce the complexity of the specification.
