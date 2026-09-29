@@ -27,5 +27,11 @@
 - Various security fixes
 - Various code refactoring for maintainability
 
+## Version 5.2.1
+
+#### Bug Fixes
+
+- Fixed an issue where linting requests could fail due to incorrect HTTP headers
+
 
 
