@@ -20,8 +20,8 @@
 #### Other
 
 - Visual tweaks to test set editor
-- Improved selection behavior in the Add Test Case dialog 
-- Run sequentially checkbox changed to radio buttons for better clarity
+- Improved selection behavior in the Add Test Case dialog. [Read more](test_sets.md#add-new-test-set)
+- Run sequentially checkbox changed to radio buttons for better clarity. [Read more](test_sets.md#add-test-cases-to-already-existing-test-set)
 - Test sets are ordered alphabetically
 - Replaced stop execution icon
 - Removed test case list from the schedule dialog on the test set screen

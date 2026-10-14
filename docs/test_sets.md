@@ -46,18 +46,7 @@ The trash can icon always removes just one test case
 ![testset-edit.png](assets/ControlPanelDocu/testset-edit.png)
 <figcaption>Highlight of the add and remove buttons.</figcaption>
 
-When adding testcases a dialog appears. In the Add Test Case dialog, test cases that are already included in the test set are preselected.
-To add new test cases, select them and click Add.
-
-!!!warning "Important"
-    Existing test cases are preselected; keep them checked if you want to retain them in the test set, as unchecking them will remove them.
-
-If the Run sequentially checkbox is selected, new test cases are added as separate steps. 
-If it is not selected, the new test cases are added together as a single parallel step.
-
-![testset-add-dialog.png](assets/ControlPanelDocu/testset-add-dialog.png)
-<figcaption>Dialog for adding testcases to test set with a preselected testcase</figcaption>
-
+For more details on the topic of adding testcases check out the chapter [Add test cases to already existing test set](#add-test-cases-to-already-existing-test-set).
 
 ##### Sequence of execution
 
@@ -152,6 +141,10 @@ The window lists the individual Test Cases included in the run. For each case, t
 To create a test set you can use the *Create Test Set* button in the Test Sets screen or you can use the *Create New* in the Tests screen.
 Then a dialog will appear where you can set up the name, description and select test cases that will be part of this set.
 
+If the *Add each testcase as a step* radio button is selected the newly selected test cases are each added as separate steps.
+
+If the *Add as one parallel step* radio button is selected then all of the selected testcases will be added as one parallel step.
+
 ![test_set_create.png](assets/ControlPanelDocu/test_set_create.png)
 <figcaption>Dialog for test set creation</figcaption>
 
@@ -162,9 +155,13 @@ In this case the same dialog appears but with already preselected testcase or al
 In the Test set view in an open test set you can click on the *Edit* button in the Definitions tab.
 This will enable editing of the test set. Then you click on the *Add test case* button which will open a dialog from which you can select a test case that will be added to this set.
 
-It also shows all the testcases that are present in this set. You can also remove test cases from this set by unchecking them in the list.
-![test_set_add_case.png](assets/ControlPanelDocu/test_set_add_case.png)
-<figcaption>Dialog for adding a test case</figcaption>
+In the Add Test Case dialog, test cases that are already included in the test set are preselected and greyed out.
+To add new test cases, select them and click Add.
+
+For the meaning of the *Add each testcase as a step* and *Add as one parallel step*, check [Add new test set](#add-new-test-set).
+
+![testset-add-dialog.png](assets/ControlPanelDocu/testset-add-dialog.png)
+<figcaption>Dialog for adding a test case with greyed out testcases</figcaption>
 
 Another option is to use the context menu for the [folders](test_case_repository.md#folder-context-menu) and [testcases](test_case_repository.md#test-case-context-menu) in the test case screen.
 Then you choose add to existing test set and then select the test set to which you want to add this test case or folder.
