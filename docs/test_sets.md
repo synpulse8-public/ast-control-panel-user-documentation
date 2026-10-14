@@ -124,13 +124,14 @@ Additional columns identify the User Name responsible for the run and the specif
 
 The table includes a summary of execution results, detailing the number of Tests:
 
-- Passed 
-
-- Failed 
-
-- Error
-
-- Scheduled 
+| Execution result | Details                                                                                  |
+|------------------|------------------------------------------------------------------------------------------|
+| Passed           | Execution finished successfully                                                          |
+| Failed           | Execution finished but failed a condition                                                |
+| Error            | Execution did not finish, probably due to technical reasons                               |
+| Skipped          | Execution was not started because a preceding test case failed or the execution was cancelled |
+| Cancelled        | Execution was being executed and cancelled by the user                                   |
+| Scheduled        | Execution that is going to be executed at a set time in the future                       |
 
 This numerical breakdown offers an immediate status of the execution outcome. The right-most columns provide action options, including viewing Reports and controls to Modify or Delete a scheduled run.
 
