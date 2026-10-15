@@ -15,13 +15,14 @@
 - Fixed issue where folders were showing incorrect number of scripts
 - Fixed import dialog to show the correct script type
 - Prevented methods from being incorrectly added to test sets
+- Fixed issue where leading whitespace would cause the log filter to not work
 
 
 #### Other
 
 - Visual tweaks to test set editor
-- Improved selection behavior in the Add Test Case dialog. [Read more](test_sets.md#add-new-test-set)
-- Run sequentially checkbox changed to radio buttons for better clarity. [Read more](test_sets.md#add-test-cases-to-already-existing-test-set)
+- Improved selection behavior in the Add Test Case dialog. [Read more](test_sets.md#add-test-cases-to-already-existing-test-set)
+- Run sequentially checkbox changed to radio buttons for better clarity. [Read more](test_sets.md#add-new-test-set)
 - Test sets are ordered alphabetically
 - Replaced stop execution icon
 - Removed test case list from the schedule dialog on the test set screen
