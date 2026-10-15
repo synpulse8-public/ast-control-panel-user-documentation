@@ -5,7 +5,7 @@
 #### New Features
 
 - Added Skipped and Cancelled as execution results. [Read more](test_sets.md#reports-tab)
-- New dialog for moving test cases in a test set
+- New dialog for moving test cases in a test set. [Read more](test_sets.md#move-dialog)
 - Added color picker for header color customization
 
 
