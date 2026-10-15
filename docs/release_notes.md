@@ -33,5 +33,11 @@
 
 - Fixed an issue where linting requests could fail due to incorrect HTTP headers
 
+## Version 5.2.2
+
+#### Other
+
+- Increased buffer size in AI integration
+
 
 
