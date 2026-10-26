@@ -194,3 +194,17 @@ You can use the same example of the `ast-control-panel.properties` file and spec
 You can also deploy the application on your own without using the provided helm chart.
 In this case we can provide limited support as we have no knowledge about your infrastructure and deployment setup.
 
+## Management endpoints
+The application exposes its management endpoints under the `/management` path instead of the standard Spring Boot `/actuator` path. 
+The standard endpoints such as `/actuator/health` or `/actuator/info` are not available.
+
+| Endpoint             | Purpose                                                                                                                              |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| `/management/health` | Health status of the application. Use it for Kubernetes liveness/readiness probes, load balancer health checks and monitoring tools. |
+| `/management/info`   | Application information such as the deployed version (`git.build.version`), commit ID and active Spring profiles.                    |
+
+Both endpoints are accessible without authentication.
+
+!!! info
+    If you set a [custom context path](#setting-a-custom-context-path), the endpoints are served under it, e.g. `/your-context-path/management/health`.
+

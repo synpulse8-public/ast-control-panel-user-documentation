@@ -1,43 +1,31 @@
 # Release notes
 
-## Version 5.2.0
+## Version 5.3.0
 
 #### New Features
- 
-- Users can now continue working in the application while AI test case generation is ongoing
-- Added PDF support to AI testcase generation
-- Added auto-scroll to trial run output
-- Updated API specification: limited visible endpoints to a curated set and added more detailed descriptions
+
+- Added Skipped and Cancelled as execution results. [Read more](test_sets.md#reports-tab)
+- New dialog for moving test cases in a test set. [Read more](test_sets.md#move-dialog)
+- Administrators can now pick a custom header ribbon color with a color picker, in addition to the 6 predefined colors. [Read more](admin.md#configuration)
+
 
 #### Bug Fixes
 
-- Fixed duplicated requests when loading file editors
-- Preserved per-tab undo history in the test case editor
-- Fixed pre-selected Avaloq instance in the schedule dialog not matching the global selection
-- Fixed an issue where non-admin users were unable to access the application due to a Keycloak profile configuration
-- Persisted unsaved test case content across page navigation
+- Fixed schedule dialog to display the current time correctly.
+- Fixed issue where folders were showing incorrect number of scripts.
+- Fixed import dialog to show the correct script type.
+- Prevented scripts of method type from being incorrectly added to test sets.
+- Fixed the log filter returning no results when the search text started with a space.
+- Fixed the Executions table not showing running executions when the Running filter was selected.
 
 
 #### Other
 
-- Updated loading and collapsible panel animations
-- Redesigned user profile dropdown menu
-- Increased display duration for error toast messages
-- Frontend and Backend dependency updates
-- Various security fixes
-- Various code refactoring for maintainability
-
-## Version 5.2.1
-
-#### Bug Fixes
-
-- Fixed an issue where linting requests could fail due to incorrect HTTP headers
-
-## Version 5.2.2
-
-#### Other
-
-- Increased buffer size in AI integration
-
-
-
+- Test cases already in the test set are now preselected and greyed out in the Add Test Case dialog. [Read more](test_sets.md#add-test-cases-to-already-existing-test-set)
+- The Run sequentially checkbox was replaced by the radio buttons *Add each test case as a step* and *Add as one parallel step*. [Read more](test_sets.md#add-new-test-set)
+- Test sets are ordered alphabetically in the Test Sets screen.
+- Replaced stop execution icon in the Executions table.
+- Removed test case list from the schedule dialog on the Test Sets screen.
+- Test set editor view mode styling enhanced for more clarity.
+- Increased the rows-per-page options in the Executions table to 30–100.
+- Backend and frontend dependency updates.

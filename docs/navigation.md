@@ -1,7 +1,9 @@
 # Landing Page and Navigation
 
 ### Landing Page
-After successfully logging in, you will be directed to the landing page of the AST application. This page displays an overview of your testing activities and provides quick access to various sections of the application. The landing page is designed to give you a snapshot of your testing environment, including recent test cases, scheduled runs, and quick actions for common tasks.
+After successfully logging in, you will be directed to the landing page of the AST application. 
+This page displays an overview of your testing activities and provides quick access to various sections of the application. 
+The landing page is designed to give you a snapshot of your testing environment, including recent test cases, scheduled runs, and quick actions for common tasks.
 
 ![navigation.png](assets/ControlPanelDocu/landing-page.png)
 <figcaption>AST homepage after logging in</figcaption>
@@ -15,7 +17,8 @@ Short description of the sections on the landing page is provided in the table b
 | Scheduled runs    | Shows the number of scheduled executions on the current Avaloq environment.                                                                                             |
 | Recent Test Cases | Displays the last 5 test cases modified by the currently logged-in user. Click on a test case to open.                                                                  |
 | Recent Run Status | Displays the last 5 executions started by the currently logged-in user on the current Avaloq environment with their status. Click on the execution to see more details. |
-| Quick Actions     | Quick links to Create a new test case, Scheduling execution, Manage exteral IDs (Xray, ALM) and Analytics                                                               |
+| Quick Actions     | Quick links to Create a new test case, Scheduling execution, Manage external IDs (Xray, ALM) and Analytics                                                              |
+| Version           | Shows the version of the AST Control Panel that is currently deployed.                                                                                                  |
 
 
 

@@ -10,6 +10,6 @@
         <!-- Optional right-side content -->
         <div id="hero-content-pdf">
             <h1 class="intro-heading">Control panel user guide</h1>
-            <h2 class="intro-heading">Version 5.2.x</h2>
+            <h2 class="intro-heading">Version 5.3.x</h2>
         </div>
     </div>
