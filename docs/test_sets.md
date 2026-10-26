@@ -103,7 +103,7 @@ The *Insert as step* and *Add in parallel to existing step* options work the sam
 #### Stop execution on failure
 
 You can select the **Stop if fail** checkbox for a test case so that if it fails, the remaining test cases in the set are skipped.
-When that happens, test cases with a higher sequence number are skipped and marked as failed in the execution [report](#reports-tab).
+When that happens, test cases with a higher sequence number are skipped and marked as skipped in the execution [report](#reports-tab).
 
 ![stop_if_fail.png](assets/ControlPanelDocu/stop-if-fail.png)
 <figcaption>Enabling the option to stop execution on failure</figcaption>
