@@ -38,3 +38,17 @@ After the activation of the Keycloak profile, the authentication endpoint is dis
 #### The application experienced a crash and the test run logs are not accessible, how to retrieve the logs?
 Unfortunately, in this case, the logs are not retrievable as they were not saved in the database. 
 The logs are stored in the database only after the test run is finished, so if the application crashes during the test run, the logs will not be saved and therefore not accessible.
+
+---
+
+#### The health check on `/actuator/health` is not responding, where is the health endpoint?
+The application does not use the standard Spring Boot `/actuator` path. The health status is available at `/management/health` and does not require authentication.
+Use this path when configuring Kubernetes liveness/readiness probes, load balancer health checks or monitoring tools.
+For more information see the [Management endpoints](deployment.md#management-endpoints) section in the [Deployment](deployment.md) documentation.
+
+---
+
+#### How can I check which version of the application is deployed?
+The version is displayed on the [landing page](navigation.md#landing-page) after logging in.
+Alternatively, open the `/management/info` endpoint, which does not require authentication. The deployed version is shown in the `git.build.version` field, together with the commit ID and the active Spring profiles.
+For more information see the [Management endpoints](deployment.md#management-endpoints) section in the [Deployment](deployment.md) documentation.
