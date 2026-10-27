@@ -29,3 +29,4 @@
 - Test set editor view mode styling enhanced for more clarity.
 - Increased the rows-per-page options in the Executions table to 30–100.
 - Backend and frontend dependency updates.
+- Added curl to the docker image.
