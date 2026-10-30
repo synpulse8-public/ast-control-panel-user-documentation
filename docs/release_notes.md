@@ -30,3 +30,10 @@
 - Increased the rows-per-page options in the Executions table to 30–100.
 - Backend and frontend dependency updates.
 - Added curl to the docker image.
+
+## Version 5.3.1
+
+#### Bug Fixes
+
+- Fixed issue where the Xray sync would crash for Skipped execution status. Skipped reports as Aborted in Xray when triggering the Resend to Xray button.
+- Fixed issue where Xray could not reach host when going via a proxy. The proxy can be configured via environment variables. [Read more](jira_xray.md#proxy-settings-optional)
