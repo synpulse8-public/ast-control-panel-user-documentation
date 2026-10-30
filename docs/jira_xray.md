@@ -15,12 +15,40 @@ To enable the integration, an administrator must navigate to the application pro
 <figcaption>Xray connection settings in AST Control Panel</figcaption>
 
 #### Setting Environment Variables (Optional)
-If needed, the Xray sync endpoint can be adjusted by setting the environment variable `AST_CONTROL_PANEL_XRAY_SYNC_ENDPOINT` to the desired URL. 
+If needed, the Xray sync endpoint can be adjusted by setting the environment variable `AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_ENDPOINT` to the desired URL. 
 
 The default value for this variable is `/rest/raven/2.0/import/execution`. 
 
 If your Xray instance uses a different endpoint, you can set the environment variable accordingly.
 For instructions on how to set environment variables please refer to the [Setting environment variables](deployment.md#setting-up-environment-variables) documentation.
+
+#### Proxy Settings (Optional)
+If the AST Control Panel can reach your Jira/Xray instance only through an HTTP proxy, configure the proxy using the following environment variables:
+
+| Environment variable                                       | Description                                                                                    | Default |
+|------------------------------------------------------------|------------------------------------------------------------------------------------------------|---------|
+| `AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_HOST`            | Hostname of the proxy server. If empty, no proxy is used.                                      | –       |
+| `AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_PORT`            | Port of the proxy server.                                                                      | `8080`  |
+| `AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_USERNAME`        | Username, if the proxy requires authentication. Optional.                                      | –       |
+| `AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_PASSWORD`        | Password, if the proxy requires authentication. Optional.                                      | –       |
+| `AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_NON_PROXY_HOSTS` | Hosts that are accessed directly, bypassing the proxy. Use Java regular expressions. Optional. | –       |
+
+Example configuration in the `Values.yaml` file of the helm chart:
+
+~~~yaml
+env:
+  AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_HOST: "proxy.yourcompany.com"
+  AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_PORT: "8080"
+  AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_USERNAME: "proxy_user"
+  AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_NON_PROXY_HOSTS: 'localhost|127\.0\.0\.1|.*\.mycorp\.local|jira\.internal\.com'
+
+envSecrets:
+  AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_PASSWORD:
+    secretName: ast-control-panel-xray-proxy-secret
+    key: password
+~~~
+
+It is recommended to store the proxy password in a Kubernetes secret and reference it via `envSecrets`, as shown above. For more details, see [Setting environment variables](deployment.md#setting-up-environment-variables).
 
 ### Assigning External XRAY IDs to Test Cases
 
