@@ -1477,10 +1477,61 @@
 <figcaption>Xray connection settings in AST Control Panel</figcaption>
 
 <h4 id="setting-environment-variables-optional">Setting Environment Variables (Optional)</h4>
-<p>If needed, the Xray sync endpoint can be adjusted by setting the environment variable <code>AST_CONTROL_PANEL_XRAY_SYNC_ENDPOINT</code> to the desired URL. </p>
+<p>If needed, the Xray sync endpoint can be adjusted by setting the environment variable <code>AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_ENDPOINT</code> to the desired URL. </p>
 <p>The default value for this variable is <code>/rest/raven/2.0/import/execution</code>. </p>
 <p>If your Xray instance uses a different endpoint, you can set the environment variable accordingly.
 For instructions on how to set environment variables please refer to the <a href="../deployment/#setting-up-environment-variables">Setting environment variables</a> documentation.</p>
+<h4 id="proxy-settings-optional">Proxy Settings (Optional)</h4>
+<p>If the AST Control Panel can reach your Jira/Xray instance only through an HTTP proxy, configure the proxy using the following environment variables:</p>
+<table>
+<thead>
+<tr>
+<th>Environment variable</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_HOST</code></td>
+<td>Hostname of the proxy server. If empty, no proxy is used.</td>
+<td>–</td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_PORT</code></td>
+<td>Port of the proxy server.</td>
+<td><code>8080</code></td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_USERNAME</code></td>
+<td>Username, if the proxy requires authentication. Optional.</td>
+<td>–</td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_PASSWORD</code></td>
+<td>Password, if the proxy requires authentication. Optional.</td>
+<td>–</td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_NON_PROXY_HOSTS</code></td>
+<td>Hosts that are accessed directly, bypassing the proxy. Use Java regular expressions. Optional.</td>
+<td>–</td>
+</tr>
+</tbody>
+</table>
+<p>Example configuration in the <code>Values.yaml</code> file of the helm chart:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">env</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"proxy.yourcompany.com"</span>
+<span class="w">  </span><span class="nt">AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8080"</span>
+<span class="w">  </span><span class="nt">AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_USERNAME</span><span class="p">:</span><span class="w"> </span><span class="s">"proxy_user"</span>
+<span class="w">  </span><span class="nt">AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_NON_PROXY_HOSTS</span><span class="p">:</span><span class="w"> </span><span class="s">'localhost|127\.0\.0\.1|.*\.mycorp\.local|jira\.internal\.com'</span>
+
+<span class="nt">envSecrets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_PASSWORD</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ast-control-panel-xray-proxy-secret</span>
+<span class="w">    </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+</code></pre></div>
+<p>It is recommended to store the proxy password in a Kubernetes secret and reference it via <code>envSecrets</code>, as shown above. For more details, see <a href="../deployment/#setting-up-environment-variables">Setting environment variables</a>.</p>
 <h3 id="assigning-external-xray-ids-to-test-cases">Assigning External XRAY IDs to Test Cases</h3>
 <p>You must link your AST test cases to their corresponding Xray test entities in Jira by assigning an <strong>External Xray ID</strong>.</p>
 <h4 id="individual-assignment">Individual Assignment</h4>

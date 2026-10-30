@@ -1332,6 +1332,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#version-531" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 5.3.1
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1369,6 +1380,17 @@
     <span class="md-ellipsis">
       
         Version 5.3.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-531" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 5.3.1
       
     </span>
   </a>
@@ -1420,6 +1442,12 @@
 <li>Increased the rows-per-page options in the Executions table to 30–100.</li>
 <li>Backend and frontend dependency updates.</li>
 <li>Added curl to the docker image.</li>
+</ul>
+<h2 id="version-531">Version 5.3.1</h2>
+<h4 id="bug-fixes_1">Bug Fixes</h4>
+<ul>
+<li>Fixed issue where the Xray sync would crash for Skipped execution status. Skipped reports as Aborted in Xray when triggering the Resend to Xray button.</li>
+<li>Fixed issue where Xray could not reach host when going via a proxy. The proxy can be configured via environment variables. <a href="../jira_xray/#proxy-settings-optional">Read more</a></li>
 </ul>
 
 
