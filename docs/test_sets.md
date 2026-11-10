@@ -51,48 +51,62 @@ For more details on the topic of adding testcases check out the chapter [Add tes
 #### Sequence of execution
 
 Sequence can be parallel or sequential. In parallel execution, all test cases are executed simultaneously, while in sequential execution, test cases are executed one after the other in a specified order.
-The image below shows that the two testcases are set to execute in parallel as indicated by the line before the second testcase. 
-The third testcase has a number next to it, which means that it will be executed after the first two testcases are finished.
+The image below shows that the two test cases are set to execute in parallel as indicated by the line before the second test case. 
+The third test case has a number next to it, which means that it will be executed after the first two test cases are finished.
 
 ![test_set_sequence.png](assets/ControlPanelDocu/test_set_sequence.png)
 <figcaption>Two test cases are in parallel, the third is sequential</figcaption>
 
-To group testcases into parallel or sequential execution you need to click the *Edit* button in the Definitions tab.
-There are two ways to move test cases:
+To group test cases into parallel or sequential execution you need to click the *Edit* button in the Definitions tab.
+There are several ways to move test cases:
 
 ##### Drag and drop
 
-To set testcase to execute in parallel you click on it and drag it on the testcase you want to execute in parallel with.
-![test_set_parallel.png](assets/ControlPanelDocu/test_set_parallel.png)
-<figcaption>Dropping a testcase to another to make them execute in parallel</figcaption>
+In edit mode you can move a test case by dragging its row and dropping it on another row. Where you release it on the target row decides what happens:
 
-To set testcase to execute sequentially you click on it and drag it to the line between testcases until the line is highlighted. 
-Then you drop it there, and it will be executed after the testcase above the line is finished.
+| Drop position          | Highlight               | Result                                                                    |
+|------------------------|-------------------------|---------------------------------------------------------------------------|
+| Middle of the row      | Row is highlighted      | The test case runs **in parallel** with the target test case (same step) |
+| Top edge of the row    | Blue line above the row | The test case is placed **before** the target test case                  |
+| Bottom edge of the row | Blue line below the row | The test case is placed **after** the target test case                   |
+
+![test_set_parallel.png](assets/ControlPanelDocu/test_set_parallel.png)
+<figcaption>Dropping a test case on another to make them execute in parallel</figcaption>
 
 ![test_set_sequential.png](assets/ControlPanelDocu/test_set_sequential.png)
-<figcaption>Dropping a testcase after another to make them execute in sequence</figcaption>
+<figcaption>Dropping a test case below another to make them execute in sequence</figcaption>
+
+When you drop on the line between two **different** steps, the test case becomes a new step at that position and the following steps are shifted down.
+When you drop on the line between two test cases of the **same parallel step**, the test case joins that parallel step.
+
+!!!info "Info"
+    A moved test case takes over the **Stop if fail** setting of the step it is moved into.
+
+Changes are applied only after you click `Save`. Click `Discard` to undo them.
+
+You can also drag several selected test cases at once, see [Dragging multiple test cases](#dragging-multiple-test-cases).
 
 ##### Move dialog
 
-Each testcase has an arrow button next to the delete button (see screenshot). Clicking this button opens the move testcase dialog.
+Each test case has an arrow button next to the delete button (see screenshot). Clicking this button opens the move test case dialog.
 
 ![test-set-move-icon](assets/ControlPanelDocu/test-set-move-icon.png)
 <figcaption>Highlight of the icon that opens the move dialog</figcaption>
 
-In the move dialog the test name and current step number are displayed. You can edit the target step where the testcase would be moved to.
+In the move dialog the test name and current step number are displayed. You can edit the target step where the test case would be moved to.
 
 If the *Insert as step* radio button is selected the test case is moved to the target step.
 
 If the *Add in parallel to existing step* radio button is selected then the test case is added to an existing step as a parallel execution.
 
 ![test-set-move-dialog](assets/ControlPanelDocu/test-set-move-dialog.png)
-<figcaption>Move testcase dialog</figcaption>
+<figcaption>Move test case dialog</figcaption>
 
-If you decide to move any testcase that is part of a parallel step the dialog will contain two more radio buttons.
+If you decide to move any test case that is part of a parallel step the dialog will contain two more radio buttons.
 
-If the *Selected testcase* radio button is selected then only the selected testcase is moved.
+If the *Selected test case* radio button is selected then only the selected test case is moved.
 
-If the *Whole parallel step* radio button is selected then all of the testcases in the parallel step are moved.
+If the *Whole parallel step* radio button is selected then all of the test cases in the parallel step are moved.
 
 The *Insert as step* and *Add in parallel to existing step* options work the same as described above.
 
@@ -135,6 +149,22 @@ Click `Confirm` to apply the change, or `Cancel` to close the dialog without cha
     With *Add in parallel to existing step*, the moved test cases follow the **Stop if fail** setting of the target step.
 
 The selection is cleared after a move is confirmed and when you leave edit mode. As with all other changes, click `Save` to keep the new order.
+
+##### Dragging multiple test cases
+
+Selected test cases can also be moved with [drag and drop](#drag-and-drop). Select the test cases, then drag **one of the selected rows**. 
+All selected test cases are moved together, and the drag preview shows the name of the dragged test case followed by the number of other selected test cases, e.g. *Checkout and 2 more*. 
+The selected rows are marked while you drag them.
+
+Where you drop the test cases determines how they are placed:
+
+- Dropping them **on** a test case adds all selected test cases in parallel to that test case's step (same as *Add in parallel to existing step*).
+- Dropping them on the **line before or after** a test case inserts all selected test cases together as **one new parallel step** before or after that test case's step (same as *Insert as step*).
+
+!!!info "Info"
+    The same rules as in the *Set step* dialog apply: the selected test cases keep the order in which they appear in the table, and the **Stop if fail** setting is applied the same way.
+    Selected test cases cannot be dropped on another selected test case.
+    If you drag a test case that is **not** selected, only that test case is moved and the selection is ignored.
 
 !!!tip "Tip"
     To move a single test case you can still use [drag and drop](#drag-and-drop) or the [move dialog](#move-dialog).

@@ -7,6 +7,7 @@
 - The execution report table is now sortable by clicking a column header. [Read more](test_sets.md#sorting-the-execution-report-table)
 - Added Step and Stop if fail columns to the execution report table. [Read more](test_sets.md#stop-execution-on-failure)
 - Multiple test cases can be selected in the test set definitions (Ctrl/Cmd + click, Shift + click) and moved together with the new *Set step* action. [Read more](test_sets.md#moving-multiple-test-cases-at-once)
+- Multiple selected test cases in the test set definitions can now be moved together with drag and drop. [Read more](test_sets.md#dragging-multiple-test-cases)
 - Administrators can now configure how AST execution statuses are mapped to Xray statuses. [Read more](jira_xray.md#status-mapping)
 - Added Xray sync status filters and Xray sync status sorting to the Executions table.
 
