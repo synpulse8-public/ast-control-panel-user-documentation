@@ -101,6 +101,17 @@ In the application configuration section you can set up various properties:
 | Xray enabled              | Flag to enable or disable the Xray integration. If set to true, more options will be available in the configuration for Xray integration. For more details on Xray integration see [Xray integration](jira_xray.md) documentation.                                                    |
 | Header color              | Property to set up the color of the ribbon under the header in the control panel. You can choose from 6 predefined header ribbon colors or pick your own color via the color picker option.                                                                                           |
 
+When **Xray enabled** is set to true, the *Xray* section offers the following properties:
+
+| Property       | Description                                                                                                                                                                                         |
+|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Url            | Base URL of the Jira instance with the Xray app.                                                                                                                                                    |
+| Token          | Jira Personal Access Token used for the synchronization.                                                                                                                                            |
+| Sync enabled   | Flag to enable or disable sending of execution results to Xray. External Xray IDs can still be maintained when it is set to false.                                                                 |
+| Status mapping | Defines which Xray test run status is sent for each AST execution result (Success, Fail, Error, Cancelled, Skipped, Not evaluated). All values are required and must match an Xray status exactly. |
+
+For details and default values see [Jira Xray configuration](jira_xray.md#configuration-settings) and [Status mapping](jira_xray.md#status-mapping).
+
 The input fields are populated with the default values at the start. Default values are set up in the application database.
 Writing into the input fields and pressing the `Save Changes` button saves currently filled in values.
 
