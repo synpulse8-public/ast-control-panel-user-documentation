@@ -161,7 +161,7 @@ A separate detail window, accessed by clicking the desired row, provides a focus
 
 Granular execution report detail. This modal window displays the results breakdown and provides links to retrieve various report formats for in-depth analysis. For more details on the report formats, see the [Reports](reports.md) section.
 
-The window lists the individual Test Cases included in the run. For each case, the Status, Start time, and End time of its execution are listed. The Reports dropdown offers access to the execution data for that specific test case in the following formats: HTML, Log, XML, and Excel. This allows for granular review and data integration. The bottom of the window provides controls to Schedule the test run again or Close the report window.
+The window lists the individual Test Cases included in the run. For each case, the Step number, the Stop if fail setting, the Status, Start time, and End time of its execution are listed. The **Step** column shows the position of the test case in the execution sequence; test cases executed in parallel share the same step number. The **Stop if fail** column shows a check mark if [Stop if fail](#stop-execution-on-failure) was enabled for the test case when the execution was scheduled, and a dash otherwise. The Reports dropdown offers access to the execution data for that specific test case in the following formats: HTML, Log, XML, and Excel. This allows for granular review and data integration. The bottom of the window provides controls to Schedule the test run again or Close the report window.
 
 #### Sorting the execution report table
 
