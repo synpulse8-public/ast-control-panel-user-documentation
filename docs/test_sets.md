@@ -163,6 +163,18 @@ Granular execution report detail. This modal window displays the results breakdo
 
 The window lists the individual Test Cases included in the run. For each case, the Status, Start time, and End time of its execution are listed. The Reports dropdown offers access to the execution data for that specific test case in the following formats: HTML, Log, XML, and Excel. This allows for granular review and data integration. The bottom of the window provides controls to Schedule the test run again or Close the report window.
 
+#### Sorting the execution report table
+
+The execution report table can be sorted by clicking a column header. The following columns are sortable:
+
+- **Step**: sorted by the execution sequence number.
+- **Test Case**: sorted alphabetically by the test case name (including its version).
+- **Execution Status**: sorted alphabetically by the displayed status (Cancelled, Error, Failed, Processing, Scheduled, Skipped, Success).
+- **Start** and **End**: sorted chronologically.
+- **Xray Sync Status** and **ALM Sync Status**: sorted alphabetically by the displayed sync status. These columns are only shown when Xray or ALM synchronization is used for the run.
+
+The first click sorts the column in ascending order and the second click in descending order. Only one column can be sorted at a time. Rows without a value in the sorted column (for example, test cases that have not started yet) are always shown at the bottom. Sorting works together with the status filter badges and resets when you open a different execution.
+
 
 ## Test set creation and alterations
 

@@ -78,6 +78,7 @@ The **Executions** menu functions as the central log for all test activity, show
 - **Execution Results Summary**: This summary details the total number of tests that Passed, Failed, Errored, and are Pending.
 - **Detailed Execution Report Window**: Clicking the Report action in the grid opens a separate detail window showing the results for that entire run.
     - This window lists every Test Case included in the run, its Status, Start and End times.
+    - The table can be sorted by clicking a column header. See [Sorting the execution report table](test_sets.md#sorting-the-execution-report-table) for details.
     - It offers a Summary HTML Report button for a full-run overview.
 
 #### Test Case Repository (Individual Test Case)
