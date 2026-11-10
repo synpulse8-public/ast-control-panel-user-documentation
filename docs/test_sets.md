@@ -34,7 +34,7 @@ The Definitions tab shown in the previous image lists all the individual test ca
 This organized table gives the user a clear view of which tests are part of the set and their execution order.
 
 You can also see three buttons: `Schedule`, `Execute Now` and `Edit`. `Schedule` is used for scheduling the test set for a certain time. 
-`Execute Now` executes the testcase immediately. `Edit` button allows you to edit the test set: Adding/removing testcases, changing order of testcases etc.
+`Execute Now` executes the testcase immediately. `Edit` button allows you to edit the test set: Adding/removing testcases, changing order of testcases (individually or several at once) etc.
 
 When in edit mode, the following options are available:
 
@@ -98,6 +98,46 @@ The *Insert as step* and *Add in parallel to existing step* options work the sam
 
 ![test-set-move-dialog-parallel](assets/ControlPanelDocu/test-set-move-dialog-parallel.png)
 <figcaption>Move test case dialog for a test case in a parallel step</figcaption>
+
+##### Moving multiple test cases at once
+
+In edit mode you can select several test cases and move them to a step in a single action.
+
+| Action                          | Result                                                                        |
+|---------------------------------|-------------------------------------------------------------------------------|
+| `Ctrl` + click (`Cmd` on macOS) | Adds the test case to the selection, or removes it if it is already selected |
+| `Shift` + click                 | Selects all test cases between the last clicked test case and the clicked one |
+| `Ctrl` + `Shift` + click        | Adds the range to the current selection instead of replacing it              |
+
+Selected rows are highlighted. Clicking a checkbox, the instance field or the action icons does not change the selection.
+
+As soon as at least one test case is selected, a toolbar appears above the table. It shows how many test cases are selected and offers two buttons:
+
+- `Set step` opens the *Set step* dialog for the selected test cases.
+- `Clear selection` deselects all test cases.
+
+![test-set-selection-toolbar.png](assets/ControlPanelDocu/test-set-selection-toolbar.png)
+<figcaption>Definitions tab in edit mode with three highlighted test cases and selection toolbar showing "3 selected", Set step and Clear selection</figcaption>
+
+The *Set step* dialog lists the selected test cases. Enter the *Target step* (a number between 1 and the highest step in the test set) and choose how the test cases are placed:
+
+- *Insert as step*: All selected test cases are inserted together as **one new parallel step** at the target step. The following steps are shifted down.
+- *Add in parallel to existing step*: The selected test cases are added in parallel to the test cases already in the target step. This option is only available if the target step already exists.
+
+Click `Confirm` to apply the change, or `Cancel` to close the dialog without changes.
+
+![test-set-set-step-dialog.png](assets/ControlPanelDocu/test-set-set-step-dialog.png)
+<figcaption>Set step dialog with the list of selected test cases, target step and placement options</figcaption>
+
+!!!info "Info"
+    The selected test cases keep the order in which they appear in the table.
+    With *Insert as step*, the first selected test case determines the **Stop if fail** setting of the new step.
+    With *Add in parallel to existing step*, the moved test cases follow the **Stop if fail** setting of the target step.
+
+The selection is cleared after a move is confirmed and when you leave edit mode. As with all other changes, click `Save` to keep the new order.
+
+!!!tip "Tip"
+    To move a single test case you can still use [drag and drop](#drag-and-drop) or the [move dialog](#move-dialog).
 
 
 #### Stop execution on failure
