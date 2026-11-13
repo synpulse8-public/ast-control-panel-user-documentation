@@ -19,6 +19,7 @@
 
 #### Other
 
+- Manage external IDs (bulk upload and download of External Xray and HP ALM IDs) was moved from the test case details panel to Admin → Configuration and is now available to administrators only. [Read more](admin.md#manage-external-ids)
 - The Stop if fail setting is now stored for each execution, so later changes to the test set no longer affect existing executions.
 - The status sent to Xray is now taken from the execution result.
 - Trial runs are stopped automatically when their logs are no longer being followed in the editor, for example after closing the browser tab.

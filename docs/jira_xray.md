@@ -193,7 +193,10 @@ The **Create new test case** dialog contains an optional **External Xray ID** fi
 
 #### Bulk Assignment (CSV Upload)
 
-1. Click on any test case in the repository tree to open the [details panel](test_case_repository.md#version-information-and-details-panel) and then click **Manage External IDs**. The dialog can also be opened from the **Quick Actions** on the [Landing page](navigation.md#landing-page).
+!!! info
+    The bulk upload is available to administrators only, because an upload can overwrite the External Xray IDs of any test case.
+
+1. Go to **Admin** → **Configuration** and click **Manage external IDs** in the [Manage external IDs](admin.md#manage-external-ids) section. The dialog can also be opened via the **Manage external IDs (bulk)** quick action on the [Landing page](navigation.md#landing-page).
 2. If both Xray and ALM are enabled, choose **External Xray ID** in **External ID to update**.
 3. Choose the **CSV delimiter** used in your file: comma (`,`) or semicolon (`;`).
 4. Drop or select the CSV file (maximum 100 MB). The file is validated immediately and the results are listed in **Messages**.
@@ -219,7 +222,7 @@ During validation the following rules apply:
 - **Conflicts**: if a test case already has a different External Xray ID, you are asked whether to **Replace** it or **Skip** the row.
 
 #### Downloading the current mapping
-On the right side of the **Manage External IDs** dialog you can **Download** the mapping of all test cases and their External Xray IDs as `external_xray_id_mapping.csv`. Use it as a template for your first upload. Select **Include test case name (info only)** to add the test case names for easier editing.
+On the right side of the **Manage external IDs** dialog you can **Download** the mapping of all test cases and their External Xray IDs as `external_xray_id_mapping.csv`. Use it as a template for your first upload. Select **Include test case name (info only)** to add the test case names for easier editing.
 
 ### Scheduling and Xray Synchronization
 

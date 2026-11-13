@@ -41,7 +41,7 @@ You can also see the last run status of this testcase.
 
 In this section you can also modify the name of the test case and its description.
 
-When Xray or ALM integration is set up, you can also see the linked external IDs and you can also bulk upload or download these IDs.
+When Xray or ALM integration is set up, you can also see and edit the linked external IDs. The bulk upload and download of external IDs is available to administrators in [Admin → Configuration](admin.md#manage-external-ids).
 
 ![testcasemetadata.png](assets/UserDocumentationM/testcasemetadata.png)
 <figcaption>Detailed view of a selected test case information, external IDs, the last run and the button where you can upload test data.</figcaption>

@@ -76,7 +76,7 @@ It is also possible to disable the application log filter (by unchecking the 'Sh
 
 ### Configuration
 The Configuration tab provides access to the application's configuration properties.
-You can also upload and download some necessary files for the application, such as ast.properties file etc.
+You can also upload and download some necessary files for the application, such as ast.properties file etc., and manage external test case IDs in bulk.
 
 In the configuration files you can set up files necessary for the application:
 
@@ -90,6 +90,23 @@ In the configuration files you can set up files necessary for the application:
 
 For file contents and examples, see [Configuration files](configuration_files.md).
 
+#### Manage external IDs
+The **Manage external IDs** section is used for the bulk upload and download of external test case IDs (External HP ALM IDs and External Xray IDs) via CSV files.
+It is located between the configuration files and the application configuration section and is only shown when the [ALM](alm.md) or the [Xray](jira_xray.md) integration is enabled.
+
+Click the **Manage external IDs** button to open the dialog. The dialog can also be opened via the **Manage external IDs (bulk)** quick action on the [Landing page](navigation.md#landing-page), which navigates to this tab and opens the dialog directly.
+
+<!-- TODO: add screenshot of Admin → Configuration showing the Manage external IDs section (header, description text and the Manage external IDs button) between the configuration files and the application configuration section -->
+![admin_manage_external_ids.png](assets/AdminDocu/admin_manage_external_ids.png)
+<figcaption>Manage external IDs section in the Configuration tab</figcaption>
+
+!!! warning
+    An upload can overwrite the external ID mappings of any test case. This is why the bulk management of external IDs is available to administrators only.
+
+For the CSV format, validation rules and downloading of the current mapping see [Bulk assignment of External Xray IDs](jira_xray.md#bulk-assignment-csv-upload) and [Bulk assignment of External ALM IDs](alm.md#assigning-external-alm-ids-to-test-cases).
+Individual external IDs can still be edited by every user in the test case [details panel](test_case_repository.md#version-information-and-details-panel).
+
+#### Application configuration
 In the application configuration section you can set up various properties:
 
 | Property                  | Description                                                                                                                                                                                                                                                                           |
