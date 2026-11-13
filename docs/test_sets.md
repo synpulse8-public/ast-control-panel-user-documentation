@@ -17,12 +17,13 @@ An important feature of this menu is the context menu, which appears when a user
 ![sets.png](assets/ControlPanelDocu/sets.png)
 <figcaption>Display of the context menu</figcaption>
 
-| Action               | Description                                          |
-|----------------------|------------------------------------------------------|
-| Modify Test Set Info | Allows user to change the name                       |
-| Schedule             | Allows the user to schedule an execution of test set |
-| Execute Now          | Immediate execution of test set                      |
-| Delete Test Set      | Deletes test set                                     |
+| Action               | Description                                                                                  |
+|----------------------|----------------------------------------------------------------------------------------------|
+| Modify Test Set Info | Allows user to change the name                                                               |
+| Duplicate Test Set   | Creates a copy of the test set, see [Duplicate test set](#duplicate-test-set)                |
+| Schedule             | Allows the user to schedule an execution of test set                                         |
+| Execute Now          | Immediate execution of test set                                                              |
+| Delete Test Set      | Deletes test set                                                                             |
 
 The primary content area is divided into two key sections. At the top, a metadata panel displays the Name, Description, and unique Test Set ID. This provides quick, high-level context about the selected set. Below this, a tabbed interface further organizes the information. 
 
@@ -33,8 +34,8 @@ The primary content area is divided into two key sections. At the top, a metadat
 The Definitions tab shown in the previous image lists all the individual test cases included in the test set. For each test case, it displays its name, execution sequence, and whether it is Deactivated.
 This organized table gives the user a clear view of which tests are part of the set and their execution order.
 
-You can also see three buttons: `Schedule`, `Execute Now` and `Edit`. `Schedule` is used for scheduling the test set for a certain time. 
-`Execute Now` executes the testcase immediately. `Edit` button allows you to edit the test set: Adding/removing testcases, changing order of testcases (individually or several at once) etc.
+You can also see four buttons: `Schedule`, `Execute Now`, `Duplicate` and `Edit`. `Schedule` is used for scheduling the test set for a certain time. 
+`Execute Now` executes the testcase immediately. `Duplicate` creates a copy of the test set, see [Duplicate test set](#duplicate-test-set). `Edit` button allows you to edit the test set: Adding/removing testcases, changing order of testcases (individually or several at once) etc.
 
 When in edit mode, the following options are available:
 
@@ -279,6 +280,33 @@ Then you choose add to existing test set and then select the test set to which y
 
 ![Adding test to set](assets/ControlPanelDocu/test_case_add_set.png)
 <figcaption>Dialog for adding test cases to existing set</figcaption>
+
+### Duplicate test set
+You can create a copy of an existing test set, for example to use it as a starting point for a similar test set. There are two ways to do this:
+
+- Click the `Duplicate` button in the [Definitions tab](#definitions-tab) of the open test set. The button is not shown while the test set is in edit mode.
+- Click the three dots next to the test set in the repository tree and select *Duplicate test set* from the [context menu](#context-menu).
+
+![test-set-duplicate-button.png](assets/ControlPanelDocu/test-set-duplicate-button.png)
+<figcaption>Duplicate button in the Definitions tab</figcaption>
+
+The copy is created immediately, without a dialog. When it is created, a confirmation message is shown and the new test set is opened.
+
+The copy is named *Copy of* followed by the name of the original test set, for example *Copy of Regression*. If a test set with this name already exists, a number is added, for example *Copy of Regression (1)*, *Copy of Regression (2)* and so on. The comparison ignores upper and lower case.
+
+![test-set-duplicate-result.png](assets/ControlPanelDocu/test-set-duplicate-result.png)
+<figcaption>Newly created copy of a test set with the confirmation message</figcaption>
+
+The copy contains the following from the original test set:
+
+- The description
+- All test cases in the same order, with the same [sequence of execution](#sequence-of-execution) (steps and parallel steps)
+- The **Deactivated** and [Stop if fail](#stop-execution-on-failure) settings and the selected instance of each test case
+
+The execution history of the original test set, including its scheduled executions and reports, is not copied.
+
+!!!info "Info"
+    The copy is always made from the last saved version of the test set. To rename the copy or change its description, use *Modify test set info* in the [context menu](#context-menu).
 
 
 ## Scheduling and Executing Test Sets
