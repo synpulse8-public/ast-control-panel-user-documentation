@@ -141,11 +141,63 @@ It will also disappear after a certain time of inactivity from the user that is 
 
 #### Trial Run vs Schedule
 The **Trial Run** feature allows users to execute the test case immediately. 
-A window is displayed where you can see the logs of the execution in real-time. 
+A [trial run window](#trial-run-window) is displayed where you can see the logs of the execution in real-time. 
 This is useful for quick validation of the test case logic. No reports are generated for trial runs, and the execution is not recorded in the system.
 
 The **Schedule** feature allows users to schedule the execution of the test case for a later time or date. This execution is recorded in the system, and reports are generated for it.
 It can be visible in the [Executions](executions.md) tab, where you can see all scheduled and executed runs.
+
+#### Trial run window
+When you click **Trial Run**, a logs panel opens at the bottom of the editor. Each trial run is shown in its own window (a tab in this panel) named `Execution: <test case name> (<number>)`. 
+The number increases with every trial run you start, so you can tell runs of the same test case apart.
+
+!!! info
+    An Avaloq instance must be selected in the header dropdown before you can start a trial run. Otherwise a warning is shown and the trial run is not started.
+
+![trial-run-window.png](assets/ControlPanelDocu/trial-run-window.png)
+<figcaption>Trial run logs panel with one window per trial run</figcaption>
+
+The window shows *Waiting for execution to start…* until the first log lines arrive. After that the log is updated in real-time:
+
+- The log automatically scrolls to the newest lines. If you scroll up to read an older part, automatic scrolling stops. Scroll back to the bottom to resume it.
+- When the execution has finished, the notification *Execution completed* is shown.
+- If the trial run cannot be started, the window shows the error message and the notification *Trial run failed.* is shown.
+
+**Window behaviour**
+
+- Every test case has its own window. Running a test case again replaces its previous window, unless that window is [pinned](#pinning-trial-run-windows). Windows of other test cases are not affected.
+- When you switch to another test case in the editor, its most recent trial run window is selected automatically. You can also click any window to select it.
+- The windows stay open when you navigate to another page, for example to [Executions](executions.md), and come back to the Tests page.
+- To close a single window, click the **X** next to its name. To close the whole panel together with all its windows, click **Close** on the right side of the panel.
+
+!!! warning
+    A trial run is stopped automatically when its log is no longer being followed, for example when you close its window, close the whole panel or close the browser tab.
+
+**Panel controls**
+
+| Control         | Description                                                                                     |
+|-----------------|-------------------------------------------------------------------------------------------------|
+| Resize          | Drag the top edge of the panel up or down to change its height                                  |
+| Collapse/Expand | Hides the log content and leaves only the window names visible, or shows the log content again. |
+| Copy            | Copies the log of the selected window to the clipboard.                                         |
+| Close           | Closes the panel and all its windows, including pinned ones.                                    |
+
+##### Pinning trial run windows
+Pin a window when you want to keep its log, for example to compare the results of the current run with a previous run of the same test case.
+
+To pin a window, click the pin icon next to its name. A pinned window has a filled pin icon. Click the icon again to unpin the window. Hover over the icon to see the **Pin** or **Unpin** tooltip.
+
+![trial-run-window-pinned.png](assets/ControlPanelDocu/trial-run-window-pinned.png)
+<figcaption>A pinned trial run window next to the newer run of the same test case</figcaption>
+
+When you run a test case again:
+
+- Its pinned windows stay open.
+- Its unpinned window, if there is one, is replaced by the window of the new run.
+- The new window is placed right after the other windows of the same test case, so all runs of one test case stay next to each other.
+- The new window is selected. When you later switch back to this test case, its most recent run is selected, not the pinned one.
+
+You can pin several windows of the same test case to keep the logs of multiple runs. A pinned window can still be closed with the **X** next to its name. If you unpin a window, it stays open until you run the test case again.
 
 
 

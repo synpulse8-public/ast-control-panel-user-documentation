@@ -13,6 +13,8 @@
 - Administrators can now configure how AST execution statuses are mapped to Xray statuses. [Read more](jira_xray.md#status-mapping)
 - Administrators can now configure which Xray Test Run custom fields are filled with the test steps table and the report link. [Read more](jira_xray.md#custom-fields)
 - Added Xray sync status filters and Xray sync status sorting to the Executions table.
+- - Trial run logs improvements: every test case has its own trial run window, which is replaced when the test case is run again, and its latest window is selected when you switch to the test case.[Read more](test_case_repository.md#trial-run-window)
+- Trial run windows can now be pinned. A pinned window stays open when the same test case is run again, so you can keep and compare the logs of several runs. [Read more](test_case_repository.md#pinning-trial-run-windows)
 
 #### Bug Fixes
 
@@ -25,6 +27,5 @@
 - The Stop if fail setting is now stored for each execution, so later changes to the test set no longer affect existing executions.
 - The status sent to Xray is now taken from the execution result.
 - Trial runs are stopped automatically when their logs are no longer being followed in the editor, for example after closing the browser tab.
-- Trial run logs improvements.
 - The database user ID is no longer shown in the User Management table and edit dialog.
 - Backend and frontend dependency updates.
