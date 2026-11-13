@@ -109,8 +109,9 @@ When **Xray enabled** is set to true, the *Xray* section offers the following pr
 | Token          | Jira Personal Access Token used for the synchronization.                                                                                                                                            |
 | Sync enabled   | Flag to enable or disable sending of execution results to Xray. External Xray IDs can still be maintained when it is set to false.                                                                 |
 | Status mapping | Defines which Xray test run status is sent for each AST execution result (Success, Fail, Error, Cancelled, Skipped, Not evaluated). All values are required and must match an Xray status exactly. |
+| Custom fields  | Defines which AST data (**Test steps table**, **Report link**) is sent to which Xray Test Run custom field. Each row contains an **Xray field ID** and a **Value**; use **Add field** to add a row. Empty by default, so no custom fields are sent. |
 
-For details and default values see [Jira Xray configuration](jira_xray.md#configuration-settings) and [Status mapping](jira_xray.md#status-mapping).
+For details and default values see [Jira Xray configuration](jira_xray.md#configuration-settings), [Status mapping](jira_xray.md#status-mapping) and [Custom fields](jira_xray.md#custom-fields).
 
 The input fields are populated with the default values at the start. Default values are set up in the application database.
 Writing into the input fields and pressing the `Save Changes` button saves currently filled in values.

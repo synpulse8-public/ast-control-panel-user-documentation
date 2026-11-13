@@ -9,6 +9,7 @@
 - Multiple test cases can be selected in the test set definitions (Ctrl/Cmd + click, Shift + click) and moved together with the new *Set step* action. [Read more](test_sets.md#moving-multiple-test-cases-at-once)
 - Multiple selected test cases in the test set definitions can now be moved together with drag and drop. [Read more](test_sets.md#dragging-multiple-test-cases)
 - Administrators can now configure how AST execution statuses are mapped to Xray statuses. [Read more](jira_xray.md#status-mapping)
+- Administrators can now configure which Xray Test Run custom fields are filled with the test steps table and the report link. [Read more](jira_xray.md#custom-fields)
 - Added Xray sync status filters and Xray sync status sorting to the Executions table.
 
 #### Bug Fixes

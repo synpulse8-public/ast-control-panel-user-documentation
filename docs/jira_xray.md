@@ -17,6 +17,7 @@ To enable the integration, an administrator must navigate to **Admin → Configu
 | Token          | Jira Personal Access Token of the technical user that is used for the synchronization. It is sent as a `Bearer` token in the `Authorization` header. The user needs permission to import executions in the target project. | –                                     |
 | Sync enabled   | Flag to enable or disable sending of results to Xray. When set to false, External Xray IDs can still be maintained, but no results are sent and **Resend to Xray** is rejected.                                            | `true`                                |
 | Status mapping | Mapping of AST execution results to Xray test run statuses.                                                                                                                                                                | See [Status mapping](#status-mapping) |
+| Custom fields  | Mapping of AST data (test steps table, report link) to Xray test run custom fields.                                                                                                                                        | `[]` (no custom fields), see [Custom fields](#custom-fields) |
 
 Results are only sent to Xray when both **Xray enabled** and **Sync enabled** are set to true.
 
@@ -38,6 +39,7 @@ All Xray properties can also be preset via environment variables, which is usefu
 | `AST_CONTROL_PANEL_INTEGRATION_XRAY_TOKEN`              | Personal Access Token used for the synchronization. Store it as a secret.        | –                                  |
 | `AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_ENABLED`       | Enables sending of results to Xray.                                              | `true`                             |
 | `AST_CONTROL_PANEL_INTEGRATION_XRAY_STATUS_MAPPING`     | Default status mapping as a JSON object.                                         | See [Status mapping](#status-mapping) |
+| `AST_CONTROL_PANEL_INTEGRATION_XRAY_CUSTOM_FIELDS`      | Default custom fields mapping as a JSON array.                                   | `[]`, see [Custom fields](#custom-fields) |
 | `AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_ENDPOINT`      | Path of the import endpoint, appended to the URL.                                | `/rest/raven/2.0/import/execution` |
 | `AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_ATTEMPTS`      | Maximum number of retries of a failed synchronization.                           | `3`                                |
 | `AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_DURATION`      | Initial waiting time in seconds before the first retry. See [Retries](#retries). | `30`                               |
@@ -66,6 +68,73 @@ When setting the default via the environment variable, use the internal keys:
 env:
   AST_CONTROL_PANEL_INTEGRATION_XRAY_STATUS_MAPPING: '{"test_success":"PASS","test_fail":"FAIL","test_error":"ABORTED","test_cancelled":"ABORTED","test_skipped":"ABORTED","not_evaluated":"TODO"}'
 ~~~
+
+#### Custom fields
+In addition to the status and the comment, AST can fill **Test Run custom fields** in Xray with data from the execution. The custom fields mapping defines which AST data is written into which Xray custom field. It can be edited in **Admin → Configuration** in the *Xray* section in the **Custom fields** property.
+
+By default the mapping is empty (`[]`) and no custom fields are sent to Xray.
+
+The following AST data can be sent:
+
+| Value              | JSON value         | Content sent to Xray                                                                                                                                                                                       |
+|--------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test steps table   | `test_steps_table` | Table of the executed test steps in Jira wiki markup with the columns *Type*, *User*, *Description*, *Operation Type*, *Err.Message*, *Status* and *CreationTime*. Use a multi-line text field in Xray. |
+| Report link        | `report_link`      | Link to the HTML report of the test case. The link is based on the **Web domain** configured in [Administration](admin.md#configuration).                                                                  |
+
+!!! info "Prerequisite"
+    The Test Run custom fields must already exist in your Jira Xray instance. AST does not create them, it only fills them. Ask your Jira administrator for the ID of each field (for example `customfield_10021`) and make sure the field type fits the content, for example a multi-line text field for the test steps table.
+
+##### Configuring the mapping in AST
+1. Go to **Admin → Configuration** and expand the *Xray* section. The section is only available when **Xray enabled** is set to true.
+2. In the **Custom fields** property, click **Add field**. If no custom fields are configured yet, the property shows *No custom fields configured*.
+3. In **Xray field ID**, enter the ID of the Test Run custom field in Xray, for example `customfield_10021`.
+4. In **Value**, select the AST data to send to this field: **Test steps table** or **Report link**.
+5. To send the second value as well, click **Add field** again and fill in the new row.
+6. Press `Save Changes`. The button appears as soon as a value in the section has been changed.
+
+<!-- TODO: add screenshot of Admin → Configuration, expanded Xray section, with two Custom fields rows (Xray field ID + Value), the Add field button and the Save Changes button visible -->
+![xray_custom_fields_settings.png](assets/UserDocumentationM/xray_custom_fields_settings.png)
+<figcaption><strong>Custom fields</strong> editor in the Xray section of the configuration</figcaption>
+
+To remove a field, click the trash icon (**Remove field**) at the end of its row and save. If you remove all rows, no custom fields are sent to Xray.
+
+The following rules apply:
+
+- Both values are optional. To send only the report link, add only one row with **Report link**.
+- Each value can be selected only once. A value that is already used in another row is disabled in the **Value** list, and **Add field** is disabled once both values are used.
+- Each Xray field ID can be used only once and must not be empty. Leading and trailing spaces are removed when saving.
+- The custom fields are sent to Xray in the order of the rows.
+
+The rows are checked while you edit them. As long as a row is incomplete or invalid, a message is shown below the row and `Save Changes` is disabled:
+
+| Message                               | Cause                                                       |
+|---------------------------------------|-------------------------------------------------------------|
+| Enter an Xray field ID.               | The **Xray field ID** of the row is empty.                  |
+| This Xray field ID is already used.   | The same Xray field ID is entered in an earlier row.        |
+| Select a value.                       | No **Value** is selected in the row.                        |
+| This value is already used.           | The same value is selected in an earlier row.               |
+
+A newly added row that is still empty does not show a message, but `Save Changes` stays disabled until the row is filled in or removed.
+
+<!-- TODO: add screenshot of the Custom fields editor showing a validation message below a row and the disabled Save Changes button -->
+![xray_custom_fields_validation.png](assets/UserDocumentationM/xray_custom_fields_validation.png)
+<figcaption>Validation message in the <strong>Custom fields</strong> editor</figcaption>
+
+The mapping is stored as a JSON array, in which `test_steps_table` stands for **Test steps table** and `report_link` for **Report link**. The server validates the mapping again when it is saved. If a stored mapping turns out to be invalid (for example a wrong value set via the environment variable), AST logs a warning and uses the default mapping from the application configuration instead.
+
+##### Resetting to the default
+Once a value has been saved in the user interface, a **Reset to default** button (circular arrow icon) appears next to the **Custom fields** editor. Clicking it removes the saved value, restores the default from the application configuration (`AST_CONTROL_PANEL_INTEGRATION_XRAY_CUSTOM_FIELDS`, by default `[]`) and shows the notification **Custom fields was reset to default.**
+
+The custom fields are only filled when a run log is available for the test case. For example, test cases that were skipped before they started are sent without custom fields.
+
+When setting the default via the environment variable, pass the mapping as a JSON array. Each entry contains the Xray field ID (`id`) and the value (`source`: `test_steps_table` or `report_link`):
+
+~~~yaml
+env:
+  AST_CONTROL_PANEL_INTEGRATION_XRAY_CUSTOM_FIELDS: '[{"id":"customfield_10021","source":"test_steps_table"},{"id":"customfield_10022","source":"report_link"}]'
+~~~
+
+After the synchronization, the values are visible in the custom fields of the test run in Xray.
 
 #### Proxy Settings (Optional)
 If the AST Control Panel can reach your Jira/Xray instance only through an HTTP proxy, configure the proxy using the following environment variables:
@@ -176,6 +245,7 @@ As long as an execution has not started yet, you can change or remove its Jira X
 - The results are sent **automatically after each test case finishes**, not at the end of the whole execution. Each test case creates or updates its own test run in the Xray Test Execution.
 - The Xray test is identified by the test case's External Xray ID. If the test case has no External Xray ID, `testKey` is sent as `null`.
 - The Xray status is determined by the [Status mapping](#status-mapping).
+- The Test Run custom fields are filled according to the [Custom fields](#custom-fields) mapping.
 - Before the results are sent, AST reads the defects already linked to the test run in Xray and sends them along, so re-synchronizing does not remove defect links. If the defects cannot be read, the synchronization continues without them.
 
 #### Retries
@@ -219,7 +289,7 @@ If the synchronization failed, or the results should be sent again (for example 
 2. Select the test cases to be resent, or use **Select all**.
 3. Click **Resend to Xray**.
 
-The button is only available when the Xray integration is enabled and the execution has a Jira Xray Execution ID. The payload is rebuilt from the current data, so changes to the External Xray IDs or the status mapping are taken into account.
+The button is only available when the Xray integration is enabled and the execution has a Jira Xray Execution ID. The payload is rebuilt from the current data, so changes to the External Xray IDs, the status mapping or the custom fields mapping are taken into account.
 
 ![xray_resend.png](assets/UserDocumentationM/xray_resend.png)
 <figcaption><strong>Execution Report</strong> window with selected test cases and the <strong>Resend to Xray</strong> button</figcaption>
@@ -241,11 +311,11 @@ Below is an example of a JSON payload sent to Xray for a single test case:
       "evidences": [],
       "customFields": [
         {
-          "id": "2",
+          "id": "customfield_10021",
           "value": "|| Type || User || Description || Operation Type || Err.Message || Status || CreationTime ||\n"
         },
         {
-          "id": "1",
+          "id": "customfield_10022",
           "value": "127.0.0.1:8080/api/execution/scripts/ast/report/retrieve/by/deeplink/?reportDownloadKey=KN2jJBjKp2v8RLcbBbdWdiSAJpOMQBSFMRWLUdIDxcpuFzBckZ8xD4zPFomD7p4Az39god0GsCDbggUb9TMEVQM7rjm3hDAR8EeC&mimeTypeString=text%2Fhtml"
         }
       ],
@@ -263,7 +333,7 @@ Below is an example of a JSON payload sent to Xray for a single test case:
 | `status`           | The Xray status resolved via the [Status mapping](#status-mapping).                                                                        |
 | `comment`          | Table with the test case and test set IDs, names and links and the execution instance, in Jira wiki markup.                                 |
 | `evidences`        | Always empty.                                                                                                                              |
-| `customFields`     | Field `1` contains the link to the HTML report of the test case. Field `2` contains a table of the executed test steps with their status and error messages. |
+| `customFields`     | The Test Run custom fields defined in the [Custom fields](#custom-fields) mapping. The example uses the environment variable example from that section: `customfield_10021` contains the test steps table and `customfield_10022` the link to the HTML report. Empty if no mapping is configured. |
 | `defects`          | Keys of the defects already linked to the test run in Xray.                                                                                |
 
 The links in the payload are based on the **Web domain** configured in [Administration](admin.md#configuration), followed by the [context path](deployment.md#setting-a-custom-context-path) if one is set.
