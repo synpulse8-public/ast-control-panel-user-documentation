@@ -92,7 +92,6 @@ The following AST data can be sent:
 5. To send the second value as well, click **Add field** again and fill in the new row.
 6. Press `Save Changes`. The button appears as soon as a value in the section has been changed.
 
-<!-- TODO: add screenshot of Admin → Configuration, expanded Xray section, with two Custom fields rows (Xray field ID + Value), the Add field button and the Save Changes button visible -->
 ![xray_custom_fields_settings.png](assets/UserDocumentationM/xray_custom_fields_settings.png)
 <figcaption><strong>Custom fields</strong> editor in the Xray section of the configuration</figcaption>
 
@@ -116,7 +115,6 @@ The rows are checked while you edit them. As long as a row is incomplete or inva
 
 A newly added row that is still empty does not show a message, but `Save Changes` stays disabled until the row is filled in or removed.
 
-<!-- TODO: add screenshot of the Custom fields editor showing a validation message below a row and the disabled Save Changes button -->
 ![xray_custom_fields_validation.png](assets/UserDocumentationM/xray_custom_fields_validation.png)
 <figcaption>Validation message in the <strong>Custom fields</strong> editor</figcaption>
 

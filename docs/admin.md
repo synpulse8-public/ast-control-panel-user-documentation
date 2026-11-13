@@ -96,7 +96,6 @@ It is located between the configuration files and the application configuration 
 
 Click the **Manage external IDs** button to open the dialog. The dialog can also be opened via the **Manage external IDs (bulk)** quick action on the [Landing page](navigation.md#landing-page), which navigates to this tab and opens the dialog directly.
 
-<!-- TODO: add screenshot of Admin → Configuration showing the Manage external IDs section (header, description text and the Manage external IDs button) between the configuration files and the application configuration section -->
 ![admin_manage_external_ids.png](assets/AdminDocu/admin_manage_external_ids.png)
 <figcaption>Manage external IDs section in the Configuration tab</figcaption>
 
