@@ -62,6 +62,30 @@ Test data can also be uploaded in this section. You can also download the data f
 
 To learn more about test data, please read **[Test script and test data design](test_script_and_test_data.md)**.
 
+#### Test set membership
+The **Test Sets** section in the right panel shows all [test sets](test_sets.md) that contain the opened test case. This lets you see where a test case is used, for example before you change or delete it.
+
+The section is shown only for test cases, not for methods.
+
+The test sets are listed alphabetically by name. Each name is a link: click it to open the test set in the [Test Sets](test_sets.md) screen. If a name is too long to fit, it is shortened, and you can hover over it to see the full name.
+
+If the test case is deactivated in a test set (the **Deactivated** checkbox in the [Definitions tab](test_sets.md#definitions-tab)), a **Suspended** label is shown next to the name of that test set. A deactivated test case is still part of the test set, but it is not executed.
+
+![test-case-test-sets.png](assets/ControlPanelDocu/test-case-test-sets.png)
+<figcaption>Test Sets section in the right panel listing the test sets that contain the test case</figcaption>
+
+The following messages can be shown instead of the list:
+
+| Message                        | Meaning                                                                                       |
+|--------------------------------|-----------------------------------------------------------------------------------------------|
+| Not part of any test set       | No test set contains the test case. This is also shown for a new test case that is not saved yet. |
+| Test sets could not be loaded  | The list could not be loaded. Reopen the test case to try again.                              |
+
+!!! info
+    Up to five test sets are visible at once. If the test case is part of more test sets, scroll inside the section to see the rest.
+
+The list is updated automatically when a test set is created, changed or deleted, for example when you add the test case to a test set via [Create New Test Set or Add to Existing Test Set](#test-case-context-menu).
+
 
 
 ### Execution Reporting
