@@ -75,6 +75,7 @@ In certain filters you can also select multiple values. For example, you can sel
 ### Execution details
 
 Clicking a table row of a Running or Finished execution will show the same functionality as shown in the Test set [reports tab](test_sets.md#reports-tab).
+From this report you can also [schedule selected test cases again](test_sets.md#scheduling-test-cases-again-from-the-report) on the Avaloq instance the execution ran on.
 
 When clicking a table row of a Scheduled execution a dialog will be shown that gives you the option to modify or cancel the scheduled execution.
 

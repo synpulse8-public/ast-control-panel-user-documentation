@@ -232,7 +232,7 @@ A separate detail window, accessed by clicking the desired row, provides a focus
 
 Granular execution report detail. This modal window displays the results breakdown and provides links to retrieve various report formats for in-depth analysis. For more details on the report formats, see the [Reports](reports.md) section.
 
-The window lists the individual Test Cases included in the run. For each case, the Step number, the Stop if fail setting, the Status, Start time, and End time of its execution are listed. The **Step** column shows the position of the test case in the execution sequence; test cases executed in parallel share the same step number. The **Stop if fail** column shows a check mark if [Stop if fail](#stop-execution-on-failure) was enabled for the test case when the execution was scheduled, and a dash otherwise. The Reports dropdown offers access to the execution data for that specific test case in the following formats: HTML, Log, XML, and Excel. This allows for granular review and data integration. The bottom of the window provides controls to Schedule the test run again or Close the report window.
+The window lists the individual Test Cases included in the run. For each case, the Step number, the Stop if fail setting, the Status, Start time, and End time of its execution are listed. The **Step** column shows the position of the test case in the execution sequence; test cases executed in parallel share the same step number. The **Stop if fail** column shows a check mark if [Stop if fail](#stop-execution-on-failure) was enabled for the test case when the execution was scheduled, and a dash otherwise. The Reports dropdown offers access to the execution data for that specific test case in the following formats: HTML, Log, XML, and Excel. This allows for granular review and data integration. The bottom of the window provides controls to [Schedule the test run again](#scheduling-test-cases-again-from-the-report) or Close the report window.
 
 #### Sorting the execution report table
 
@@ -245,6 +245,23 @@ The execution report table can be sorted by clicking a column header. The follow
 - **Xray Sync Status** and **ALM Sync Status**: sorted alphabetically by the displayed sync status. These columns are only shown when Xray or ALM synchronization is used for the run.
 
 The first click sorts the column in ascending order and the second click in descending order. Only one column can be sorted at a time. Rows without a value in the sorted column (for example, test cases that have not started yet) are always shown at the bottom. Sorting works together with the status filter badges and resets when you open a different execution.
+
+#### Scheduling test cases again from the report
+
+You can schedule test cases from an execution report again, for example to repeat the test cases that failed:
+
+1. Open the execution report by clicking the execution in the Reports tab or in the [Executions](executions.md#execution-details) tab.
+2. Select one or more test cases in the report table. The `Schedule` button is enabled only when at least one test case is selected.
+3. Click `Schedule`. The *Schedule execution* dialog opens with the selected test cases.
+
+The dialog is prefilled with values from the execution you opened:
+
+- **Execution name**: the name of the execution.
+- **Avaloq instance**: the instance the execution ran on, even if a different instance is selected in the header. This way the test cases are run again on the same instance by default.
+
+If the instance of the execution is no longer available, the instance selected in the header is used instead. If that instance is not available either, the first available instance is used.
+
+You can change any of the prefilled values before you schedule the execution. When you schedule from the Tests or Test Sets screens, the instance selected in the header is still used as the default.
 
 
 ## Test set creation and alterations

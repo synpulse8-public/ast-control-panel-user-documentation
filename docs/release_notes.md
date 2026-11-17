@@ -14,6 +14,7 @@
 - Administrators can now configure how AST execution statuses are mapped to Xray statuses. [Read more](jira_xray.md#status-mapping)
 - Administrators can now configure which Xray Test Run custom fields are filled with the test steps table and the report link. [Read more](jira_xray.md#custom-fields)
 - Added Xray sync status filters and Xray sync status sorting to the Executions table.
+- When you schedule test cases again from an execution report, the *Schedule execution* dialog now preselects the Avaloq instance the execution ran on instead of the instance selected in the header. [Read more](test_sets.md#scheduling-test-cases-again-from-the-report)
 - Trial run logs improvements: every test case has its own trial run window, which is replaced when the test case is run again, and its latest window is selected when you switch to the test case. [Read more](test_case_repository.md#trial-run-window)
 - Trial run windows can now be pinned. A pinned window stays open when the same test case is run again, so you can keep and compare the logs of several runs. [Read more](test_case_repository.md#pinning-trial-run-windows)
 

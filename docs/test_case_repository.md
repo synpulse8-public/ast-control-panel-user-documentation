@@ -120,7 +120,7 @@ Each square shows the result of the run with a color and an icon:
 !!! info
     Only runs with the result **Success** count as passed in the *X of Y passed* summary. Skipped and cancelled runs count towards the total but not as passed.
 
-**Run history dialog**
+##### Run history dialog
 To see all finished runs of the test case, click **View history** below the strip. The **Run history: &lt;test case name&gt;** dialog opens.
 
 ![run-history-dialog.png](assets/ControlPanelDocu/run-history-dialog.png)
@@ -149,19 +149,19 @@ The following messages can be shown instead of the table:
 | This test case has no finished runs yet. | The test case has not been executed yet, or no run has finished.  |
 | The run history could not be loaded.     | The runs could not be loaded. Close the dialog and open it again. |
 
-**Comparing results across versions**
+##### Comparing results across versions
 The **Executed version** column together with the **New version** label helps you find out whether a change to the test case affected its results. For example, if the runs before a **New version** label were successful and the runs after it failed, the change in that version is a likely cause. Use the [test case history](#test-case-history) to open and compare the versions.
 
 
 ![run-history-new-version.png](assets/ControlPanelDocu/run-history-new-version.png)
 <figcaption>Results changed with the first run of a new version</figcaption>
 
-**Xray sync status**
+##### Xray sync status
 When the Jira Xray integration is enabled, the **Xray Sync Status** column shows whether the result of the run was sent to Xray. An icon shows the status of the latest synchronization; hover over it to see the status as text (for example *Success*, *Failed*, *Error* or *Pending*). Next to the icon you can see the date and time of the latest synchronization. If the run was never sent to Xray, *Not synced* is shown.
 
 To learn more about the synchronization with Xray, please read **[Jira Xray](jira_xray.md)**.
 
-**Downloading reports**
+##### Downloading reports
 To download a report of an earlier run, click **Reports** in the row of that run and select the format:
 
 - **HTML**
