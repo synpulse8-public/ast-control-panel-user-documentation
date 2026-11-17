@@ -37,7 +37,7 @@ When a test case is opened, the main content area of the control panel populates
 In the right panel you can see its version information like creation date, who created this version and the version number. 
 When the newest available version is shown, the version is labeled as 'latest' and the version number is not shown.
 
-You can also see the last run status of this testcase. 
+You can also see the last run status of this testcase and the results of its most recent runs, see [Run history](#run-history). 
 
 In this section you can also modify the name of the test case and its description.
 
@@ -85,6 +85,94 @@ The following messages can be shown instead of the list:
     Up to five test sets are visible at once. If the test case is part of more test sets, scroll inside the section to see the rest.
 
 The list is updated automatically when a test set is created, changed or deleted, for example when you add the test case to a test set via [Create New Test Set or Add to Existing Test Set](#test-case-context-menu).
+
+#### Run history
+The **Last run** section at the bottom of the right panel shows how the opened test case performed in its most recent runs. From there you can open the full run history of the test case and download the reports of any earlier run.
+
+The section is shown only for test cases, not for methods. It appears after the test case has at least one finished run.
+
+!!! info
+    Only finished [scheduled](#trial-run-vs-schedule) runs are part of the run history, regardless of their result (success, failure, error or cancellation). Runs that are still waiting or in progress are not shown until they finish. [Trial runs](#trial-run-window) are not recorded and therefore never appear in the run history.
+
+![run-history-last-runs.png](assets/ControlPanelDocu/run-history-last-runs.png)
+<figcaption>Last run section with the strip of the last 10 runs</figcaption>
+
+The **Last run** card consists of two parts:
+
+1. **Last run**: the status, date and duration of the most recent run. Click it to open the [execution report](#execution-reporting) of that run.
+2. **Last 10 runs**: a strip of up to ten squares, one for each of the latest finished runs. The oldest run is on the left and the newest run is on the right, like a timeline. Above the strip, the summary *X of Y passed* shows how many of the displayed runs were successful.
+
+If the test case has fewer than ten finished runs, the missing squares are shown as empty dashed boxes on the left, so the newest run is always at the right end of the strip.
+
+Hover over a square to see the result and the date and time when the run finished, for example *Success, 12.11.2026 14:32*.
+
+Each square shows the result of the run with a color and an icon:
+
+| Result    | Color  | Icon           |
+|-----------|--------|----------------|
+| Success   | Green  | Check mark     |
+| Failed    | Red    | Cross          |
+| Error     | Orange | Warning sign   |
+| Skipped   | Blue   | Skip forward   |
+| Cancelled | Purple | Prohibited     |
+| Unknown   | Grey   | Dash           |
+
+!!! info
+    Only runs with the result **Success** count as passed in the *X of Y passed* summary. Skipped and cancelled runs count towards the total but not as passed.
+
+**Run history dialog**
+To see all finished runs of the test case, click **View history** below the strip. The **Run history: &lt;test case name&gt;** dialog opens.
+
+![run-history-dialog.png](assets/ControlPanelDocu/run-history-dialog.png)
+<figcaption>Run history dialog with all finished runs of the test case</figcaption>
+
+The runs are listed from the newest to the oldest, based on the time they finished. The table contains the following columns:
+
+| Column           | Description                                                                                                                                                                                                 |
+|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Executed version | The [version](#test-case-history) of the test case that was executed. The label **New version** marks the first run of that version, so you can see where a change to the test case started to be executed. |
+| Started          | Date and time when the run started.                                                                                                                                                                         |
+| Finished         | Date and time when the run finished.                                                                                                                                                                        |
+| Result           | Result of the run: Success, Failed, Error, Skipped or Cancelled.                                                                                                                                            |
+| Instance         | The Avaloq instance the run was executed on.                                                                                                                                                                |
+| Xray Sync Status | Shown only when the [Jira Xray](jira_xray.md) integration is enabled. See [Xray sync status](#xray-sync-status) below.                                                                                      |
+| Reports          | Opens a menu to download the reports of the run, see [Downloading reports](#downloading-reports) below.                                                                                                     |
+
+A dash (**-**) is shown when a value is not available, for example when no result was recorded for a run.
+
+The table shows ten runs per page. If the test case has more than ten finished runs, use the pagination below the table to move between pages. The text *Page X of Y* next to it shows the current page. When you close and reopen the dialog, it starts again on the first page with the newest runs.
+
+The following messages can be shown instead of the table:
+
+| Message                                  | Meaning                                                           |
+|------------------------------------------|-------------------------------------------------------------------|
+| This test case has no finished runs yet. | The test case has not been executed yet, or no run has finished.  |
+| The run history could not be loaded.     | The runs could not be loaded. Close the dialog and open it again. |
+
+**Comparing results across versions**
+The **Executed version** column together with the **New version** label helps you find out whether a change to the test case affected its results. For example, if the runs before a **New version** label were successful and the runs after it failed, the change in that version is a likely cause. Use the [test case history](#test-case-history) to open and compare the versions.
+
+
+![run-history-new-version.png](assets/ControlPanelDocu/run-history-new-version.png)
+<figcaption>Results changed with the first run of a new version</figcaption>
+
+**Xray sync status**
+When the Jira Xray integration is enabled, the **Xray Sync Status** column shows whether the result of the run was sent to Xray. An icon shows the status of the latest synchronization; hover over it to see the status as text (for example *Success*, *Failed*, *Error* or *Pending*). Next to the icon you can see the date and time of the latest synchronization. If the run was never sent to Xray, *Not synced* is shown.
+
+To learn more about the synchronization with Xray, please read **[Jira Xray](jira_xray.md)**.
+
+**Downloading reports**
+To download a report of an earlier run, click **Reports** in the row of that run and select the format:
+
+- **HTML**
+- **Log**
+- **XML**
+- **Excel**
+
+Only the formats that were generated for the run are listed. If no report is available for a run, a dash is shown instead of the **Reports** button.
+
+![run-history-reports.png](assets/ControlPanelDocu/run-history-reports.png)
+<figcaption>Downloading a report of an earlier run</figcaption>
 
 
 

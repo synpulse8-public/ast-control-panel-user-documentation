@@ -10,6 +10,7 @@
 - Multiple selected test cases in the test set definitions can now be moved together with drag and drop. [Read more](test_sets.md#dragging-multiple-test-cases)
 - Test sets can now be duplicated with the new *Duplicate* button in the Definitions tab or the *Duplicate test set* context menu action. [Read more](test_sets.md#duplicate-test-set)
 - The test case details panel now shows the test sets that contain the test case, with links to open them and a *Suspended* label where the test case is deactivated. [Read more](test_case_repository.md#test-set-membership)
+- The test case details panel now shows the results of the last 10 runs. With *View history* you can open the full run history of the test case, see which version was executed in each run and download the reports of earlier runs. [Read more](test_case_repository.md#run-history)
 - Administrators can now configure how AST execution statuses are mapped to Xray statuses. [Read more](jira_xray.md#status-mapping)
 - Administrators can now configure which Xray Test Run custom fields are filled with the test steps table and the report link. [Read more](jira_xray.md#custom-fields)
 - Added Xray sync status filters and Xray sync status sorting to the Executions table.
