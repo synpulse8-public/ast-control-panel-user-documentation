@@ -1,0 +1,2056 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../alm/">
+      
+      
+        <link rel="next" href="../keycloak/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/global/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>Jira Xray - Control Panel Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../styles/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuration-settings" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Control Panel Guide" class="md-header__button md-logo" aria-label="Control Panel Guide" data-md-component="logo">
+      
+  <img src="../assets/global/s8AST.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Control Panel Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Jira Xray
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Control Panel Guide" class="md-nav__button md-logo" aria-label="Control Panel Guide" data-md-component="logo">
+      
+  <img src="../assets/global/s8AST.png" alt="logo">
+
+    </a>
+    Control Panel Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_guide_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Login
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../navigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Landing page and Navigation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test_case_repository/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test case repository
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test script definition
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Test script definition
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test_script_and_test_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test script and test data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration_of_script_languages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration of script languages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../input_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../query_operation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Query operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verify_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verify operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../control_statements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control statements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test_sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test sets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../executions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Executions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary_of_terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frequently used terms and metatypes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Integration guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration_overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration_files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security-info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system_requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HP ALM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jira Xray
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jira Xray
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assigning-external-xray-ids-to-test-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assigning External Xray IDs to Test Cases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling-and-xray-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scheduling and Xray Synchronization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-reports-and-sync-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewing Reports and Sync Logs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON payload
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keycloak/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keycloak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../best_practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assigning-external-xray-ids-to-test-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assigning External Xray IDs to Test Cases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduling-and-xray-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scheduling and Xray Synchronization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-reports-and-sync-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewing Reports and Sync Logs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON payload
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="jira-xray">Jira Xray</h1>
+<p>This chapter explains how to set up the <strong>AST Control Panel</strong> to integrate with <strong>Jira</strong> using the <strong>Xray</strong> test management app. This integration allows you to link your automated test cases to Xray tests, send execution results to an Xray Test Execution, and view the synchronization status and logs directly from AST.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The integration uses the Xray REST API v2 (<code>/rest/raven/2.0/...</code>) of <strong>Xray for Jira Server / Data Center</strong>. Xray Cloud uses a different API and authentication and is not supported by the default configuration.</p>
+</div>
+<h3 id="configuration-settings">Configuration Settings</h3>
+<p>To enable the integration, an administrator must navigate to <strong>Admin → Configuration</strong> in the <strong>AST Control Panel</strong>:</p>
+<ol>
+<li><strong>Enable Integration</strong>: In the <em>General</em> section set <strong>Xray enabled</strong> (<code>ast-control-panel.integration.xray.enabled</code>) to <strong>true</strong>. The <em>Xray</em> section with the remaining properties becomes available.</li>
+<li><strong>Enter Connection Details</strong>: In the <em>Xray</em> section fill in the following properties and press <code>Save Changes</code>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Url</td>
+<td>Base URL of your Jira instance, for example <code>https://jira.yourcompany.com</code>. The sync endpoint is appended to this URL.</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Token</td>
+<td>Jira Personal Access Token of the technical user that is used for the synchronization. It is sent as a <code>Bearer</code> token in the <code>Authorization</code> header. The user needs permission to import executions in the target project.</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Sync enabled</td>
+<td>Flag to enable or disable sending of results to Xray. When set to false, External Xray IDs can still be maintained, but no results are sent and <strong>Resend to Xray</strong> is rejected.</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>Status mapping</td>
+<td>Mapping of AST execution results to Xray test run statuses.</td>
+<td>See <a href="#status-mapping">Status mapping</a></td>
+</tr>
+<tr>
+<td>Custom fields</td>
+<td>Mapping of AST data (test steps table, report link) to Xray test run custom fields.</td>
+<td><code>[]</code> (no custom fields), see <a href="#custom-fields">Custom fields</a></td>
+</tr>
+</tbody>
+</table>
+<p>Results are only sent to Xray when both <strong>Xray enabled</strong> and <strong>Sync enabled</strong> are set to true.</p>
+<p><img alt="xray_enabling.png" src="../assets/UserDocumentationM/xray_enabling-1.png" /></p>
+<figcaption>Configuration to enable Xray integration</figcaption>
+
+<p><img alt="xray_settings.png" src="../assets/UserDocumentationM/xray_settings-1.png" /></p>
+<figcaption>Xray connection settings in AST Control Panel</figcaption>
+
+<p>Values saved in the user interface are stored in the database and override the values from the application configuration (environment variables or the Helm <code>Values.yaml</code>). Removing a saved value restores the value from the configuration. For more details see <a href="../admin/#configuration">Administration</a>.</p>
+<h4 id="setting-the-defaults-via-environment-variables-optional">Setting the defaults via environment variables (Optional)</h4>
+<p>All Xray properties can also be preset via environment variables, which is useful for automated deployments:</p>
+<table>
+<thead>
+<tr>
+<th>Environment variable</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_ENABLED</code></td>
+<td>Enables the Xray integration.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_URL</code></td>
+<td>Base URL of the Jira instance.</td>
+<td>–</td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_TOKEN</code></td>
+<td>Personal Access Token used for the synchronization. Store it as a secret.</td>
+<td>–</td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_ENABLED</code></td>
+<td>Enables sending of results to Xray.</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_STATUS_MAPPING</code></td>
+<td>Default status mapping as a JSON object.</td>
+<td>See <a href="#status-mapping">Status mapping</a></td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_CUSTOM_FIELDS</code></td>
+<td>Default custom fields mapping as a JSON array.</td>
+<td><code>[]</code>, see <a href="#custom-fields">Custom fields</a></td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_ENDPOINT</code></td>
+<td>Path of the import endpoint, appended to the URL.</td>
+<td><code>/rest/raven/2.0/import/execution</code></td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_ATTEMPTS</code></td>
+<td>Maximum number of retries of a failed synchronization.</td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_DURATION</code></td>
+<td>Initial waiting time in seconds before the first retry. See <a href="#retries">Retries</a>.</td>
+<td><code>30</code></td>
+</tr>
+</tbody>
+</table>
+<p>For instructions on how to set environment variables please refer to the <a href="../deployment/#setting-up-environment-variables">Setting environment variables</a> documentation.</p>
+<h4 id="status-mapping">Status mapping</h4>
+<p>The status mapping defines which Xray test run status is sent for each AST execution result. It can be edited in <strong>Admin → Configuration</strong> in the <em>Xray</em> section. Each AST status has its own input field:</p>
+<table>
+<thead>
+<tr>
+<th>AST status</th>
+<th>Default Xray status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Success</td>
+<td><code>PASS</code></td>
+</tr>
+<tr>
+<td>Fail</td>
+<td><code>FAIL</code></td>
+</tr>
+<tr>
+<td>Error</td>
+<td><code>ABORTED</code></td>
+</tr>
+<tr>
+<td>Cancelled</td>
+<td><code>ABORTED</code></td>
+</tr>
+<tr>
+<td>Skipped</td>
+<td><code>ABORTED</code></td>
+</tr>
+<tr>
+<td>Not evaluated</td>
+<td><code>TODO</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>All six values are required and every value must match an existing Xray test run status <strong>exactly</strong> (including custom statuses defined in your Xray instance). The changes cannot be saved while a field is empty. If a stored mapping turns out to be invalid, AST logs a warning and uses the default mapping instead.</p>
+</div>
+<p>When setting the default via the environment variable, use the internal keys:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">env</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">AST_CONTROL_PANEL_INTEGRATION_XRAY_STATUS_MAPPING</span><span class="p">:</span><span class="w"> </span><span class="s">'{"test_success":"PASS","test_fail":"FAIL","test_error":"ABORTED","test_cancelled":"ABORTED","test_skipped":"ABORTED","not_evaluated":"TODO"}'</span>
+</code></pre></div>
+<h4 id="custom-fields">Custom fields</h4>
+<p>In addition to the status and the comment, AST can fill <strong>Test Run custom fields</strong> in Xray with data from the execution. The custom fields mapping defines which AST data is written into which Xray custom field. It can be edited in <strong>Admin → Configuration</strong> in the <em>Xray</em> section in the <strong>Custom fields</strong> property.</p>
+<p>By default the mapping is empty (<code>[]</code>) and no custom fields are sent to Xray.</p>
+<p>The following AST data can be sent:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>JSON value</th>
+<th>Content sent to Xray</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test steps table</td>
+<td><code>test_steps_table</code></td>
+<td>Table of the executed test steps in Jira wiki markup with the columns <em>Type</em>, <em>User</em>, <em>Description</em>, <em>Operation Type</em>, <em>Err.Message</em>, <em>Status</em> and <em>CreationTime</em>. Use a multi-line text field in Xray.</td>
+</tr>
+<tr>
+<td>Report link</td>
+<td><code>report_link</code></td>
+<td>Link to the HTML report of the test case. The link is based on the <strong>Web domain</strong> configured in <a href="../admin/#configuration">Administration</a>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Prerequisite</p>
+<p>The Test Run custom fields must already exist in your Jira Xray instance. AST does not create them, it only fills them. Ask your Jira administrator for the ID of each field (for example <code>customfield_10021</code>) and make sure the field type fits the content, for example a multi-line text field for the test steps table.</p>
+</div>
+<h5 id="configuring-the-mapping-in-ast">Configuring the mapping in AST</h5>
+<ol>
+<li>Go to <strong>Admin → Configuration</strong> and expand the <em>Xray</em> section. The section is only available when <strong>Xray enabled</strong> is set to true.</li>
+<li>In the <strong>Custom fields</strong> property, click <strong>Add field</strong>. If no custom fields are configured yet, the property shows <em>No custom fields configured</em>.</li>
+<li>In <strong>Xray field ID</strong>, enter the ID of the Test Run custom field in Xray, for example <code>customfield_10021</code>.</li>
+<li>In <strong>Value</strong>, select the AST data to send to this field: <strong>Test steps table</strong> or <strong>Report link</strong>.</li>
+<li>To send the second value as well, click <strong>Add field</strong> again and fill in the new row.</li>
+<li>Press <code>Save Changes</code>. The button appears as soon as a value in the section has been changed.</li>
+</ol>
+<p><img alt="xray_custom_fields_settings.png" src="../assets/UserDocumentationM/xray_custom_fields_settings.png" /></p>
+<figcaption><strong>Custom fields</strong> editor in the Xray section of the configuration</figcaption>
+
+<p>To remove a field, click the trash icon (<strong>Remove field</strong>) at the end of its row and save. If you remove all rows, no custom fields are sent to Xray.</p>
+<p>The following rules apply:</p>
+<ul>
+<li>Both values are optional. To send only the report link, add only one row with <strong>Report link</strong>.</li>
+<li>Each value can be selected only once. A value that is already used in another row is disabled in the <strong>Value</strong> list, and <strong>Add field</strong> is disabled once both values are used.</li>
+<li>Each Xray field ID can be used only once and must not be empty. Leading and trailing spaces are removed when saving.</li>
+<li>The custom fields are sent to Xray in the order of the rows.</li>
+</ul>
+<p>The rows are checked while you edit them. As long as a row is incomplete or invalid, a message is shown below the row and <code>Save Changes</code> is disabled:</p>
+<table>
+<thead>
+<tr>
+<th>Message</th>
+<th>Cause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enter an Xray field ID.</td>
+<td>The <strong>Xray field ID</strong> of the row is empty.</td>
+</tr>
+<tr>
+<td>This Xray field ID is already used.</td>
+<td>The same Xray field ID is entered in an earlier row.</td>
+</tr>
+<tr>
+<td>Select a value.</td>
+<td>No <strong>Value</strong> is selected in the row.</td>
+</tr>
+<tr>
+<td>This value is already used.</td>
+<td>The same value is selected in an earlier row.</td>
+</tr>
+</tbody>
+</table>
+<p>A newly added row that is still empty does not show a message, but <code>Save Changes</code> stays disabled until the row is filled in or removed.</p>
+<p><img alt="xray_custom_fields_validation.png" src="../assets/UserDocumentationM/xray_custom_fields_validation.png" /></p>
+<figcaption>Validation message in the <strong>Custom fields</strong> editor</figcaption>
+
+<p>The mapping is stored as a JSON array, in which <code>test_steps_table</code> stands for <strong>Test steps table</strong> and <code>report_link</code> for <strong>Report link</strong>. The server validates the mapping again when it is saved. If a stored mapping turns out to be invalid (for example a wrong value set via the environment variable), AST logs a warning and uses the default mapping from the application configuration instead.</p>
+<h5 id="resetting-to-the-default">Resetting to the default</h5>
+<p>Once a value has been saved in the user interface, a <strong>Reset to default</strong> button (circular arrow icon) appears next to the <strong>Custom fields</strong> editor. Clicking it removes the saved value, restores the default from the application configuration (<code>AST_CONTROL_PANEL_INTEGRATION_XRAY_CUSTOM_FIELDS</code>, by default <code>[]</code>) and shows the notification <strong>Custom fields was reset to default.</strong></p>
+<p>The custom fields are only filled when a run log is available for the test case. For example, test cases that were skipped before they started are sent without custom fields.</p>
+<p>When setting the default via the environment variable, pass the mapping as a JSON array. Each entry contains the Xray field ID (<code>id</code>) and the value (<code>source</code>: <code>test_steps_table</code> or <code>report_link</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">env</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">AST_CONTROL_PANEL_INTEGRATION_XRAY_CUSTOM_FIELDS</span><span class="p">:</span><span class="w"> </span><span class="s">'[{"id":"customfield_10021","source":"test_steps_table"},{"id":"customfield_10022","source":"report_link"}]'</span>
+</code></pre></div>
+<p>After the synchronization, the values are visible in the custom fields of the test run in Xray.</p>
+<h4 id="proxy-settings-optional">Proxy Settings (Optional)</h4>
+<p>If the AST Control Panel can reach your Jira/Xray instance only through an HTTP proxy, configure the proxy using the following environment variables:</p>
+<table>
+<thead>
+<tr>
+<th>Environment variable</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_HOST</code></td>
+<td>Hostname of the proxy server. If empty, no proxy is used.</td>
+<td>–</td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_PORT</code></td>
+<td>Port of the proxy server.</td>
+<td><code>8080</code></td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_USERNAME</code></td>
+<td>Username, if the proxy requires authentication. Optional.</td>
+<td>–</td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_PASSWORD</code></td>
+<td>Password, if the proxy requires authentication. Optional.</td>
+<td>–</td>
+</tr>
+<tr>
+<td><code>AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_NON_PROXY_HOSTS</code></td>
+<td>Hosts that are accessed directly, bypassing the proxy. Use Java regular expressions. Optional.</td>
+<td>–</td>
+</tr>
+</tbody>
+</table>
+<p>Example configuration in the <code>Values.yaml</code> file of the helm chart:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">env</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_HOST</span><span class="p">:</span><span class="w"> </span><span class="s">"proxy.yourcompany.com"</span>
+<span class="w">  </span><span class="nt">AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_PORT</span><span class="p">:</span><span class="w"> </span><span class="s">"8080"</span>
+<span class="w">  </span><span class="nt">AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_USERNAME</span><span class="p">:</span><span class="w"> </span><span class="s">"proxy_user"</span>
+<span class="w">  </span><span class="nt">AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_NON_PROXY_HOSTS</span><span class="p">:</span><span class="w"> </span><span class="s">'localhost|127\.0\.0\.1|.*\.mycorp\.local|jira\.internal\.com'</span>
+
+<span class="nt">envSecrets</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">AST_CONTROL_PANEL_INTEGRATION_XRAY_PROXY_PASSWORD</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ast-control-panel-xray-proxy-secret</span>
+<span class="w">    </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+</code></pre></div>
+<p>It is recommended to store the proxy password in a Kubernetes secret and reference it via <code>envSecrets</code>, as shown above. For more details, see <a href="../deployment/#setting-up-environment-variables">Setting environment variables</a>.</p>
+<h4 id="ssl-certificates">SSL certificates</h4>
+<p>If your Jira instance uses a certificate signed by an internal or self-signed certificate authority, the synchronization fails with an SSL error. Import the certificate into the truststore of the application as described in <a href="../deployment/#setting-up-a-truststore-for-ssl">Setting up a truststore for SSL</a>. See also the <a href="../faq/">FAQ</a>.</p>
+<h3 id="assigning-external-xray-ids-to-test-cases">Assigning External Xray IDs to Test Cases</h3>
+<p>You must link your AST test cases to their corresponding Xray <strong>Test</strong> issues in Jira by assigning an <strong>External Xray ID</strong> (the Jira issue key of the Xray test, for example <code>PROJ-1042</code>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>An External Xray ID can be assigned to only <strong>one</strong> test case. Saving an ID that is already used by another test case fails with the message <code>External XRay Id "&lt;ID&gt;" already exists!</code>.</p>
+</div>
+<p>The External Xray ID fields are only visible when the Xray integration is enabled.</p>
+<h4 id="when-creating-a-test-case">When creating a test case</h4>
+<p>The <strong>Create new test case</strong> dialog contains an optional <strong>External Xray ID</strong> field.</p>
+<p><img alt="xray_create_testcase.png" src="../assets/UserDocumentationM/xray_create_testcase.png" /></p>
+<figcaption><strong>Create new test case</strong> dialog with the <strong>External Xray ID</strong> field</figcaption>
+
+<h4 id="individual-assignment">Individual Assignment</h4>
+<ol>
+<li>Go to the Test tab and select a test case to open its details shown in the <a href="../test_case_repository/#version-information-and-details-panel">details panel</a>.</li>
+<li>Click the <strong>Xray</strong> field, enter or change the External Xray ID and confirm. Leave the field empty to remove the link.</li>
+</ol>
+<p><img alt="xray_testid.png" src="../assets/UserDocumentationM/xray_testid.png" /></p>
+<figcaption>Test case detail with External Xray ID field</figcaption>
+
+<h4 id="bulk-assignment-csv-upload">Bulk Assignment (CSV Upload)</h4>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The bulk upload is available to administrators only, because an upload can overwrite the External Xray IDs of any test case.</p>
+</div>
+<ol>
+<li>Go to <strong>Admin</strong> → <strong>Configuration</strong> and click <strong>Manage external IDs</strong> in the <a href="../admin/#manage-external-ids">Manage external IDs</a> section. The dialog can also be opened via the <strong>Manage external IDs (bulk)</strong> quick action on the <a href="../navigation/#landing-page">Landing page</a>.</li>
+<li>If both Xray and ALM are enabled, choose <strong>External Xray ID</strong> in <strong>External ID to update</strong>.</li>
+<li>Choose the <strong>CSV delimiter</strong> used in your file: comma (<code>,</code>) or semicolon (<code>;</code>).</li>
+<li>Drop or select the CSV file (maximum 100 MB). The file is validated immediately and the results are listed in <strong>Messages</strong>.</li>
+<li>Press <strong>Upload</strong>.</li>
+</ol>
+<p><img alt="xray_csv.png" src="../assets/UserDocumentationM/external_ids_dialog.png" /></p>
+<figcaption>Dialog for managing bulk external IDs upload</figcaption>
+
+<p>The CSV file must contain a header row with the columns <code>AST Test Case ID</code> and <code>External Xray ID</code>. Additional columns (for example <code>Test Case Name</code>) are ignored. Example with comma as delimiter:</p>
+<div class="highlight"><pre><span></span><code>AST Test Case ID,External Xray ID
+1,PROJ-101
+2,PROJ-102
+5,PROJ-105
+6,PROJ-106
+</code></pre></div>
+<p>During validation the following rules apply:</p>
+<ul>
+<li><strong>Errors</strong> block the upload, for example a missing required column, an AST Test Case ID that does not exist, or an External Xray ID that is already used by another test case or appears more than once in the file.</li>
+<li><strong>Warnings</strong> skip the affected row, for example a row without an External Xray ID. The skipped rows can be downloaded via <strong>Download warning records</strong> for review.</li>
+<li><strong>Conflicts</strong>: if a test case already has a different External Xray ID, you are asked whether to <strong>Replace</strong> it or <strong>Skip</strong> the row.</li>
+</ul>
+<h4 id="downloading-the-current-mapping">Downloading the current mapping</h4>
+<p>On the right side of the <strong>Manage external IDs</strong> dialog you can <strong>Download</strong> the mapping of all test cases and their External Xray IDs as <code>external_xray_id_mapping.csv</code>. Use it as a template for your first upload. Select <strong>Include test case name (info only)</strong> to add the test case names for easier editing.</p>
+<h3 id="scheduling-and-xray-synchronization">Scheduling and Xray Synchronization</h3>
+<p>When you schedule a test run, select <strong>Create Jira Xray report</strong> in the schedule dialog and enter the <strong>Jira Xray Execution ID</strong>. This is the Jira issue key of the Xray <strong>Test Execution</strong> the results are sent to (for example <code>PROJ-2000</code>). <strong>It is different from the External Xray ID</strong> assigned to individual test cases. The field is mandatory when the checkbox is selected.</p>
+<p><img alt="xray_sync.png" src="../assets/UserDocumentationM/xray_sync.png" /></p>
+<figcaption>Schedule execution dialog with 'Create Jira Xray report' option</figcaption>
+
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>Execute now</strong> on a test set starts the execution without a Jira Xray Execution ID, so its results are not sent to Xray. Use <strong>Schedule</strong> if the results should be synchronized.</p>
+</div>
+<h4 id="changing-the-xray-execution-id-of-a-scheduled-execution">Changing the Xray Execution ID of a scheduled execution</h4>
+<p>As long as an execution has not started yet, you can change or remove its Jira Xray Execution ID:</p>
+<ol>
+<li>In the <a href="../executions/">Executions</a> table, click the scheduled execution and choose <strong>Modify</strong> ("Edit name, instance, schedule, or Xray settings").</li>
+<li>Change the <strong>Jira Xray Execution ID</strong>, or clear <strong>Create Jira Xray report</strong> to stop sending results to Xray.</li>
+<li>For recurring executions choose whether the change applies to <strong>This occurrence</strong> or to the <strong>Entire series</strong>.</li>
+</ol>
+<p><img alt="xray_modify_execution.png" src="../assets/UserDocumentationM/xray_modify_execution.png" /></p>
+<figcaption><strong>Modify</strong> dialog of a recurring scheduled execution showing the series options and the <strong>Create Jira Xray report</strong> / <strong>Jira Xray Execution ID</strong> fields</figcaption>
+
+<h4 id="how-the-synchronization-works">How the synchronization works</h4>
+<ul>
+<li>The results are sent <strong>automatically after each test case finishes</strong>, not at the end of the whole execution. Each test case creates or updates its own test run in the Xray Test Execution.</li>
+<li>The Xray test is identified by the test case's External Xray ID. If the test case has no External Xray ID, <code>testKey</code> is sent as <code>null</code>.</li>
+<li>The Xray status is determined by the <a href="#status-mapping">Status mapping</a>.</li>
+<li>The Test Run custom fields are filled according to the <a href="#custom-fields">Custom fields</a> mapping.</li>
+<li>Before the results are sent, AST reads the defects already linked to the test run in Xray and sends them along, so re-synchronizing does not remove defect links. If the defects cannot be read, the synchronization continues without them.</li>
+</ul>
+<h4 id="retries">Retries</h4>
+<p>If the Xray server cannot be reached or responds with a server error (HTTP 5xx) or <code>429 Too Many Requests</code>, the request is retried up to <code>AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_ATTEMPTS</code> times (default 3). The first retry waits <code>AST_CONTROL_PANEL_INTEGRATION_XRAY_SYNC_DURATION</code> seconds (default 30) and the waiting time increases with each retry.</p>
+<p>Client errors such as <code>400 Bad Request</code>, <code>401 Unauthorized</code> or <code>404 Not Found</code> (for example a wrong token, an unknown issue key or a wrong status in the mapping) are <strong>not</strong> retried. If all attempts fail, the test case is shown with a failed sync status and the error is stored in the sync log. You can resend the results afterwards, see <a href="#resending-results-to-xray">Resending results to Xray</a>.</p>
+<h3 id="viewing-reports-and-sync-logs">Viewing Reports and Sync Logs</h3>
+<p>When the Xray integration is enabled, the <a href="../executions/">Executions</a> table shows the <strong>External Xray</strong> and <strong>Xray sync status</strong> columns. You can filter the executions by <strong>External Xray ID</strong> and by <strong>Xray sync status</strong> (Success, Failed, N/A).</p>
+<p>After a test run is complete, you can review its status and troubleshoot any issues:</p>
+<ul>
+<li><strong>View Sync Status</strong>: Click a row in the executions table to open the <strong>Execution Report</strong> window. The header shows the <strong>External Xray ID</strong> and the <strong>Xray Sync Status</strong> column shows the status and time of the last synchronization of each test case.</li>
+<li><strong>Detailed Logs</strong>: Click <strong>View sync logs</strong> next to the sync status to see the response returned by Xray.</li>
+<li><strong>Manual JSON Download</strong>: Open the <strong>Reports</strong> dropdown of a test case and click <strong>Xray JSON</strong> to download the raw JSON payload that is sent to Xray. This option is only available for test cases that finished technically and belong to an execution with a Jira Xray Execution ID.</li>
+</ul>
+<p><img alt="xray_reports.png" src="../assets/UserDocumentationM/xray_reports.png" /></p>
+<figcaption>Execution Report window showing Xray sync status</figcaption>
+
+<p><img alt="xray_log.png" src="../assets/UserDocumentationM/xray_log.png" /></p>
+<figcaption>Log view of Xray synchronization</figcaption>
+
+<h4 id="sync-status-values">Sync status values</h4>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Success</td>
+<td>Xray accepted the results (HTTP 2xx).</td>
+</tr>
+<tr>
+<td>Failed</td>
+<td>Xray rejected the request (HTTP 4xx), for example because of a wrong token, issue key or status value.</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>The Xray server failed or could not be reached after all retries (HTTP 5xx), or an internal error occurred in AST.</td>
+</tr>
+<tr>
+<td>Pending</td>
+<td>The synchronization has not finished yet.</td>
+</tr>
+<tr>
+<td>Partial</td>
+<td>Shown on execution level in the Executions table when only some test cases were synchronized successfully.</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>No synchronization applies, for example because the execution has no Jira Xray Execution ID.</td>
+</tr>
+</tbody>
+</table>
+<p>Check <strong>View sync logs</strong> to see the exact error returned by Xray.</p>
+<h4 id="resending-results-to-xray">Resending results to Xray</h4>
+<p>If the synchronization failed, or the results should be sent again (for example after correcting the External Xray ID or the status mapping):</p>
+<ol>
+<li>Open the <strong>Execution Report</strong> window of the execution.</li>
+<li>Select the test cases to be resent, or use <strong>Select all</strong>.</li>
+<li>Click <strong>Resend to Xray</strong>.</li>
+</ol>
+<p>The button is only available when the Xray integration is enabled and the execution has a Jira Xray Execution ID. The payload is rebuilt from the current data, so changes to the External Xray IDs, the status mapping or the custom fields mapping are taken into account.</p>
+<p><img alt="xray_resend.png" src="../assets/UserDocumentationM/xray_resend.png" /></p>
+<figcaption><strong>Execution Report</strong> window with selected test cases and the <strong>Resend to Xray</strong> button</figcaption>
+
+<h3 id="json-payload">JSON payload</h3>
+<p>Below is an example of a JSON payload sent to Xray for a single test case:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"testExecutionKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PROJ-2000"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"tests"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"testKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PROJ-1042"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-23T10:27:09+02:00"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"finish"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-10-23T10:29:33+02:00"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FAIL"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*Test Execution Info*\n || Key || Value ||\n | Testcase ID | 260 |\n  | Testcase Name | stex_13.xml |\n  | Testcase Link | 127.0.0.1:8080/testcase-repository/260 |\n  | Test Set ID | 41 |\n  | Test Set Name | reporting_test |\n  | Test Set Link | 127.0.0.1:8080/test-sets/41 |\n  | Execution Instance | INSTANCE_DEV |\n "</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"evidences"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">      </span><span class="nt">"customFields"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customfield_10021"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"|| Type || User || Description || Operation Type || Err.Message || Status || CreationTime ||\n"</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customfield_10022"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"127.0.0.1:8080/api/execution/scripts/ast/report/retrieve/by/deeplink/?reportDownloadKey=KN2jJBjKp2v8RLcbBbdWdiSAJpOMQBSFMRWLUdIDxcpuFzBckZ8xD4zPFomD7p4Az39god0GsCDbggUb9TMEVQM7rjm3hDAR8EeC&amp;mimeTypeString=text%2Fhtml"</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">"defects"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"PROJ-3001"</span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>testExecutionKey</code></td>
+<td>The Jira Xray Execution ID entered when scheduling.</td>
+</tr>
+<tr>
+<td><code>testKey</code></td>
+<td>The External Xray ID of the test case, or <code>null</code> if none is assigned.</td>
+</tr>
+<tr>
+<td><code>start</code> / <code>finish</code></td>
+<td>Start and end time of the test case in ISO 8601 format (time zone Europe/Zurich). For skipped test cases both contain the time of skipping.</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>The Xray status resolved via the <a href="#status-mapping">Status mapping</a>.</td>
+</tr>
+<tr>
+<td><code>comment</code></td>
+<td>Table with the test case and test set IDs, names and links and the execution instance, in Jira wiki markup.</td>
+</tr>
+<tr>
+<td><code>evidences</code></td>
+<td>Always empty.</td>
+</tr>
+<tr>
+<td><code>customFields</code></td>
+<td>The Test Run custom fields defined in the <a href="#custom-fields">Custom fields</a> mapping. The example uses the environment variable example from that section: <code>customfield_10021</code> contains the test steps table and <code>customfield_10022</code> the link to the HTML report. Empty if no mapping is configured.</td>
+</tr>
+<tr>
+<td><code>defects</code></td>
+<td>Keys of the defects already linked to the test run in Xray.</td>
+</tr>
+</tbody>
+</table>
+<p>The links in the payload are based on the <strong>Web domain</strong> configured in <a href="../admin/#configuration">Administration</a>, followed by the <a href="../deployment/#setting-a-custom-context-path">context path</a> if one is set.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Synpulse
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tracking"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
