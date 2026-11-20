@@ -2,6 +2,10 @@
 
 ## Version 5.4.0
 
+#### Breaking Changes
+
+- Xray custom fields are no longer sent by default. After upgrading, configure them in Admin → Configuration or via `AST_CONTROL_PANEL_INTEGRATION_XRAY_CUSTOM_FIELDS`. [Read more](jira_xray.md#custom-fields)
+
 #### New Features
 
 - The execution report table is now sortable by clicking a column header. [Read more](test_sets.md#sorting-the-execution-report-table)
@@ -36,4 +40,7 @@
 - The status sent to Xray is now taken from the execution result.
 - Trial runs are stopped automatically when their logs are no longer being followed in the editor, for example after closing the browser tab.
 - The database user ID is no longer shown in the User Management table and edit dialog.
+- Execution result colors are now the same everywhere in the Control Panel: Failed is orange, Error is red.
+- The test case details panel now shows Error, Skipped and Cancelled runs with their own label and icon instead of *Warning*.
+- The Analytics CSV reports are now generated on the backend. The endpoints `GET /api/scripts/run-execution-report` and `GET /api/scripts/all-run-execution-report` now return CSV (`text/csv`) instead of JSON.
 - Backend and frontend dependency updates.

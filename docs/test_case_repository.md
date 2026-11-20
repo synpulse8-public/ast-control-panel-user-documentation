@@ -111,8 +111,8 @@ Each square shows the result of the run with a color and an icon:
 | Result    | Color  | Icon           |
 |-----------|--------|----------------|
 | Success   | Green  | Check mark     |
-| Failed    | Red    | Cross          |
-| Error     | Orange | Warning sign   |
+| Failed    | Orange | Cross          |
+| Error     | Red    | Warning sign   |
 | Skipped   | Blue   | Skip forward   |
 | Cancelled | Purple | Prohibited     |
 | Unknown   | Grey   | Dash           |
