@@ -1,39 +1,46 @@
 # Release notes
 
-## Version 5.3.0
+## Version 5.4.0
+
+#### Breaking Changes
+
+- Xray custom fields are no longer sent by default. After upgrading, configure them in Admin → Configuration or via `AST_CONTROL_PANEL_INTEGRATION_XRAY_CUSTOM_FIELDS`. [Read more](jira_xray.md#custom-fields)
 
 #### New Features
 
-- Added Skipped and Cancelled as execution results. [Read more](test_sets.md#reports-tab)
-- New dialog for moving test cases in a test set. [Read more](test_sets.md#move-dialog)
-- Administrators can now pick a custom header ribbon color with a color picker, in addition to the 6 predefined colors. [Read more](admin.md#configuration)
-
+- The execution report table is now sortable by clicking a column header. [Read more](test_sets.md#sorting-the-execution-report-table)
+- Added Step and Stop if fail columns to the execution report table. [Read more](test_sets.md#stop-execution-on-failure)
+- Multiple test cases can be selected in the test set definitions (Ctrl/Cmd + click, Shift + click) and moved together with the new *Set step* action. [Read more](test_sets.md#moving-multiple-test-cases-at-once)
+- Multiple selected test cases in the test set definitions can now be moved together with drag and drop. [Read more](test_sets.md#dragging-multiple-test-cases)
+- Test sets can now be duplicated with the new *Duplicate* button in the Definitions tab or the *Duplicate test set* context menu action. [Read more](test_sets.md#duplicate-test-set)
+- The test case details panel now shows the test sets that contain the test case, with links to open them and a *Suspended* label where the test case is deactivated. [Read more](test_case_repository.md#test-set-membership)
+- The test case details panel now shows the results of the last 10 runs. With *View history* you can open the full run history of the test case, see which version was executed in each run and download the reports of earlier runs. [Read more](test_case_repository.md#run-history)
+- Administrators can now configure how AST execution statuses are mapped to Xray statuses. [Read more](jira_xray.md#status-mapping)
+- Administrators can now configure which Xray Test Run custom fields are filled with the test steps table and the report link. [Read more](jira_xray.md#custom-fields)
+- Added Xray sync status filters and Xray sync status sorting to the Executions table.
+- When you schedule test cases again from an execution report, the *Schedule execution* dialog now preselects the Avaloq instance the execution ran on instead of the instance selected in the header. [Read more](test_sets.md#scheduling-test-cases-again-from-the-report)
+- Trial run logs improvements: every test case has its own trial run window, which is replaced when the test case is run again, and its latest window is selected when you switch to the test case. [Read more](test_case_repository.md#trial-run-window)
+- Trial run windows can now be pinned. A pinned window stays open when the same test case is run again, so you can keep and compare the logs of several runs. [Read more](test_case_repository.md#pinning-trial-run-windows)
 
 #### Bug Fixes
 
-- Fixed schedule dialog to display the current time correctly.
-- Fixed issue where folders were showing incorrect number of scripts.
-- Fixed import dialog to show the correct script type.
-- Prevented scripts of method type from being incorrectly added to test sets.
-- Fixed the log filter returning no results when the search text started with a space.
-- Fixed the Executions table not showing running executions when the Running filter was selected.
+- Fixed Xray sync status icons differing between the Executions table and the execution report window.
+- Fixed renamed test cases showing their old name in the test set.
+- Fixed the `Add testcase` dialog changing its size while typing in its search field.
 
+#### Deprecated
+
+- The self-registration endpoints `POST /api/register` and `GET /api/activate` are deprecated and will be removed in the next release. They are not used by the AST Control Panel.
+- The endpoint `GET /SGKB/Jira/XRay/{processExecutorId}` is deprecated. Use `GET /api/execution/xray/{processExecutorId}` instead.
 
 #### Other
 
-- Test cases already in the test set are now preselected and greyed out in the Add Test Case dialog. [Read more](test_sets.md#add-test-cases-to-already-existing-test-set)
-- The Run sequentially checkbox was replaced by the radio buttons *Add each test case as a step* and *Add as one parallel step*. [Read more](test_sets.md#add-new-test-set)
-- Test sets are ordered alphabetically in the Test Sets screen.
-- Replaced stop execution icon in the Executions table.
-- Removed test case list from the schedule dialog on the Test Sets screen.
-- Test set editor view mode styling enhanced for more clarity.
-- Increased the rows-per-page options in the Executions table to 30–100.
+- Manage external IDs (bulk upload and download of External Xray and HP ALM IDs) was moved from the test case details panel to Admin → Configuration and is now available to administrators only. [Read more](admin.md#manage-external-ids)
+- The Stop if fail setting is now stored for each execution, so later changes to the test set no longer affect existing executions.
+- The status sent to Xray is now taken from the execution result.
+- Trial runs are stopped automatically when their logs are no longer being followed in the editor, for example after closing the browser tab.
+- The database user ID is no longer shown in the User Management table and edit dialog.
+- Execution result colors are now the same everywhere in the Control Panel: Failed is orange, Error is red.
+- The test case details panel now shows Error, Skipped and Cancelled runs with their own label and icon instead of *Warning*.
+- The Analytics CSV reports are now generated on the backend. The endpoints `GET /api/scripts/run-execution-report` and `GET /api/scripts/all-run-execution-report` now return CSV (`text/csv`) instead of JSON.
 - Backend and frontend dependency updates.
-- Added curl to the docker image.
-
-## Version 5.3.1
-
-#### Bug Fixes
-
-- Fixed issue where the Xray sync would crash for Skipped execution status. Skipped reports as Aborted in Xray when triggering the Resend to Xray button.
-- Fixed issue where Xray could not reach host when going via a proxy. The proxy can be configured via environment variables. [Read more](jira_xray.md#proxy-settings-optional)

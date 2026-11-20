@@ -23,9 +23,9 @@ It is the main place to monitor and manage test execution.
 | Recurrence       | Recurrence of this execution (e.g. daily, weekly, one-time)                        |
 | Test cases       | Number of test cases                                                               |
 | AST execution ID | Internal identifier used by the AST system                                         |
-| External Xray    | Id used for Xray sync                                                              |
+| External Xray    | Jira Xray Execution ID the results are sent to. Only shown when Xray is enabled. See [Jira Xray](jira_xray.md#scheduling-and-xray-synchronization) |
 | Execution status | Summary of test results (e.g. 5 Passed / 2 Failed / 1 Error)                       |
-| Xray sync status | Displays the success/fail of the sync to xray                                      |
+| Xray sync status | Combined Xray sync status of all test cases (Success, Partial, Failed, Error, N/A). See [Sync status values](jira_xray.md#sync-status-values) |
 | ALM sync status  | Displays the success/fail of the sync to alm                                       |
 
 ### Table view customization
@@ -75,6 +75,7 @@ In certain filters you can also select multiple values. For example, you can sel
 ### Execution details
 
 Clicking a table row of a Running or Finished execution will show the same functionality as shown in the Test set [reports tab](test_sets.md#reports-tab).
+From this report you can also [schedule selected test cases again](test_sets.md#scheduling-test-cases-again-from-the-report) on the Avaloq instance the execution ran on.
 
 When clicking a table row of a Scheduled execution a dialog will be shown that gives you the option to modify or cancel the scheduled execution.
 

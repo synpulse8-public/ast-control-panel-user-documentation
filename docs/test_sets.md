@@ -17,12 +17,13 @@ An important feature of this menu is the context menu, which appears when a user
 ![sets.png](assets/ControlPanelDocu/sets.png)
 <figcaption>Display of the context menu</figcaption>
 
-| Action               | Description                                          |
-|----------------------|------------------------------------------------------|
-| Modify Test Set Info | Allows user to change the name                       |
-| Schedule             | Allows the user to schedule an execution of test set |
-| Execute Now          | Immediate execution of test set                      |
-| Delete Test Set      | Deletes test set                                     |
+| Action               | Description                                                                                  |
+|----------------------|----------------------------------------------------------------------------------------------|
+| Modify Test Set Info | Allows user to change the name                                                               |
+| Duplicate Test Set   | Creates a copy of the test set, see [Duplicate test set](#duplicate-test-set)                |
+| Schedule             | Allows the user to schedule an execution of test set                                         |
+| Execute Now          | Immediate execution of test set                                                              |
+| Delete Test Set      | Deletes test set                                                                             |
 
 The primary content area is divided into two key sections. At the top, a metadata panel displays the Name, Description, and unique Test Set ID. This provides quick, high-level context about the selected set. Below this, a tabbed interface further organizes the information. 
 
@@ -33,8 +34,8 @@ The primary content area is divided into two key sections. At the top, a metadat
 The Definitions tab shown in the previous image lists all the individual test cases included in the test set. For each test case, it displays its name, execution sequence, and whether it is Deactivated.
 This organized table gives the user a clear view of which tests are part of the set and their execution order.
 
-You can also see three buttons: `Schedule`, `Execute Now` and `Edit`. `Schedule` is used for scheduling the test set for a certain time. 
-`Execute Now` executes the testcase immediately. `Edit` button allows you to edit the test set: Adding/removing testcases, changing order of testcases etc.
+You can also see four buttons: `Schedule`, `Execute Now`, `Duplicate` and `Edit`. `Schedule` is used for scheduling the test set for a certain time. 
+`Execute Now` executes the testcase immediately. `Duplicate` creates a copy of the test set, see [Duplicate test set](#duplicate-test-set). `Edit` button allows you to edit the test set: Adding/removing testcases, changing order of testcases (individually or several at once) etc.
 
 When in edit mode, the following options are available:
 
@@ -51,53 +52,123 @@ For more details on the topic of adding testcases check out the chapter [Add tes
 #### Sequence of execution
 
 Sequence can be parallel or sequential. In parallel execution, all test cases are executed simultaneously, while in sequential execution, test cases are executed one after the other in a specified order.
-The image below shows that the two testcases are set to execute in parallel as indicated by the line before the second testcase. 
-The third testcase has a number next to it, which means that it will be executed after the first two testcases are finished.
+The image below shows that the two test cases are set to execute in parallel as indicated by the line before the second test case. 
+The third test case has a number next to it, which means that it will be executed after the first two test cases are finished.
 
 ![test_set_sequence.png](assets/ControlPanelDocu/test_set_sequence.png)
 <figcaption>Two test cases are in parallel, the third is sequential</figcaption>
 
-To group testcases into parallel or sequential execution you need to click the *Edit* button in the Definitions tab.
-There are two ways to move test cases:
+To group test cases into parallel or sequential execution you need to click the *Edit* button in the Definitions tab.
+There are several ways to move test cases:
 
 ##### Drag and drop
 
-To set testcase to execute in parallel you click on it and drag it on the testcase you want to execute in parallel with.
-![test_set_parallel.png](assets/ControlPanelDocu/test_set_parallel.png)
-<figcaption>Dropping a testcase to another to make them execute in parallel</figcaption>
+In edit mode you can move a test case by dragging its row and dropping it on another row. Where you release it on the target row decides what happens:
 
-To set testcase to execute sequentially you click on it and drag it to the line between testcases until the line is highlighted. 
-Then you drop it there, and it will be executed after the testcase above the line is finished.
+| Drop position          | Highlight               | Result                                                                    |
+|------------------------|-------------------------|---------------------------------------------------------------------------|
+| Middle of the row      | Row is highlighted      | The test case runs **in parallel** with the target test case (same step) |
+| Top edge of the row    | Blue line above the row | The test case is placed **before** the target test case                  |
+| Bottom edge of the row | Blue line below the row | The test case is placed **after** the target test case                   |
+
+![test_set_parallel.png](assets/ControlPanelDocu/test_set_parallel.png)
+<figcaption>Dropping a test case on another to make them execute in parallel</figcaption>
 
 ![test_set_sequential.png](assets/ControlPanelDocu/test_set_sequential.png)
-<figcaption>Dropping a testcase after another to make them execute in sequence</figcaption>
+<figcaption>Dropping a test case below another to make them execute in sequence</figcaption>
+
+When you drop on the line between two **different** steps, the test case becomes a new step at that position and the following steps are shifted down.
+When you drop on the line between two test cases of the **same parallel step**, the test case joins that parallel step.
+
+!!!info "Info"
+    A moved test case takes over the **Stop if fail** setting of the step it is moved into.
+
+Changes are applied only after you click `Save`. Click `Discard` to undo them.
+
+You can also drag several selected test cases at once, see [Dragging multiple test cases](#dragging-multiple-test-cases).
 
 ##### Move dialog
 
-Each testcase has an arrow button next to the delete button (see screenshot). Clicking this button opens the move testcase dialog.
+Each test case has an arrow button next to the delete button (see screenshot). Clicking this button opens the move test case dialog.
 
 ![test-set-move-icon](assets/ControlPanelDocu/test-set-move-icon.png)
 <figcaption>Highlight of the icon that opens the move dialog</figcaption>
 
-In the move dialog the test name and current step number are displayed. You can edit the target step where the testcase would be moved to.
+In the move dialog the test name and current step number are displayed. You can edit the target step where the test case would be moved to.
 
 If the *Insert as step* radio button is selected the test case is moved to the target step.
 
 If the *Add in parallel to existing step* radio button is selected then the test case is added to an existing step as a parallel execution.
 
 ![test-set-move-dialog](assets/ControlPanelDocu/test-set-move-dialog.png)
-<figcaption>Move testcase dialog</figcaption>
+<figcaption>Move test case dialog</figcaption>
 
-If you decide to move any testcase that is part of a parallel step the dialog will contain two more radio buttons.
+If you decide to move any test case that is part of a parallel step the dialog will contain two more radio buttons.
 
-If the *Selected testcase* radio button is selected then only the selected testcase is moved.
+If the *Selected test case* radio button is selected then only the selected test case is moved.
 
-If the *Whole parallel step* radio button is selected then all of the testcases in the parallel step are moved.
+If the *Whole parallel step* radio button is selected then all of the test cases in the parallel step are moved.
 
 The *Insert as step* and *Add in parallel to existing step* options work the same as described above.
 
 ![test-set-move-dialog-parallel](assets/ControlPanelDocu/test-set-move-dialog-parallel.png)
 <figcaption>Move test case dialog for a test case in a parallel step</figcaption>
+
+##### Moving multiple test cases at once
+
+In edit mode you can select several test cases and move them to a step in a single action.
+
+| Action                          | Result                                                                        |
+|---------------------------------|-------------------------------------------------------------------------------|
+| `Ctrl` + click (`Cmd` on macOS) | Adds the test case to the selection, or removes it if it is already selected |
+| `Shift` + click                 | Selects all test cases between the last clicked test case and the clicked one |
+| `Ctrl` + `Shift` + click        | Adds the range to the current selection instead of replacing it              |
+
+Selected rows are highlighted. Clicking a checkbox, the instance field or the action icons does not change the selection.
+
+As soon as at least one test case is selected, a toolbar appears above the table. It shows how many test cases are selected and offers two buttons:
+
+- `Set step` opens the *Set step* dialog for the selected test cases.
+- `Clear selection` deselects all test cases.
+
+![test-set-selection-toolbar.png](assets/ControlPanelDocu/test-set-selection-toolbar.png)
+<figcaption>Definitions tab in edit mode with three highlighted test cases and selection toolbar showing "3 selected", Set step and Clear selection</figcaption>
+
+The *Set step* dialog lists the selected test cases. Enter the *Target step* (a number between 1 and the highest step in the test set) and choose how the test cases are placed:
+
+- *Insert as step*: All selected test cases are inserted together as **one new parallel step** at the target step. The following steps are shifted down.
+- *Add in parallel to existing step*: The selected test cases are added in parallel to the test cases already in the target step. This option is only available if the target step already exists.
+
+Click `Confirm` to apply the change, or `Cancel` to close the dialog without changes.
+
+![test-set-set-step-dialog.png](assets/ControlPanelDocu/test-set-set-step-dialog.png)
+<figcaption>Set step dialog with the list of selected test cases, target step and placement options</figcaption>
+
+!!!info "Info"
+    The selected test cases keep the order in which they appear in the table.
+    With *Insert as step*, the first selected test case determines the **Stop if fail** setting of the new step.
+    With *Add in parallel to existing step*, the moved test cases follow the **Stop if fail** setting of the target step.
+
+The selection is cleared after a move is confirmed and when you leave edit mode. As with all other changes, click `Save` to keep the new order.
+
+##### Dragging multiple test cases
+
+Selected test cases can also be moved with [drag and drop](#drag-and-drop). Select the test cases, then drag **one of the selected rows**. 
+All selected test cases are moved together, and the drag preview shows the name of the dragged test case followed by the number of other selected test cases, e.g. *Checkout and 2 more*. 
+The selected rows are marked while you drag them.
+
+Where you drop the test cases determines how they are placed:
+
+- Dropping them **on** a test case adds all selected test cases in parallel to that test case's step (same as *Add in parallel to existing step*).
+- Dropping them on the **line before or after** a test case inserts all selected test cases together as **one new parallel step** before or after that test case's step (same as *Insert as step*).
+
+!!!info "Info"
+    The same rules as in the *Set step* dialog apply: the selected test cases keep the order in which they appear in the table, and the **Stop if fail** setting is applied the same way.
+    Selected test cases cannot be dropped on another selected test case.
+    If you drag a test case that is **not** selected, only that test case is moved and the selection is ignored.
+
+!!!tip "Tip"
+    To move a single test case you can still use [drag and drop](#drag-and-drop) or the [move dialog](#move-dialog).
 
 
 #### Stop execution on failure
@@ -161,7 +232,36 @@ A separate detail window, accessed by clicking the desired row, provides a focus
 
 Granular execution report detail. This modal window displays the results breakdown and provides links to retrieve various report formats for in-depth analysis. For more details on the report formats, see the [Reports](reports.md) section.
 
-The window lists the individual Test Cases included in the run. For each case, the Status, Start time, and End time of its execution are listed. The Reports dropdown offers access to the execution data for that specific test case in the following formats: HTML, Log, XML, and Excel. This allows for granular review and data integration. The bottom of the window provides controls to Schedule the test run again or Close the report window.
+The window lists the individual Test Cases included in the run. For each case, the Step number, the Stop if fail setting, the Status, Start time, and End time of its execution are listed. The **Step** column shows the position of the test case in the execution sequence; test cases executed in parallel share the same step number. The **Stop if fail** column shows a check mark if [Stop if fail](#stop-execution-on-failure) was enabled for the test case when the execution was scheduled, and a dash otherwise. The Reports dropdown offers access to the execution data for that specific test case in the following formats: HTML, Log, XML, and Excel. This allows for granular review and data integration. The bottom of the window provides controls to [Schedule the test run again](#scheduling-test-cases-again-from-the-report) or Close the report window.
+
+#### Sorting the execution report table
+
+The execution report table can be sorted by clicking a column header. The following columns are sortable:
+
+- **Step**: sorted by the execution sequence number.
+- **Test Case**: sorted alphabetically by the test case name (including its version).
+- **Execution Status**: sorted alphabetically by the displayed status (Cancelled, Error, Failed, Processing, Scheduled, Skipped, Success).
+- **Start** and **End**: sorted chronologically.
+- **Xray Sync Status** and **ALM Sync Status**: sorted alphabetically by the displayed sync status. These columns are only shown when Xray or ALM synchronization is used for the run.
+
+The first click sorts the column in ascending order and the second click in descending order. Only one column can be sorted at a time. Rows without a value in the sorted column (for example, test cases that have not started yet) are always shown at the bottom. Sorting works together with the status filter badges and resets when you open a different execution.
+
+#### Scheduling test cases again from the report
+
+You can schedule test cases from an execution report again, for example to repeat the test cases that failed:
+
+1. Open the execution report by clicking the execution in the Reports tab or in the [Executions](executions.md#execution-details) tab.
+2. Select one or more test cases in the report table. The `Schedule` button is enabled only when at least one test case is selected.
+3. Click `Schedule`. The *Schedule execution* dialog opens with the selected test cases.
+
+The dialog is prefilled with values from the execution you opened:
+
+- **Execution name**: the name of the execution.
+- **Avaloq instance**: the instance the execution ran on, even if a different instance is selected in the header. This way the test cases are run again on the same instance by default.
+
+If the instance of the execution is no longer available, the instance selected in the header is used instead. If that instance is not available either, the first available instance is used.
+
+You can change any of the prefilled values before you schedule the execution. When you schedule from the Tests or Test Sets screens, the instance selected in the header is still used as the default.
 
 
 ## Test set creation and alterations
@@ -197,6 +297,33 @@ Then you choose add to existing test set and then select the test set to which y
 
 ![Adding test to set](assets/ControlPanelDocu/test_case_add_set.png)
 <figcaption>Dialog for adding test cases to existing set</figcaption>
+
+### Duplicate test set
+You can create a copy of an existing test set, for example to use it as a starting point for a similar test set. There are two ways to do this:
+
+- Click the `Duplicate` button in the [Definitions tab](#definitions-tab) of the open test set. The button is not shown while the test set is in edit mode.
+- Click the three dots next to the test set in the repository tree and select *Duplicate test set* from the [context menu](#context-menu).
+
+![test-set-duplicate-button.png](assets/ControlPanelDocu/test-set-duplicate-button.png)
+<figcaption>Duplicate button in the Definitions tab</figcaption>
+
+The copy is created immediately, without a dialog. When it is created, a confirmation message is shown and the new test set is opened.
+
+The copy is named *Copy of* followed by the name of the original test set, for example *Copy of Regression*. If a test set with this name already exists, a number is added, for example *Copy of Regression (1)*, *Copy of Regression (2)* and so on. The comparison ignores upper and lower case.
+
+![test-set-duplicate-result.png](assets/ControlPanelDocu/test-set-duplicate-result.png)
+<figcaption>Newly created copy of a test set with the confirmation message</figcaption>
+
+The copy contains the following from the original test set:
+
+- The description
+- All test cases in the same order, with the same [sequence of execution](#sequence-of-execution) (steps and parallel steps)
+- The **Deactivated** and [Stop if fail](#stop-execution-on-failure) settings and the selected instance of each test case
+
+The execution history of the original test set, including its scheduled executions and reports, is not copied.
+
+!!!info "Info"
+    The copy is always made from the last saved version of the test set. To rename the copy or change its description, use *Modify test set info* in the [context menu](#context-menu).
 
 
 ## Scheduling and Executing Test Sets
