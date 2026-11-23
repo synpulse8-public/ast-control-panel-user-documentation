@@ -1,5 +1,13 @@
 # Release notes
 
+## Version 5.4.1
+
+#### Other
+
+- The Failed execution result is now shown in yellow instead of orange everywhere in the Control Panel (badges, run history, test set summary, charts). Error stays red.
+- Updated to Spring boot 4.1.3
+- Updated base image Java version to eliminate the Java4Shell vulnerability
+
 ## Version 5.4.0
 
 #### Breaking Changes
