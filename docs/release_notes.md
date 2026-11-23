@@ -1,13 +1,5 @@
 # Release notes
 
-## Version 5.4.1
-
-#### Other
-
-- The Failed execution result is now shown in yellow instead of orange everywhere in the Control Panel (badges, run history, test set summary, charts). Error stays red.
-- Updated to Spring boot 4.1.3
-- Updated base image Java version to eliminate the Java4Shell vulnerability
-
 ## Version 5.4.0
 
 #### Breaking Changes
@@ -52,3 +44,11 @@
 - The test case details panel now shows Error, Skipped and Cancelled runs with their own label and icon instead of *Warning*.
 - The Analytics CSV reports are now generated on the backend. The endpoints `GET /api/scripts/run-execution-report` and `GET /api/scripts/all-run-execution-report` now return CSV (`text/csv`) instead of JSON.
 - Backend and frontend dependency updates.
+
+## Version 5.4.1
+
+#### Other
+
+- The Failed execution result is now shown in yellow instead of orange everywhere in the Control Panel (badges, run history, test set summary, charts). Error stays red.
+- Updated to Spring boot 4.1.3
+- Updated base image Java version to eliminate the Java4Shell vulnerability
